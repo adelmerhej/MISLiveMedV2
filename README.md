@@ -1,1 +1,1 @@
-# Main App for Management Information Shipping V2
+# Management Information Shipping V2
