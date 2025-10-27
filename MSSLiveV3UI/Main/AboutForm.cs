@@ -14,14 +14,14 @@ namespace MISLiveMed.UI.Main
 
         private void GetInfo()
         {
-            Text = String.Format("About {0}", AssemblyTitle);
+            Text = @$"About {AssemblyTitle}";
             txtProductName.Text = AssemblyProduct;
-            txtVersion.Text = String.Format("Version {0}", AssemblyVersion);
+            txtVersion.Text = @$"Version {AssemblyVersion}";
             txtCopyright.Text = AssemblyCopyright;
             txtCompanyName.Text = AssemblyCompany;
             txtDescription.Text = AssemblyDescription;
             hypCompanyWebsite.Text = Environment.NewLine + @"Visit our website!";
-            hypCompanyWebsite.Tag = "https://xolog.com/";
+            hypCompanyWebsite.Tag = "https://medlogservices.com/";
         }
 
         #region Assembly Attribute Accessors
