@@ -17,17 +17,20 @@ namespace MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs
         public int CountryDeparture { get; set; }
         public int SeaportDestination { get; set; }
         public int CountryDestination { get; set; }
-        public int AgentId { get; set; }
-        public string FreeOfDemurrage { get; set; }
-        public string BookingNo { get; set; }
-        public string ContainerNo { get; set; }
+
+		//Agent and Booking
+		public int AgentId { get; set; }
+		public string BookingNo { get; set; }
+		public string FreeOfDemurrage { get; set; }
+		public int ShippedWithId { get; set; }
+		public int SideId { get; set; }
 
 		//Commodities
 		public string NatureOfGoods { get; set; }
 		public float ValueOfGoods { get; set; }
 
 		//Volume
-		public string Quantities { get; set; } //TODO: it should be int
+		public string Quantities { get; set; }
 		public string Volume { get; set; }
         public int Pieces { get; set; }             
         public float Weight { get; set; }           
@@ -41,8 +44,9 @@ namespace MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs
         public decimal TotalInvoicesUsd { get; set; }
         public decimal TotalCostsLl { get; set; }
         public decimal TotalCostsUsd { get; set; }
-        
-        public int OperatingUserId { get; set; }
+
+		//Users
+		public int OperatingUserId { get; set; }
         public int SalesId { get; set; }
         public int UserId { get; set; }
         
@@ -52,12 +56,13 @@ namespace MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs
         public DateTime? FullPaidDate { get; set; }
         public int ClearingAgentId { get; set; }
 
-        public DateTime? Etd { get; set; }
+		//Trace and tracking Dates
+		public DateTime? Etd { get; set; }
         public DateTime? Eta { get; set; }
         public DateTime? Atd { get; set; }
         public DateTime? Ata { get; set; }
         public DateTime? CutOffDate { get; set; }
-        public DateTime? DateOfLoading { get; set; }
+        public DateTime? LoadingDate { get; set; }
         public string Ppcc { get; set; }
 
         public string Status { get; set; }
@@ -103,6 +108,7 @@ namespace MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs
         public DateTime? PaidDODate { get; set; }
         public bool MissingDocuments { get; set; }
         public DateTime? MissingDocumentsDate { get; set; }
+        public DateTime? ArrivalDate { get; set; }
 
 		public virtual JobSeaImportDetailModel JobSeaImportDetails { get; set; } = new JobSeaImportDetailModel();
 

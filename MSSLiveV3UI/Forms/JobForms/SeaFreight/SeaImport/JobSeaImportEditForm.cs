@@ -614,8 +614,20 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void openFolder_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+			try
+			{
+				DocumentModel documentModel = new DocumentModel();
+				documentModel = LoadDocument();
+				if (documentModel == null) return;
 
-        }
+				bsDocuments.Add(documentModel);
+
+			}
+			catch (Exception exception)
+			{
+				MessageBox.Show(exception.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
         private void rgJobStatusAction_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
         {

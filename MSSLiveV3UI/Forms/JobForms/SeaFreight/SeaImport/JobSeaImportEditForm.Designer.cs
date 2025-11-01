@@ -35,16 +35,16 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobSeaImportEditForm));
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges5 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges6 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup6 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem13 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem14 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem15 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem16 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem17 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem18 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
 			DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
 			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -1008,16 +1008,16 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.galleryQuickLetters.Gallery.ColumnCount = 2;
 			this.galleryQuickLetters.Gallery.DrawImageBackground = false;
-			galleryItemGroup5.Caption = "Group1";
+			galleryItemGroup1.Caption = "Group1";
 			this.galleryQuickLetters.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup5});
+            galleryItemGroup1});
 			this.galleryQuickLetters.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-			skinPaddingEdges5.Bottom = -4;
-			skinPaddingEdges5.Top = -4;
-			this.galleryQuickLetters.Gallery.ItemImagePadding = skinPaddingEdges5;
-			skinPaddingEdges6.Bottom = -1;
-			skinPaddingEdges6.Top = -1;
-			this.galleryQuickLetters.Gallery.ItemTextPadding = skinPaddingEdges6;
+			skinPaddingEdges1.Bottom = -4;
+			skinPaddingEdges1.Top = -4;
+			this.galleryQuickLetters.Gallery.ItemImagePadding = skinPaddingEdges1;
+			skinPaddingEdges2.Bottom = -1;
+			skinPaddingEdges2.Top = -1;
+			this.galleryQuickLetters.Gallery.ItemTextPadding = skinPaddingEdges2;
 			this.galleryQuickLetters.Gallery.ShowItemText = true;
 			this.galleryQuickLetters.Id = 14;
 			this.galleryQuickLetters.Name = "galleryQuickLetters";
@@ -1057,41 +1057,41 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.rgJobStatusAction.Gallery.ColumnCount = 3;
 			this.rgJobStatusAction.Gallery.DrawImageBackground = false;
-			galleryItemGroup6.Caption = "ActionGroup";
-			galleryItem13.Caption = "Normal Mod";
-			galleryItem13.Checked = true;
-			galleryItem13.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
-			galleryItem13.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem13.Value = 0;
-			galleryItem14.Caption = "Close current Job";
-			galleryItem14.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
-			galleryItem14.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem14.Value = 1;
-			galleryItem15.Caption = "Edit closed Job";
-			galleryItem15.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
-			galleryItem15.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem15.Value = 2;
-			galleryItem16.Caption = "Cancel current File";
-			galleryItem16.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
-			galleryItem16.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem16.Value = 3;
-			galleryItem17.Caption = "ReOpen canceled File";
-			galleryItem17.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
-			galleryItem17.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem17.Value = 4;
-			galleryItem18.Caption = "N/A";
-			galleryItem18.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
-			galleryItem18.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem18.Value = 5;
-			galleryItemGroup6.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem13,
-            galleryItem14,
-            galleryItem15,
-            galleryItem16,
-            galleryItem17,
-            galleryItem18});
+			galleryItemGroup2.Caption = "ActionGroup";
+			galleryItem1.Caption = "Normal Mod";
+			galleryItem1.Checked = true;
+			galleryItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+			galleryItem1.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem1.Value = 0;
+			galleryItem2.Caption = "Close current Job";
+			galleryItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
+			galleryItem2.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem2.Value = 1;
+			galleryItem3.Caption = "Edit closed Job";
+			galleryItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
+			galleryItem3.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem3.Value = 2;
+			galleryItem4.Caption = "Cancel current File";
+			galleryItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
+			galleryItem4.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem4.Value = 3;
+			galleryItem5.Caption = "ReOpen canceled File";
+			galleryItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
+			galleryItem5.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem5.Value = 4;
+			galleryItem6.Caption = "N/A";
+			galleryItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
+			galleryItem6.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem6.Value = 5;
+			galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem1,
+            galleryItem2,
+            galleryItem3,
+            galleryItem4,
+            galleryItem5,
+            galleryItem6});
 			this.rgJobStatusAction.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup6});
+            galleryItemGroup2});
 			this.rgJobStatusAction.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleCheck;
 			this.rgJobStatusAction.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
 			this.rgJobStatusAction.Gallery.ShowItemText = true;
@@ -1128,7 +1128,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// bsJobSeaImport
 			// 
-			this.bsJobSeaImport.DataSource = typeof(JobSeaImportModel);
+			this.bsJobSeaImport.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportModel);
 			// 
 			// btnCloseInvoice
 			// 
@@ -1463,7 +1463,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// bsJobSeaImportDetails
 			// 
-			this.bsJobSeaImportDetails.DataSource = typeof(JobSeaImportDetailModel);
+			this.bsJobSeaImportDetails.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportDetailModel);
 			// 
 			// xtraTabPage1
 			// 
@@ -1477,15 +1477,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// bsCosts
 			// 
-			this.bsCosts.DataSource = typeof(CostModel);
+			this.bsCosts.DataSource = typeof(MISLiveMed.Models.Models.Accounting.CostSheets.CostModel);
 			// 
 			// bsInvoices
 			// 
-			this.bsInvoices.DataSource = typeof(InvoiceModel);
+			this.bsInvoices.DataSource = typeof(MISLiveMed.Models.Models.Accounting.Invoices.InvoiceModel);
 			// 
 			// bsDocuments
 			// 
-			this.bsDocuments.DataSource = typeof(DocumentModel);
+			this.bsDocuments.DataSource = typeof(MISLiveMed.Models.Models.Common.Documents.DocumentModel);
 			// 
 			// mainLayout
 			// 
@@ -1983,7 +1983,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// LoadingDate
 			// 
-			this.LoadingDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "DateOfLoading", true));
+			this.LoadingDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "LoadingDate", true));
 			this.LoadingDate.EditValue = null;
 			this.LoadingDate.Location = new System.Drawing.Point(155, 207);
 			this.LoadingDate.Name = "LoadingDate";
@@ -5424,7 +5424,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.tabDocuments.Caption = "Attached Documents";
 			this.tabDocuments.Controls.Add(this.layoutAttachedDocumnets);
 			this.tabDocuments.Name = "tabDocuments";
-			this.tabDocuments.Size = new System.Drawing.Size(1424, 242);
+			this.tabDocuments.Size = new System.Drawing.Size(1420, 251);
 			// 
 			// layoutAttachedDocumnets
 			// 
@@ -5434,7 +5434,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutAttachedDocumnets.Location = new System.Drawing.Point(0, 0);
 			this.layoutAttachedDocumnets.Name = "layoutAttachedDocumnets";
 			this.layoutAttachedDocumnets.Root = this.layoutControlGroup5;
-			this.layoutAttachedDocumnets.Size = new System.Drawing.Size(1424, 242);
+			this.layoutAttachedDocumnets.Size = new System.Drawing.Size(1420, 251);
 			this.layoutAttachedDocumnets.TabIndex = 0;
 			this.layoutAttachedDocumnets.Text = "layoutControl1";
 			// 
@@ -5442,11 +5442,11 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.gcDocuments.DataSource = this.bsDocuments;
 			this.gcDocuments.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5);
-			this.gcDocuments.Location = new System.Drawing.Point(14, 46);
+			this.gcDocuments.Location = new System.Drawing.Point(14, 48);
 			this.gcDocuments.MainView = this.gvDocuments;
 			this.gcDocuments.Margin = new System.Windows.Forms.Padding(4);
 			this.gcDocuments.Name = "gcDocuments";
-			this.gcDocuments.Size = new System.Drawing.Size(1396, 182);
+			this.gcDocuments.Size = new System.Drawing.Size(1392, 189);
 			this.gcDocuments.TabIndex = 7;
 			this.gcDocuments.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDocuments});
@@ -5518,9 +5518,10 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             new DevExpress.XtraEditors.Repository.SearchButton(),
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", "loadFile", null, DevExpress.Utils.ToolTipAnchor.Default)});
 			this.openDocuments.Properties.Client = this.gcDocuments;
-			this.openDocuments.Size = new System.Drawing.Size(1396, 28);
+			this.openDocuments.Size = new System.Drawing.Size(1392, 30);
 			this.openDocuments.StyleController = this.layoutAttachedDocumnets;
 			this.openDocuments.TabIndex = 6;
+			this.openDocuments.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.openFolder_ButtonClick);
 			// 
 			// layoutControlGroup5
 			// 
@@ -5530,15 +5531,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.layoutControlItem5,
             this.lblAddFiles});
 			this.layoutControlGroup5.Name = "layoutControlGroup5";
-			this.layoutControlGroup5.Size = new System.Drawing.Size(1424, 242);
+			this.layoutControlGroup5.Size = new System.Drawing.Size(1420, 251);
 			this.layoutControlGroup5.TextVisible = false;
 			// 
 			// layoutControlItem5
 			// 
 			this.layoutControlItem5.Control = this.gcDocuments;
-			this.layoutControlItem5.Location = new System.Drawing.Point(0, 32);
+			this.layoutControlItem5.Location = new System.Drawing.Point(0, 34);
 			this.layoutControlItem5.Name = "layoutControlItem5";
-			this.layoutControlItem5.Size = new System.Drawing.Size(1400, 186);
+			this.layoutControlItem5.Size = new System.Drawing.Size(1396, 193);
 			this.layoutControlItem5.TextVisible = false;
 			// 
 			// lblAddFiles
@@ -5546,7 +5547,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblAddFiles.Control = this.openDocuments;
 			this.lblAddFiles.Location = new System.Drawing.Point(0, 0);
 			this.lblAddFiles.Name = "lblAddFiles";
-			this.lblAddFiles.Size = new System.Drawing.Size(1400, 32);
+			this.lblAddFiles.Size = new System.Drawing.Size(1396, 34);
 			this.lblAddFiles.Text = "Add Files";
 			this.lblAddFiles.TextVisible = false;
 			// 

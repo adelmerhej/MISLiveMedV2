@@ -145,9 +145,11 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@SeaportDestination", model.SeaportDestination);
 				p.Add("@CountryDestination", model.CountryDestination);
 				p.Add("@AgentId", model.AgentId);
+				p.Add("@ShippedWithId", model.ShippedWithId);
+				p.Add("@SideId", model.SideId);
+
 				p.Add("@FreeOfDemurrage", model.FreeOfDemurrage);
 				p.Add("@BookingNo", model.BookingNo);
-				p.Add("@ContainerNo", model.ContainerNo);
 				p.Add("@NatureOfGoods", model.NatureOfGoods);
 				p.Add("@ValueOfGoods", model.ValueOfGoods);
 				p.Add("@Quantities", model.Quantities);
@@ -174,7 +176,7 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@Atd", model.Atd);
 				p.Add("@Ata", model.Ata);
 				p.Add("@CutOffDate", model.CutOffDate);
-				p.Add("@DateOfLoading", model.DateOfLoading);
+				p.Add("@LoadingDate", model.LoadingDate);
 				p.Add("@Ppcc", model.Ppcc);
 				p.Add("@Status", model.Status);
 				p.Add("@BlStatus", model.BlStatus);
@@ -211,6 +213,9 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@PaidDODate", model.PaidDODate);
 				p.Add("@MissingDocuments", model.MissingDocuments);
 				p.Add("@MissingDocumentsDate", model.MissingDocumentsDate);
+				p.Add("@PendingForDelivery", model.PendingForDelivery);
+				p.Add("@PendingDeliveryDate", model.PendingDeliveryDate);
+				p.Add("@ArrivalDate", model.ArrivalDate);
 
 				p.Add("@Notes", model.Notes);
 				p.Add("@CompanyId", model.CompanyId);
@@ -219,15 +224,17 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 
 				model.Id = connection.ExecuteScalar<int>(
 					"dbo.job_AddNewJobSeaImport @ReferenceNo, @DepartmentId, @JobTypeId, @JobNo, @JobDate, @Mbl, @CustomerId, @ConsigneeId, " +
-					"@SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @FreeOfDemurrage, @BookingNo, " +
-					"@ContainerNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId, @FeederVesselId, " +
-					"@PreferredCurrencyId, @TotalInvoicesLl, @TotalInvoicesUsd, @TotalCostsLl, @TotalCostsUsd, @OperatingUserId, @SalesId, @UserId, " +
-					"@Project, @Transit, @FullPaid, @FullPaidDate, @ClearingAgentId, @Etd, @Eta, @Atd, @Ata, @CutOffDate, @DateOfLoading, " +
+					"@SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @ShippedWithId, @SideId, " +
+					"@FreeOfDemurrage, @BookingNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId, " +
+					"@FeederVesselId, @PreferredCurrencyId, @TotalInvoicesLl, @TotalInvoicesUsd, @TotalCostsLl, @TotalCostsUsd, " +
+					"@OperatingUserId, @SalesId, @UserId, @Project, @Transit, @FullPaid, @FullPaidDate, @ClearingAgentId, " +
+					"@Etd, @Eta, @Atd, @Ata, @CutOffDate, @LoadingDate, " +
 					"@Ppcc, @Status, @BlStatus, @RTejrim, @RTejrimDate, @Tejrim, @TejrimDate, @RClearance, @RClearanceDate, @IncoTerms, " +
 					"@AllInOrderToBeLoaded, @AllInOrderOnWater, @Delivered, @DeliveredTo, @DeliveredDate, @ContainerToCnee, @ContainerToCneeDate, " +
 					"@EmptyContainer, @EmptyContainerDate, @ConfirmEmptyContainer, @ConfirmEmptyContainerDate, @JobScId, @JobStatus, @Closed, " +
 					"@ClosedDate, @CancelledJob, @CancelledJobDate, @CancelledJobByUserId, @LastJobReopenedBy, @LastJobReopenedDate, " +
-					"@CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate, @Notes, @CompanyId, @CreatedBy, @IsProtected;",
+					"@CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate, @PendingForDelivery, " +
+					"@PendingDeliveryDate, @ArrivalDate, @Notes, @CompanyId, @CreatedBy, @IsProtected;",
 					p);
 				return model.Id;
 			}
@@ -258,9 +265,11 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@SeaportDestination", model.SeaportDestination);
 				p.Add("@CountryDestination", model.CountryDestination);
 				p.Add("@AgentId", model.AgentId);
+				p.Add("@ShippedWithId", model.ShippedWithId);
+				p.Add("@SideId", model.SideId);
+
 				p.Add("@FreeOfDemurrage", model.FreeOfDemurrage);
 				p.Add("@BookingNo", model.BookingNo);
-				p.Add("@ContainerNo", model.ContainerNo);
 				p.Add("@NatureOfGoods", model.NatureOfGoods);
 				p.Add("@ValueOfGoods", model.ValueOfGoods);
 				p.Add("@Quantities", model.Quantities);
@@ -287,7 +296,7 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@Atd", model.Atd);
 				p.Add("@Ata", model.Ata);
 				p.Add("@CutOffDate", model.CutOffDate);
-				p.Add("@DateOfLoading", model.DateOfLoading);
+				p.Add("@LoadingDate", model.LoadingDate);
 				p.Add("@Ppcc", model.Ppcc);
 				p.Add("@Status", model.Status);
 				p.Add("@BlStatus", model.BlStatus);
@@ -324,6 +333,10 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@PaidDODate", model.PaidDODate);
 				p.Add("@MissingDocuments", model.MissingDocuments);
 				p.Add("@MissingDocumentsDate", model.MissingDocumentsDate);
+				p.Add("@PendingForDelivery", model.PendingForDelivery);
+				p.Add("@PendingDeliveryDate", model.PendingDeliveryDate);
+				p.Add("@ArrivalDate", model.ArrivalDate);
+
 				// Preserved from EntityObject
 				p.Add("@Notes", model.Notes);
 				p.Add("@LastModifiedBy", model.LastModifiedBy);
@@ -333,17 +346,17 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				_ = connection.Execute(
 					@"dbo.job_UpdateJobSeaImport
 				        @Id, @ReferenceNo, @DepartmentId, @JobTypeId, @JobNo, @JobDate, @Mbl, @CustomerId, @ConsigneeId,
-				        @SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @FreeOfDemurrage,
-				        @BookingNo, @ContainerNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId,
+				        @SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @ShippedWithId, @SideId, 
+						@FreeOfDemurrage, @BookingNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId,
 				        @FeederVesselId, @PreferredCurrencyId, @TotalInvoicesLl, @TotalInvoicesUsd, @TotalCostsLl, @TotalCostsUsd,
 				        @OperatingUserId, @SalesId, @UserId, @Project, @Transit, @FullPaid, @FullPaidDate, @ClearingAgentId, @Etd, @Eta,
-				        @Atd, @Ata, @CutOffDate, @DateOfLoading, @Ppcc, @Status, @BlStatus, @RTejrim, @RTejrimDate, @Tejrim, @TejrimDate,
+				        @Atd, @Ata, @CutOffDate, @LoadingDate, @Ppcc, @Status, @BlStatus, @RTejrim, @RTejrimDate, @Tejrim, @TejrimDate,
 				        @RClearance, @RClearanceDate, @IncoTerms, @AllInOrderToBeLoaded, @AllInOrderOnWater, @Delivered, @DeliveredTo,
 				        @DeliveredDate, @ContainerToCnee, @ContainerToCneeDate, @EmptyContainer, @EmptyContainerDate,
 				        @ConfirmEmptyContainer, @ConfirmEmptyContainerDate, @JobScId, @JobStatus, @Closed, @ClosedDate,
 				        @CancelledJob, @CancelledJobDate, @CancelledJobByUserId, @LastJobReopenedBy, @LastJobReopenedDate,
-				        @CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate,
-				        @Notes, @LastModifiedBy, @Active, @IsProtected;",
+				        @CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate, @PendingForDelivery, 
+						@PendingDeliveryDate, @ArrivalDate, @Notes, @LastModifiedBy, @Active, @IsProtected;",
 					p);
 			}
 			catch (Exception e)
