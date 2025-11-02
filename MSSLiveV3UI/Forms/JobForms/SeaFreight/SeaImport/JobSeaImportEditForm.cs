@@ -864,5 +864,46 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
 		#endregion
 
+		private void btnAllInOrderTBL_Click(object sender, EventArgs e)
+		{
+			GridView view = gvRequiredToBeLoaded;
+
+			if (_jobSeaImportModel.AllInOrderToBeLoaded)
+			{
+				if (XtraMessageBox.Show($"Are you sure you want to clear list and reset to default?",
+						"Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+						MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					for (int i = 0; i < view.DataRowCount; i++)
+					{
+						if ((bool)view.GetRowCellValue(i, "IsRequired"))
+						{
+							view.SetRowCellValue(i, view.Columns["IsFulFilled"], false);
+						}
+					}
+					_jobSeaImportModel.AllInOrderToBeLoaded = false;
+					lcAllInOrderToBeloaded.Visibility = LayoutVisibility.Never;
+					btnAllInOrderTBL.Text = ToggleInOrderSetting(_jobSeaImportModel.AllInOrderToBeLoaded);
+				}
+			}
+			else
+			{
+				if (XtraMessageBox.Show($"Are you sure you want to put All in Order?",
+						"Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+						MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+				{
+					for (int i = 0; i < view.DataRowCount; i++)
+					{
+						if ((bool)view.GetRowCellValue(i, "IsRequired"))
+						{
+							view.SetRowCellValue(i, view.Columns["IsFulFilled"], true);
+						}
+					}
+					_jobSeaImportModel.AllInOrderToBeLoaded = true;
+					lcAllInOrderToBeloaded.Visibility = LayoutVisibility.Always;
+					btnAllInOrderTBL.Text = ToggleInOrderSetting(_jobSeaImportModel.AllInOrderToBeLoaded);
+				}
+			}
+		}
 	}
 }
