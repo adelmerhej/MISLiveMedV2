@@ -570,57 +570,91 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             return allInOrderMessage.ToString();
         }
 
-        private DocumentModel LoadDocument()
-        {
-            try
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-                ofd.Filter = @"All Files (*.*)|*.*" +
-                             @"|PDF Portable Document Format (*.pdf)|*.pdf" +
-                             @"|PNG Portable Network Graphics (*.png)|*.png" +
-                             @"|JPEG File Interchange Format (*.jpg *.jpeg *jfif)|*.jpg;*.jpeg;*.jfif" +
-                             @"|BMP Windows Bitmap (*.bmp)|*.bmp" +
-                             @"|TIF Tagged Imaged File Format (*.tif *.tiff)|*.tif;*.tiff" +
-                             @"|GIF Graphics Interchange Format (*.gif)|*.gif";
-
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    DocumentModel newDocument = new DocumentModel();
-                    using (FileStream stream = new FileStream(ofd.FileName, FileMode.Open))
-                    {
-
-                        newDocument.DocumentName = ofd.SafeFileName;
-                        newDocument.OriginPath = ofd.FileName;
-                        newDocument.DocumentDate = File.GetCreationTime(ofd.FileName);
-
-                        byte[] bytes = new byte[stream.Length];
-                        var read = stream.Read(bytes, 0, bytes.Length);
-
-                        newDocument.DocumentContent = bytes;
-                    }
-
-                    return newDocument;
-                }
-
-            }
-            catch (Exception e)
-            {
-                XtraMessageBox.Show(e.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return null;
-        }
-
         private void openFolder_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
 			try
 			{
-				DocumentModel documentModel = new DocumentModel();
-				documentModel = LoadDocument();
-				if (documentModel == null) return;
+				// Select one or more files to attach
+				var ofd = new OpenFileDialog
+				{
+					InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+					Multiselect = true,
+					Filter = @"All Files (*.*)|*.*" +
+							 @"|PDF Portable Document Format (*.pdf)|*.pdf" +
+							 @"|PNG Portable Network Graphics (*.png)|*.png" +
+							 @"|JPEG File Interchange Format (*.jpg *.jpeg *jfif)|*.jpg;*.jpeg;*.jfif" +
+							 @"|BMP Windows Bitmap (*.bmp)|*.bmp" +
+							 @"|TIF Tagged Imaged File Format (*.tif *.tiff)|*.tif;*.tiff" +
+							 @"|GIF Graphics Interchange Format (*.gif)|*.gif"
+				};
 
-				bsDocuments.Add(documentModel);
+				if (ofd.ShowDialog() != DialogResult.OK) return;
+
+				// Prepare destination folder: Documents\MISLiveMed\Jobs\<ReferenceNo>\<JobNo>
+				string referenceNo = !string.IsNullOrWhiteSpace(txtReferenceNo.Text)
+					? txtReferenceNo.Text
+					: _jobSeaImportModel.ReferenceNo;
+				string jobNo = !string.IsNullOrWhiteSpace(txtJobNo.Text)
+					? txtJobNo.Text
+					: _jobSeaImportModel.JobNo.ToString();
+
+				string Sanitize(string value)
+				{
+					if (string.IsNullOrWhiteSpace(value)) return "Unknown";
+					var invalid = Path.GetInvalidFileNameChars();
+					foreach (var c in invalid)
+					{
+						value = value.Replace(c.ToString(), "_");
+					}
+					return value.Trim();
+				}
+
+				referenceNo = Sanitize(referenceNo);
+				jobNo = Sanitize(jobNo);
+
+				string baseFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MISLiveMed", "Jobs", referenceNo, jobNo);
+				Directory.CreateDirectory(baseFolder);
+
+				foreach (var file in ofd.FileNames)
+				{
+					try
+					{
+						string fileName = Path.GetFileName(file);
+						string destinationPath = Path.Combine(baseFolder, fileName);
+
+						if (File.Exists(destinationPath))
+						{
+							var result = XtraMessageBox.Show($"File '{fileName}' already exists. Overwrite?", "Confirm Overwrite", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+							if (result == DialogResult.Cancel)
+							{
+								break;
+							}
+							if (result == DialogResult.No)
+							{
+								continue;
+							}
+							// Yes -> overwrite below
+						}
+
+						File.Copy(file, destinationPath, true);
+
+						// Create document model and add to binding source
+						var newDocument = new DocumentModel
+						{
+							DocumentName = Path.GetFileName(destinationPath),
+							OriginPath = destinationPath,
+							DocumentDate = File.GetCreationTime(destinationPath),
+							StreamedDate = DateTime.Now,
+							DocumentContent = File.ReadAllBytes(destinationPath)
+						};
+
+						bsDocuments.Add(newDocument);
+					}
+					catch (Exception ex)
+					{
+						XtraMessageBox.Show(ex.Message, @"Copy Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
 
 			}
 			catch (Exception exception)
