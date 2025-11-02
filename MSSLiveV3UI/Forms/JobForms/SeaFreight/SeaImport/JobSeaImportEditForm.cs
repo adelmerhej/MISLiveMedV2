@@ -9,6 +9,7 @@ using DevExpress.Utils.Menu;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout.Utils;
 using MISLiveMed.DataLayers.Accounting.Costs;
@@ -47,13 +48,13 @@ using MISLiveMed.Utils.Enums;
 namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 {
     public partial class JobSeaImportEditForm : RibbonForm
-	{
-		private const string _formName = "JobSeaImportEdit";
-		private int _formId;
+    {
+        private const string _formName = "JobSeaImportEdit";
+        private int _formId;
 
-		private DataEntityState _objState = DataEntityState.Unchanged;
+        private DataEntityState _objState = DataEntityState.Unchanged;
 
-		DXMenuItem[] _menuItems;
+        DXMenuItem[] _menuItems;
 
         private JobSeaImportModel _jobSeaImportModel = new JobSeaImportModel();
         private IList<JobSeaImportDetailModel> _jobSeaImportDetails = new List<JobSeaImportDetailModel>();
@@ -63,7 +64,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private IList<CustomerModel> _customers = new List<CustomerModel>();
         private IList<JobTypeModel> _jobTypes = new List<JobTypeModel>();
-        
+
         private IList<VesselModel> _vessels = new List<VesselModel>();
         private IList<AgentModel> _carriers = new List<AgentModel>();
 
@@ -71,6 +72,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private IList<TermsModel> _terms = new List<TermsModel>();
         private IList<PortModel> _seaports = new List<PortModel>();
         private IList<CountryModel> _countries = new List<CountryModel>();
+        private IList<AgentCategoryModel> _agentCategories = new List<AgentCategoryModel>();
+        private IList<AgentModel> _sideShippingAgents = new List<AgentModel>();
+
         private IList<ConditionDetailModel> _toBeLoadedConditions = new List<ConditionDetailModel>();
         private IList<ConditionDetailModel> _onWaterConditions = new List<ConditionDetailModel>();
         private IList<DocumentModel> _documents = new List<DocumentModel>();
@@ -99,6 +103,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private readonly InvoiceRepository _invoiceRepository = new InvoiceRepository();
         private readonly CostRepository _costRepository = new CostRepository();
+        private readonly AgentCategoryRepository agentCategoryRepository = new AgentCategoryRepository();
 
         /// <summary>
         /// User Permission Role
@@ -106,17 +111,17 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private IList<UserPermissionModel> _userPermission = new List<UserPermissionModel>();
         private readonly UserPermissionRepository _userPermissionRepository = new UserPermissionRepository();
         private readonly FormRepository _formRepository = new FormRepository();
-		private readonly LogInfoRepository _logInfoRepository = new LogInfoRepository();
+        private readonly LogInfoRepository _logInfoRepository = new LogInfoRepository();
 
-		//Init permission variables
-		private bool _canAdd;
-		private bool _canEdit;
-		private bool _canDelete;
-		private bool _canPrint;
-		private bool _isAdmin;
-		private bool _isProtected;
+        //Init permission variables
+        private bool _canAdd;
+        private bool _canEdit;
+        private bool _canDelete;
+        private bool _canPrint;
+        private bool _isAdmin;
+        private bool _isProtected;
 
-		public EventHandler SendUpdatedJobSeaImport;
+        public EventHandler SendUpdatedJobSeaImport;
 
         public JobSeaImportEditForm(JobSeaImportModel model)
         {
@@ -128,24 +133,26 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
                 InitializeBindings();
                 WireUpBindings();
-                ApplyDefaults();
+                UpdateAgents();
+
+				ApplyDefaults();
                 ApplyPermissions();
-				InitializeMenuItems();
+                InitializeMenuItems();
             }
             catch (Exception e)
             {
-				XtraMessageBox.Show(e.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
+                XtraMessageBox.Show(e.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void InitializeBindings()
         {
             try
-			{
-				_formId = _formRepository.SelectFormByName(_formName);
-				_userPermission = _userPermissionRepository.SelectUserPermissionById(CurrentUser.UserId, _formId);
+            {
+                _formId = _formRepository.SelectFormByName(_formName);
+                _userPermission = _userPermissionRepository.SelectUserPermissionById(CurrentUser.UserId, _formId);
 
-				_jobSeaImportDetails = _jobSeaImportModel.JobNo == 0
+                _jobSeaImportDetails = _jobSeaImportModel.JobNo == 0
                     ? new List<JobSeaImportDetailModel>()
                     : _jobSeaImportDetailRepository.JobsSeaImportDetailByJobNo(_jobSeaImportModel.JobNo);
 
@@ -155,8 +162,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
                 _customers = _customerRepository.SelectCustomers();
                 _agents = _agentRepository.SelectAgents();
+                _agentCategories = agentCategoryRepository.SelectAgentCategories();
 
-				_jobTypes = _jobTypeRepository.SelectJobsType();
+                _jobTypes = _jobTypeRepository.SelectJobsType();
                 _vessels = _vesselRepository.SeaVessels();
                 _terms = _termRepository.SelectTerms();
                 _seaports = _seaportRepository.SelectSeaports();
@@ -176,11 +184,11 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
                 _shippers = _shipperRepository.SelectShippers();
                 _carriers = _agentRepository.SelectAgentByCategoryId(4, false, false);
-			}
+            }
             catch (Exception e)
             {
-				XtraMessageBox.Show(e.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
+                XtraMessageBox.Show(e.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void WireUpBindings()
@@ -200,7 +208,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             cboCustomers.Properties.DataSource = _customers;
             cboCustomers.EditValue = _jobSeaImportModel.CustomerId;
 
-			cboConsignees.Properties.DataSource = null;
+            cboConsignees.Properties.DataSource = null;
             cboConsignees.Properties.DataSource = _customers;
             cboConsignees.EditValue = _jobSeaImportModel.ConsigneeId;
 
@@ -219,6 +227,10 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             cboAgents.Properties.DataSource = null;
             cboAgents.Properties.DataSource = _agents;
             cboAgents.EditValue = _jobSeaImportModel.AgentId;
+
+            cboShippedWith.Properties.DataSource = null;
+            cboShippedWith.Properties.DataSource = _agentCategories;
+            cboShippedWith.EditValue = _jobSeaImportModel.ShippedWithId;
 
             cboIncoTerms.Properties.DataSource = null;
             cboIncoTerms.Properties.DataSource = _terms;
@@ -240,10 +252,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             cboSales.Properties.DataSource = _users;
             cboSales.EditValue = _jobSeaImportModel.SalesId;
 
-            //cboSeaCarriers.Properties.DataSource = null;
-            //cboSeaCarriers.Properties.DataSource = _carriers;
-            //cboSeaCarriers.EditValue = _jobSeaImportModel.SideId;
-            
             cboOperatingUsers.Properties.DataSource = null;
             cboOperatingUsers.Properties.DataSource = _users;
             cboOperatingUsers.EditValue = _jobSeaImportModel.OperatingUserId;
@@ -261,44 +269,43 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             gcRequiredOnWater.DataSource = _onWaterConditions;
 
             btnProtected.Checked = _jobSeaImportModel.IsProtected;
-
-		}
+        }
 
         private void ApplyPermissions()
-		{
-			dtJobDate.ReadOnly = _userModel.SecurityLevel > 2;
-			cboUsers.ReadOnly = _userModel.SecurityLevel > 2;
-			cboSales.ReadOnly = _userModel.SecurityLevel > 2;
-			cboOperatingUsers.ReadOnly = _userModel.SecurityLevel > 2;
+        {
+            dtJobDate.ReadOnly = _userModel.SecurityLevel > 2;
+            cboUsers.ReadOnly = _userModel.SecurityLevel > 2;
+            cboSales.ReadOnly = _userModel.SecurityLevel > 2;
+            cboOperatingUsers.ReadOnly = _userModel.SecurityLevel > 2;
 
-			//rpSettings.Visible = _userModel.UserLevel < 3;
+            //rpSettings.Visible = _userModel.UserLevel < 3;
 
-			if (_userPermission == null) return;
-			if (_userPermission.Count <= 0) return;
+            if (_userPermission == null) return;
+            if (_userPermission.Count <= 0) return;
 
-			var canAdd = _userPermission.SingleOrDefault(x => x.ControlName == "CanAdd")?.Value;
-			if (canAdd != null) _canAdd = (bool)canAdd;
+            var canAdd = _userPermission.SingleOrDefault(x => x.ControlName == "CanAdd")?.Value;
+            if (canAdd != null) _canAdd = (bool)canAdd;
 
-			var canEdit = _userPermission.SingleOrDefault(x => x.ControlName == "CanEdit")?.Value;
-			if (canEdit != null) _canEdit = (bool)canEdit;
+            var canEdit = _userPermission.SingleOrDefault(x => x.ControlName == "CanEdit")?.Value;
+            if (canEdit != null) _canEdit = (bool)canEdit;
 
-			var canDelete = _userPermission.SingleOrDefault(x => x.ControlName == "CanDelete")?.Value;
-			if (canDelete != null) _canDelete = (bool)canDelete; 
+            var canDelete = _userPermission.SingleOrDefault(x => x.ControlName == "CanDelete")?.Value;
+            if (canDelete != null) _canDelete = (bool)canDelete;
 
-			var canPrint = _userPermission.SingleOrDefault(x => x.ControlName == "CanPrint")?.Value;
-			if (canPrint != null) _canPrint = (bool)canPrint;
+            var canPrint = _userPermission.SingleOrDefault(x => x.ControlName == "CanPrint")?.Value;
+            if (canPrint != null) _canPrint = (bool)canPrint;
 
-			var isAdmin = _userPermission.SingleOrDefault(x => x.ControlName == "IsAdmin")?.Value;
-			if (isAdmin != null) _isAdmin = (bool)isAdmin;
-            
-			var isProtected = _userPermission.SingleOrDefault(x => x.ControlName == "IsProtected")?.Value;
-			if (isProtected != null) _isProtected = (bool)isProtected;
-            
-			btnNew.Enabled = _isAdmin || _canAdd;
-			btnSave.Enabled = _isAdmin || _canEdit;
-			btnSaveAndClose.Enabled = _isAdmin || _canEdit;
-			btnPrint.Enabled = _isAdmin || _canPrint;
-			btnDelete.Enabled = _isAdmin || _canDelete;
+            var isAdmin = _userPermission.SingleOrDefault(x => x.ControlName == "IsAdmin")?.Value;
+            if (isAdmin != null) _isAdmin = (bool)isAdmin;
+
+            var isProtected = _userPermission.SingleOrDefault(x => x.ControlName == "IsProtected")?.Value;
+            if (isProtected != null) _isProtected = (bool)isProtected;
+
+            btnNew.Enabled = _isAdmin || _canAdd;
+            btnSave.Enabled = _isAdmin || _canEdit;
+            btnSaveAndClose.Enabled = _isAdmin || _canEdit;
+            btnPrint.Enabled = _isAdmin || _canPrint;
+            btnDelete.Enabled = _isAdmin || _canDelete;
             btnProtected.Enabled = _isAdmin;
         }
 
@@ -498,18 +505,18 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
                 // UPDATE DETAILS
                 foreach (var seaImportDetail in _jobSeaImportDetails)
                 {
-	                seaImportDetail.JobId = _jobSeaImportModel.JobNo;
+                    seaImportDetail.JobId = _jobSeaImportModel.JobNo;
 
-					if (seaImportDetail.Id == 0)
-	                {
-						_logInfoRepository.CreateLogInfo(seaImportDetail);
-						_ = _jobSeaImportDetailRepository.AddNewJobSeaImportDetail(seaImportDetail);
-					}
-	                else
-	                {
-						_logInfoRepository.UpdateLogInfo(seaImportDetail);
-						_jobSeaImportDetailRepository.UpdateJobSeaImportDetail(seaImportDetail);
-					}
+                    if (seaImportDetail.Id == 0)
+                    {
+                        _logInfoRepository.CreateLogInfo(seaImportDetail);
+                        _ = _jobSeaImportDetailRepository.AddNewJobSeaImportDetail(seaImportDetail);
+                    }
+                    else
+                    {
+                        _logInfoRepository.UpdateLogInfo(seaImportDetail);
+                        _jobSeaImportDetailRepository.UpdateJobSeaImportDetail(seaImportDetail);
+                    }
                 }
 
                 _objState = DataEntityState.Unchanged;
@@ -525,21 +532,21 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void UpdateFormComboListDetails()
         {
-			//cboCustomers
-			//cboConsignees
-			//cboJobsType
-			//cboDeparture
-			//cboDestination
+            //cboCustomers
+            //cboConsignees
+            //cboJobsType
+            //cboDeparture
+            //cboDestination
 
-			//cboVessels
-			//cboFeederVessels
-			//cboAgents
-			//cboIncoTerms
-			//cboSeaCarriers
+            //cboVessels
+            //cboFeederVessels
+            //cboAgents
+            //cboIncoTerms
+            //cboSeaCarriers
 
-			//cboUsers
-			//cboSales
-			//cboOperatingUsers
+            //cboUsers
+            //cboSales
+            //cboOperatingUsers
 
             _jobSeaImportModel.CustomerId = cboCustomers.EditValue == null ? 0 : (int)cboCustomers.EditValue;
             _jobSeaImportModel.ConsigneeId = cboConsignees.EditValue == null ? 0 : (int)cboConsignees.EditValue;
@@ -551,15 +558,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             _jobSeaImportModel.FeederVesselId = cboFeederVessels.EditValue == null ? 0 : (int)cboFeederVessels.EditValue;
             _jobSeaImportModel.AgentId = cboAgents.EditValue == null ? 0 : (int)cboAgents.EditValue;
             _jobSeaImportModel.IncoTerms = cboIncoTerms.EditValue == null ? 0 : (int)cboIncoTerms.EditValue;
-			//_jobSeaImportModel.SideId = cboSeaCarriers.EditValue == null ? 0 : (int)cboSeaCarriers.EditValue;
+            //_jobSeaImportModel.SideId = cboSeaCarriers.EditValue == null ? 0 : (int)cboSeaCarriers.EditValue;
             _jobSeaImportModel.UserId = cboUsers.EditValue == null ? 0 : (int)cboUsers.EditValue;
             _jobSeaImportModel.SalesId = cboSales.EditValue == null ? 0 : (int)cboSales.EditValue;
             _jobSeaImportModel.OperatingUserId = cboOperatingUsers.EditValue == null ? 0 : (int)cboOperatingUsers.EditValue;
 
-		}
+        }
 
 
-		private string ToggleInOrderSetting(bool isAllInOrder)
+        private string ToggleInOrderSetting(bool isAllInOrder)
         {
             string strOrigin = " ".PadLeft(4) + "<< All In Order".PadRight(20);
             string strAllInOrder = " ".PadLeft(4) + "Clear All In Order".PadRight(20);
@@ -570,98 +577,98 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             return allInOrderMessage.ToString();
         }
 
-        private void openFolder_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void openFolder_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-			try
-			{
-				// Select one or more files to attach
-				var ofd = new OpenFileDialog
-				{
-					InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-					Multiselect = true,
-					Filter = @"All Files (*.*)|*.*" +
-							 @"|PDF Portable Document Format (*.pdf)|*.pdf" +
-							 @"|PNG Portable Network Graphics (*.png)|*.png" +
-							 @"|JPEG File Interchange Format (*.jpg *.jpeg *jfif)|*.jpg;*.jpeg;*.jfif" +
-							 @"|BMP Windows Bitmap (*.bmp)|*.bmp" +
-							 @"|TIF Tagged Imaged File Format (*.tif *.tiff)|*.tif;*.tiff" +
-							 @"|GIF Graphics Interchange Format (*.gif)|*.gif"
-				};
+            try
+            {
+                // Select one or more files to attach
+                var ofd = new OpenFileDialog
+                {
+                    InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                    Multiselect = true,
+                    Filter = @"All Files (*.*)|*.*" +
+                             @"|PDF Portable Document Format (*.pdf)|*.pdf" +
+                             @"|PNG Portable Network Graphics (*.png)|*.png" +
+                             @"|JPEG File Interchange Format (*.jpg *.jpeg *jfif)|*.jpg;*.jpeg;*.jfif" +
+                             @"|BMP Windows Bitmap (*.bmp)|*.bmp" +
+                             @"|TIF Tagged Imaged File Format (*.tif *.tiff)|*.tif;*.tiff" +
+                             @"|GIF Graphics Interchange Format (*.gif)|*.gif"
+                };
 
-				if (ofd.ShowDialog() != DialogResult.OK) return;
+                if (ofd.ShowDialog() != DialogResult.OK) return;
 
-				// Prepare destination folder: Documents\MISLiveMed\Jobs\<ReferenceNo>\<JobNo>
-				string referenceNo = !string.IsNullOrWhiteSpace(txtReferenceNo.Text)
-					? txtReferenceNo.Text
-					: _jobSeaImportModel.ReferenceNo;
-				string jobNo = !string.IsNullOrWhiteSpace(txtJobNo.Text)
-					? txtJobNo.Text
-					: _jobSeaImportModel.JobNo.ToString();
+                // Prepare destination folder: Documents\MISLiveMed\Jobs\<ReferenceNo>\<JobNo>
+                string referenceNo = !string.IsNullOrWhiteSpace(txtReferenceNo.Text)
+                    ? txtReferenceNo.Text
+                    : _jobSeaImportModel.ReferenceNo;
+                string jobNo = !string.IsNullOrWhiteSpace(txtJobNo.Text)
+                    ? txtJobNo.Text
+                    : _jobSeaImportModel.JobNo.ToString();
 
-				string Sanitize(string value)
-				{
-					if (string.IsNullOrWhiteSpace(value)) return "Unknown";
-					var invalid = Path.GetInvalidFileNameChars();
-					foreach (var c in invalid)
-					{
-						value = value.Replace(c.ToString(), "_");
-					}
-					return value.Trim();
-				}
+                string Sanitize(string value)
+                {
+                    if (string.IsNullOrWhiteSpace(value)) return "Unknown";
+                    var invalid = Path.GetInvalidFileNameChars();
+                    foreach (var c in invalid)
+                    {
+                        value = value.Replace(c.ToString(), "_");
+                    }
+                    return value.Trim();
+                }
 
-				referenceNo = Sanitize(referenceNo);
-				jobNo = Sanitize(jobNo);
+                referenceNo = Sanitize(referenceNo);
+                jobNo = Sanitize(jobNo);
 
-				string baseFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MISLiveMed", "Jobs", referenceNo, jobNo);
-				Directory.CreateDirectory(baseFolder);
+                string baseFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MISLiveMed", "Jobs", referenceNo, jobNo);
+                Directory.CreateDirectory(baseFolder);
 
-				foreach (var file in ofd.FileNames)
-				{
-					try
-					{
-						string fileName = Path.GetFileName(file);
-						string destinationPath = Path.Combine(baseFolder, fileName);
+                foreach (var file in ofd.FileNames)
+                {
+                    try
+                    {
+                        string fileName = Path.GetFileName(file);
+                        string destinationPath = Path.Combine(baseFolder, fileName);
 
-						if (File.Exists(destinationPath))
-						{
-							var result = XtraMessageBox.Show($"File '{fileName}' already exists. Overwrite?", "Confirm Overwrite", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-							if (result == DialogResult.Cancel)
-							{
-								break;
-							}
-							if (result == DialogResult.No)
-							{
-								continue;
-							}
-							// Yes -> overwrite below
-						}
+                        if (File.Exists(destinationPath))
+                        {
+                            var result = XtraMessageBox.Show($"File '{fileName}' already exists. Overwrite?", "Confirm Overwrite", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                            if (result == DialogResult.Cancel)
+                            {
+                                break;
+                            }
+                            if (result == DialogResult.No)
+                            {
+                                continue;
+                            }
+                            // Yes -> overwrite below
+                        }
 
-						File.Copy(file, destinationPath, true);
+                        File.Copy(file, destinationPath, true);
 
-						// Create document model and add to binding source
-						var newDocument = new DocumentModel
-						{
-							DocumentName = Path.GetFileName(destinationPath),
-							OriginPath = destinationPath,
-							DocumentDate = File.GetCreationTime(destinationPath),
-							StreamedDate = DateTime.Now,
-							DocumentContent = File.ReadAllBytes(destinationPath)
-						};
+                        // Create document model and add to binding source
+                        var newDocument = new DocumentModel
+                        {
+                            DocumentName = Path.GetFileName(destinationPath),
+                            OriginPath = destinationPath,
+                            DocumentDate = File.GetCreationTime(destinationPath),
+                            StreamedDate = DateTime.Now,
+                            DocumentContent = File.ReadAllBytes(destinationPath)
+                        };
 
-						bsDocuments.Add(newDocument);
-					}
-					catch (Exception ex)
-					{
-						XtraMessageBox.Show(ex.Message, @"Copy Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
-				}
+                        bsDocuments.Add(newDocument);
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show(ex.Message, @"Copy Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
 
-			}
-			catch (Exception exception)
-			{
-				MessageBox.Show(exception.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void rgJobStatusAction_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
         {
@@ -743,58 +750,58 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void tabDetails_Click(object sender, EventArgs e)
         {
-	        switch (tabDetails.SelectedPage.Name)
-	        {
-		        case "tabSellingGroup":
-			        rpInvoice.Visible = true;
-			        rpCost.Visible = false;
-			        rcMain.SelectPage(rpInvoice);
-			        break;
+            switch (tabDetails.SelectedPage.Name)
+            {
+                case "tabSellingGroup":
+                    rpInvoice.Visible = true;
+                    rpCost.Visible = false;
+                    rcMain.SelectPage(rpInvoice);
+                    break;
 
-		        case "tabCostGroup":
-			        rpInvoice.Visible = false;
-			        rpCost.Visible = true;
-			        rcMain.SelectPage(rpCost);
-			        break;
+                case "tabCostGroup":
+                    rpInvoice.Visible = false;
+                    rpCost.Visible = true;
+                    rcMain.SelectPage(rpCost);
+                    break;
 
-		        default:
-			        rpInvoice.Visible = false;
-			        rpCost.Visible = false;
-			        rcMain.SelectPage(rpMain);
-			        break;
-	        }
-		}
+                default:
+                    rpInvoice.Visible = false;
+                    rpCost.Visible = false;
+                    rcMain.SelectPage(rpMain);
+                    break;
+            }
+        }
 
         private void btnProtected_CheckedChanged(object sender, ItemClickEventArgs e)
-		{
-			//if (_userPermission. != EnumStatusType.Requested) return;
+        {
+            //if (_userPermission. != EnumStatusType.Requested) return;
 
-			_jobSeaImportModel.IsProtected = btnProtected.Checked;
+            _jobSeaImportModel.IsProtected = btnProtected.Checked;
 
-			if (btnProtected.Checked)
-			{
-				//btnProtected.Appearance.Image.Palette = new Palette();
-				btnProtected.ItemAppearance.Normal.Font = new Font("Tahoma", 8, FontStyle.Bold);
-				btnProtected.ItemAppearance.Normal.ForeColor = Color.Red;
-				btnProtected.ItemAppearance.Hovered.Font = new Font("Tahoma", 8, FontStyle.Bold);
-				btnProtected.ItemAppearance.Hovered.ForeColor = Color.Red;
-				btnProtected.ItemAppearance.Pressed.Font = new Font("Tahoma", 8, FontStyle.Bold);
-				btnProtected.ItemAppearance.Pressed.ForeColor = Color.Red;
-			}
-			else
-			{
-				btnProtected.ItemAppearance.Normal.Font = new Font("Tahoma", 8, FontStyle.Regular);
-				btnProtected.ItemAppearance.Normal.ForeColor = Color.Black;
-				btnProtected.ItemAppearance.Hovered.Font = new Font("Tahoma", 8, FontStyle.Regular);
-				btnProtected.ItemAppearance.Hovered.ForeColor = Color.Black;
-				btnProtected.ItemAppearance.Pressed.Font = new Font("Tahoma", 8, FontStyle.Regular);
-				btnProtected.ItemAppearance.Pressed.ForeColor = Color.Black;
-			}
-		}
+            if (btnProtected.Checked)
+            {
+                //btnProtected.Appearance.Image.Palette = new Palette();
+                btnProtected.ItemAppearance.Normal.Font = new Font("Tahoma", 8, FontStyle.Bold);
+                btnProtected.ItemAppearance.Normal.ForeColor = Color.Red;
+                btnProtected.ItemAppearance.Hovered.Font = new Font("Tahoma", 8, FontStyle.Bold);
+                btnProtected.ItemAppearance.Hovered.ForeColor = Color.Red;
+                btnProtected.ItemAppearance.Pressed.Font = new Font("Tahoma", 8, FontStyle.Bold);
+                btnProtected.ItemAppearance.Pressed.ForeColor = Color.Red;
+            }
+            else
+            {
+                btnProtected.ItemAppearance.Normal.Font = new Font("Tahoma", 8, FontStyle.Regular);
+                btnProtected.ItemAppearance.Normal.ForeColor = Color.Black;
+                btnProtected.ItemAppearance.Hovered.Font = new Font("Tahoma", 8, FontStyle.Regular);
+                btnProtected.ItemAppearance.Hovered.ForeColor = Color.Black;
+                btnProtected.ItemAppearance.Pressed.Font = new Font("Tahoma", 8, FontStyle.Regular);
+                btnProtected.ItemAppearance.Pressed.ForeColor = Color.Black;
+            }
+        }
 
-		#region Invoices Buttons Event
-		private void btnNewInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        #region Invoices Buttons Event
+        private void btnNewInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
             if (_jobSeaImportModel == null || _jobSeaImportModel.Id == 0)
             {
                 XtraMessageBox.Show("Please save the job first before creating an invoice.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -811,133 +818,152 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             var frm = new InvoiceEditForm(newInvoice);
             frm.SendUpdatedInvoice += RcvUpdatedInvoice;
             frm.ShowDialog();
-		}
+        }
 
-		private void btnSaveInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnSaveInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
+        }
 
-		private void btnSaveAndCloseInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnSaveAndCloseInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
+        }
 
-		private void btnRefreshInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnRefreshInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
+        }
 
-		private void btnDeleteInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnDeleteInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
+        }
 
-		private void btnPrintInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnPrintInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
+        }
 
-		private void btnPrintOriginalInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnPrintOriginalInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
+        }
 
-		private void btnInvoiceProtected_ItemClick(object sender, ItemClickEventArgs e)
-		{
+        private void btnInvoiceProtected_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		}
-		private void btnCloseInvoice_ItemClick(object sender, ItemClickEventArgs e)
-		{
-			Close();
-		}
-		
-		#endregion
+        }
+        private void btnCloseInvoice_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Close();
+        }
 
-
-		#region Costsheet Buttons Event
-		private void btnNewCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-
-		private void btnSaveCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-
-		private void btnSaveAndCloseCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-
-		private void btnRefreshCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-
-		private void btnDeleteCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-
-		private void btnPrintCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-
-		private void btnCostProtected_ItemClick(object sender, ItemClickEventArgs e)
-		{
-
-		}
-		private void btnCloseCost_ItemClick(object sender, ItemClickEventArgs e)
-		{
-			Close();
-		}
+        #endregion
 
 
-		#endregion
+        #region Costsheet Buttons Event
+        private void btnNewCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
-		private void btnAllInOrderTBL_Click(object sender, EventArgs e)
-		{
-			GridView view = gvRequiredToBeLoaded;
+        }
 
-			if (_jobSeaImportModel.AllInOrderToBeLoaded)
-			{
-				if (XtraMessageBox.Show($"Are you sure you want to clear list and reset to default?",
-						"Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-						MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-				{
-					for (int i = 0; i < view.DataRowCount; i++)
-					{
-						if ((bool)view.GetRowCellValue(i, "IsRequired"))
-						{
-							view.SetRowCellValue(i, view.Columns["IsFulFilled"], false);
-						}
-					}
-					_jobSeaImportModel.AllInOrderToBeLoaded = false;
-					lcAllInOrderToBeloaded.Visibility = LayoutVisibility.Never;
-					btnAllInOrderTBL.Text = ToggleInOrderSetting(_jobSeaImportModel.AllInOrderToBeLoaded);
-				}
-			}
-			else
-			{
-				if (XtraMessageBox.Show($"Are you sure you want to put All in Order?",
-						"Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-						MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-				{
-					for (int i = 0; i < view.DataRowCount; i++)
-					{
-						if ((bool)view.GetRowCellValue(i, "IsRequired"))
-						{
-							view.SetRowCellValue(i, view.Columns["IsFulFilled"], true);
-						}
-					}
-					_jobSeaImportModel.AllInOrderToBeLoaded = true;
-					lcAllInOrderToBeloaded.Visibility = LayoutVisibility.Always;
-					btnAllInOrderTBL.Text = ToggleInOrderSetting(_jobSeaImportModel.AllInOrderToBeLoaded);
-				}
-			}
-		}
-	}
+        private void btnSaveCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnSaveAndCloseCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnRefreshCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnPrintCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnCostProtected_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+        private void btnCloseCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Close();
+        }
+
+
+        #endregion
+
+        private void btnAllInOrderTBL_Click(object sender, EventArgs e)
+        {
+            GridView view = gvRequiredToBeLoaded;
+
+            if (_jobSeaImportModel.AllInOrderToBeLoaded)
+            {
+                if (XtraMessageBox.Show($"Are you sure you want to clear list and reset to default?",
+                        "Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    for (int i = 0; i < view.DataRowCount; i++)
+                    {
+                        if ((bool)view.GetRowCellValue(i, "IsRequired"))
+                        {
+                            view.SetRowCellValue(i, view.Columns["IsFulFilled"], false);
+                        }
+                    }
+                    _jobSeaImportModel.AllInOrderToBeLoaded = false;
+                    lcAllInOrderToBeloaded.Visibility = LayoutVisibility.Never;
+                    btnAllInOrderTBL.Text = ToggleInOrderSetting(_jobSeaImportModel.AllInOrderToBeLoaded);
+                }
+            }
+            else
+            {
+                if (XtraMessageBox.Show($"Are you sure you want to put All in Order?",
+                        "Confirm...", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    for (int i = 0; i < view.DataRowCount; i++)
+                    {
+                        if ((bool)view.GetRowCellValue(i, "IsRequired"))
+                        {
+                            view.SetRowCellValue(i, view.Columns["IsFulFilled"], true);
+                        }
+                    }
+                    _jobSeaImportModel.AllInOrderToBeLoaded = true;
+                    lcAllInOrderToBeloaded.Visibility = LayoutVisibility.Always;
+                    btnAllInOrderTBL.Text = ToggleInOrderSetting(_jobSeaImportModel.AllInOrderToBeLoaded);
+                }
+            }
+        }
+
+        private void cboShippedWith_EditValueChanged(object sender, EventArgs e)
+        {
+            UpdateAgents();
+        }
+
+
+        private void UpdateAgents()
+        {
+			//lblSeaCarriers.Text = cboShippedWith.Text;
+			//lblSeaCarriers.Text = cboShippedWith.Text.LimitTo(15);
+
+			if (cboShippedWith.EditValue == null) return;
+            int shippedWithId = (int)cboShippedWith.EditValue;
+            _sideShippingAgents = _agentRepository.SelectAgentByCategoryId(shippedWithId, false, false);
+			cboSeaCarriers.Properties.DataSource = null;
+			cboSeaCarriers.Properties.DataSource = _agents;
+			cboSeaCarriers.EditValue = _jobSeaImportModel.SideId;
+        }
+    }
 }

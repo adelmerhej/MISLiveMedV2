@@ -891,4 +891,14 @@ namespace MISLiveMed.UI.Utilities
 			HelperApplication.SafeShowMessageBox(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 	}
+
+	// Define extension method
+	public static class StringExtensions
+	{
+		public static string LimitTo(this string text, int maxLength)
+		{
+			return text.Length > maxLength ? text.Substring(0, maxLength) : text;
+		}
+	}
+
 }

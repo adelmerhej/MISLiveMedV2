@@ -35,22 +35,22 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobSeaImportEditForm));
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
-			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup7 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges7 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges8 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup8 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem19 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem20 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem21 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem22 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem23 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem24 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.Utils.ContextButton contextButton2 = new DevExpress.Utils.ContextButton();
+			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.rcMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnSave = new DevExpress.XtraBars.BarButtonItem();
 			this.btnClose = new DevExpress.XtraBars.BarButtonItem();
@@ -1008,16 +1008,16 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.galleryQuickLetters.Gallery.ColumnCount = 2;
 			this.galleryQuickLetters.Gallery.DrawImageBackground = false;
-			galleryItemGroup1.Caption = "Group1";
+			galleryItemGroup7.Caption = "Group1";
 			this.galleryQuickLetters.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup7});
 			this.galleryQuickLetters.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-			skinPaddingEdges1.Bottom = -4;
-			skinPaddingEdges1.Top = -4;
-			this.galleryQuickLetters.Gallery.ItemImagePadding = skinPaddingEdges1;
-			skinPaddingEdges2.Bottom = -1;
-			skinPaddingEdges2.Top = -1;
-			this.galleryQuickLetters.Gallery.ItemTextPadding = skinPaddingEdges2;
+			skinPaddingEdges7.Bottom = -4;
+			skinPaddingEdges7.Top = -4;
+			this.galleryQuickLetters.Gallery.ItemImagePadding = skinPaddingEdges7;
+			skinPaddingEdges8.Bottom = -1;
+			skinPaddingEdges8.Top = -1;
+			this.galleryQuickLetters.Gallery.ItemTextPadding = skinPaddingEdges8;
 			this.galleryQuickLetters.Gallery.ShowItemText = true;
 			this.galleryQuickLetters.Id = 14;
 			this.galleryQuickLetters.Name = "galleryQuickLetters";
@@ -1057,41 +1057,41 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.rgJobStatusAction.Gallery.ColumnCount = 3;
 			this.rgJobStatusAction.Gallery.DrawImageBackground = false;
-			galleryItemGroup2.Caption = "ActionGroup";
-			galleryItem1.Caption = "Normal Mod";
-			galleryItem1.Checked = true;
-			galleryItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
-			galleryItem1.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem1.Value = 0;
-			galleryItem2.Caption = "Close current Job";
-			galleryItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
-			galleryItem2.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem2.Value = 1;
-			galleryItem3.Caption = "Edit closed Job";
-			galleryItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
-			galleryItem3.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem3.Value = 2;
-			galleryItem4.Caption = "Cancel current File";
-			galleryItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
-			galleryItem4.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem4.Value = 3;
-			galleryItem5.Caption = "ReOpen canceled File";
-			galleryItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
-			galleryItem5.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem5.Value = 4;
-			galleryItem6.Caption = "N/A";
-			galleryItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
-			galleryItem6.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem6.Value = 5;
-			galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1,
-            galleryItem2,
-            galleryItem3,
-            galleryItem4,
-            galleryItem5,
-            galleryItem6});
+			galleryItemGroup8.Caption = "ActionGroup";
+			galleryItem19.Caption = "Normal Mod";
+			galleryItem19.Checked = true;
+			galleryItem19.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+			galleryItem19.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem19.Value = 0;
+			galleryItem20.Caption = "Close current Job";
+			galleryItem20.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
+			galleryItem20.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem20.Value = 1;
+			galleryItem21.Caption = "Edit closed Job";
+			galleryItem21.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
+			galleryItem21.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem21.Value = 2;
+			galleryItem22.Caption = "Cancel current File";
+			galleryItem22.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
+			galleryItem22.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem22.Value = 3;
+			galleryItem23.Caption = "ReOpen canceled File";
+			galleryItem23.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
+			galleryItem23.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem23.Value = 4;
+			galleryItem24.Caption = "N/A";
+			galleryItem24.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
+			galleryItem24.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem24.Value = 5;
+			galleryItemGroup8.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem19,
+            galleryItem20,
+            galleryItem21,
+            galleryItem22,
+            galleryItem23,
+            galleryItem24});
 			this.rgJobStatusAction.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup8});
 			this.rgJobStatusAction.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleCheck;
 			this.rgJobStatusAction.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
 			this.rgJobStatusAction.Gallery.ShowItemText = true;
@@ -2411,7 +2411,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.tabShipmentInformation.Controls.Add(this.layoutShipmentTracking);
 			this.tabShipmentInformation.Name = "tabShipmentInformation";
-			this.tabShipmentInformation.Size = new System.Drawing.Size(814, 374);
+			this.tabShipmentInformation.Size = new System.Drawing.Size(812, 372);
 			this.tabShipmentInformation.Text = "Shipment Information";
 			// 
 			// layoutShipmentTracking
@@ -2448,7 +2448,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutShipmentTracking.Location = new System.Drawing.Point(0, 0);
 			this.layoutShipmentTracking.Name = "layoutShipmentTracking";
 			this.layoutShipmentTracking.Root = this.layoutControlGroup9;
-			this.layoutShipmentTracking.Size = new System.Drawing.Size(814, 374);
+			this.layoutShipmentTracking.Size = new System.Drawing.Size(812, 372);
 			this.layoutShipmentTracking.TabIndex = 0;
 			this.layoutShipmentTracking.Text = "layoutControl1";
 			// 
@@ -2463,9 +2463,10 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboShippedWith.Properties.NullText = "";
 			this.cboShippedWith.Properties.PopupView = this.gridView1;
 			this.cboShippedWith.Properties.ValueMember = "Id";
-			this.cboShippedWith.Size = new System.Drawing.Size(240, 22);
+			this.cboShippedWith.Size = new System.Drawing.Size(239, 22);
 			this.cboShippedWith.StyleController = this.layoutShipmentTracking;
 			this.cboShippedWith.TabIndex = 35;
+			this.cboShippedWith.EditValueChanged += new System.EventHandler(this.cboShippedWith_EditValueChanged);
 			// 
 			// gridView1
 			// 
@@ -2499,7 +2500,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtConfirmEmptyContainer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "ConfirmEmptyContainerDate", true));
 			this.dtConfirmEmptyContainer.EditValue = null;
-			this.dtConfirmEmptyContainer.Location = new System.Drawing.Point(195, 336);
+			this.dtConfirmEmptyContainer.Location = new System.Drawing.Point(195, 334);
 			this.dtConfirmEmptyContainer.MenuManager = this.rcMain;
 			this.dtConfirmEmptyContainer.Name = "dtConfirmEmptyContainer";
 			this.dtConfirmEmptyContainer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2510,7 +2511,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtConfirmEmptyContainer.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtConfirmEmptyContainer.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtConfirmEmptyContainer.Properties.UseMaskAsDisplayFormat = true;
-			this.dtConfirmEmptyContainer.Size = new System.Drawing.Size(178, 22);
+			this.dtConfirmEmptyContainer.Size = new System.Drawing.Size(177, 22);
 			this.dtConfirmEmptyContainer.StyleController = this.layoutShipmentTracking;
 			this.dtConfirmEmptyContainer.TabIndex = 34;
 			// 
@@ -2518,7 +2519,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtEmptyContainer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "EmptyContainerDate", true));
 			this.dtEmptyContainer.EditValue = null;
-			this.dtEmptyContainer.Location = new System.Drawing.Point(195, 308);
+			this.dtEmptyContainer.Location = new System.Drawing.Point(195, 306);
 			this.dtEmptyContainer.MenuManager = this.rcMain;
 			this.dtEmptyContainer.Name = "dtEmptyContainer";
 			this.dtEmptyContainer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2529,7 +2530,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtEmptyContainer.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtEmptyContainer.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtEmptyContainer.Properties.UseMaskAsDisplayFormat = true;
-			this.dtEmptyContainer.Size = new System.Drawing.Size(178, 22);
+			this.dtEmptyContainer.Size = new System.Drawing.Size(177, 22);
 			this.dtEmptyContainer.StyleController = this.layoutShipmentTracking;
 			this.dtEmptyContainer.TabIndex = 33;
 			// 
@@ -2537,7 +2538,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtContainerToCnee.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "ContainerToCneeDate", true));
 			this.dtContainerToCnee.EditValue = null;
-			this.dtContainerToCnee.Location = new System.Drawing.Point(195, 280);
+			this.dtContainerToCnee.Location = new System.Drawing.Point(195, 278);
 			this.dtContainerToCnee.MenuManager = this.rcMain;
 			this.dtContainerToCnee.Name = "dtContainerToCnee";
 			this.dtContainerToCnee.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2548,14 +2549,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtContainerToCnee.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtContainerToCnee.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtContainerToCnee.Properties.UseMaskAsDisplayFormat = true;
-			this.dtContainerToCnee.Size = new System.Drawing.Size(178, 22);
+			this.dtContainerToCnee.Size = new System.Drawing.Size(177, 22);
 			this.dtContainerToCnee.StyleController = this.layoutShipmentTracking;
 			this.dtContainerToCnee.TabIndex = 32;
 			// 
 			// chkEmptyContainer
 			// 
 			this.chkEmptyContainer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "EmptyContainer", true));
-			this.chkEmptyContainer.Location = new System.Drawing.Point(14, 308);
+			this.chkEmptyContainer.Location = new System.Drawing.Point(14, 306);
 			this.chkEmptyContainer.MenuManager = this.rcMain;
 			this.chkEmptyContainer.Name = "chkEmptyContainer";
 			this.chkEmptyContainer.Properties.Caption = "Empty in Depot";
@@ -2566,7 +2567,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// chkConfirmEmptyContainer
 			// 
 			this.chkConfirmEmptyContainer.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "ConfirmEmptyContainer", true));
-			this.chkConfirmEmptyContainer.Location = new System.Drawing.Point(14, 336);
+			this.chkConfirmEmptyContainer.Location = new System.Drawing.Point(14, 334);
 			this.chkConfirmEmptyContainer.MenuManager = this.rcMain;
 			this.chkConfirmEmptyContainer.Name = "chkConfirmEmptyContainer";
 			this.chkConfirmEmptyContainer.Properties.Caption = "Confirm Empty in Depot";
@@ -2577,7 +2578,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// chkContainerToCnee
 			// 
 			this.chkContainerToCnee.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "ContainerToCnee", true));
-			this.chkContainerToCnee.Location = new System.Drawing.Point(14, 280);
+			this.chkContainerToCnee.Location = new System.Drawing.Point(14, 278);
 			this.chkContainerToCnee.MenuManager = this.rcMain;
 			this.chkContainerToCnee.Name = "chkContainerToCnee";
 			this.chkContainerToCnee.Properties.Caption = "Container to consignee";
@@ -2591,7 +2592,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtBookingNo.Location = new System.Drawing.Point(133, 118);
 			this.txtBookingNo.MenuManager = this.rcMain;
 			this.txtBookingNo.Name = "txtBookingNo";
-			this.txtBookingNo.Size = new System.Drawing.Size(240, 22);
+			this.txtBookingNo.Size = new System.Drawing.Size(239, 22);
 			this.txtBookingNo.StyleController = this.layoutShipmentTracking;
 			this.txtBookingNo.TabIndex = 28;
 			// 
@@ -2599,7 +2600,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtMissingDocumentsDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "MissingDocumentsDate", true));
 			this.dtMissingDocumentsDate.EditValue = null;
-			this.dtMissingDocumentsDate.Location = new System.Drawing.Point(541, 210);
+			this.dtMissingDocumentsDate.Location = new System.Drawing.Point(540, 210);
 			this.dtMissingDocumentsDate.MenuManager = this.rcMain;
 			this.dtMissingDocumentsDate.Name = "dtMissingDocumentsDate";
 			this.dtMissingDocumentsDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2610,7 +2611,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtMissingDocumentsDate.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtMissingDocumentsDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtMissingDocumentsDate.Properties.UseMaskAsDisplayFormat = true;
-			this.dtMissingDocumentsDate.Size = new System.Drawing.Size(259, 22);
+			this.dtMissingDocumentsDate.Size = new System.Drawing.Size(258, 22);
 			this.dtMissingDocumentsDate.StyleController = this.layoutShipmentTracking;
 			this.dtMissingDocumentsDate.TabIndex = 27;
 			// 
@@ -2618,7 +2619,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtPaidDoDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "PaidDODate", true));
 			this.dtPaidDoDate.EditValue = null;
-			this.dtPaidDoDate.Location = new System.Drawing.Point(541, 182);
+			this.dtPaidDoDate.Location = new System.Drawing.Point(540, 182);
 			this.dtPaidDoDate.MenuManager = this.rcMain;
 			this.dtPaidDoDate.Name = "dtPaidDoDate";
 			this.dtPaidDoDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2629,7 +2630,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtPaidDoDate.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtPaidDoDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtPaidDoDate.Properties.UseMaskAsDisplayFormat = true;
-			this.dtPaidDoDate.Size = new System.Drawing.Size(259, 22);
+			this.dtPaidDoDate.Size = new System.Drawing.Size(258, 22);
 			this.dtPaidDoDate.StyleController = this.layoutShipmentTracking;
 			this.dtPaidDoDate.TabIndex = 26;
 			// 
@@ -2637,7 +2638,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtTejrimDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "TejrimDate", true));
 			this.dtTejrimDate.EditValue = null;
-			this.dtTejrimDate.Location = new System.Drawing.Point(541, 154);
+			this.dtTejrimDate.Location = new System.Drawing.Point(540, 154);
 			this.dtTejrimDate.MenuManager = this.rcMain;
 			this.dtTejrimDate.Name = "dtTejrimDate";
 			this.dtTejrimDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2648,7 +2649,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtTejrimDate.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtTejrimDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtTejrimDate.Properties.UseMaskAsDisplayFormat = true;
-			this.dtTejrimDate.Size = new System.Drawing.Size(259, 22);
+			this.dtTejrimDate.Size = new System.Drawing.Size(258, 22);
 			this.dtTejrimDate.StyleController = this.layoutShipmentTracking;
 			this.dtTejrimDate.TabIndex = 25;
 			// 
@@ -2667,7 +2668,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dateEdit10.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dateEdit10.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dateEdit10.Properties.UseMaskAsDisplayFormat = true;
-			this.dateEdit10.Size = new System.Drawing.Size(178, 22);
+			this.dateEdit10.Size = new System.Drawing.Size(177, 22);
 			this.dateEdit10.StyleController = this.layoutShipmentTracking;
 			this.dateEdit10.TabIndex = 24;
 			// 
@@ -2686,7 +2687,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtPendingForDelivery.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtPendingForDelivery.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtPendingForDelivery.Properties.UseMaskAsDisplayFormat = true;
-			this.dtPendingForDelivery.Size = new System.Drawing.Size(178, 22);
+			this.dtPendingForDelivery.Size = new System.Drawing.Size(177, 22);
 			this.dtPendingForDelivery.StyleController = this.layoutShipmentTracking;
 			this.dtPendingForDelivery.TabIndex = 23;
 			// 
@@ -2705,7 +2706,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtReadyForClearance.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtReadyForClearance.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtReadyForClearance.Properties.UseMaskAsDisplayFormat = true;
-			this.dtReadyForClearance.Size = new System.Drawing.Size(178, 22);
+			this.dtReadyForClearance.Size = new System.Drawing.Size(177, 22);
 			this.dtReadyForClearance.StyleController = this.layoutShipmentTracking;
 			this.dtReadyForClearance.TabIndex = 22;
 			// 
@@ -2724,7 +2725,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtReadyForTejrim.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
 			this.dtReadyForTejrim.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtReadyForTejrim.Properties.UseMaskAsDisplayFormat = true;
-			this.dtReadyForTejrim.Size = new System.Drawing.Size(178, 22);
+			this.dtReadyForTejrim.Size = new System.Drawing.Size(177, 22);
 			this.dtReadyForTejrim.StyleController = this.layoutShipmentTracking;
 			this.dtReadyForTejrim.TabIndex = 21;
 			// 
@@ -2742,7 +2743,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// chkMissingDocuments
 			// 
 			this.chkMissingDocuments.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "MissingDocuments", true));
-			this.chkMissingDocuments.Location = new System.Drawing.Point(387, 210);
+			this.chkMissingDocuments.Location = new System.Drawing.Point(386, 210);
 			this.chkMissingDocuments.MenuManager = this.rcMain;
 			this.chkMissingDocuments.Name = "chkMissingDocuments";
 			this.chkMissingDocuments.Properties.Caption = "Missing Documents";
@@ -2764,7 +2765,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// chkPaidDo
 			// 
 			this.chkPaidDo.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "PaidDO", true));
-			this.chkPaidDo.Location = new System.Drawing.Point(387, 182);
+			this.chkPaidDo.Location = new System.Drawing.Point(386, 182);
 			this.chkPaidDo.MenuManager = this.rcMain;
 			this.chkPaidDo.Name = "chkPaidDo";
 			this.chkPaidDo.Properties.Caption = "Paid D/O";
@@ -2786,7 +2787,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// chkTejrim
 			// 
 			this.chkTejrim.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "Tejrim", true));
-			this.chkTejrim.Location = new System.Drawing.Point(387, 154);
+			this.chkTejrim.Location = new System.Drawing.Point(386, 154);
 			this.chkTejrim.MenuManager = this.rcMain;
 			this.chkTejrim.Name = "chkTejrim";
 			this.chkTejrim.Properties.Caption = "Tejrim";
@@ -2815,7 +2816,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboAgents.Properties.NullText = "";
 			this.cboAgents.Properties.PopupView = this.gridView12;
 			this.cboAgents.Properties.ValueMember = "Id";
-			this.cboAgents.Size = new System.Drawing.Size(667, 22);
+			this.cboAgents.Size = new System.Drawing.Size(665, 22);
 			this.cboAgents.StyleController = this.layoutShipmentTracking;
 			this.cboAgents.TabIndex = 17;
 			// 
@@ -2857,7 +2858,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboIncoTerms.Properties.NullText = "";
 			this.cboIncoTerms.Properties.PopupView = this.gridView13;
 			this.cboIncoTerms.Properties.ValueMember = "Id";
-			this.cboIncoTerms.Size = new System.Drawing.Size(240, 22);
+			this.cboIncoTerms.Size = new System.Drawing.Size(239, 22);
 			this.cboIncoTerms.StyleController = this.layoutShipmentTracking;
 			this.cboIncoTerms.TabIndex = 18;
 			// 
@@ -2901,15 +2902,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// cboSeaCarriers
 			// 
-			this.cboSeaCarriers.Location = new System.Drawing.Point(496, 66);
+			this.cboSeaCarriers.Location = new System.Drawing.Point(495, 66);
 			this.cboSeaCarriers.Name = "cboSeaCarriers";
 			this.cboSeaCarriers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.cboSeaCarriers.Properties.DisplayMember = "CarrierName";
+			this.cboSeaCarriers.Properties.DisplayMember = "AgentName";
 			this.cboSeaCarriers.Properties.NullText = "";
 			this.cboSeaCarriers.Properties.PopupView = this.searchLookUpEdit3View;
 			this.cboSeaCarriers.Properties.ValueMember = "Id";
-			this.cboSeaCarriers.Size = new System.Drawing.Size(304, 22);
+			this.cboSeaCarriers.Size = new System.Drawing.Size(303, 22);
 			this.cboSeaCarriers.StyleController = this.layoutShipmentTracking;
 			this.cboSeaCarriers.TabIndex = 19;
 			// 
@@ -2930,16 +2931,16 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.ColumnSeaCarrierId.Name = "ColumnSeaCarrierId";
 			this.ColumnSeaCarrierId.Visible = true;
 			this.ColumnSeaCarrierId.VisibleIndex = 0;
-			this.ColumnSeaCarrierId.Width = 96;
+			this.ColumnSeaCarrierId.Width = 97;
 			// 
 			// ColumnSeaCarrierName
 			// 
 			this.ColumnSeaCarrierName.Caption = "Name";
-			this.ColumnSeaCarrierName.FieldName = "Name";
+			this.ColumnSeaCarrierName.FieldName = "AgentName";
 			this.ColumnSeaCarrierName.Name = "ColumnSeaCarrierName";
 			this.ColumnSeaCarrierName.Visible = true;
 			this.ColumnSeaCarrierName.VisibleIndex = 1;
-			this.ColumnSeaCarrierName.Width = 940;
+			this.ColumnSeaCarrierName.Width = 939;
 			// 
 			// cboVessels
 			// 
@@ -2952,7 +2953,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboVessels.Properties.PopupView = this.gridView61;
 			this.cboVessels.Properties.ShowAddNewButton = true;
 			this.cboVessels.Properties.ValueMember = "Id";
-			this.cboVessels.Size = new System.Drawing.Size(240, 22);
+			this.cboVessels.Size = new System.Drawing.Size(239, 22);
 			this.cboVessels.StyleController = this.layoutShipmentTracking;
 			this.cboVessels.TabIndex = 11;
 			// 
@@ -2986,7 +2987,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// cboFeederVessels
 			// 
-			this.cboFeederVessels.Location = new System.Drawing.Point(496, 14);
+			this.cboFeederVessels.Location = new System.Drawing.Point(495, 14);
 			this.cboFeederVessels.Name = "cboFeederVessels";
 			this.cboFeederVessels.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2995,7 +2996,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboFeederVessels.Properties.PopupView = this.gridView7;
 			this.cboFeederVessels.Properties.ShowAddNewButton = true;
 			this.cboFeederVessels.Properties.ValueMember = "Id";
-			this.cboFeederVessels.Size = new System.Drawing.Size(304, 22);
+			this.cboFeederVessels.Size = new System.Drawing.Size(303, 22);
 			this.cboFeederVessels.StyleController = this.layoutShipmentTracking;
 			this.cboFeederVessels.TabIndex = 14;
 			// 
@@ -3030,9 +3031,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// txtFreeOfDemurage
 			// 
 			this.txtFreeOfDemurage.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "FreeOfDemurrage", true));
-			this.txtFreeOfDemurage.Location = new System.Drawing.Point(496, 118);
+			this.txtFreeOfDemurage.Location = new System.Drawing.Point(495, 118);
 			this.txtFreeOfDemurage.Name = "txtFreeOfDemurage";
-			this.txtFreeOfDemurage.Size = new System.Drawing.Size(304, 22);
+			this.txtFreeOfDemurage.Size = new System.Drawing.Size(303, 22);
 			this.txtFreeOfDemurage.StyleController = this.layoutShipmentTracking;
 			this.txtFreeOfDemurage.TabIndex = 15;
 			// 
@@ -3075,7 +3076,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.emptySpaceItem2,
             this.lblShippedWith});
 			this.layoutControlGroup9.Name = "Root";
-			this.layoutControlGroup9.Size = new System.Drawing.Size(814, 374);
+			this.layoutControlGroup9.Size = new System.Drawing.Size(812, 372);
 			this.layoutControlGroup9.TextVisible = false;
 			// 
 			// layoutControlItem15
@@ -3105,7 +3106,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// layoutControlItem16
 			// 
 			this.layoutControlItem16.Control = this.chkTejrim;
-			this.layoutControlItem16.Location = new System.Drawing.Point(373, 140);
+			this.layoutControlItem16.Location = new System.Drawing.Point(372, 140);
 			this.layoutControlItem16.Name = "layoutControlItem16";
 			this.layoutControlItem16.Size = new System.Drawing.Size(145, 28);
 			this.layoutControlItem16.TextVisible = false;
@@ -3113,7 +3114,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// layoutControlItem18
 			// 
 			this.layoutControlItem18.Control = this.chkPaidDo;
-			this.layoutControlItem18.Location = new System.Drawing.Point(373, 168);
+			this.layoutControlItem18.Location = new System.Drawing.Point(372, 168);
 			this.layoutControlItem18.Name = "layoutControlItem18";
 			this.layoutControlItem18.Size = new System.Drawing.Size(145, 28);
 			this.layoutControlItem18.TextVisible = false;
@@ -3121,7 +3122,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// layoutControlItem20
 			// 
 			this.layoutControlItem20.Control = this.chkMissingDocuments;
-			this.layoutControlItem20.Location = new System.Drawing.Point(373, 196);
+			this.layoutControlItem20.Location = new System.Drawing.Point(372, 196);
 			this.layoutControlItem20.Name = "layoutControlItem20";
 			this.layoutControlItem20.Size = new System.Drawing.Size(145, 28);
 			this.layoutControlItem20.TextVisible = false;
@@ -3138,7 +3139,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.emptySpaceItem5.Location = new System.Drawing.Point(0, 130);
 			this.emptySpaceItem5.Name = "emptySpaceItem5";
-			this.emptySpaceItem5.Size = new System.Drawing.Size(790, 10);
+			this.emptySpaceItem5.Size = new System.Drawing.Size(788, 10);
 			// 
 			// lblVessels
 			// 
@@ -3147,7 +3148,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblVessels.CustomizationFormText = "Vessel";
 			this.lblVessels.Location = new System.Drawing.Point(0, 0);
 			this.lblVessels.Name = "lblVessels";
-			this.lblVessels.Size = new System.Drawing.Size(363, 26);
+			this.lblVessels.Size = new System.Drawing.Size(362, 26);
 			this.lblVessels.Text = "Vessel";
 			this.lblVessels.TextSize = new System.Drawing.Size(104, 16);
 			// 
@@ -3156,9 +3157,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblFeederVessels.Control = this.cboFeederVessels;
 			this.lblFeederVessels.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblFeederVessels.CustomizationFormText = "Feeder Vessel";
-			this.lblFeederVessels.Location = new System.Drawing.Point(363, 0);
+			this.lblFeederVessels.Location = new System.Drawing.Point(362, 0);
 			this.lblFeederVessels.Name = "lblFeederVessels";
-			this.lblFeederVessels.Size = new System.Drawing.Size(427, 26);
+			this.lblFeederVessels.Size = new System.Drawing.Size(426, 26);
 			this.lblFeederVessels.Text = "Feeder Vessel";
 			this.lblFeederVessels.TextSize = new System.Drawing.Size(104, 16);
 			// 
@@ -3169,7 +3170,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblAgents.CustomizationFormText = "Agents";
 			this.lblAgents.Location = new System.Drawing.Point(0, 26);
 			this.lblAgents.Name = "lblAgents";
-			this.lblAgents.Size = new System.Drawing.Size(790, 26);
+			this.lblAgents.Size = new System.Drawing.Size(788, 26);
 			this.lblAgents.Text = "Agents";
 			this.lblAgents.TextSize = new System.Drawing.Size(104, 16);
 			// 
@@ -3178,9 +3179,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblSeaCarriers.Control = this.cboSeaCarriers;
 			this.lblSeaCarriers.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblSeaCarriers.CustomizationFormText = "Sea Carriers";
-			this.lblSeaCarriers.Location = new System.Drawing.Point(363, 52);
+			this.lblSeaCarriers.Location = new System.Drawing.Point(362, 52);
 			this.lblSeaCarriers.Name = "lblSeaCarriers";
-			this.lblSeaCarriers.Size = new System.Drawing.Size(427, 26);
+			this.lblSeaCarriers.Size = new System.Drawing.Size(426, 26);
 			this.lblSeaCarriers.Text = "Sea Carriers";
 			this.lblSeaCarriers.TextSize = new System.Drawing.Size(104, 16);
 			// 
@@ -3191,16 +3192,16 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblIncoTerms.CustomizationFormText = "Inco Terms";
 			this.lblIncoTerms.Location = new System.Drawing.Point(0, 78);
 			this.lblIncoTerms.Name = "lblIncoTerms";
-			this.lblIncoTerms.Size = new System.Drawing.Size(363, 26);
+			this.lblIncoTerms.Size = new System.Drawing.Size(362, 26);
 			this.lblIncoTerms.Text = "Inco Terms";
 			this.lblIncoTerms.TextSize = new System.Drawing.Size(104, 16);
 			// 
 			// lblTejrimDate
 			// 
 			this.lblTejrimDate.Control = this.dtTejrimDate;
-			this.lblTejrimDate.Location = new System.Drawing.Point(518, 140);
+			this.lblTejrimDate.Location = new System.Drawing.Point(517, 140);
 			this.lblTejrimDate.Name = "lblTejrimDate";
-			this.lblTejrimDate.Size = new System.Drawing.Size(272, 28);
+			this.lblTejrimDate.Size = new System.Drawing.Size(271, 28);
 			this.lblTejrimDate.Text = " ";
 			this.lblTejrimDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblTejrimDate.TextSize = new System.Drawing.Size(4, 16);
@@ -3209,9 +3210,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lblPaidDoDate
 			// 
 			this.lblPaidDoDate.Control = this.dtPaidDoDate;
-			this.lblPaidDoDate.Location = new System.Drawing.Point(518, 168);
+			this.lblPaidDoDate.Location = new System.Drawing.Point(517, 168);
 			this.lblPaidDoDate.Name = "lblPaidDoDate";
-			this.lblPaidDoDate.Size = new System.Drawing.Size(272, 28);
+			this.lblPaidDoDate.Size = new System.Drawing.Size(271, 28);
 			this.lblPaidDoDate.Text = " ";
 			this.lblPaidDoDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblPaidDoDate.TextSize = new System.Drawing.Size(4, 16);
@@ -3220,9 +3221,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lblMissingDocumentsDate
 			// 
 			this.lblMissingDocumentsDate.Control = this.dtMissingDocumentsDate;
-			this.lblMissingDocumentsDate.Location = new System.Drawing.Point(518, 196);
+			this.lblMissingDocumentsDate.Location = new System.Drawing.Point(517, 196);
 			this.lblMissingDocumentsDate.Name = "lblMissingDocumentsDate";
-			this.lblMissingDocumentsDate.Size = new System.Drawing.Size(272, 28);
+			this.lblMissingDocumentsDate.Size = new System.Drawing.Size(271, 28);
 			this.lblMissingDocumentsDate.Text = " ";
 			this.lblMissingDocumentsDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblMissingDocumentsDate.TextSize = new System.Drawing.Size(4, 16);
@@ -3230,18 +3231,18 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// emptySpaceItem15
 			// 
-			this.emptySpaceItem15.Location = new System.Drawing.Point(363, 78);
+			this.emptySpaceItem15.Location = new System.Drawing.Point(362, 78);
 			this.emptySpaceItem15.Name = "emptySpaceItem15";
-			this.emptySpaceItem15.Size = new System.Drawing.Size(427, 26);
+			this.emptySpaceItem15.Size = new System.Drawing.Size(426, 26);
 			// 
 			// lblFreeOfDemurage
 			// 
 			this.lblFreeOfDemurage.Control = this.txtFreeOfDemurage;
 			this.lblFreeOfDemurage.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblFreeOfDemurage.CustomizationFormText = "Free of Demurage";
-			this.lblFreeOfDemurage.Location = new System.Drawing.Point(363, 104);
+			this.lblFreeOfDemurage.Location = new System.Drawing.Point(362, 104);
 			this.lblFreeOfDemurage.Name = "lblFreeOfDemurage";
-			this.lblFreeOfDemurage.Size = new System.Drawing.Size(427, 26);
+			this.lblFreeOfDemurage.Size = new System.Drawing.Size(426, 26);
 			this.lblFreeOfDemurage.Text = "Free of Demurage";
 			this.lblFreeOfDemurage.TextSize = new System.Drawing.Size(104, 16);
 			// 
@@ -3250,14 +3251,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblBookingNo.Control = this.txtBookingNo;
 			this.lblBookingNo.Location = new System.Drawing.Point(0, 104);
 			this.lblBookingNo.Name = "lblBookingNo";
-			this.lblBookingNo.Size = new System.Drawing.Size(363, 26);
+			this.lblBookingNo.Size = new System.Drawing.Size(362, 26);
 			this.lblBookingNo.Text = "Booking#";
 			this.lblBookingNo.TextSize = new System.Drawing.Size(104, 16);
 			// 
 			// layoutControlItem7
 			// 
 			this.layoutControlItem7.Control = this.chkContainerToCnee;
-			this.layoutControlItem7.Location = new System.Drawing.Point(0, 266);
+			this.layoutControlItem7.Location = new System.Drawing.Point(0, 264);
 			this.layoutControlItem7.Name = "layoutControlItem7";
 			this.layoutControlItem7.Size = new System.Drawing.Size(172, 28);
 			this.layoutControlItem7.TextVisible = false;
@@ -3265,7 +3266,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// layoutControlItem8
 			// 
 			this.layoutControlItem8.Control = this.chkConfirmEmptyContainer;
-			this.layoutControlItem8.Location = new System.Drawing.Point(0, 322);
+			this.layoutControlItem8.Location = new System.Drawing.Point(0, 320);
 			this.layoutControlItem8.Name = "layoutControlItem8";
 			this.layoutControlItem8.Size = new System.Drawing.Size(172, 28);
 			this.layoutControlItem8.TextVisible = false;
@@ -3273,29 +3274,29 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// layoutControlItem22
 			// 
 			this.layoutControlItem22.Control = this.chkEmptyContainer;
-			this.layoutControlItem22.Location = new System.Drawing.Point(0, 294);
+			this.layoutControlItem22.Location = new System.Drawing.Point(0, 292);
 			this.layoutControlItem22.Name = "layoutControlItem22";
 			this.layoutControlItem22.Size = new System.Drawing.Size(172, 28);
 			this.layoutControlItem22.TextVisible = false;
 			// 
 			// emptySpaceItem12
 			// 
-			this.emptySpaceItem12.Location = new System.Drawing.Point(363, 140);
+			this.emptySpaceItem12.Location = new System.Drawing.Point(362, 140);
 			this.emptySpaceItem12.Name = "emptySpaceItem12";
-			this.emptySpaceItem12.Size = new System.Drawing.Size(10, 210);
+			this.emptySpaceItem12.Size = new System.Drawing.Size(10, 208);
 			// 
 			// emptySpaceItem26
 			// 
-			this.emptySpaceItem26.Location = new System.Drawing.Point(373, 224);
+			this.emptySpaceItem26.Location = new System.Drawing.Point(372, 224);
 			this.emptySpaceItem26.Name = "emptySpaceItem26";
-			this.emptySpaceItem26.Size = new System.Drawing.Size(417, 126);
+			this.emptySpaceItem26.Size = new System.Drawing.Size(416, 124);
 			// 
 			// lblReadyForTejrim
 			// 
 			this.lblReadyForTejrim.Control = this.dtReadyForTejrim;
 			this.lblReadyForTejrim.Location = new System.Drawing.Point(172, 140);
 			this.lblReadyForTejrim.Name = "lblReadyForTejrim";
-			this.lblReadyForTejrim.Size = new System.Drawing.Size(191, 28);
+			this.lblReadyForTejrim.Size = new System.Drawing.Size(190, 28);
 			this.lblReadyForTejrim.Text = " ";
 			this.lblReadyForTejrim.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblReadyForTejrim.TextSize = new System.Drawing.Size(4, 16);
@@ -3306,7 +3307,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblReadyForClearance.Control = this.dtReadyForClearance;
 			this.lblReadyForClearance.Location = new System.Drawing.Point(172, 168);
 			this.lblReadyForClearance.Name = "lblReadyForClearance";
-			this.lblReadyForClearance.Size = new System.Drawing.Size(191, 28);
+			this.lblReadyForClearance.Size = new System.Drawing.Size(190, 28);
 			this.lblReadyForClearance.Text = " ";
 			this.lblReadyForClearance.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblReadyForClearance.TextSize = new System.Drawing.Size(4, 16);
@@ -3317,7 +3318,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblPendingForDelivery.Control = this.dtPendingForDelivery;
 			this.lblPendingForDelivery.Location = new System.Drawing.Point(172, 196);
 			this.lblPendingForDelivery.Name = "lblPendingForDelivery";
-			this.lblPendingForDelivery.Size = new System.Drawing.Size(191, 28);
+			this.lblPendingForDelivery.Size = new System.Drawing.Size(190, 28);
 			this.lblPendingForDelivery.Text = " ";
 			this.lblPendingForDelivery.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblPendingForDelivery.TextSize = new System.Drawing.Size(4, 16);
@@ -3328,7 +3329,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlItem25.Control = this.dateEdit10;
 			this.layoutControlItem25.Location = new System.Drawing.Point(172, 224);
 			this.layoutControlItem25.Name = "layoutControlItem25";
-			this.layoutControlItem25.Size = new System.Drawing.Size(191, 28);
+			this.layoutControlItem25.Size = new System.Drawing.Size(190, 28);
 			this.layoutControlItem25.Text = " ";
 			this.layoutControlItem25.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.layoutControlItem25.TextSize = new System.Drawing.Size(4, 16);
@@ -3337,9 +3338,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lblContainerToCneeDate
 			// 
 			this.lblContainerToCneeDate.Control = this.dtContainerToCnee;
-			this.lblContainerToCneeDate.Location = new System.Drawing.Point(172, 266);
+			this.lblContainerToCneeDate.Location = new System.Drawing.Point(172, 264);
 			this.lblContainerToCneeDate.Name = "lblContainerToCneeDate";
-			this.lblContainerToCneeDate.Size = new System.Drawing.Size(191, 28);
+			this.lblContainerToCneeDate.Size = new System.Drawing.Size(190, 28);
 			this.lblContainerToCneeDate.Text = " ";
 			this.lblContainerToCneeDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblContainerToCneeDate.TextSize = new System.Drawing.Size(4, 16);
@@ -3348,9 +3349,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lblEmptyContainerDate
 			// 
 			this.lblEmptyContainerDate.Control = this.dtEmptyContainer;
-			this.lblEmptyContainerDate.Location = new System.Drawing.Point(172, 294);
+			this.lblEmptyContainerDate.Location = new System.Drawing.Point(172, 292);
 			this.lblEmptyContainerDate.Name = "lblEmptyContainerDate";
-			this.lblEmptyContainerDate.Size = new System.Drawing.Size(191, 28);
+			this.lblEmptyContainerDate.Size = new System.Drawing.Size(190, 28);
 			this.lblEmptyContainerDate.Text = " ";
 			this.lblEmptyContainerDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblEmptyContainerDate.TextSize = new System.Drawing.Size(4, 16);
@@ -3359,9 +3360,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lblConfirmEmptyContainerDate
 			// 
 			this.lblConfirmEmptyContainerDate.Control = this.dtConfirmEmptyContainer;
-			this.lblConfirmEmptyContainerDate.Location = new System.Drawing.Point(172, 322);
+			this.lblConfirmEmptyContainerDate.Location = new System.Drawing.Point(172, 320);
 			this.lblConfirmEmptyContainerDate.Name = "lblConfirmEmptyContainerDate";
-			this.lblConfirmEmptyContainerDate.Size = new System.Drawing.Size(191, 28);
+			this.lblConfirmEmptyContainerDate.Size = new System.Drawing.Size(190, 28);
 			this.lblConfirmEmptyContainerDate.Text = " ";
 			this.lblConfirmEmptyContainerDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblConfirmEmptyContainerDate.TextSize = new System.Drawing.Size(4, 16);
@@ -3371,14 +3372,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.emptySpaceItem2.Location = new System.Drawing.Point(0, 252);
 			this.emptySpaceItem2.Name = "emptySpaceItem2";
-			this.emptySpaceItem2.Size = new System.Drawing.Size(363, 14);
+			this.emptySpaceItem2.Size = new System.Drawing.Size(362, 12);
 			// 
 			// lblShippedWith
 			// 
 			this.lblShippedWith.Control = this.cboShippedWith;
 			this.lblShippedWith.Location = new System.Drawing.Point(0, 52);
 			this.lblShippedWith.Name = "lblShippedWith";
-			this.lblShippedWith.Size = new System.Drawing.Size(363, 26);
+			this.lblShippedWith.Size = new System.Drawing.Size(362, 26);
 			this.lblShippedWith.Text = "Shipped With";
 			this.lblShippedWith.TextSize = new System.Drawing.Size(104, 16);
 			// 
@@ -3386,7 +3387,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.tabPackageDetails.Controls.Add(this.layoutPackageDetails);
 			this.tabPackageDetails.Name = "tabPackageDetails";
-			this.tabPackageDetails.Size = new System.Drawing.Size(814, 374);
+			this.tabPackageDetails.Size = new System.Drawing.Size(812, 372);
 			this.tabPackageDetails.Text = "Package Details";
 			// 
 			// layoutPackageDetails
@@ -3401,17 +3402,17 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutPackageDetails.Location = new System.Drawing.Point(0, 0);
 			this.layoutPackageDetails.Name = "layoutPackageDetails";
 			this.layoutPackageDetails.Root = this.layoutControlGroup11;
-			this.layoutPackageDetails.Size = new System.Drawing.Size(814, 374);
+			this.layoutPackageDetails.Size = new System.Drawing.Size(812, 372);
 			this.layoutPackageDetails.TabIndex = 0;
 			this.layoutPackageDetails.Text = "layoutControl1";
 			// 
 			// txtValueOfGoods
 			// 
 			this.txtValueOfGoods.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "ValueOfGoods", true));
-			this.txtValueOfGoods.Location = new System.Drawing.Point(114, 293);
+			this.txtValueOfGoods.Location = new System.Drawing.Point(114, 291);
 			this.txtValueOfGoods.MenuManager = this.rcMain;
 			this.txtValueOfGoods.Name = "txtValueOfGoods";
-			this.txtValueOfGoods.Size = new System.Drawing.Size(291, 22);
+			this.txtValueOfGoods.Size = new System.Drawing.Size(290, 22);
 			this.txtValueOfGoods.StyleController = this.layoutPackageDetails;
 			this.txtValueOfGoods.TabIndex = 9;
 			// 
@@ -3421,7 +3422,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtVolume.Location = new System.Drawing.Point(114, 40);
 			this.txtVolume.MenuManager = this.rcMain;
 			this.txtVolume.Name = "txtVolume";
-			this.txtVolume.Size = new System.Drawing.Size(291, 22);
+			this.txtVolume.Size = new System.Drawing.Size(290, 22);
 			this.txtVolume.StyleController = this.layoutPackageDetails;
 			this.txtVolume.TabIndex = 8;
 			// 
@@ -3431,7 +3432,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtWeight.Location = new System.Drawing.Point(114, 92);
 			this.txtWeight.MenuManager = this.rcMain;
 			this.txtWeight.Name = "txtWeight";
-			this.txtWeight.Size = new System.Drawing.Size(291, 22);
+			this.txtWeight.Size = new System.Drawing.Size(290, 22);
 			this.txtWeight.StyleController = this.layoutPackageDetails;
 			this.txtWeight.TabIndex = 6;
 			// 
@@ -3441,7 +3442,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtPieces.Location = new System.Drawing.Point(114, 66);
 			this.txtPieces.MenuManager = this.rcMain;
 			this.txtPieces.Name = "txtPieces";
-			this.txtPieces.Size = new System.Drawing.Size(291, 22);
+			this.txtPieces.Size = new System.Drawing.Size(290, 22);
 			this.txtPieces.StyleController = this.layoutPackageDetails;
 			this.txtPieces.TabIndex = 5;
 			// 
@@ -3451,7 +3452,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtQuantities.Location = new System.Drawing.Point(114, 14);
 			this.txtQuantities.MenuManager = this.rcMain;
 			this.txtQuantities.Name = "txtQuantities";
-			this.txtQuantities.Size = new System.Drawing.Size(291, 22);
+			this.txtQuantities.Size = new System.Drawing.Size(290, 22);
 			this.txtQuantities.StyleController = this.layoutPackageDetails;
 			this.txtQuantities.TabIndex = 4;
 			// 
@@ -3461,7 +3462,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtNatureOfGoods.Location = new System.Drawing.Point(114, 134);
 			this.txtNatureOfGoods.MenuManager = this.rcMain;
 			this.txtNatureOfGoods.Name = "txtNatureOfGoods";
-			this.txtNatureOfGoods.Size = new System.Drawing.Size(686, 155);
+			this.txtNatureOfGoods.Size = new System.Drawing.Size(684, 153);
 			this.txtNatureOfGoods.StyleController = this.layoutPackageDetails;
 			this.txtNatureOfGoods.TabIndex = 7;
 			// 
@@ -3483,7 +3484,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.lblValueOfGoods,
             this.emptySpaceItem25});
 			this.layoutControlGroup11.Name = "Root";
-			this.layoutControlGroup11.Size = new System.Drawing.Size(814, 374);
+			this.layoutControlGroup11.Size = new System.Drawing.Size(812, 372);
 			this.layoutControlGroup11.TextVisible = false;
 			// 
 			// lblQuantities
@@ -3491,22 +3492,22 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblQuantities.Control = this.txtQuantities;
 			this.lblQuantities.Location = new System.Drawing.Point(0, 0);
 			this.lblQuantities.Name = "lblQuantities";
-			this.lblQuantities.Size = new System.Drawing.Size(395, 26);
+			this.lblQuantities.Size = new System.Drawing.Size(394, 26);
 			this.lblQuantities.Text = "Quantities";
 			this.lblQuantities.TextSize = new System.Drawing.Size(85, 16);
 			// 
 			// emptySpaceItem18
 			// 
-			this.emptySpaceItem18.Location = new System.Drawing.Point(0, 305);
+			this.emptySpaceItem18.Location = new System.Drawing.Point(0, 303);
 			this.emptySpaceItem18.Name = "emptySpaceItem18";
-			this.emptySpaceItem18.Size = new System.Drawing.Size(790, 45);
+			this.emptySpaceItem18.Size = new System.Drawing.Size(788, 45);
 			// 
 			// lblPieces
 			// 
 			this.lblPieces.Control = this.txtPieces;
 			this.lblPieces.Location = new System.Drawing.Point(0, 52);
 			this.lblPieces.Name = "lblPieces";
-			this.lblPieces.Size = new System.Drawing.Size(395, 26);
+			this.lblPieces.Size = new System.Drawing.Size(394, 26);
 			this.lblPieces.Text = "Pieces";
 			this.lblPieces.TextSize = new System.Drawing.Size(85, 16);
 			// 
@@ -3515,7 +3516,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblWeight.Control = this.txtWeight;
 			this.lblWeight.Location = new System.Drawing.Point(0, 78);
 			this.lblWeight.Name = "lblWeight";
-			this.lblWeight.Size = new System.Drawing.Size(395, 26);
+			this.lblWeight.Size = new System.Drawing.Size(394, 26);
 			this.lblWeight.Text = "Weight";
 			this.lblWeight.TextSize = new System.Drawing.Size(85, 16);
 			// 
@@ -3524,7 +3525,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblCommodities.Control = this.txtNatureOfGoods;
 			this.lblCommodities.Location = new System.Drawing.Point(0, 120);
 			this.lblCommodities.Name = "lblCommodities";
-			this.lblCommodities.Size = new System.Drawing.Size(790, 159);
+			this.lblCommodities.Size = new System.Drawing.Size(788, 157);
 			this.lblCommodities.Text = "Commodities";
 			this.lblCommodities.TextSize = new System.Drawing.Size(85, 16);
 			// 
@@ -3532,55 +3533,55 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.emptySpaceItem19.Location = new System.Drawing.Point(0, 104);
 			this.emptySpaceItem19.Name = "emptySpaceItem19";
-			this.emptySpaceItem19.Size = new System.Drawing.Size(790, 16);
+			this.emptySpaceItem19.Size = new System.Drawing.Size(788, 16);
 			// 
 			// emptySpaceItem20
 			// 
-			this.emptySpaceItem20.Location = new System.Drawing.Point(395, 0);
+			this.emptySpaceItem20.Location = new System.Drawing.Point(394, 0);
 			this.emptySpaceItem20.Name = "emptySpaceItem20";
-			this.emptySpaceItem20.Size = new System.Drawing.Size(395, 26);
+			this.emptySpaceItem20.Size = new System.Drawing.Size(394, 26);
 			// 
 			// emptySpaceItem21
 			// 
-			this.emptySpaceItem21.Location = new System.Drawing.Point(395, 26);
+			this.emptySpaceItem21.Location = new System.Drawing.Point(394, 26);
 			this.emptySpaceItem21.Name = "emptySpaceItem21";
-			this.emptySpaceItem21.Size = new System.Drawing.Size(395, 52);
+			this.emptySpaceItem21.Size = new System.Drawing.Size(394, 52);
 			// 
 			// emptySpaceItem22
 			// 
-			this.emptySpaceItem22.Location = new System.Drawing.Point(395, 78);
+			this.emptySpaceItem22.Location = new System.Drawing.Point(394, 78);
 			this.emptySpaceItem22.Name = "emptySpaceItem22";
-			this.emptySpaceItem22.Size = new System.Drawing.Size(395, 26);
+			this.emptySpaceItem22.Size = new System.Drawing.Size(394, 26);
 			// 
 			// lblVolume
 			// 
 			this.lblVolume.Control = this.txtVolume;
 			this.lblVolume.Location = new System.Drawing.Point(0, 26);
 			this.lblVolume.Name = "lblVolume";
-			this.lblVolume.Size = new System.Drawing.Size(395, 26);
+			this.lblVolume.Size = new System.Drawing.Size(394, 26);
 			this.lblVolume.Text = "Volume";
 			this.lblVolume.TextSize = new System.Drawing.Size(85, 16);
 			// 
 			// lblValueOfGoods
 			// 
 			this.lblValueOfGoods.Control = this.txtValueOfGoods;
-			this.lblValueOfGoods.Location = new System.Drawing.Point(0, 279);
+			this.lblValueOfGoods.Location = new System.Drawing.Point(0, 277);
 			this.lblValueOfGoods.Name = "lblValueOfGoods";
-			this.lblValueOfGoods.Size = new System.Drawing.Size(395, 26);
+			this.lblValueOfGoods.Size = new System.Drawing.Size(394, 26);
 			this.lblValueOfGoods.Text = "Value of goods";
 			this.lblValueOfGoods.TextSize = new System.Drawing.Size(85, 16);
 			// 
 			// emptySpaceItem25
 			// 
-			this.emptySpaceItem25.Location = new System.Drawing.Point(395, 279);
+			this.emptySpaceItem25.Location = new System.Drawing.Point(394, 277);
 			this.emptySpaceItem25.Name = "emptySpaceItem25";
-			this.emptySpaceItem25.Size = new System.Drawing.Size(395, 26);
+			this.emptySpaceItem25.Size = new System.Drawing.Size(394, 26);
 			// 
 			// tabUserInformation
 			// 
 			this.tabUserInformation.Controls.Add(this.layoutUserInformation);
 			this.tabUserInformation.Name = "tabUserInformation";
-			this.tabUserInformation.Size = new System.Drawing.Size(814, 374);
+			this.tabUserInformation.Size = new System.Drawing.Size(812, 372);
 			this.tabUserInformation.Text = "User Information";
 			// 
 			// layoutUserInformation
@@ -3593,18 +3594,18 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutUserInformation.Location = new System.Drawing.Point(0, 0);
 			this.layoutUserInformation.Name = "layoutUserInformation";
 			this.layoutUserInformation.Root = this.layoutControlGroup2;
-			this.layoutUserInformation.Size = new System.Drawing.Size(814, 374);
+			this.layoutUserInformation.Size = new System.Drawing.Size(812, 372);
 			this.layoutUserInformation.TabIndex = 0;
 			this.layoutUserInformation.Text = "layoutControl1";
 			// 
 			// txtUserLogData
 			// 
-			this.txtUserLogData.Location = new System.Drawing.Point(14, 135);
+			this.txtUserLogData.Location = new System.Drawing.Point(14, 134);
 			this.txtUserLogData.MenuManager = this.rcMain;
 			this.txtUserLogData.Name = "txtUserLogData";
 			this.txtUserLogData.Properties.ReadOnly = true;
 			this.txtUserLogData.Properties.UseReadOnlyAppearance = false;
-			this.txtUserLogData.Size = new System.Drawing.Size(786, 212);
+			this.txtUserLogData.Size = new System.Drawing.Size(784, 211);
 			this.txtUserLogData.StyleController = this.layoutUserInformation;
 			this.txtUserLogData.TabIndex = 14;
 			// 
@@ -3618,7 +3619,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboUsers.Properties.NullText = "";
 			this.cboUsers.Properties.PopupView = this.gridView3;
 			this.cboUsers.Properties.ValueMember = "Id";
-			this.cboUsers.Size = new System.Drawing.Size(290, 22);
+			this.cboUsers.Size = new System.Drawing.Size(289, 22);
 			this.cboUsers.StyleController = this.layoutUserInformation;
 			this.cboUsers.TabIndex = 6;
 			// 
@@ -3660,7 +3661,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboSales.Properties.NullText = "";
 			this.cboSales.Properties.PopupView = this.gridView4;
 			this.cboSales.Properties.ValueMember = "Id";
-			this.cboSales.Size = new System.Drawing.Size(290, 22);
+			this.cboSales.Size = new System.Drawing.Size(289, 22);
 			this.cboSales.StyleController = this.layoutUserInformation;
 			this.cboSales.TabIndex = 7;
 			// 
@@ -3702,7 +3703,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboOperatingUsers.Properties.NullText = "";
 			this.cboOperatingUsers.Properties.PopupView = this.gridView5;
 			this.cboOperatingUsers.Properties.ValueMember = "Id";
-			this.cboOperatingUsers.Size = new System.Drawing.Size(290, 22);
+			this.cboOperatingUsers.Size = new System.Drawing.Size(289, 22);
 			this.cboOperatingUsers.StyleController = this.layoutUserInformation;
 			this.cboOperatingUsers.TabIndex = 13;
 			// 
@@ -3749,7 +3750,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.lblUserLogData,
             this.emptySpaceItem23});
 			this.layoutControlGroup2.Name = "layoutControlGroup2";
-			this.layoutControlGroup2.Size = new System.Drawing.Size(814, 374);
+			this.layoutControlGroup2.Size = new System.Drawing.Size(812, 372);
 			this.layoutControlGroup2.TextVisible = false;
 			// 
 			// lblUserName
@@ -3759,7 +3760,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblUserName.CustomizationFormText = "User Name";
 			this.lblUserName.Location = new System.Drawing.Point(0, 0);
 			this.lblUserName.Name = "lblUserName";
-			this.lblUserName.Size = new System.Drawing.Size(395, 26);
+			this.lblUserName.Size = new System.Drawing.Size(394, 26);
 			this.lblUserName.Text = "User Name";
 			this.lblUserName.TextSize = new System.Drawing.Size(86, 16);
 			// 
@@ -3770,7 +3771,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblSalesman.CustomizationFormText = "Salesman";
 			this.lblSalesman.Location = new System.Drawing.Point(0, 26);
 			this.lblSalesman.Name = "lblSalesman";
-			this.lblSalesman.Size = new System.Drawing.Size(395, 26);
+			this.lblSalesman.Size = new System.Drawing.Size(394, 26);
 			this.lblSalesman.Text = "Salesman";
 			this.lblSalesman.TextSize = new System.Drawing.Size(86, 16);
 			// 
@@ -3781,40 +3782,40 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblOperatingUser.CustomizationFormText = "Operating User";
 			this.lblOperatingUser.Location = new System.Drawing.Point(0, 52);
 			this.lblOperatingUser.Name = "lblOperatingUser";
-			this.lblOperatingUser.Size = new System.Drawing.Size(395, 26);
+			this.lblOperatingUser.Size = new System.Drawing.Size(394, 26);
 			this.lblOperatingUser.Text = "Operating User";
 			this.lblOperatingUser.TextSize = new System.Drawing.Size(86, 16);
 			// 
 			// emptySpaceItem13
 			// 
-			this.emptySpaceItem13.Location = new System.Drawing.Point(0, 337);
+			this.emptySpaceItem13.Location = new System.Drawing.Point(0, 335);
 			this.emptySpaceItem13.Name = "emptySpaceItem13";
-			this.emptySpaceItem13.Size = new System.Drawing.Size(790, 13);
+			this.emptySpaceItem13.Size = new System.Drawing.Size(788, 13);
 			// 
 			// emptySpaceItem14
 			// 
-			this.emptySpaceItem14.Location = new System.Drawing.Point(395, 0);
+			this.emptySpaceItem14.Location = new System.Drawing.Point(394, 0);
 			this.emptySpaceItem14.Name = "emptySpaceItem14";
-			this.emptySpaceItem14.Size = new System.Drawing.Size(395, 26);
+			this.emptySpaceItem14.Size = new System.Drawing.Size(394, 26);
 			// 
 			// emptySpaceItem16
 			// 
-			this.emptySpaceItem16.Location = new System.Drawing.Point(395, 26);
+			this.emptySpaceItem16.Location = new System.Drawing.Point(394, 26);
 			this.emptySpaceItem16.Name = "emptySpaceItem16";
-			this.emptySpaceItem16.Size = new System.Drawing.Size(395, 26);
+			this.emptySpaceItem16.Size = new System.Drawing.Size(394, 26);
 			// 
 			// emptySpaceItem17
 			// 
-			this.emptySpaceItem17.Location = new System.Drawing.Point(395, 52);
+			this.emptySpaceItem17.Location = new System.Drawing.Point(394, 52);
 			this.emptySpaceItem17.Name = "emptySpaceItem17";
-			this.emptySpaceItem17.Size = new System.Drawing.Size(395, 26);
+			this.emptySpaceItem17.Size = new System.Drawing.Size(394, 26);
 			// 
 			// lblUserLogData
 			// 
 			this.lblUserLogData.Control = this.txtUserLogData;
-			this.lblUserLogData.Location = new System.Drawing.Point(0, 101);
+			this.lblUserLogData.Location = new System.Drawing.Point(0, 100);
 			this.lblUserLogData.Name = "lblUserLogData";
-			this.lblUserLogData.Size = new System.Drawing.Size(790, 236);
+			this.lblUserLogData.Size = new System.Drawing.Size(788, 235);
 			this.lblUserLogData.Text = "User Log Data";
 			this.lblUserLogData.TextLocation = DevExpress.Utils.Locations.Top;
 			this.lblUserLogData.TextSize = new System.Drawing.Size(86, 16);
@@ -3823,7 +3824,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.emptySpaceItem23.Location = new System.Drawing.Point(0, 78);
 			this.emptySpaceItem23.Name = "emptySpaceItem23";
-			this.emptySpaceItem23.Size = new System.Drawing.Size(790, 23);
+			this.emptySpaceItem23.Size = new System.Drawing.Size(788, 22);
 			// 
 			// tabDetails
 			// 
@@ -5462,12 +5463,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gvDocuments.ColumnSet.DescriptionColumn = this.colDate1;
 			this.gvDocuments.ColumnSet.TextColumn = this.colName;
 			this.gvDocuments.ContextButtonOptions.AllowGlyphSkinning = true;
-			contextButton1.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Right;
-			contextButton1.Id = new System.Guid("29468572-0411-449a-bc2d-0c333134705c");
-			contextButton1.ImageOptionsCollection.ItemNormal.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage6")));
-			contextButton1.ImageOptionsCollection.ItemNormal.SvgImageSize = new System.Drawing.Size(16, 16);
-			contextButton1.Name = "removeButton";
-			this.gvDocuments.ContextButtons.Add(contextButton1);
+			contextButton2.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Right;
+			contextButton2.Id = new System.Guid("29468572-0411-449a-bc2d-0c333134705c");
+			contextButton2.ImageOptionsCollection.ItemNormal.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage6")));
+			contextButton2.ImageOptionsCollection.ItemNormal.SvgImageSize = new System.Drawing.Size(16, 16);
+			contextButton2.Name = "removeButton";
+			this.gvDocuments.ContextButtons.Add(contextButton2);
 			this.gvDocuments.GridControl = this.gcDocuments;
 			this.gvDocuments.Name = "gvDocuments";
 			this.gvDocuments.OptionsBehavior.Editable = false;
@@ -5512,12 +5513,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.openDocuments.Name = "openDocuments";
 			this.openDocuments.Properties.AutoHeight = false;
 			this.openDocuments.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-			editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-			editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
+			editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+			editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
 			this.openDocuments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton(),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", "loadFile", null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", "loadFile", null, DevExpress.Utils.ToolTipAnchor.Default)});
 			this.openDocuments.Properties.Client = this.gcDocuments;
 			this.openDocuments.Size = new System.Drawing.Size(1392, 30);
 			this.openDocuments.StyleController = this.layoutAttachedDocumnets;
