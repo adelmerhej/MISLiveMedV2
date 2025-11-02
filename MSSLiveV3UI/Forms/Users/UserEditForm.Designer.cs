@@ -325,15 +325,15 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// bsUser
 			// 
-			this.bsUser.DataSource = typeof(UserModel);
+			this.bsUser.DataSource = typeof(MISLiveMed.Models.Models.Users.UserModel);
 			// 
 			// bsUserDetails
 			// 
-			this.bsUserDetails.DataSource = typeof(UserDetailModel);
+			this.bsUserDetails.DataSource = typeof(MISLiveMed.Models.Models.Users.UserDetailModel);
 			// 
 			// bsUserPermission
 			// 
-			this.bsUserPermission.DataSource = typeof(UserPermissionModel);
+			this.bsUserPermission.DataSource = typeof(MISLiveMed.Models.Models.Users.UserPermissionModel);
 			// 
 			// mainLayout
 			// 
@@ -547,7 +547,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboCities
 			// 
-			this.cboCities.Location = new System.Drawing.Point(474, 422);
+			this.cboCities.Location = new System.Drawing.Point(474, 417);
 			this.cboCities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboCities.Name = "cboCities";
 			this.cboCities.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -565,7 +565,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboCountries
 			// 
-			this.cboCountries.Location = new System.Drawing.Point(124, 422);
+			this.cboCountries.Location = new System.Drawing.Point(124, 417);
 			this.cboCountries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboCountries.Name = "cboCountries";
 			this.cboCountries.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -607,7 +607,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// txtNotes
 			// 
 			this.txtNotes.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsUser, "Notes", true));
-			this.txtNotes.Location = new System.Drawing.Point(14, 532);
+			this.txtNotes.Location = new System.Drawing.Point(14, 527);
 			this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtNotes.Name = "txtNotes";
 			this.txtNotes.Properties.ReadOnly = true;
@@ -636,7 +636,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtAddress.Name = "txtAddress";
 			this.txtAddress.Properties.ReadOnly = true;
-			this.txtAddress.Size = new System.Drawing.Size(595, 51);
+			this.txtAddress.Size = new System.Drawing.Size(595, 46);
 			this.txtAddress.StyleController = this.lcMain;
 			this.txtAddress.TabIndex = 4;
 			// 
@@ -684,7 +684,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboProvinces
 			// 
-			this.cboProvinces.Location = new System.Drawing.Point(124, 448);
+			this.cboProvinces.Location = new System.Drawing.Point(124, 443);
 			this.cboProvinces.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboProvinces.Name = "cboProvinces";
 			this.cboProvinces.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -702,7 +702,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboDistricts
 			// 
-			this.cboDistricts.Location = new System.Drawing.Point(474, 448);
+			this.cboDistricts.Location = new System.Drawing.Point(474, 443);
 			this.cboDistricts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboDistricts.Name = "cboDistricts";
 			this.cboDistricts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -796,19 +796,19 @@ namespace MISLiveMed.UI.Forms.Users
 			// emptySpaceItem3
 			// 
 			this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 579);
-			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 10);
-			this.emptySpaceItem3.MinSize = new System.Drawing.Size(15, 10);
+			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 574);
+			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 15);
+			this.emptySpaceItem3.MinSize = new System.Drawing.Size(24, 15);
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
 			this.emptySpaceItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.emptySpaceItem3.Size = new System.Drawing.Size(737, 10);
+			this.emptySpaceItem3.Size = new System.Drawing.Size(737, 15);
 			this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			// 
 			// lblNotes
 			// 
 			this.lblNotes.Control = this.txtNotes;
 			this.lblNotes.CustomizationFormText = "layoutControlItem3";
-			this.lblNotes.Location = new System.Drawing.Point(0, 498);
+			this.lblNotes.Location = new System.Drawing.Point(0, 493);
 			this.lblNotes.Name = "lblNotes";
 			this.lblNotes.Size = new System.Drawing.Size(737, 81);
 			this.lblNotes.Text = "Notes:";
@@ -832,7 +832,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.emptySpaceItem2});
 			this.lcgInfo.Location = new System.Drawing.Point(0, 165);
 			this.lcgInfo.Name = "lcgInfo";
-			this.lcgInfo.Size = new System.Drawing.Size(737, 333);
+			this.lcgInfo.Size = new System.Drawing.Size(737, 328);
 			this.lcgInfo.Text = "Personal Info";
 			// 
 			// lblMobile
@@ -865,7 +865,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// emptySpaceItem4
 			// 
 			this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem1";
-			this.emptySpaceItem4.Location = new System.Drawing.Point(0, 269);
+			this.emptySpaceItem4.Location = new System.Drawing.Point(0, 264);
 			this.emptySpaceItem4.Name = "emptySpaceItem1";
 			this.emptySpaceItem4.Size = new System.Drawing.Size(709, 10);
 			// 
@@ -906,7 +906,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.lblCountries});
 			this.lcgAddress.Location = new System.Drawing.Point(0, 108);
 			this.lcgAddress.Name = "lcgAddress";
-			this.lcgAddress.Size = new System.Drawing.Size(709, 161);
+			this.lcgAddress.Size = new System.Drawing.Size(709, 156);
 			this.lcgAddress.Text = "Address Info";
 			// 
 			// lblAddress
@@ -917,7 +917,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblAddress.CustomizationFormText = "layoutControlItem6";
 			this.lblAddress.Location = new System.Drawing.Point(0, 0);
 			this.lblAddress.Name = "lblAddress";
-			this.lblAddress.Size = new System.Drawing.Size(681, 55);
+			this.lblAddress.Size = new System.Drawing.Size(681, 50);
 			this.lblAddress.Text = "Address";
 			this.lblAddress.TextSize = new System.Drawing.Size(67, 16);
 			// 
@@ -927,7 +927,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblDistricts.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lblDistricts.Control = this.cboDistricts;
 			this.lblDistricts.CustomizationFormText = "layoutControlItem8";
-			this.lblDistricts.Location = new System.Drawing.Point(350, 81);
+			this.lblDistricts.Location = new System.Drawing.Point(350, 76);
 			this.lblDistricts.Name = "lblDistricts";
 			this.lblDistricts.Size = new System.Drawing.Size(331, 26);
 			this.lblDistricts.Text = "District";
@@ -937,7 +937,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			this.lblProvinces.Control = this.cboProvinces;
 			this.lblProvinces.CustomizationFormText = "layoutControlItem9";
-			this.lblProvinces.Location = new System.Drawing.Point(0, 81);
+			this.lblProvinces.Location = new System.Drawing.Point(0, 76);
 			this.lblProvinces.Name = "lblProvinces";
 			this.lblProvinces.Size = new System.Drawing.Size(350, 26);
 			this.lblProvinces.Text = "Province";
@@ -948,7 +948,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblCities.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.lblCities.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lblCities.Control = this.cboCities;
-			this.lblCities.Location = new System.Drawing.Point(350, 55);
+			this.lblCities.Location = new System.Drawing.Point(350, 50);
 			this.lblCities.Name = "lblCities";
 			this.lblCities.Size = new System.Drawing.Size(331, 26);
 			this.lblCities.Text = "City";
@@ -957,7 +957,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// lblCountries
 			// 
 			this.lblCountries.Control = this.cboCountries;
-			this.lblCountries.Location = new System.Drawing.Point(0, 55);
+			this.lblCountries.Location = new System.Drawing.Point(0, 50);
 			this.lblCountries.Name = "lblCountries";
 			this.lblCountries.Size = new System.Drawing.Size(350, 26);
 			this.lblCountries.Text = "Country";
@@ -1111,7 +1111,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			this.xtpUserPermissions.Controls.Add(this.layoutControl4);
 			this.xtpUserPermissions.Name = "xtpUserPermissions";
-			this.xtpUserPermissions.Size = new System.Drawing.Size(1113, 669);
+			this.xtpUserPermissions.Size = new System.Drawing.Size(1117, 673);
 			this.xtpUserPermissions.Text = "User Permissions";
 			// 
 			// layoutControl4
@@ -1123,15 +1123,15 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl4.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl4.Name = "layoutControl4";
 			this.layoutControl4.Root = this.layoutControlGroup4;
-			this.layoutControl4.Size = new System.Drawing.Size(1113, 669);
+			this.layoutControl4.Size = new System.Drawing.Size(1117, 673);
 			this.layoutControl4.TabIndex = 0;
 			this.layoutControl4.Text = "layoutControl4";
 			// 
 			// btnUpdatePermissions
 			// 
-			this.btnUpdatePermissions.Location = new System.Drawing.Point(949, 628);
+			this.btnUpdatePermissions.Location = new System.Drawing.Point(952, 632);
 			this.btnUpdatePermissions.Name = "btnUpdatePermissions";
-			this.btnUpdatePermissions.Size = new System.Drawing.Size(150, 27);
+			this.btnUpdatePermissions.Size = new System.Drawing.Size(151, 27);
 			this.btnUpdatePermissions.StyleController = this.layoutControl4;
 			this.btnUpdatePermissions.TabIndex = 8;
 			this.btnUpdatePermissions.Text = "Update Permissions";
@@ -1151,7 +1151,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			this.spcUserPermissions.Panel2.Controls.Add(this.layoutControl6);
 			this.spcUserPermissions.Panel2.Text = "Panel2";
-			this.spcUserPermissions.Size = new System.Drawing.Size(1085, 610);
+			this.spcUserPermissions.Size = new System.Drawing.Size(1089, 614);
 			this.spcUserPermissions.SplitterPosition = 578;
 			this.spcUserPermissions.TabIndex = 4;
 			// 
@@ -1162,7 +1162,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl5.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl5.Name = "layoutControl5";
 			this.layoutControl5.Root = this.layoutControlGroup5;
-			this.layoutControl5.Size = new System.Drawing.Size(578, 610);
+			this.layoutControl5.Size = new System.Drawing.Size(578, 614);
 			this.layoutControl5.TabIndex = 0;
 			this.layoutControl5.Text = "layoutControl5";
 			// 
@@ -1171,7 +1171,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.gcAppForms.Location = new System.Drawing.Point(14, 14);
 			this.gcAppForms.MainView = this.gvAppForms;
 			this.gcAppForms.Name = "gcAppForms";
-			this.gcAppForms.Size = new System.Drawing.Size(550, 582);
+			this.gcAppForms.Size = new System.Drawing.Size(550, 586);
 			this.gcAppForms.TabIndex = 5;
 			this.gcAppForms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvAppForms});
@@ -1226,7 +1226,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem7});
 			this.layoutControlGroup5.Name = "layoutControlGroup5";
-			this.layoutControlGroup5.Size = new System.Drawing.Size(578, 610);
+			this.layoutControlGroup5.Size = new System.Drawing.Size(578, 614);
 			this.layoutControlGroup5.TextVisible = false;
 			// 
 			// layoutControlItem7
@@ -1234,7 +1234,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem7.Control = this.gcAppForms;
 			this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem7.Name = "layoutControlItem7";
-			this.layoutControlItem7.Size = new System.Drawing.Size(554, 586);
+			this.layoutControlItem7.Size = new System.Drawing.Size(554, 590);
 			this.layoutControlItem7.TextVisible = false;
 			// 
 			// layoutControl6
@@ -1244,7 +1244,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl6.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl6.Name = "layoutControl6";
 			this.layoutControl6.Root = this.layoutControlGroup6;
-			this.layoutControl6.Size = new System.Drawing.Size(495, 610);
+			this.layoutControl6.Size = new System.Drawing.Size(499, 614);
 			this.layoutControl6.TabIndex = 0;
 			this.layoutControl6.Text = "layoutControl6";
 			// 
@@ -1255,7 +1255,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.gcFormPermissions.Name = "gcFormPermissions";
 			this.gcFormPermissions.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repUsersPermissionControls});
-			this.gcFormPermissions.Size = new System.Drawing.Size(467, 582);
+			this.gcFormPermissions.Size = new System.Drawing.Size(471, 586);
 			this.gcFormPermissions.TabIndex = 5;
 			this.gcFormPermissions.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvFormPermissions});
@@ -1364,7 +1364,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem8});
 			this.layoutControlGroup6.Name = "layoutControlGroup6";
-			this.layoutControlGroup6.Size = new System.Drawing.Size(495, 610);
+			this.layoutControlGroup6.Size = new System.Drawing.Size(499, 614);
 			this.layoutControlGroup6.TextVisible = false;
 			// 
 			// layoutControlItem8
@@ -1372,12 +1372,12 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem8.Control = this.gcFormPermissions;
 			this.layoutControlItem8.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem8.Name = "layoutControlItem8";
-			this.layoutControlItem8.Size = new System.Drawing.Size(471, 586);
+			this.layoutControlItem8.Size = new System.Drawing.Size(475, 590);
 			this.layoutControlItem8.TextVisible = false;
 			// 
 			// btnSeedDefaultData
 			// 
-			this.btnSeedDefaultData.Location = new System.Drawing.Point(14, 628);
+			this.btnSeedDefaultData.Location = new System.Drawing.Point(14, 632);
 			this.btnSeedDefaultData.Name = "btnSeedDefaultData";
 			this.btnSeedDefaultData.Size = new System.Drawing.Size(158, 27);
 			this.btnSeedDefaultData.StyleController = this.layoutControl4;
@@ -1397,7 +1397,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.layoutControlItem15,
             this.emptySpaceItem25});
 			this.layoutControlGroup4.Name = "layoutControlGroup4";
-			this.layoutControlGroup4.Size = new System.Drawing.Size(1113, 669);
+			this.layoutControlGroup4.Size = new System.Drawing.Size(1117, 673);
 			this.layoutControlGroup4.TextVisible = false;
 			// 
 			// layoutControlItem3
@@ -1405,21 +1405,21 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem3.Control = this.spcUserPermissions;
 			this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem3.Name = "layoutControlItem3";
-			this.layoutControlItem3.Size = new System.Drawing.Size(1089, 614);
+			this.layoutControlItem3.Size = new System.Drawing.Size(1093, 618);
 			this.layoutControlItem3.TextVisible = false;
 			// 
 			// emptySpaceItem8
 			// 
-			this.emptySpaceItem8.Location = new System.Drawing.Point(162, 614);
+			this.emptySpaceItem8.Location = new System.Drawing.Point(162, 618);
 			this.emptySpaceItem8.Name = "emptySpaceItem8";
-			this.emptySpaceItem8.Size = new System.Drawing.Size(478, 31);
+			this.emptySpaceItem8.Size = new System.Drawing.Size(480, 31);
 			// 
 			// layoutControlItem14
 			// 
 			this.layoutControlItem14.Control = this.btnSeedDefaultData;
 			this.layoutControlItem14.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.layoutControlItem14.CustomizationFormText = "layoutControlItem14";
-			this.layoutControlItem14.Location = new System.Drawing.Point(0, 614);
+			this.layoutControlItem14.Location = new System.Drawing.Point(0, 618);
 			this.layoutControlItem14.Name = "layoutControlItem14";
 			this.layoutControlItem14.Size = new System.Drawing.Size(162, 31);
 			this.layoutControlItem14.TextVisible = false;
@@ -1427,22 +1427,22 @@ namespace MISLiveMed.UI.Forms.Users
 			// layoutControlItem15
 			// 
 			this.layoutControlItem15.Control = this.btnUpdatePermissions;
-			this.layoutControlItem15.Location = new System.Drawing.Point(935, 614);
+			this.layoutControlItem15.Location = new System.Drawing.Point(938, 618);
 			this.layoutControlItem15.Name = "layoutControlItem15";
-			this.layoutControlItem15.Size = new System.Drawing.Size(154, 31);
+			this.layoutControlItem15.Size = new System.Drawing.Size(155, 31);
 			this.layoutControlItem15.TextVisible = false;
 			// 
 			// emptySpaceItem25
 			// 
-			this.emptySpaceItem25.Location = new System.Drawing.Point(640, 614);
+			this.emptySpaceItem25.Location = new System.Drawing.Point(642, 618);
 			this.emptySpaceItem25.Name = "emptySpaceItem25";
-			this.emptySpaceItem25.Size = new System.Drawing.Size(295, 31);
+			this.emptySpaceItem25.Size = new System.Drawing.Size(296, 31);
 			// 
 			// xtpAccountingInfo
 			// 
 			this.xtpAccountingInfo.Controls.Add(this.layoutControl7);
 			this.xtpAccountingInfo.Name = "xtpAccountingInfo";
-			this.xtpAccountingInfo.Size = new System.Drawing.Size(1113, 669);
+			this.xtpAccountingInfo.Size = new System.Drawing.Size(1117, 673);
 			this.xtpAccountingInfo.Text = "Accounting Info";
 			// 
 			// layoutControl7
@@ -1452,7 +1452,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl7.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl7.Name = "layoutControl7";
 			this.layoutControl7.Root = this.layoutControlGroup7;
-			this.layoutControl7.Size = new System.Drawing.Size(1113, 669);
+			this.layoutControl7.Size = new System.Drawing.Size(1117, 673);
 			this.layoutControl7.TabIndex = 0;
 			this.layoutControl7.Text = "layoutControl7";
 			// 
@@ -1466,7 +1466,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl8.Location = new System.Drawing.Point(14, 14);
 			this.layoutControl8.Name = "layoutControl8";
 			this.layoutControl8.Root = this.layoutControlGroup9;
-			this.layoutControl8.Size = new System.Drawing.Size(1085, 641);
+			this.layoutControl8.Size = new System.Drawing.Size(1089, 645);
 			this.layoutControl8.TabIndex = 4;
 			this.layoutControl8.Text = "layoutControl8";
 			// 
@@ -1478,7 +1478,7 @@ namespace MISLiveMed.UI.Forms.Users
             0,
             0,
             0});
-			this.txtSecurityLevel.Location = new System.Drawing.Point(239, 258);
+			this.txtSecurityLevel.Location = new System.Drawing.Point(240, 258);
 			this.txtSecurityLevel.Name = "txtSecurityLevel";
 			this.txtSecurityLevel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1492,17 +1492,17 @@ namespace MISLiveMed.UI.Forms.Users
             0,
             0,
             0});
-			this.txtSecurityLevel.Size = new System.Drawing.Size(78, 24);
+			this.txtSecurityLevel.Size = new System.Drawing.Size(79, 24);
 			this.txtSecurityLevel.StyleController = this.layoutControl8;
 			this.txtSecurityLevel.TabIndex = 12;
 			// 
 			// chkIsSales
 			// 
 			this.chkIsSales.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsUserDetails, "IsSales", true));
-			this.chkIsSales.Location = new System.Drawing.Point(138, 286);
+			this.chkIsSales.Location = new System.Drawing.Point(139, 286);
 			this.chkIsSales.Name = "chkIsSales";
 			this.chkIsSales.Properties.Caption = "Is Sales";
-			this.chkIsSales.Size = new System.Drawing.Size(531, 24);
+			this.chkIsSales.Size = new System.Drawing.Size(533, 24);
 			this.chkIsSales.StyleController = this.layoutControl8;
 			this.chkIsSales.TabIndex = 11;
 			// 
@@ -1512,7 +1512,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.chkTwoFactorAuth.Location = new System.Drawing.Point(127, 108);
 			this.chkTwoFactorAuth.Name = "chkTwoFactorAuth";
 			this.chkTwoFactorAuth.Properties.Caption = "Two Factor Authentication";
-			this.chkTwoFactorAuth.Size = new System.Drawing.Size(542, 24);
+			this.chkTwoFactorAuth.Size = new System.Drawing.Size(545, 24);
 			this.chkTwoFactorAuth.StyleController = this.layoutControl8;
 			this.chkTwoFactorAuth.TabIndex = 9;
 			// 
@@ -1523,7 +1523,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.txtAuthId.Name = "txtAuthId";
 			this.txtAuthId.Properties.ReadOnly = true;
 			this.txtAuthId.Properties.UseReadOnlyAppearance = false;
-			this.txtAuthId.Size = new System.Drawing.Size(540, 22);
+			this.txtAuthId.Size = new System.Drawing.Size(543, 22);
 			this.txtAuthId.StyleController = this.layoutControl8;
 			this.txtAuthId.TabIndex = 8;
 			// 
@@ -1533,7 +1533,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.chkChangePasswordOnFirstLogon.Location = new System.Drawing.Point(127, 80);
 			this.chkChangePasswordOnFirstLogon.Name = "chkChangePasswordOnFirstLogon";
 			this.chkChangePasswordOnFirstLogon.Properties.Caption = "Change Password On First Logon";
-			this.chkChangePasswordOnFirstLogon.Size = new System.Drawing.Size(542, 24);
+			this.chkChangePasswordOnFirstLogon.Size = new System.Drawing.Size(545, 24);
 			this.chkChangePasswordOnFirstLogon.StyleController = this.layoutControl8;
 			this.chkChangePasswordOnFirstLogon.TabIndex = 7;
 			// 
@@ -1549,14 +1549,14 @@ namespace MISLiveMed.UI.Forms.Users
             this.emptySpaceItem17,
             this.emptySpaceItem7});
 			this.layoutControlGroup9.Name = "layoutControlGroup6";
-			this.layoutControlGroup9.Size = new System.Drawing.Size(1085, 641);
+			this.layoutControlGroup9.Size = new System.Drawing.Size(1089, 645);
 			this.layoutControlGroup9.TextVisible = false;
 			// 
 			// emptySpaceItem18
 			// 
-			this.emptySpaceItem18.Location = new System.Drawing.Point(0, 532);
+			this.emptySpaceItem18.Location = new System.Drawing.Point(0, 536);
 			this.emptySpaceItem18.Name = "emptySpaceItem18";
-			this.emptySpaceItem18.Size = new System.Drawing.Size(673, 85);
+			this.emptySpaceItem18.Size = new System.Drawing.Size(676, 85);
 			// 
 			// grpAccounting
 			// 
@@ -1569,49 +1569,49 @@ namespace MISLiveMed.UI.Forms.Users
             this.emptySpaceItem19});
 			this.grpAccounting.Location = new System.Drawing.Point(0, 204);
 			this.grpAccounting.Name = "grpAccounting";
-			this.grpAccounting.Size = new System.Drawing.Size(673, 328);
+			this.grpAccounting.Size = new System.Drawing.Size(676, 332);
 			this.grpAccounting.Text = "Accounting settings";
 			// 
 			// emptySpaceItem23
 			// 
 			this.emptySpaceItem23.Location = new System.Drawing.Point(0, 56);
 			this.emptySpaceItem23.Name = "emptySpaceItem23";
-			this.emptySpaceItem23.Size = new System.Drawing.Size(645, 218);
+			this.emptySpaceItem23.Size = new System.Drawing.Size(648, 222);
 			// 
 			// layoutControlItem21
 			// 
 			this.layoutControlItem21.Control = this.chkIsSales;
-			this.layoutControlItem21.Location = new System.Drawing.Point(110, 28);
+			this.layoutControlItem21.Location = new System.Drawing.Point(111, 28);
 			this.layoutControlItem21.Name = "layoutControlItem21";
-			this.layoutControlItem21.Size = new System.Drawing.Size(535, 28);
+			this.layoutControlItem21.Size = new System.Drawing.Size(537, 28);
 			this.layoutControlItem21.TextVisible = false;
 			// 
 			// emptySpaceItem24
 			// 
 			this.emptySpaceItem24.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem24.Name = "emptySpaceItem24";
-			this.emptySpaceItem24.Size = new System.Drawing.Size(110, 56);
+			this.emptySpaceItem24.Size = new System.Drawing.Size(111, 56);
 			// 
 			// lblSecurityLevel
 			// 
 			this.lblSecurityLevel.Control = this.txtSecurityLevel;
-			this.lblSecurityLevel.Location = new System.Drawing.Point(110, 0);
+			this.lblSecurityLevel.Location = new System.Drawing.Point(111, 0);
 			this.lblSecurityLevel.Name = "lblSecurityLevel";
-			this.lblSecurityLevel.Size = new System.Drawing.Size(183, 28);
+			this.lblSecurityLevel.Size = new System.Drawing.Size(184, 28);
 			this.lblSecurityLevel.Text = "Security Level";
 			this.lblSecurityLevel.TextSize = new System.Drawing.Size(86, 16);
 			// 
 			// emptySpaceItem19
 			// 
-			this.emptySpaceItem19.Location = new System.Drawing.Point(293, 0);
+			this.emptySpaceItem19.Location = new System.Drawing.Point(295, 0);
 			this.emptySpaceItem19.Name = "emptySpaceItem19";
-			this.emptySpaceItem19.Size = new System.Drawing.Size(352, 28);
+			this.emptySpaceItem19.Size = new System.Drawing.Size(353, 28);
 			// 
 			// emptySpaceItem22
 			// 
 			this.emptySpaceItem22.Location = new System.Drawing.Point(0, 136);
 			this.emptySpaceItem22.Name = "emptySpaceItem22";
-			this.emptySpaceItem22.Size = new System.Drawing.Size(673, 68);
+			this.emptySpaceItem22.Size = new System.Drawing.Size(676, 68);
 			// 
 			// grpAuthenticateSettings
 			// 
@@ -1624,7 +1624,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.emptySpaceItem21});
 			this.grpAuthenticateSettings.Location = new System.Drawing.Point(0, 0);
 			this.grpAuthenticateSettings.Name = "grpAuthenticateSettings";
-			this.grpAuthenticateSettings.Size = new System.Drawing.Size(673, 136);
+			this.grpAuthenticateSettings.Size = new System.Drawing.Size(676, 136);
 			this.grpAuthenticateSettings.Text = "Authenticate Settings";
 			// 
 			// lblAuthId
@@ -1632,7 +1632,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblAuthId.Control = this.txtAuthId;
 			this.lblAuthId.Location = new System.Drawing.Point(0, 0);
 			this.lblAuthId.Name = "lblAuthId";
-			this.lblAuthId.Size = new System.Drawing.Size(645, 26);
+			this.lblAuthId.Size = new System.Drawing.Size(648, 26);
 			this.lblAuthId.Text = "Authenticate Id";
 			this.lblAuthId.TextSize = new System.Drawing.Size(86, 16);
 			// 
@@ -1641,7 +1641,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem17.Control = this.chkChangePasswordOnFirstLogon;
 			this.layoutControlItem17.Location = new System.Drawing.Point(99, 26);
 			this.layoutControlItem17.Name = "layoutControlItem17";
-			this.layoutControlItem17.Size = new System.Drawing.Size(546, 28);
+			this.layoutControlItem17.Size = new System.Drawing.Size(549, 28);
 			this.layoutControlItem17.TextVisible = false;
 			// 
 			// emptySpaceItem20
@@ -1655,7 +1655,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem18.Control = this.chkTwoFactorAuth;
 			this.layoutControlItem18.Location = new System.Drawing.Point(99, 54);
 			this.layoutControlItem18.Name = "layoutControlItem18";
-			this.layoutControlItem18.Size = new System.Drawing.Size(546, 28);
+			this.layoutControlItem18.Size = new System.Drawing.Size(549, 28);
 			this.layoutControlItem18.TextVisible = false;
 			// 
 			// emptySpaceItem21
@@ -1666,15 +1666,15 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// emptySpaceItem17
 			// 
-			this.emptySpaceItem17.Location = new System.Drawing.Point(673, 0);
+			this.emptySpaceItem17.Location = new System.Drawing.Point(676, 0);
 			this.emptySpaceItem17.Name = "emptySpaceItem17";
-			this.emptySpaceItem17.Size = new System.Drawing.Size(45, 617);
+			this.emptySpaceItem17.Size = new System.Drawing.Size(45, 621);
 			// 
 			// emptySpaceItem7
 			// 
-			this.emptySpaceItem7.Location = new System.Drawing.Point(718, 0);
+			this.emptySpaceItem7.Location = new System.Drawing.Point(721, 0);
 			this.emptySpaceItem7.Name = "emptySpaceItem7";
-			this.emptySpaceItem7.Size = new System.Drawing.Size(343, 617);
+			this.emptySpaceItem7.Size = new System.Drawing.Size(344, 621);
 			// 
 			// layoutControlGroup7
 			// 
@@ -1683,7 +1683,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem9});
 			this.layoutControlGroup7.Name = "layoutControlGroup7";
-			this.layoutControlGroup7.Size = new System.Drawing.Size(1113, 669);
+			this.layoutControlGroup7.Size = new System.Drawing.Size(1117, 673);
 			this.layoutControlGroup7.TextVisible = false;
 			// 
 			// layoutControlItem9
@@ -1691,7 +1691,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem9.Control = this.layoutControl8;
 			this.layoutControlItem9.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem9.Name = "layoutControlItem9";
-			this.layoutControlItem9.Size = new System.Drawing.Size(1089, 645);
+			this.layoutControlItem9.Size = new System.Drawing.Size(1093, 649);
 			this.layoutControlItem9.TextVisible = false;
 			// 
 			// btnCancel

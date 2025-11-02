@@ -2018,14 +2018,17 @@
 			this.mnuMigrations.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.mnuMigrateCharts,
             this.mnuMigrateJournals});
+			this.mnuMigrations.Expanded = true;
 			this.mnuMigrations.Name = "mnuMigrations";
 			this.mnuMigrations.Text = "Migration";
+			this.mnuMigrations.Visible = false;
 			// 
 			// mnuMigrateCharts
 			// 
 			this.mnuMigrateCharts.Name = "mnuMigrateCharts";
 			this.mnuMigrateCharts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.mnuMigrateCharts.Text = "Charts";
+			this.mnuMigrateCharts.Visible = false;
 			this.mnuMigrateCharts.Click += new System.EventHandler(this.mnuMigrateCharts_Click);
 			// 
 			// mnuMigrateJournals
@@ -2033,6 +2036,7 @@
 			this.mnuMigrateJournals.Name = "mnuMigrateJournals";
 			this.mnuMigrateJournals.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.mnuMigrateJournals.Text = "Journals";
+			this.mnuMigrateJournals.Visible = false;
 			this.mnuMigrateJournals.Click += new System.EventHandler(this.mnuMigrateJournals_Click);
 			// 
 			// accordionSettings

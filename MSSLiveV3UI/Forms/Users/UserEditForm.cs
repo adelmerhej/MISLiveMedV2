@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.Utils;
+﻿using DevExpress.Utils;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
@@ -18,12 +12,19 @@ using MISLiveMed.DataLayers.Common.Titles;
 using MISLiveMed.DataLayers.Users;
 using MISLiveMed.Models.Models.Common.Countries;
 using MISLiveMed.Models.Models.Common.Forms;
+using MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs;
 using MISLiveMed.Models.Models.Users;
 using MISLiveMed.UI.Main;
 using MISLiveMed.UI.Properties;
 using MISLiveMed.UI.Utilities;
 using MISLiveMed.Utils.Common;
 using MISLiveMed.Utils.Enums;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
 namespace MISLiveMed.UI.Forms.Users
 {
@@ -152,15 +153,18 @@ namespace MISLiveMed.UI.Forms.Users
 
 		private void ApplyPermissions()
 		{
-			if (_userPermission == null) return;
-			if (_userPermission.Count <= 0) return;
+			// If no permissions loaded, keep defaults for buttons
+			if (_userPermission == null || _userPermission.Count == 0)
+			{
+				return;
+			}
 
-			var canEdit = _userPermission.SingleOrDefault(x => x.ControlName == "CanEdit")?.Value;
-			if (canEdit != null) _canEdit = (bool)canEdit;
+			// Retrieve permissions safely and succinctly
+			_canEdit = GetPermission("CanEdit");
+			_isAdmin = GetPermission("IsAdmin");
+			_isProtected = GetPermission("IsProtected");
 
-			var isAdmin = _userPermission.SingleOrDefault(x => x.ControlName == "IsAdmin")?.Value;
-			if (isAdmin != null) _isAdmin = (bool)isAdmin;
-
+			// Apply to UI elements
 			txtUserName.ReadOnly = !_isAdmin && !_canEdit;
 			txtPassword.ReadOnly = !_isAdmin && !_canEdit;
 			cboTitles.ReadOnly = !_isAdmin && !_canEdit;
@@ -190,6 +194,13 @@ namespace MISLiveMed.UI.Forms.Users
 
 			chkMobileNumberConfirmed.Enabled = _isAdmin;
 			chkConfirmedEmail.Enabled = _isAdmin;
+		}
+
+		// Helper to get a permission flag by name with default fallback
+		private bool GetPermission(string name, bool defaultValue = false)
+		{
+			var raw = _userPermission.FirstOrDefault(p => p.ControlName == name)?.Value;
+			return HelperApplication.ConvertToBool(raw) ?? defaultValue;
 		}
 
 		private void ApplyDefaults()
@@ -441,7 +452,7 @@ namespace MISLiveMed.UI.Forms.Users
 				}
 
 				ChangePasswordForm _frm = new ChangePasswordForm(changeUserModel);
-
+				_frm.SendChangedPassword += RcvChangedPassword;
 				_frm.ShowDialog();
 			}
 			catch (Exception exception)
@@ -576,5 +587,10 @@ namespace MISLiveMed.UI.Forms.Users
 			}
 		}
 
+		private void RcvChangedPassword(object sender, EventArgs e)
+		{
+			if (sender is not UserModel model) return;
+			_userModel = model;
+		}
 	}
 }

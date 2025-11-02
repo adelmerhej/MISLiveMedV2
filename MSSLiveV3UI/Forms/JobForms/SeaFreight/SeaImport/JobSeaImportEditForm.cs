@@ -273,40 +273,43 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void ApplyPermissions()
         {
-            dtJobDate.ReadOnly = _userModel.SecurityLevel > 2;
-            cboUsers.ReadOnly = _userModel.SecurityLevel > 2;
-            cboSales.ReadOnly = _userModel.SecurityLevel > 2;
-            cboOperatingUsers.ReadOnly = _userModel.SecurityLevel > 2;
+            // Basic read-only state based on security level
+            bool makeReadOnly = _userModel.SecurityLevel > 2;
+            dtJobDate.ReadOnly = makeReadOnly;
+            cboUsers.ReadOnly = makeReadOnly;
+            cboSales.ReadOnly = makeReadOnly;
+            cboOperatingUsers.ReadOnly = makeReadOnly;
 
-            //rpSettings.Visible = _userModel.UserLevel < 3;
+            // If no permissions loaded, keep defaults for buttons
+            if (_userPermission == null || _userPermission.Count == 0)
+            {
+                return;
+            }
 
-            if (_userPermission == null) return;
-            if (_userPermission.Count <= 0) return;
+            // Retrieve permissions safely and succinctly
+            _canAdd = GetPermission("CanAdd");
+            _canEdit = GetPermission("CanEdit");
+            _canDelete = GetPermission("CanDelete");
+            _canPrint = GetPermission("CanPrint");
+            _isAdmin = GetPermission("IsAdmin");
+            _isProtected = GetPermission("IsProtected");
 
-            var canAdd = _userPermission.SingleOrDefault(x => x.ControlName == "CanAdd")?.Value;
-            if (canAdd != null) _canAdd = (bool)canAdd;
-
-            var canEdit = _userPermission.SingleOrDefault(x => x.ControlName == "CanEdit")?.Value;
-            if (canEdit != null) _canEdit = (bool)canEdit;
-
-            var canDelete = _userPermission.SingleOrDefault(x => x.ControlName == "CanDelete")?.Value;
-            if (canDelete != null) _canDelete = (bool)canDelete;
-
-            var canPrint = _userPermission.SingleOrDefault(x => x.ControlName == "CanPrint")?.Value;
-            if (canPrint != null) _canPrint = (bool)canPrint;
-
-            var isAdmin = _userPermission.SingleOrDefault(x => x.ControlName == "IsAdmin")?.Value;
-            if (isAdmin != null) _isAdmin = (bool)isAdmin;
-
-            var isProtected = _userPermission.SingleOrDefault(x => x.ControlName == "IsProtected")?.Value;
-            if (isProtected != null) _isProtected = (bool)isProtected;
-
+            // Apply to UI elements
             btnNew.Enabled = _isAdmin || _canAdd;
             btnSave.Enabled = _isAdmin || _canEdit;
             btnSaveAndClose.Enabled = _isAdmin || _canEdit;
             btnPrint.Enabled = _isAdmin || _canPrint;
             btnDelete.Enabled = _isAdmin || _canDelete;
-            btnProtected.Enabled = _isAdmin;
+            btnProtected.Enabled = _isAdmin || _isProtected;
+        }
+
+
+
+        // Helper to get a permission flag by name with default fallback
+        private bool GetPermission(string name, bool defaultValue = false)
+        {
+            var raw = _userPermission.FirstOrDefault(p => p.ControlName == name)?.Value;
+            return HelperApplication.ConvertToBool(raw) ?? defaultValue;
         }
 
         private void ApplyDefaults()

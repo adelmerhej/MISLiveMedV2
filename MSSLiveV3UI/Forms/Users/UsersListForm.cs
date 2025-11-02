@@ -100,28 +100,32 @@ namespace MISLiveMed.UI.Forms.Users
 		}
 		private void ApplyPermissions()
 		{
-			if (_userPermission == null) return;
-			if (_userPermission.Count <= 0) return;
+			// If no permissions loaded, keep defaults for buttons
+			if (_userPermission == null || _userPermission.Count == 0)
+			{
+				return;
+			}
 
-			var canAdd = _userPermission.SingleOrDefault(x => x.ControlName == "CanAdd")?.Value;
-			if (canAdd != null) _canAdd = (bool)canAdd;
+			// Retrieve permissions safely and succinctly
+			_canAdd = GetPermission("CanAdd");
+			_canEdit = GetPermission("CanEdit");
+			_canDelete = GetPermission("CanDelete");
+			_canPrint = GetPermission("CanPrint");
+			_isAdmin = GetPermission("IsAdmin");
+			_isProtected = GetPermission("IsProtected");
 
-			var canEdit = _userPermission.SingleOrDefault(x => x.ControlName == "CanEdit")?.Value;
-			if (canEdit != null) _canEdit = (bool)canEdit;
-
-			var canDelete = _userPermission.SingleOrDefault(x => x.ControlName == "CanDelete")?.Value;
-			if (canDelete != null) _canDelete = (bool)canDelete;
-
-			var canPrint = _userPermission.SingleOrDefault(x => x.ControlName == "CanPrint")?.Value;
-			if (canPrint != null) _canPrint = (bool)canPrint;
-
-			var isAdmin = _userPermission.SingleOrDefault(x => x.ControlName == "IsAdmin")?.Value;
-			if (isAdmin != null) _isAdmin = (bool)isAdmin;
-
+			// Apply to UI elements
 			btnNew.Enabled = _isAdmin || _canAdd;
 			btnEdit.Enabled = _isAdmin || _canEdit;
 			btnPrint.Enabled = _isAdmin || _canPrint;
 			btnDelete.Enabled = _isAdmin || _canDelete;
+		}
+
+		// Helper to get a permission flag by name with default fallback
+		private bool GetPermission(string name, bool defaultValue = false)
+		{
+			var raw = _userPermission.FirstOrDefault(p => p.ControlName == name)?.Value;
+			return HelperApplication.ConvertToBool(raw) ?? defaultValue;
 		}
 
 		#region MenuButtons

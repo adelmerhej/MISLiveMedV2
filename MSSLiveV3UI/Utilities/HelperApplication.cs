@@ -854,6 +854,20 @@ namespace MISLiveMed.UI.Utilities
 				Income
 			}
 		}
+
+		// Safely convert a permission value (bool/int/string) to bool
+		public static bool? ConvertToBool(object value)
+		{
+			if (value == null) return null;
+			if (value is bool b) return b;
+			if (value is int i) return i != 0;
+			if (value is string s)
+			{
+				if (bool.TryParse(s, out var sb)) return sb;
+				if (int.TryParse(s, out var si)) return si != 0;
+			}
+			return null;
+		}
 	}
 
 	// ... handler implementations ...

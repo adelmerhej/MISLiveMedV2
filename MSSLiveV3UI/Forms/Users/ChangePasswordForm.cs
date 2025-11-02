@@ -114,6 +114,7 @@ namespace MISLiveMed.UI.Forms.Users
 
 				_userModel.PasswordHash = SystemUtilities.PasswordHasher.HashPassword(txtNewPassword.Text);
 
+				_userModel.Password = txtConfirmPassword.Text.Trim(); // TODO: to be removed, it's just for logging purpose only
 				if (!_userRepository.UpdateUser(_userModel))
 				{
 					throw new Exception("Error while changing password\n- Contact your system administrator.");

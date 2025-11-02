@@ -22,8 +22,9 @@ namespace MISLiveMed.Models.Models.Users
 		public int SecurityLevel { get; set; }
 	    public bool FirstTimeAccess { get; set; }
 	    public bool PermissionChanged { get; set; }
+		public string Password { get; set; } //TODO: Remove this property after implementing proper password handling
 
-        public virtual IList<UserDetailModel> UsersDetail { get; set; } = new List<UserDetailModel>();
+		public virtual IList<UserDetailModel> UsersDetail { get; set; } = new List<UserDetailModel>();
 
 
         #region Implementation of ICloneable
