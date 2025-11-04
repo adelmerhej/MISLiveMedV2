@@ -273,16 +273,17 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void ApplyPermissions()
         {
-            // Basic read-only state based on security level
+            // Basic read-only state for date based on security level
             bool makeReadOnly = _userModel.SecurityLevel > 2;
             dtJobDate.ReadOnly = makeReadOnly;
-            cboUsers.ReadOnly = makeReadOnly;
-            cboSales.ReadOnly = makeReadOnly;
-            cboOperatingUsers.ReadOnly = makeReadOnly;
 
             // If no permissions loaded, keep defaults for buttons
             if (_userPermission == null || _userPermission.Count == 0)
             {
+                // Default to admin-only editing disabled when we don't know permissions
+                cboUsers.ReadOnly = true;
+                cboSales.ReadOnly = true;
+                cboOperatingUsers.ReadOnly = true;
                 return;
             }
 
@@ -301,6 +302,11 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             btnPrint.Enabled = _isAdmin || _canPrint;
             btnDelete.Enabled = _isAdmin || _canDelete;
             btnProtected.Enabled = _isAdmin || _isProtected;
+
+            // Admin-only editing for user assignment combos
+            cboUsers.ReadOnly = !_isAdmin;
+            cboSales.ReadOnly = !_isAdmin;
+            cboOperatingUsers.ReadOnly = !_isAdmin;
         }
 
 

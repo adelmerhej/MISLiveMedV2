@@ -206,6 +206,7 @@ namespace MISLiveMed.DataLayers.Users
 				var p = new DynamicParameters();
 				p.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
 				p.Add("@UserName", dataModel.UserName);
+				p.Add("@Password", dataModel.Password);
 				p.Add("@PasswordHash", dataModel.PasswordHash);
 				p.Add("@SecurityStamp", dataModel.SecurityStamp);
 				p.Add("@Email", dataModel.Email);
@@ -229,7 +230,7 @@ namespace MISLiveMed.DataLayers.Users
 				p.Add("@IsDefault", dataModel.IsDefault);
 
 				dataModel.Id = connection.ExecuteScalar<int>(
-					"dbo.job_AddNewUser @UserName, @PasswordHash, @SecurityStamp, @Email, @EmailConfirmed, " +
+					"dbo.job_AddNewUser @UserName, @Password, @PasswordHash, @SecurityStamp, @Email, @EmailConfirmed, " +
 					"@MobileNumber, @MobileNumberConfirmed, @TwoFactorEnabled, @LockoutEndDate, @LockoutEnabled, @AccessFailedCount, " +
 					"@ChangePasswordNextLogon, @SecurityLevel, @FirstTimeAccess, @PermissionChanged, " +
 					"@Notes, @CompanyId, @BranchId, @CreatedBy, @IsProtected, @IsDefault ",
@@ -251,6 +252,7 @@ namespace MISLiveMed.DataLayers.Users
 				var p = new DynamicParameters();
 				p.Add("@Id", dataModel.Id);
 				p.Add("@UserName", dataModel.UserName);
+				p.Add("@Password", dataModel.Password);
 				p.Add("@PasswordHash", dataModel.PasswordHash);
 				p.Add("@SecurityStamp", dataModel.SecurityStamp);
 				p.Add("@Email", dataModel.Email);
@@ -272,7 +274,7 @@ namespace MISLiveMed.DataLayers.Users
 				p.Add("@IsProtected", dataModel.IsProtected);
 				p.Add("@Active", dataModel.Active);
 
-				_ = connection.ExecuteScalar("dbo.job_UpdateUser @Id, @UserName, @PasswordHash, @SecurityStamp, @Email, @EmailConfirmed, " +
+				_ = connection.ExecuteScalar("dbo.job_UpdateUser @Id, @UserName, @Password, @PasswordHash, @SecurityStamp, @Email, @EmailConfirmed, " +
 				                             "@MobileNumber, @MobileNumberConfirmed, @TwoFactorEnabled, @LockoutEndDate, @LockoutEnabled, @AccessFailedCount, " +
 				                             "@ChangePasswordNextLogon, @SecurityLevel, @FirstTimeAccess, @PermissionChanged, " +
 				                             "@Notes, @CompanyId, @LastModifiedBy, @IsProtected, @Active", p);
