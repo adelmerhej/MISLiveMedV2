@@ -176,7 +176,7 @@ namespace MISLiveMed.DataLayers.Common.Forms
 					_ = connection.ExecuteScalar<int>(
 						$@"UPDATE {_schema}.Forms SET Name = @Name, Description = @Description, Notes = @Notes, CompanyId = @CompanyId, " +
 							"BranchId = BranchId, LastModifiedBy = @LastModifiedBy, IsProtected = @IsProtected, IsDefault = @IsDefault, " +
-							"Active = @Active, Locked = @Locked", p);
+							"Active = @Active, Locked = @Locked WHERE Id = @Id", p);
 				}
 			}
 			catch (Exception e)

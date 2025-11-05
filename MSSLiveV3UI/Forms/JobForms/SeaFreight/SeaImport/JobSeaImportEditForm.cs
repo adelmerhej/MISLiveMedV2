@@ -423,13 +423,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
             //Print
         }
-
-        private void btnAbout_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            AboutForm frm = new AboutForm();
-            frm.ShowDialog();
-        }
-
+		
         private void btnClose_ItemClick(object sender, ItemClickEventArgs e)
         {
             Close();

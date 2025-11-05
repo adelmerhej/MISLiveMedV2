@@ -233,23 +233,25 @@
 			// 
 			// gcForms
 			// 
+			this.gcForms.DataSource = this.bsForms;
 			this.gcForms.EmbeddedNavigator.Buttons.Append.Visible = false;
 			this.gcForms.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
 			this.gcForms.EmbeddedNavigator.Buttons.Edit.Visible = false;
 			this.gcForms.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
 			this.gcForms.EmbeddedNavigator.Buttons.Remove.Visible = false;
-			this.gcForms.Location = new System.Drawing.Point(9, 10);
+			this.gcForms.Location = new System.Drawing.Point(11, 12);
 			this.gcForms.MainView = this.gvForms;
 			this.gcForms.Name = "gcForms";
 			this.gcForms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repCheckBox,
             this.repBranches,
             this.repCompanies});
-			this.gcForms.Size = new System.Drawing.Size(1407, 533);
+			this.gcForms.Size = new System.Drawing.Size(1403, 529);
 			this.gcForms.TabIndex = 9;
 			this.gcForms.UseEmbeddedNavigator = true;
 			this.gcForms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvForms});
+			this.gcForms.DoubleClick += new System.EventHandler(this.gcForms_DoubleClick);
 			// 
 			// gvForms
 			// 
@@ -393,7 +395,7 @@
 			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1});
 			this.layoutControlGroup1.Name = "Root";
-			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(7, 7, 8, 8);
+			this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(9, 9, 10, 10);
 			this.layoutControlGroup1.Size = new System.Drawing.Size(1425, 553);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
@@ -402,8 +404,7 @@
 			this.layoutControlItem1.Control = this.gcForms;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1411, 537);
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(1407, 533);
 			this.layoutControlItem1.TextVisible = false;
 			// 
 			// FormsList

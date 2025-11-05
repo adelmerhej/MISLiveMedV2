@@ -98,8 +98,8 @@ namespace MISLiveMed.UI.Forms.Common.Forms
 		{
 			bsForms.DataSource = _forms;
 
-			gcForms.DataSource = null;
-			gcForms.DataSource = _companies;
+			//gcForms.DataSource = null;
+			//gcForms.DataSource = _companies;
 
 			repCompanies.DataSource = null;
 			repCompanies.DataSource = _companies;
