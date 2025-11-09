@@ -1,15 +1,16 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MISLiveV2")]
-[assembly: AssemblyDescription("Main App for Management Information Shipping V2")]
+[assembly: AssemblyTitle("MISLiveMed.Update")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Vision^n")]
-[assembly: AssemblyProduct("MISLiveV2 UI")]
-[assembly: AssemblyCopyright("Copyright © Vision^n 2026")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("MISLiveMed.Update")]
+[assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("DBBB8FC5-7FAC-4501-949C-CEEE736B92EE")]
+[assembly: Guid("962e930a-5ac7-4a37-b34d-c11438e8f5f3")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -28,8 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("4.8.2.3")]
-[assembly: AssemblyFileVersion("2.0.1.12")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

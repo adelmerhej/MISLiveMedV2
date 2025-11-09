@@ -875,6 +875,12 @@
     <Compile Include="Main\ReportWaitForm.Designer.cs">
       <DependentUpon>ReportWaitForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\Update\LiveUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Update\LiveUpdateForm.Designer.cs">
+      <DependentUpon>LiveUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1364,6 +1370,9 @@
     <EmbeddedResource Include="Main\ReportWaitForm.resx">
       <DependentUpon>ReportWaitForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\Update\LiveUpdateForm.resx">
+      <DependentUpon>LiveUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
@@ -1563,6 +1572,10 @@
     <Analyzer Include="C:\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.data\25.1.5\analyzers\dotnet\DevExpress.Generator.dll" Visible="false" Condition="Exists('C:\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.data\25.1.5\analyzers\dotnet\DevExpress.Generator.dll')" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MISLiveMed.Update\MISLiveMed.Update.csproj">
+      <Project>{962e930a-5ac7-4a37-b34d-c11438e8f5f3}</Project>
+      <Name>MISLiveMed.Update</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MISLiveMedV2.DataLayer\MISLiveMed.DataLayers.csproj">
       <Project>{9d71cec1-c086-4601-9724-6e59d5b7b11c}</Project>
       <Name>MISLiveMed.DataLayers</Name>
@@ -1579,5 +1592,11 @@
       <Project>{210e3bb2-135b-4c60-95b6-0a0d4f39f659}</Project>
       <Name>MISLiveMed.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiveUpdate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LiveUpdate.ico" />
   </ItemGroup>
 </Project>

@@ -267,7 +267,7 @@ namespace MISLiveMed.UI.Forms.Common.Forms
 			if (e.RowHandle >= 0)
 			{
 				bool isActive = (bool)view.GetRowCellValue(e.RowHandle, "Active");
-				bool isDefault = (bool)view.GetRowCellValue(e.RowHandle, "IsDefault");
+				bool isDefault = (bool)view.GetRowCellValue(e.RowHandle, "IsDefault1");
 				if (isDefault)
 				{
 					e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Bold);

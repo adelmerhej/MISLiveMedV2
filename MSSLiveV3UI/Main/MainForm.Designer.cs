@@ -210,6 +210,9 @@
 			this.mnuCompaniesList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuDepartmentsMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuDepartmentsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuFormsSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuForms = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuFormsCategories = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuSettings = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.sep24 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.mnuGeneralSettings = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -235,9 +238,8 @@
 			this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
 			this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuFormsSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuForms = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuFormsCategories = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.btnLiveUpdate = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonMainForm)).BeginInit();
@@ -298,10 +300,11 @@
             this.statusHost,
             this.statusVersion,
             this.statusSpace1,
-            this.statusDatabase});
+            this.statusDatabase,
+            this.btnLiveUpdate});
 			this.ribbonMainForm.Location = new System.Drawing.Point(0, 0);
 			this.ribbonMainForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.ribbonMainForm.MaxItemId = 70;
+			this.ribbonMainForm.MaxItemId = 71;
 			this.ribbonMainForm.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
 			this.ribbonMainForm.Name = "ribbonMainForm";
 			this.ribbonMainForm.OptionsMenuMinWidth = 515;
@@ -449,7 +452,8 @@
 			this.rpHome.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgDashboard,
             this.rpgAbout,
-            this.rpgExit});
+            this.rpgExit,
+            this.ribbonPageGroup3});
 			this.rpHome.Name = "rpHome";
 			this.rpHome.Text = "HOME";
 			// 
@@ -549,6 +553,7 @@
             this.mnuGroupDepartments,
             this.mnuGroupReports,
             this.mnuMembers});
+			this.mnuNavigationMenu.Expanded = true;
 			this.mnuNavigationMenu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuNavigationMenu.ImageOptions.SvgImage")));
 			this.mnuNavigationMenu.ImageOptions.SvgImageSize = new System.Drawing.Size(24, 24);
 			this.mnuNavigationMenu.Name = "mnuNavigationMenu";
@@ -1884,8 +1889,8 @@
 			this.mnuSetupMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.mnuUsersMenu,
             this.mnuDepartmentsMenu,
-            this.mnuSettings,
             this.mnuFormsSetting,
+            this.mnuSettings,
             this.mnuMigrations});
 			this.mnuSetupMenu.Expanded = true;
 			this.mnuSetupMenu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuSetupMenu.ImageOptions.SvgImage")));
@@ -1946,6 +1951,33 @@
 			this.mnuDepartmentsList.Text = "Departments";
 			this.mnuDepartmentsList.Visible = false;
 			this.mnuDepartmentsList.Click += new System.EventHandler(this.mnuDepartmentsList_Click);
+			// 
+			// mnuFormsSetting
+			// 
+			this.mnuFormsSetting.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuForms,
+            this.mnuFormsCategories});
+			this.mnuFormsSetting.Expanded = true;
+			this.mnuFormsSetting.Name = "mnuFormsSetting";
+			this.mnuFormsSetting.Text = "Forms Setting";
+			// 
+			// mnuForms
+			// 
+			this.mnuForms.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuForms.ImageOptions.SvgImage")));
+			this.mnuForms.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuForms.Name = "mnuForms";
+			this.mnuForms.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuForms.Text = "Forms";
+			this.mnuForms.Click += new System.EventHandler(this.mnuForms_Click);
+			// 
+			// mnuFormsCategories
+			// 
+			this.mnuFormsCategories.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuFormsCategories.ImageOptions.SvgImage")));
+			this.mnuFormsCategories.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuFormsCategories.Name = "mnuFormsCategories";
+			this.mnuFormsCategories.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuFormsCategories.Text = "Categories";
+			this.mnuFormsCategories.Click += new System.EventHandler(this.mnuFormsCategories_Click);
 			// 
 			// mnuSettings
 			// 
@@ -2184,32 +2216,19 @@
 			this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.accordionControlElement3.Text = "Element3";
 			// 
-			// mnuFormsSetting
+			// ribbonPageGroup3
 			// 
-			this.mnuFormsSetting.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuForms,
-            this.mnuFormsCategories});
-			this.mnuFormsSetting.Expanded = true;
-			this.mnuFormsSetting.Name = "mnuFormsSetting";
-			this.mnuFormsSetting.Text = "Forms Setting";
+			this.ribbonPageGroup3.ItemLinks.Add(this.btnLiveUpdate);
+			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+			this.ribbonPageGroup3.Text = "Live update";
 			// 
-			// mnuForms
+			// btnLiveUpdate
 			// 
-			this.mnuForms.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuForms.ImageOptions.SvgImage")));
-			this.mnuForms.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuForms.Name = "mnuForms";
-			this.mnuForms.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuForms.Text = "Forms";
-			this.mnuForms.Click += new System.EventHandler(this.mnuForms_Click);
-			// 
-			// mnuFormsCategories
-			// 
-			this.mnuFormsCategories.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuFormsCategories.ImageOptions.SvgImage")));
-			this.mnuFormsCategories.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuFormsCategories.Name = "mnuFormsCategories";
-			this.mnuFormsCategories.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuFormsCategories.Text = "Categories";
-			this.mnuFormsCategories.Click += new System.EventHandler(this.mnuFormsCategories_Click);
+			this.btnLiveUpdate.Caption = "Check for Update";
+			this.btnLiveUpdate.Id = 70;
+			this.btnLiveUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLiveUpdate.ImageOptions.SvgImage")));
+			this.btnLiveUpdate.Name = "btnLiveUpdate";
+			this.btnLiveUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLiveUpdate_ItemClick);
 			// 
 			// MainForm
 			// 
@@ -2454,5 +2473,7 @@
 		private DevExpress.XtraBars.Navigation.AccordionControlElement mnuFormsSetting;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement mnuForms;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement mnuFormsCategories;
+		private DevExpress.XtraBars.BarButtonItem btnLiveUpdate;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
 	}
 }

@@ -47,6 +47,7 @@ using MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport.Reports;
 using MISLiveMed.UI.Forms.Users;
 using MISLiveMed.UI.Forms.Users.PermissionControls;
 using MISLiveMed.UI.Main.Administration.Configuration;
+using MISLiveMed.UI.Main.Update;
 using MISLiveMed.UI.Properties;
 using MISLiveMed.UI.Reports.BookingStatus;
 using MISLiveMed.UI.Reports.ClientsReports;
@@ -1147,6 +1148,12 @@ namespace MISLiveMed.UI.Main
 		private void mnuFormsCategories_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void btnLiveUpdate_ItemClick(object sender, ItemClickEventArgs e)
+		{
+			LiveUpdateForm dbForm = new LiveUpdateForm();
+			dbForm.ShowDialog();
 		}
 	}
 }
