@@ -55,10 +55,12 @@
 			this.statusVersion = new DevExpress.XtraBars.BarStaticItem();
 			this.statusSpace1 = new DevExpress.XtraBars.BarStaticItem();
 			this.statusDatabase = new DevExpress.XtraBars.BarStaticItem();
+			this.btnLiveUpdate = new DevExpress.XtraBars.BarButtonItem();
 			this.rpHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.rpgDashboard = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgAbout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgExit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgMainView = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.rpgsettings = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgAppearance = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -238,8 +240,6 @@
 			this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
 			this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.btnLiveUpdate = new DevExpress.XtraBars.BarButtonItem();
 			((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonMainForm)).BeginInit();
@@ -447,13 +447,21 @@
 			this.statusDatabase.Id = 69;
 			this.statusDatabase.Name = "statusDatabase";
 			// 
+			// btnLiveUpdate
+			// 
+			this.btnLiveUpdate.Caption = "Check for Update";
+			this.btnLiveUpdate.Id = 70;
+			this.btnLiveUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLiveUpdate.ImageOptions.SvgImage")));
+			this.btnLiveUpdate.Name = "btnLiveUpdate";
+			this.btnLiveUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLiveUpdate_ItemClick);
+			// 
 			// rpHome
 			// 
 			this.rpHome.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgDashboard,
+            this.ribbonPageGroup3,
             this.rpgAbout,
-            this.rpgExit,
-            this.ribbonPageGroup3});
+            this.rpgExit});
 			this.rpHome.Name = "rpHome";
 			this.rpHome.Text = "HOME";
 			// 
@@ -477,6 +485,13 @@
 			this.rpgExit.ItemLinks.Add(this.btnExit);
 			this.rpgExit.Name = "rpgExit";
 			this.rpgExit.Text = "Exit";
+			// 
+			// ribbonPageGroup3
+			// 
+			this.ribbonPageGroup3.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
+			this.ribbonPageGroup3.ItemLinks.Add(this.btnLiveUpdate);
+			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+			this.ribbonPageGroup3.Text = "Live update";
 			// 
 			// rpgMainView
 			// 
@@ -2215,20 +2230,6 @@
 			this.accordionControlElement3.Name = "accordionControlElement3";
 			this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.accordionControlElement3.Text = "Element3";
-			// 
-			// ribbonPageGroup3
-			// 
-			this.ribbonPageGroup3.ItemLinks.Add(this.btnLiveUpdate);
-			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-			this.ribbonPageGroup3.Text = "Live update";
-			// 
-			// btnLiveUpdate
-			// 
-			this.btnLiveUpdate.Caption = "Check for Update";
-			this.btnLiveUpdate.Id = 70;
-			this.btnLiveUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLiveUpdate.ImageOptions.SvgImage")));
-			this.btnLiveUpdate.Name = "btnLiveUpdate";
-			this.btnLiveUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLiveUpdate_ItemClick);
 			// 
 			// MainForm
 			// 
