@@ -7,7 +7,6 @@ using System.IO;
 using DevExpress.XtraLayout.Utils;
 using MISLiveMed.Update.Utilities;
 
-
 namespace MISLiveMed.UI.Main.Update
 {
 	public partial class LiveUpdateForm : XtraForm
