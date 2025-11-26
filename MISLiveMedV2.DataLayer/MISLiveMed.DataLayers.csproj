@@ -193,6 +193,7 @@
     <Compile Include="Administration\Application\ApplicationModel.cs" />
     <Compile Include="Administration\Parameters\ConfigurationRepository.cs" />
     <Compile Include="Administration\Parameters\ParameterRepository.cs" />
+    <Compile Include="Administration\Update\LiveUpdateSettingsProvider.cs" />
     <Compile Include="Common\Carriers\AirlineRepository.cs" />
     <Compile Include="Common\Colors\ColorRepository.cs" />
     <Compile Include="Common\Companies\BranchRepository.cs" />

@@ -58,9 +58,9 @@
 			this.btnLiveUpdate = new DevExpress.XtraBars.BarButtonItem();
 			this.rpHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.rpgDashboard = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgAbout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgExit = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgMainView = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.rpgsettings = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpgAppearance = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -215,11 +215,12 @@
 			this.mnuFormsSetting = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuForms = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuFormsCategories = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.accordionControlSeparator27 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.mnuPermissionControlsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuCommissionsManager = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuSettings = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.sep24 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.mnuGeneralSettings = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuPermissionControlsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuCommissionsManager = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator10 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.mnuDatabaseSettings = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuMigrations = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -471,6 +472,13 @@
 			this.rpgDashboard.Name = "rpgDashboard";
 			this.rpgDashboard.Text = "Dashboard Refresh";
 			// 
+			// ribbonPageGroup3
+			// 
+			this.ribbonPageGroup3.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
+			this.ribbonPageGroup3.ItemLinks.Add(this.btnLiveUpdate);
+			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+			this.ribbonPageGroup3.Text = "Live update";
+			// 
 			// rpgAbout
 			// 
 			this.rpgAbout.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
@@ -485,13 +493,6 @@
 			this.rpgExit.ItemLinks.Add(this.btnExit);
 			this.rpgExit.Name = "rpgExit";
 			this.rpgExit.Text = "Exit";
-			// 
-			// ribbonPageGroup3
-			// 
-			this.ribbonPageGroup3.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
-			this.ribbonPageGroup3.ItemLinks.Add(this.btnLiveUpdate);
-			this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-			this.ribbonPageGroup3.Text = "Live update";
 			// 
 			// rpgMainView
 			// 
@@ -1971,7 +1972,10 @@
 			// 
 			this.mnuFormsSetting.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.mnuForms,
-            this.mnuFormsCategories});
+            this.mnuFormsCategories,
+            this.accordionControlSeparator27,
+            this.mnuPermissionControlsList,
+            this.mnuCommissionsManager});
 			this.mnuFormsSetting.Expanded = true;
 			this.mnuFormsSetting.Name = "mnuFormsSetting";
 			this.mnuFormsSetting.Text = "Forms Setting";
@@ -1994,35 +1998,9 @@
 			this.mnuFormsCategories.Text = "Categories";
 			this.mnuFormsCategories.Click += new System.EventHandler(this.mnuFormsCategories_Click);
 			// 
-			// mnuSettings
+			// accordionControlSeparator27
 			// 
-			this.mnuSettings.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.sep24,
-            this.mnuGeneralSettings,
-            this.mnuPermissionControlsList,
-            this.mnuCommissionsManager,
-            this.accordionControlSeparator10,
-            this.mnuDatabaseSettings});
-			this.mnuSettings.Expanded = true;
-			this.mnuSettings.Name = "mnuSettings";
-			this.mnuSettings.Text = "Settings";
-			this.mnuSettings.Visible = false;
-			// 
-			// sep24
-			// 
-			this.sep24.Name = "sep24";
-			// 
-			// mnuGeneralSettings
-			// 
-			this.mnuGeneralSettings.ControlFooterAlignment = DevExpress.XtraBars.Navigation.AccordionItemFooterAlignment.Far;
-			this.mnuGeneralSettings.Enabled = false;
-			this.mnuGeneralSettings.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuGeneralSettings.ImageOptions.SvgImage")));
-			this.mnuGeneralSettings.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuGeneralSettings.Name = "mnuGeneralSettings";
-			this.mnuGeneralSettings.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuGeneralSettings.Text = "General Settings";
-			this.mnuGeneralSettings.Visible = false;
-			this.mnuGeneralSettings.Click += new System.EventHandler(this.mnuGeneralSettings_Click);
+			this.accordionControlSeparator27.Name = "accordionControlSeparator27";
 			// 
 			// mnuPermissionControlsList
 			// 
@@ -2045,6 +2023,34 @@
 			this.mnuCommissionsManager.Text = "Commission Manager";
 			this.mnuCommissionsManager.Visible = false;
 			this.mnuCommissionsManager.Click += new System.EventHandler(this.mnuCommissionsManager_Click);
+			// 
+			// mnuSettings
+			// 
+			this.mnuSettings.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.sep24,
+            this.mnuGeneralSettings,
+            this.accordionControlSeparator10,
+            this.mnuDatabaseSettings});
+			this.mnuSettings.Expanded = true;
+			this.mnuSettings.Name = "mnuSettings";
+			this.mnuSettings.Text = "Settings";
+			this.mnuSettings.Visible = false;
+			// 
+			// sep24
+			// 
+			this.sep24.Name = "sep24";
+			// 
+			// mnuGeneralSettings
+			// 
+			this.mnuGeneralSettings.ControlFooterAlignment = DevExpress.XtraBars.Navigation.AccordionItemFooterAlignment.Far;
+			this.mnuGeneralSettings.Enabled = false;
+			this.mnuGeneralSettings.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuGeneralSettings.ImageOptions.SvgImage")));
+			this.mnuGeneralSettings.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuGeneralSettings.Name = "mnuGeneralSettings";
+			this.mnuGeneralSettings.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuGeneralSettings.Text = "General Settings";
+			this.mnuGeneralSettings.Visible = false;
+			this.mnuGeneralSettings.Click += new System.EventHandler(this.mnuGeneralSettings_Click);
 			// 
 			// accordionControlSeparator10
 			// 
@@ -2250,6 +2256,7 @@
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Activated += new System.EventHandler(this.MainForm_Activated);
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.MdiChildActivate += new System.EventHandler(this.MainForm_MdiChildActivate);
 			((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
@@ -2476,5 +2483,6 @@
 		private DevExpress.XtraBars.Navigation.AccordionControlElement mnuFormsCategories;
 		private DevExpress.XtraBars.BarButtonItem btnLiveUpdate;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator27;
 	}
 }

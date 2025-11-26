@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using MISLiveMed.DataLayers.Common.Forms;
 using MISLiveMed.DataLayers.Users;
 using MISLiveMed.Models.Models.Users;
+using MISLiveMed.UI.Utilities;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace MISLiveMed.UI.Forms.Users.PermissionControls
 {
-	public partial class PermissionControlsListForm : RibbonForm
+	public partial class PermissionControlsListForm : RibbonForm, IFormWithRibbon
 	{
 		private const string _formName = "PermissionControlsList";
 		private int _formId;

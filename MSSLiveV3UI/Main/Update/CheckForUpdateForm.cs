@@ -1,54 +1,56 @@
 ﻿using DevExpress.XtraEditors;
+using MISLiveMed.DataLayers.Administration.Update;
+using MISLiveMed.Models.Models.Administration.Update;
+using MISLiveMed.Update.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-using DevExpress.XtraLayout.Utils;
-using MISLiveMed.Update.Utilities;
+using System.Windows.Forms;
 
 namespace MISLiveMed.UI.Main.Update
 {
-	public partial class LiveUpdateForm : XtraForm
+	public partial class CheckForUpdateForm : XtraForm
 	{
-		public const string UpdaterPrefix = "V1234_";
-		private static string _processToEnd = "MISlive";
-		private static string _postProcess = Application.StartupPath + @"\" + _processToEnd + ".exe";
-		public static string Updater = Application.StartupPath + @"\LiveUpdate.exe";
-
-		public const string UpdateSuccess = "MISlive has been successfully updated";
-		public const string UpdateCurrent = "No updates available for MISlive";
-		public const string UpdateInfoError = "Error in retrieving MISlive information";
-
-		private readonly string _urlLink = "https://www.xolog.com/u/liveupdate/mislive/";
-		private readonly string _currentVersionNo = "";
-		private readonly string _newVersionNo = "";
-		private readonly string _versionFilename = "version.txt";
+		private LiveUpdateSettingsModel _settings;
 		private string _fileName = "";
 
 		public static List<string> Info = new List<string>();
 
-		public LiveUpdateForm()
+		public CheckForUpdateForm()
 		{
 			InitializeComponent();
 		}
 
 		private void LiveUpdateForm_Load(object sender, EventArgs e)
 		{
-			txtDownloadUrl.Text = _urlLink;
+			// Load settings from DB (with safe defaults)
+			_settings = LiveUpdateSettingsProvider.LoadOrDefault(Application.StartupPath);
+
+			// Apply to UI
+			txtDownloadUrl.Text = _settings.UrlLink;
 			txtCurrentVersionNo.Text = GetExternalFileVersion("MISLive.exe");
 			txtNewVersionNo.Text = "";
 
-			LiveUpdateHelper.UpdateMe(UpdaterPrefix, Application.StartupPath + @"\");
-			lcUpdateResult.Visibility = LayoutVisibility.Never;
-			lcbtnUpdate.Visibility = LayoutVisibility.Never;
+			// Use settings
+			LiveUpdateHelper.UpdateMe(_settings.UpdaterPrefix, Application.StartupPath + @"\");
+			lblUpdateResult.Visible = false;
+			btnUpdate.Visible = false;
 			UnpackCommandline();
 			CheckForUpdate();
 		}
 
 		private void btnUpdate_Click(object sender, EventArgs e)
 		{
-			LiveUpdateHelper.InstallUpdateRestart(_urlLink, _fileName, "\"" + Application.StartupPath + "\\", _processToEnd, _postProcess, "updated", Updater);
+			LiveUpdateHelper.InstallUpdateRestart(
+				_settings.UrlLink,
+				_fileName,
+				"\"" + Application.StartupPath + "\\",
+				_settings.ProcessToEnd,
+				_settings.PostProcess,
+				"updated",
+				_settings.Updater);
+
 			Close();
 		}
 
@@ -77,7 +79,6 @@ namespace MISLiveMed.UI.Main.Update
 
 			foreach (string arg in Environment.GetCommandLineArgs())
 			{
-
 				if (!commandPresent)
 				{
 					commandPresent = arg.Trim().StartsWith("/");
@@ -93,8 +94,8 @@ namespace MISLiveMed.UI.Main.Update
 			{
 				if (tempStr.Remove(0, 2) == "updated")
 				{
-					lcUpdateResult.Visibility = LayoutVisibility.Always;
-					lblUpdateResult.Text = UpdateSuccess;
+					lblUpdateResult.Visible = true;
+					lblUpdateResult.Text = _settings.UpdateSuccess;
 				}
 			}
 		}
@@ -128,36 +129,42 @@ namespace MISLiveMed.UI.Main.Update
 
 		private void CheckForUpdate()
 		{
-			Info = LiveUpdateHelper.GetUpdateInfo(txtDownloadUrl.Text, _versionFilename, Application.StartupPath + @"\", 0);
+			Info = LiveUpdateHelper.GetUpdateInfo(
+				_settings.UrlLink,
+				_settings.VersionFilename,
+				Application.StartupPath + @"\",
+				0);
 
 			if (Info == null)
 			{
-				lcbtnUpdate.Visibility = LayoutVisibility.Never;
-				lblUpdateResult.Text = UpdateInfoError;
-				lcUpdateResult.Visibility = LayoutVisibility.Always;
+				btnUpdate.Visible = false;
+				lblUpdateResult.Text = _settings.UpdateInfoError;
+				lblUpdateResult.Visible = true;
 			}
 			else
 			{
-				string currentVersion = _currentVersionNo;
+				// current version comes from settings if provided; otherwise from detected file version
+				string currentVersion = string.IsNullOrWhiteSpace(_settings.CurrentVersionNo)
+					? txtCurrentVersionNo.Text
+					: _settings.CurrentVersionNo;
+
 				string newerVersion = Info[0];
 				txtNewVersionNo.Text = Info[0];
 
 				if (IsNewerVersion(currentVersion, newerVersion))
 				{
-					lcbtnUpdate.Visibility = LayoutVisibility.Always;
-					lcUpdateResult.Visibility = LayoutVisibility.Never;
+					btnUpdate.Visible = true;
+					lblUpdateResult.Visible = false;
 
 					_fileName = $"update.{newerVersion}.zip";
 				}
 				else
 				{
-					lcbtnUpdate.Visibility = LayoutVisibility.Never;
-					lcUpdateResult.Visibility = LayoutVisibility.Always;
-					lblUpdateResult.Text = UpdateCurrent;
+					btnUpdate.Visible = false;
+					lblUpdateResult.Visible = true;
+					lblUpdateResult.Text = _settings.UpdateCurrent;
 				}
 			}
 		}
-
-
 	}
 }

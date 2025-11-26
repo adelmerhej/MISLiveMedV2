@@ -863,6 +863,12 @@
     <Compile Include="Main\Administration\Configuration\SuperAdminConnectionForm.Designer.cs">
       <DependentUpon>SuperAdminConnectionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main\Administration\Settings\GeneralSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\Administration\Settings\GeneralSettingsForm.Designer.cs">
+      <DependentUpon>GeneralSettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -875,11 +881,11 @@
     <Compile Include="Main\ReportWaitForm.Designer.cs">
       <DependentUpon>ReportWaitForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main\Update\LiveUpdateForm.cs">
+    <Compile Include="Main\Update\CheckForUpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main\Update\LiveUpdateForm.Designer.cs">
-      <DependentUpon>LiveUpdateForm.cs</DependentUpon>
+    <Compile Include="Main\Update\CheckForUpdateForm.Designer.cs">
+      <DependentUpon>CheckForUpdateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Main\WaitForm1.cs">
       <SubType>Form</SubType>
@@ -1364,14 +1370,17 @@
     <EmbeddedResource Include="Main\Administration\Configuration\SuperAdminConnectionForm.resx">
       <DependentUpon>SuperAdminConnectionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main\Administration\Settings\GeneralSettingsForm.resx">
+      <DependentUpon>GeneralSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\ReportWaitForm.resx">
       <DependentUpon>ReportWaitForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main\Update\LiveUpdateForm.resx">
-      <DependentUpon>LiveUpdateForm.cs</DependentUpon>
+    <EmbeddedResource Include="Main\Update\CheckForUpdateForm.resx">
+      <DependentUpon>CheckForUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
@@ -1550,7 +1559,6 @@
     <Folder Include="Forms\JobForms\Tejrim\" />
     <Folder Include="Forms\JobForms\Transit\" />
     <Folder Include="Forms\JobForms\Warehouse\" />
-    <Folder Include="Main\Administration\Parameters\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

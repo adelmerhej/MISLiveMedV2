@@ -147,6 +147,7 @@
     <Compile Include="Models\Administration\Connections\ConnectionModel.cs" />
     <Compile Include="Models\Administration\Parameters\ConfigurationModel.cs" />
     <Compile Include="Models\Administration\Parameters\ParameterModel.cs" />
+    <Compile Include="Models\Administration\Update\LiveUpdateSettingsModel.cs" />
     <Compile Include="Models\ClientsReports\ClientDetailReportModel.cs" />
     <Compile Include="Models\ClientsReports\InvoiceDetailReportModel.cs" />
     <Compile Include="Models\Common\Carriers\VesselModel.cs" />

@@ -106,8 +106,14 @@ namespace MISLiveMed.UI
 
                 SplashScreenManager.ShowFluentSplashScreen(op, useFadeIn: true, useFadeOut: true);
 
-                //Check Database connection
-                op.RightFooter = "Check Database Connection...";
+                //Check for application updates
+                op.RightFooter = "Finishing...";
+                SplashScreenManager.Default.SendCommand(FluentSplashScreenCommand.UpdateOptions, op);
+                HelperApplication.CheckForLiveUpdate();
+                Thread.Sleep(varSleep);
+
+				//Check Database connection
+				op.RightFooter = "Check Database Connection...";
                 SplashScreenManager.Default.SendCommand(FluentSplashScreenCommand.UpdateOptions, op);
                 if (HelperApplication.CheckDatabaseConnection()) returnValue = true;
                 Thread.Sleep(varSleep);
