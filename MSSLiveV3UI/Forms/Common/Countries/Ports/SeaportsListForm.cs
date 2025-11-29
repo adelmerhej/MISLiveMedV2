@@ -138,7 +138,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
 		}
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvSeaports, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvSeaports, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Event
@@ -233,14 +233,14 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
 	            DialogResult.Yes)
 	        {
 		        _resetMenu = true;
-		        LayoutsStyle.ResetLayoutGrid(gvSeaports, CurrentUser.UserName);
+		        LayoutsStyle.ResetLayoutGrid(gvSeaports, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
 		}
         private void SeaportsListForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 	        if (!_resetMenu)
 	        {
-		        LayoutsStyle.SaveLayoutGrid(gvSeaports, CurrentUser.UserName);
+		        LayoutsStyle.SaveLayoutGrid(gvSeaports, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
         }
 

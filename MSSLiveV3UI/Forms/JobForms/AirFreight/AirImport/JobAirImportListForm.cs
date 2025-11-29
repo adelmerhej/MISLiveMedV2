@@ -117,7 +117,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirImport
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvAirImports, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvAirImports, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
 		#region Buttons Event
@@ -161,7 +161,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirImport
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvAirImports, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvAirImports, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -169,7 +169,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirImport
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvAirImports, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvAirImports, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

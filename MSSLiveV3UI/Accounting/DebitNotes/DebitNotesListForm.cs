@@ -120,7 +120,7 @@ namespace MISLiveMed.UI.Accounting.DebitNotes
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvDebitNotes, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvDebitNotes, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 		#region Buttons Event
 
@@ -169,7 +169,7 @@ namespace MISLiveMed.UI.Accounting.DebitNotes
 				DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvDebitNotes, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvDebitNotes, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -177,7 +177,7 @@ namespace MISLiveMed.UI.Accounting.DebitNotes
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvDebitNotes, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvDebitNotes, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

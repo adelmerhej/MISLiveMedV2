@@ -1,4 +1,10 @@
-﻿using DevExpress.Utils;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using DevExpress.Utils;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
@@ -12,19 +18,12 @@ using MISLiveMed.DataLayers.Common.Titles;
 using MISLiveMed.DataLayers.Users;
 using MISLiveMed.Models.Models.Common.Countries;
 using MISLiveMed.Models.Models.Common.Forms;
-using MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs;
 using MISLiveMed.Models.Models.Users;
 using MISLiveMed.UI.Main;
 using MISLiveMed.UI.Properties;
 using MISLiveMed.UI.Utilities;
 using MISLiveMed.Utils.Common;
 using MISLiveMed.Utils.Enums;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace MISLiveMed.UI.Forms.Users
 {

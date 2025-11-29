@@ -113,7 +113,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaCross
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvSeaCross, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvSeaCross, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
 		private void btnResetGridStyle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -123,7 +123,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaCross
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvSeaCross, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvSeaCross, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -131,7 +131,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaCross
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvSeaCross, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvSeaCross, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

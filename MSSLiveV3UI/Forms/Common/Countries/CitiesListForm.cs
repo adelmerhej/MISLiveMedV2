@@ -138,7 +138,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvCities, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvCities, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Event
@@ -309,7 +309,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCities, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCities, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -320,7 +320,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvCities, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvCities, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

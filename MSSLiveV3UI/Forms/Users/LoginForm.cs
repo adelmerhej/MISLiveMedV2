@@ -251,7 +251,7 @@ namespace MISLiveMed.UI.Forms.Users
         }
         private void RefreshUserPermission()
         {
-	        LayoutsStyle.ResetLayoutMenu("mainMenu", CurrentUser.UserName);
+	        LayoutsStyle.ResetLayoutMenu("mainMenu", CurrentUser.UserName, CurrentUser.CompanyName);
 
 	        _userModel.PermissionChanged = false;
 	        _userRepository.UpdateUser(_userModel);

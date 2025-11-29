@@ -104,7 +104,7 @@ namespace MISLiveMed.UI.Main
 				UpdateStatus();
 
 				defaultLookAndFeel1.LookAndFeel.SetSkinStyle(Settings.Default.ApplicationSkinName, Settings.Default.ApplicationPalette);
-				LayoutsStyle.LoadLayoutMenu(mainMenu, CurrentUser.UserName);
+				LayoutsStyle.LoadLayoutMenu(mainMenu, CurrentUser.UserName, CurrentUser.CompanyName);
 
 				_logOut = true;
 			}
@@ -463,7 +463,7 @@ namespace MISLiveMed.UI.Main
 			settings.Palette = UserLookAndFeel.Default.ActiveSvgPaletteName;
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutMenu(mainMenu, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutMenu(mainMenu, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 		private void OpenForm<T>(T myForm, bool isDialog = false) where T : Form
@@ -529,7 +529,7 @@ namespace MISLiveMed.UI.Main
 			 DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutMenu(mainMenu, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutMenu(mainMenu, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 		private void btnAbout_ItemClick(object sender, ItemClickEventArgs e)

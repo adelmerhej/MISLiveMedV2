@@ -127,7 +127,7 @@ namespace MISLiveMed.UI.Forms.CRM.Agents.Groups
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvAgentsGroup, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvAgentsGroup, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 
@@ -300,7 +300,7 @@ namespace MISLiveMed.UI.Forms.CRM.Agents.Groups
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvAgentsGroup, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvAgentsGroup, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -308,7 +308,7 @@ namespace MISLiveMed.UI.Forms.CRM.Agents.Groups
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvAgentsGroup, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvAgentsGroup, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

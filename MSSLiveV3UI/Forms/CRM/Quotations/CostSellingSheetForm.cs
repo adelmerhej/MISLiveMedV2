@@ -1131,8 +1131,8 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvQuotationCost, CurrentUser.UserName);
-				LayoutsStyle.ResetLayoutGrid(gvQuotationSelling, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvQuotationCost, CurrentUser.UserName, CurrentUser.CompanyName);
+				LayoutsStyle.ResetLayoutGrid(gvQuotationSelling, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -1140,8 +1140,8 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvQuotationCost, CurrentUser.UserName);
-				LayoutsStyle.SaveLayoutGrid(gvQuotationSelling, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvQuotationCost, CurrentUser.UserName, CurrentUser.CompanyName);
+				LayoutsStyle.SaveLayoutGrid(gvQuotationSelling, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

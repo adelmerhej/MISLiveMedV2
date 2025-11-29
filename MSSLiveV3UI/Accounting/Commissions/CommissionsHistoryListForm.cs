@@ -148,7 +148,7 @@ namespace MISLiveMed.UI.Accounting.Commissions
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvCommissions, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvCommissions, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
         #region Buttons Event
@@ -344,7 +344,7 @@ namespace MISLiveMed.UI.Accounting.Commissions
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCommissions, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCommissions, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -355,7 +355,7 @@ namespace MISLiveMed.UI.Accounting.Commissions
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvCommissions, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvCommissions, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

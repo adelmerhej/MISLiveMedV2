@@ -94,13 +94,13 @@ namespace MISLiveMed.UI.Accounting.Currencies
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvCrossExchangeRate, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvCrossExchangeRate, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 		private void ExchangeRateForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCrossExchangeRate, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCrossExchangeRate, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

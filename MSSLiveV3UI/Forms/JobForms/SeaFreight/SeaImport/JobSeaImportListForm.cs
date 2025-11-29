@@ -155,7 +155,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void ApplyDefaults()
         {
-            LayoutsStyle.LoadLayoutGrid(gvSeaImports, CurrentUser.UserName);
+            LayoutsStyle.LoadLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
 
             foreach (var value in new[] { "showActive", "showClosed", "showCancelled", "showAll" })
                 rgFilterReports.Gallery.GetItemByValue(value).Checked = false;
@@ -168,7 +168,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             gvSeaImports.ActiveFilter.Add(gvSeaImports.Columns["Tejrim"],
                 new ColumnFilterInfo("[Tejrim] = 'False'", "Tejrim = False"));
 
-            LayoutsStyle.LoadLayoutGrid(gvSeaImports, CurrentUser.UserName);
+            LayoutsStyle.LoadLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
         private void RcvUpdatedJobSeaImport(object sender, EventArgs e)
@@ -402,7 +402,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
                 DialogResult.Yes)
             {
                 _resetMenu = true;
-                LayoutsStyle.ResetLayoutGrid(gvSeaImports, CurrentUser.UserName);
+                LayoutsStyle.ResetLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
 
@@ -410,7 +410,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
             if (!_resetMenu)
             {
-                LayoutsStyle.SaveLayoutGrid(gvSeaImports, CurrentUser.UserName);
+                LayoutsStyle.SaveLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
     }

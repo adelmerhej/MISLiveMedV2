@@ -171,7 +171,7 @@ namespace MISLiveMed.UI.Accounting.Receipts
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvReceipts, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvReceipts, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
         #region Buttons Event
@@ -243,7 +243,7 @@ namespace MISLiveMed.UI.Accounting.Receipts
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvReceipts, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvReceipts, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -251,7 +251,7 @@ namespace MISLiveMed.UI.Accounting.Receipts
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvReceipts, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvReceipts, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

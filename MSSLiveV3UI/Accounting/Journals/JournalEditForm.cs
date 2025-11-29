@@ -205,7 +205,7 @@ namespace MISLiveMed.UI.Accounting.Journals
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvJournalDetails, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvJournalDetails, CurrentUser.UserName, CurrentUser.CompanyName);
 
 			//TODO: Retrieve from configuration
 			_defaultCurrency = 2;
@@ -226,7 +226,7 @@ namespace MISLiveMed.UI.Accounting.Journals
 				DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvJournalDetails, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvJournalDetails, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -242,7 +242,7 @@ namespace MISLiveMed.UI.Accounting.Journals
 
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvJournalDetails, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvJournalDetails, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

@@ -121,7 +121,7 @@ namespace MISLiveMed.UI.Accounting.Costs
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvCosts, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvCosts, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 		
 
@@ -168,7 +168,7 @@ namespace MISLiveMed.UI.Accounting.Costs
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvCosts, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvCosts, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -176,7 +176,7 @@ namespace MISLiveMed.UI.Accounting.Costs
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCosts, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCosts, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

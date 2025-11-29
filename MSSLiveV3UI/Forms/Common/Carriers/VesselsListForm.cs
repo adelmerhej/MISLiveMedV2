@@ -116,7 +116,7 @@ namespace MISLiveMed.UI.Forms.Common.Carriers
 
         private void ApplyDefaultValues()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvVessels, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvVessels, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
         private void ApplyPermissions()
@@ -191,7 +191,7 @@ namespace MISLiveMed.UI.Forms.Common.Carriers
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvVessels, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvVessels, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -199,7 +199,7 @@ namespace MISLiveMed.UI.Forms.Common.Carriers
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvVessels, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvVessels, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

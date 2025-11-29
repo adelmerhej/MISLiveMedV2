@@ -112,7 +112,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirExport
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvAirExports, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvAirExports, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
 		private void btnResetGridStyle_ItemClick(object sender, ItemClickEventArgs e)
@@ -122,7 +122,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirExport
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvAirExports, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvAirExports, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -130,7 +130,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirExport
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvAirExports, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvAirExports, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

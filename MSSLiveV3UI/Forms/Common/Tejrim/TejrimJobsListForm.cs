@@ -155,7 +155,7 @@ namespace MISLiveMed.UI.Forms.Common.Tejrim
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvTejrimList, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvTejrimList, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		private void btnClose_ItemClick(object sender, ItemClickEventArgs e)
@@ -304,7 +304,7 @@ namespace MISLiveMed.UI.Forms.Common.Tejrim
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvTejrimList, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvTejrimList, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -312,7 +312,7 @@ namespace MISLiveMed.UI.Forms.Common.Tejrim
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvTejrimList, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvTejrimList, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

@@ -208,7 +208,7 @@ namespace MISLiveMed.UI.Accounting.Payments
             dtDateFrom.EditValue = DateTime.Now.StartOfWeek(DayOfWeek.Monday);
             dtDateTo.EditValue = DateTime.Now;
 
-            LayoutsStyle.LoadLayoutGrid(gvPayments, CurrentUser.UserName);
+            LayoutsStyle.LoadLayoutGrid(gvPayments, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
         #region Buttons Event
@@ -492,7 +492,7 @@ namespace MISLiveMed.UI.Accounting.Payments
                 DialogResult.Yes)
             {
                 _resetMenu = true;
-                LayoutsStyle.ResetLayoutGrid(gvPayments, CurrentUser.UserName);
+                LayoutsStyle.ResetLayoutGrid(gvPayments, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
         private void btnResetGridStyle_ItemClick_1(object sender, ItemClickEventArgs e)
@@ -502,7 +502,7 @@ namespace MISLiveMed.UI.Accounting.Payments
 	            DialogResult.Yes)
 	        {
 		        _resetMenu = true;
-		        LayoutsStyle.ResetLayoutGrid(gvPayments, CurrentUser.UserName);
+		        LayoutsStyle.ResetLayoutGrid(gvPayments, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
         }
 
@@ -510,7 +510,7 @@ namespace MISLiveMed.UI.Accounting.Payments
         {
             if (!_resetMenu)
             {
-                LayoutsStyle.SaveLayoutGrid(gvPayments, CurrentUser.UserName);
+                LayoutsStyle.SaveLayoutGrid(gvPayments, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
 

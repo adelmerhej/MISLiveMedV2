@@ -128,7 +128,7 @@ namespace MISLiveMed.UI.Accounting.Charts
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutTreeList(chartTreeList, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutTreeList(chartTreeList, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 
@@ -304,7 +304,7 @@ namespace MISLiveMed.UI.Accounting.Charts
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutTreeList(chartTreeList, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutTreeList(chartTreeList, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -315,7 +315,7 @@ namespace MISLiveMed.UI.Accounting.Charts
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutTreeList(chartTreeList, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutTreeList(chartTreeList, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

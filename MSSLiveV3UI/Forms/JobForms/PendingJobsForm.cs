@@ -169,7 +169,7 @@ namespace MISLiveMed.UI.Forms.JobForms
 
 		private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvPedingJobsList, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvPedingJobsList, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
         // TODO: Make it public to check each permission, and return bool
@@ -283,7 +283,7 @@ namespace MISLiveMed.UI.Forms.JobForms
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvPedingJobsList, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvPedingJobsList, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -291,7 +291,7 @@ namespace MISLiveMed.UI.Forms.JobForms
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvPedingJobsList, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvPedingJobsList, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

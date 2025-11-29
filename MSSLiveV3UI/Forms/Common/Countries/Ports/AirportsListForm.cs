@@ -140,7 +140,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvAirports, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvAirports, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Event
@@ -235,7 +235,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
 	            DialogResult.Yes)
 	        {
 		        _resetMenu = true;
-		        LayoutsStyle.ResetLayoutGrid(gvAirports, CurrentUser.UserName);
+		        LayoutsStyle.ResetLayoutGrid(gvAirports, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
 		}
 
@@ -243,7 +243,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
         {
 	        if (!_resetMenu)
 	        {
-		        LayoutsStyle.SaveLayoutGrid(gvAirports, CurrentUser.UserName);
+		        LayoutsStyle.SaveLayoutGrid(gvAirports, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
         }
 

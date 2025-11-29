@@ -124,7 +124,7 @@ namespace MISLiveMed.UI.Forms.Common.Departments
 		}
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvDepartment, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvDepartment, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
 		#region MenuButtons
@@ -284,7 +284,7 @@ namespace MISLiveMed.UI.Forms.Common.Departments
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvDepartment, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvDepartment, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -292,7 +292,7 @@ namespace MISLiveMed.UI.Forms.Common.Departments
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvDepartment, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvDepartment, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

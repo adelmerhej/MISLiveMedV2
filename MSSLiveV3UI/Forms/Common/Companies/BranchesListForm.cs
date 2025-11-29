@@ -96,7 +96,7 @@ namespace MISLiveMed.UI.Forms.Common.Companies
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvBranches, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvBranches, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		private void ApplyPermissions()
@@ -220,14 +220,14 @@ namespace MISLiveMed.UI.Forms.Common.Companies
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvBranches, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvBranches, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 		private void BranchesListForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvBranches, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvBranches, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

@@ -113,7 +113,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirCross
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvAirCross, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvAirCross, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
 		private void btnResetGridStyle_ItemClick(object sender, ItemClickEventArgs e)

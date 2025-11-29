@@ -216,7 +216,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 
         private void ApplyDefaults()
         {
-            LayoutsStyle.LoadLayoutGrid(gvQuotations, CurrentUser.UserName);
+            LayoutsStyle.LoadLayoutGrid(gvQuotations, CurrentUser.UserName, CurrentUser.CompanyName);
 
             rgFilterReports.Gallery.GetItemByValue("showRequested").Checked = false;
             rgFilterReports.Gallery.GetItemByValue("showQuoted").Checked = false;
@@ -545,7 +545,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
                 DialogResult.Yes)
             {
                 _resetMenu = true;
-                LayoutsStyle.ResetLayoutGrid(gvQuotations, CurrentUser.UserName);
+                LayoutsStyle.ResetLayoutGrid(gvQuotations, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
 
@@ -553,7 +553,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
         {
             if (!_resetMenu)
             {
-                LayoutsStyle.SaveLayoutGrid(gvQuotations, CurrentUser.UserName);
+                LayoutsStyle.SaveLayoutGrid(gvQuotations, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
 

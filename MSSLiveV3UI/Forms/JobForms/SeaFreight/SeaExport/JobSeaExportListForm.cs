@@ -175,7 +175,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaExport
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvSeaExports, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvSeaExports, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
 		private void btnResetGridStyle_ItemClick(object sender, ItemClickEventArgs e)
@@ -185,7 +185,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaExport
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvSeaExports, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvSeaExports, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -193,7 +193,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaExport
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvSeaExports, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvSeaExports, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

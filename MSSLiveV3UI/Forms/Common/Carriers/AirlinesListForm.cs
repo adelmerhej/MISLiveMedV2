@@ -118,7 +118,7 @@ namespace MISLiveMed.UI.Forms.Common.Carriers
         }
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvAirlines, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvAirlines, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region ButtonsMenu
@@ -170,14 +170,14 @@ namespace MISLiveMed.UI.Forms.Common.Carriers
 	            DialogResult.Yes)
 	        {
 		        _resetMenu = true;
-		        LayoutsStyle.ResetLayoutGrid(gvAirlines, CurrentUser.UserName);
+		        LayoutsStyle.ResetLayoutGrid(gvAirlines, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
 		}
         private void AirlinesListForm_FormClosing(object sender, FormClosingEventArgs e)
         {
 	        if (!_resetMenu)
 	        {
-		        LayoutsStyle.SaveLayoutGrid(gvAirlines, CurrentUser.UserName);
+		        LayoutsStyle.SaveLayoutGrid(gvAirlines, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
         }
 

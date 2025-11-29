@@ -124,7 +124,7 @@ namespace MISLiveMed.UI.Accounting.Journals.Reports.Settings.BalanceGroup
 		}
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvBalanceGroups, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvBalanceGroups, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Event
@@ -281,14 +281,14 @@ namespace MISLiveMed.UI.Accounting.Journals.Reports.Settings.BalanceGroup
 				DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvBalanceGroups, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvBalanceGroups, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 		private void BalanceGroupListForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvBalanceGroups, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvBalanceGroups, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

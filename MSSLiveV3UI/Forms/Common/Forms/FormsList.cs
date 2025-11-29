@@ -110,7 +110,7 @@ namespace MISLiveMed.UI.Forms.Common.Forms
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvForms, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvForms, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		private void ApplyPermissions()

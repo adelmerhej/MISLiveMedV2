@@ -145,7 +145,7 @@ namespace MISLiveMed.UI.Accounting.Commissions
             view.ActiveFilter.Add(view.Columns["IsSales"],
                 new ColumnFilterInfo("[IsSales] = 'True'", "Is Sales = True"));
 
-            LayoutsStyle.LoadLayoutGrid(gvCommissionManager, CurrentUser.UserName);
+            LayoutsStyle.LoadLayoutGrid(gvCommissionManager, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
         #region Buttons Event
@@ -384,7 +384,7 @@ namespace MISLiveMed.UI.Accounting.Commissions
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvCommissionManager, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvCommissionManager, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -392,7 +392,7 @@ namespace MISLiveMed.UI.Accounting.Commissions
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCommissionManager, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCommissionManager, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

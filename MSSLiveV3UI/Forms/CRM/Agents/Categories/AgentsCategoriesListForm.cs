@@ -127,7 +127,7 @@ namespace MISLiveMed.UI.Forms.CRM.Agents.Categories
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvAgentsCategories, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvAgentsCategories, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Events
@@ -299,7 +299,7 @@ namespace MISLiveMed.UI.Forms.CRM.Agents.Categories
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvAgentsCategories, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvAgentsCategories, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -307,7 +307,7 @@ namespace MISLiveMed.UI.Forms.CRM.Agents.Categories
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvAgentsCategories, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvAgentsCategories, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 	}

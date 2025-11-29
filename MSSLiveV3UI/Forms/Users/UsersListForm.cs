@@ -67,21 +67,44 @@ namespace MISLiveMed.UI.Forms.Users
 			}
 		}
 
+		// Centralized open-edit form helper
+		private void OpenUserEdit(UserModel model)
+		{
+			if (model == null) return;
+			var userForm = new UserEditForm(model);
+			userForm.SendUpdatedUser += RcvUpdatedUser;
+			userForm.ShowDialog();
+		}
+
+		// Try get focused row user model safely
+		private bool TryGetFocusedUser(out UserModel user)
+		{
+			user = null;
+			if (_users == null || !_users.Any()) return false;
+
+			var idObj = gvUsers.GetFocusedRowCellValue("Id");
+			if (idObj == null) return false;
+
+			int id;
+			try { id = Convert.ToInt32(idObj); } catch { return false; }
+			if (id <= 0) return false;
+
+			user = _users.SingleOrDefault(x => x.Id == id);
+			return user != null;
+		}
+
 		private void InitializeBindings()
 		{
 			try
 			{
-				//
 				_formId = _formRepository.SelectFormByName(_formName);
-				_userPermission = _userPermissionRepository.SelectUserPermissionById(CurrentUser.UserId, _formId);
-				if (_userPermission != null && _userPermission.Count > 0)
+				_userPermission = _userPermissionRepository.SelectUserPermissionById(CurrentUser.UserId, _formId) ?? new List<UserPermissionModel>();
+				if (_userPermission.Count > 0)
 				{
 					var isProtected = _userPermission.SingleOrDefault(x => x.ControlName == "IsProtected")?.Value;
-					if (isProtected != null) _isProtected = (bool)isProtected;
+					_isProtected = HelperApplication.ConvertToBool(isProtected) ?? _isProtected;
 				}
-				//
-
-				_users = _userRepository.SelectUsers();
+				_users = _userRepository.SelectUsers() ?? new List<UserModel>();
 			}
 			catch (Exception e)
 			{
@@ -94,34 +117,33 @@ namespace MISLiveMed.UI.Forms.Users
 			gcUsers.DataSource = null;
 			gcUsers.DataSource = _users;
 		}
+
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvUsers, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvUsers, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
+
 		private void ApplyPermissions()
 		{
-			// If no permissions loaded, keep defaults for buttons
 			if (_userPermission == null || _userPermission.Count == 0)
 			{
+				// leave defaults
 				return;
 			}
 
-			// Retrieve permissions safely and succinctly
 			_canAdd = GetPermission("CanAdd");
 			_canEdit = GetPermission("CanEdit");
 			_canDelete = GetPermission("CanDelete");
 			_canPrint = GetPermission("CanPrint");
 			_isAdmin = GetPermission("IsAdmin");
-			_isProtected = GetPermission("IsProtected");
+			_isProtected = GetPermission("IsProtected", _isProtected);
 
-			// Apply to UI elements
 			btnNew.Enabled = _isAdmin || _canAdd;
 			btnEdit.Enabled = _isAdmin || _canEdit;
 			btnPrint.Enabled = _isAdmin || _canPrint;
 			btnDelete.Enabled = _isAdmin || _canDelete;
 		}
 
-		// Helper to get a permission flag by name with default fallback
 		private bool GetPermission(string name, bool defaultValue = false)
 		{
 			var raw = _userPermission.FirstOrDefault(p => p.ControlName == name)?.Value;
@@ -132,24 +154,15 @@ namespace MISLiveMed.UI.Forms.Users
 
 		private void btnNew_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			UserEditForm frm = new UserEditForm(new UserModel());
-			frm.SendUpdatedUser += RcvUpdatedUser;
-			frm.ShowDialog();
+			OpenUserEdit(new UserModel());
 		}
 
 		private void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
 		{
-			if (!_users.Any()) return;
-
-			int currentRowId = (int)gvUsers.GetFocusedRowCellValue("Id");
-			if (currentRowId == 0) return;
-
-			_userModel = _users.SingleOrDefault(x => x.Id == currentRowId);
-			if (_userModel == null) return;
-
-			var userForm = new UserEditForm(_userModel);
-			userForm.SendUpdatedUser += RcvUpdatedUser;
-			userForm.ShowDialog();
+			if (TryGetFocusedUser(out var user))
+			{
+				OpenUserEdit(user);
+			}
 		}
 
 		private void btnRefresh_ItemClick(object sender, ItemClickEventArgs e)
@@ -167,7 +180,7 @@ namespace MISLiveMed.UI.Forms.Users
 
 		private void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
 		{
-
+			// implement delete when repository supports it
 		}
 
 		private void btnClose_ItemClick(object sender, ItemClickEventArgs e)
@@ -179,19 +192,12 @@ namespace MISLiveMed.UI.Forms.Users
 
 		private void gvUsers_DoubleClick(object sender, EventArgs e)
 		{
-			if (!_users.Any()) return;
-
 			try
 			{
-				int currentRowId = (int)gvUsers.GetFocusedRowCellValue("Id");
-				if (currentRowId == 0) return;
-
-				_userModel = _users.SingleOrDefault(x => x.Id == currentRowId);
-				if (_userModel == null) return;
-
-				var userForm = new UserEditForm(_userModel);
-				userForm.SendUpdatedUser += RcvUpdatedUser;
-				userForm.ShowDialog();
+				if (TryGetFocusedUser(out var user))
+				{
+					OpenUserEdit(user);
+				}
 			}
 			catch (Exception exception)
 			{
@@ -201,10 +207,11 @@ namespace MISLiveMed.UI.Forms.Users
 
 		private void RcvUpdatedUser(object sender, EventArgs e)
 		{
-			if (sender == null) return;
-			_userModel = sender as UserModel;
+			var updated = sender as UserModel;
+			if (updated == null) return;
+			_userModel = updated;
 
-			if (_userModel != null && (_userModel.LastModifiedDate == null || _userModel.Deleted))
+			if (_userModel.LastModifiedDate == null || _userModel.Deleted)
 			{
 				InitializeBindings();
 				WireUpBindings();
@@ -222,7 +229,7 @@ namespace MISLiveMed.UI.Forms.Users
 				DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvUsers, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvUsers, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -230,28 +237,25 @@ namespace MISLiveMed.UI.Forms.Users
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvUsers, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvUsers, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
 		private void gvUsers_RowCellStyle(object sender, RowCellStyleEventArgs e)
 		{
-			GridView view = sender as GridView;
-			if (e.RowHandle >= 0)
+			var view = sender as GridView;
+			if (view == null || e.RowHandle < 0) return;
+			bool isActive = HelperApplication.ConvertToBool(view.GetRowCellValue(e.RowHandle, "Active")) ?? false;
+			bool isDefault = HelperApplication.ConvertToBool(view.GetRowCellValue(e.RowHandle, "IsDefault")) ?? false;
+			if (!isActive)
 			{
-				bool isActive = (bool)view.GetRowCellValue(e.RowHandle, "Active");
-				bool isDefault = (bool)view.GetRowCellValue(e.RowHandle, "IsDefault");
-				if (!isActive)
-				{
-					e.Appearance.ForeColor = isActive ? Color.Black : Color.Gray;
-					e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Italic);
-				}
-				if (isDefault)
-				{
-					e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Bold);
-				}
+				e.Appearance.ForeColor = Color.Gray;
+				e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Italic);
+			}
+			if (isDefault)
+			{
+				e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Bold);
 			}
 		}
-
 	}
 }

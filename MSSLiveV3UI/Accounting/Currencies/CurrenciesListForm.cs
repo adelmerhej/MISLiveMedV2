@@ -138,7 +138,7 @@ namespace MISLiveMed.UI.Accounting.Currencies
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvCurrencies, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvCurrencies, CurrentUser.UserName, CurrentUser.CompanyName);
 	        btnShowDetails.Checked = true;
 	        dtCurrentDate.EditValue = DateTime.Now;
 
@@ -313,7 +313,7 @@ namespace MISLiveMed.UI.Accounting.Currencies
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvCurrencies, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvCurrencies, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -321,7 +321,7 @@ namespace MISLiveMed.UI.Accounting.Currencies
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCurrencies, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCurrencies, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

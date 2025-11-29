@@ -124,7 +124,7 @@ namespace MISLiveMed.UI.Accounting.Banks
 		}
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvBanks, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvBanks, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Event
@@ -281,14 +281,14 @@ namespace MISLiveMed.UI.Accounting.Banks
 				DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvBanks, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvBanks, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 		private void BanksListForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvBanks, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvBanks, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

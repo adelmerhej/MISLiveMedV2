@@ -114,7 +114,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvLandFreightPorts, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvLandFreightPorts, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
         private void ApplyPermissions()
@@ -236,7 +236,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
 	            DialogResult.Yes)
 	        {
 		        _resetMenu = true;
-		        LayoutsStyle.ResetLayoutGrid(gvLandFreightPorts, CurrentUser.UserName);
+		        LayoutsStyle.ResetLayoutGrid(gvLandFreightPorts, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
 		}
 
@@ -244,7 +244,7 @@ namespace MISLiveMed.UI.Forms.Common.Countries.Ports
         {
 	        if (!_resetMenu)
 	        {
-		        LayoutsStyle.SaveLayoutGrid(gvLandFreightPorts, CurrentUser.UserName);
+		        LayoutsStyle.SaveLayoutGrid(gvLandFreightPorts, CurrentUser.UserName, CurrentUser.CompanyName);
 	        }
         }
 

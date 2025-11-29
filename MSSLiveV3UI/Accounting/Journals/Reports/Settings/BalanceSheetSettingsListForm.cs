@@ -117,7 +117,7 @@ namespace MISLiveMed.UI.Accounting.Journals.Reports.Settings
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvBalanceSheetSettings, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvBalanceSheetSettings, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		private void ApplyPermissions()
@@ -149,7 +149,7 @@ namespace MISLiveMed.UI.Accounting.Journals.Reports.Settings
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvBalanceSheetSettings, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvBalanceSheetSettings, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -245,7 +245,7 @@ namespace MISLiveMed.UI.Accounting.Journals.Reports.Settings
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvBalanceSheetSettings, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvBalanceSheetSettings, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

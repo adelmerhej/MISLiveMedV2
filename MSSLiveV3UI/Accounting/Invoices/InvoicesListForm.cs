@@ -123,7 +123,7 @@ namespace MISLiveMed.UI.Accounting.Invoices
 
         private void ApplyDefaults()
         {
-	        LayoutsStyle.LoadLayoutGrid(gvContinents, CurrentUser.UserName);
+	        LayoutsStyle.LoadLayoutGrid(gvContinents, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
         
 		#region Buttons Event
@@ -169,7 +169,7 @@ namespace MISLiveMed.UI.Accounting.Invoices
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvContinents, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvContinents, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -177,7 +177,7 @@ namespace MISLiveMed.UI.Accounting.Invoices
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvContinents, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvContinents, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 

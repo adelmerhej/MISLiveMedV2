@@ -121,7 +121,7 @@ namespace MISLiveMed.UI.Accounting.CreditNotes
 
 		private void ApplyDefaults()
 		{
-			LayoutsStyle.LoadLayoutGrid(gvCreditNotes, CurrentUser.UserName);
+			LayoutsStyle.LoadLayoutGrid(gvCreditNotes, CurrentUser.UserName, CurrentUser.CompanyName);
 		}
 
 		#region Buttons Event
@@ -173,7 +173,7 @@ namespace MISLiveMed.UI.Accounting.CreditNotes
 			    DialogResult.Yes)
 			{
 				_resetMenu = true;
-				LayoutsStyle.ResetLayoutGrid(gvCreditNotes, CurrentUser.UserName);
+				LayoutsStyle.ResetLayoutGrid(gvCreditNotes, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
@@ -181,7 +181,7 @@ namespace MISLiveMed.UI.Accounting.CreditNotes
 		{
 			if (!_resetMenu)
 			{
-				LayoutsStyle.SaveLayoutGrid(gvCreditNotes, CurrentUser.UserName);
+				LayoutsStyle.SaveLayoutGrid(gvCreditNotes, CurrentUser.UserName, CurrentUser.CompanyName);
 			}
 		}
 
