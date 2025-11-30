@@ -194,11 +194,11 @@
 			// 
 			// txtDescription
 			// 
-			this.txtDescription.Location = new System.Drawing.Point(106, 54);
+			this.txtDescription.Location = new System.Drawing.Point(28, 54);
 			this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtDescription.Name = "txtDescription";
 			this.txtDescription.Properties.ReadOnly = true;
-			this.txtDescription.Size = new System.Drawing.Size(267, 101);
+			this.txtDescription.Size = new System.Drawing.Size(345, 101);
 			this.txtDescription.StyleController = this.layoutControl4;
 			this.txtDescription.TabIndex = 4;
 			// 
@@ -228,7 +228,7 @@
 			this.lblDescription.Name = "lblDescription";
 			this.lblDescription.Size = new System.Drawing.Size(349, 105);
 			this.lblDescription.Text = "Description";
-			this.lblDescription.TextSize = new System.Drawing.Size(63, 16);
+			this.lblDescription.TextVisible = false;
 			// 
 			// layoutControl3
 			// 

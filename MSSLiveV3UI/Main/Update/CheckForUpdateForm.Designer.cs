@@ -250,7 +250,7 @@
 			// 
 			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 0);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(778, 10);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(774, 10);
 			// 
 			// CheckForUpdateForm
 			// 
@@ -258,8 +258,11 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(798, 300);
 			this.Controls.Add(this.mainLayout);
+			this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.IconOptions.Image = global::MISLiveMed.UI.Properties.Resources.LiveUpdate;
 			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "CheckForUpdateForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Check for update";
