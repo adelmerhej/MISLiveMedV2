@@ -611,7 +611,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtNotes.Name = "txtNotes";
 			this.txtNotes.Properties.ReadOnly = true;
-			this.txtNotes.Size = new System.Drawing.Size(733, 50);
+			this.txtNotes.Size = new System.Drawing.Size(733, 25);
 			this.txtNotes.StyleController = this.lcMain;
 			this.txtNotes.TabIndex = 12;
 			// 
@@ -797,12 +797,12 @@ namespace MISLiveMed.UI.Forms.Users
 			// emptySpaceItem3
 			// 
 			this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 543);
-			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 46);
-			this.emptySpaceItem3.MinSize = new System.Drawing.Size(71, 46);
+			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 518);
+			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 71);
+			this.emptySpaceItem3.MinSize = new System.Drawing.Size(111, 71);
 			this.emptySpaceItem3.Name = "emptySpaceItem3";
 			this.emptySpaceItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.emptySpaceItem3.Size = new System.Drawing.Size(737, 46);
+			this.emptySpaceItem3.Size = new System.Drawing.Size(737, 71);
 			this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
 			// 
 			// lblNotes
@@ -811,7 +811,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblNotes.CustomizationFormText = "layoutControlItem3";
 			this.lblNotes.Location = new System.Drawing.Point(0, 469);
 			this.lblNotes.Name = "lblNotes";
-			this.lblNotes.Size = new System.Drawing.Size(737, 74);
+			this.lblNotes.Size = new System.Drawing.Size(737, 49);
 			this.lblNotes.Text = "Notes:";
 			this.lblNotes.TextLocation = DevExpress.Utils.Locations.Top;
 			this.lblNotes.TextSize = new System.Drawing.Size(67, 16);
@@ -1260,7 +1260,6 @@ namespace MISLiveMed.UI.Forms.Users
 			this.gcFormPermissions.TabIndex = 5;
 			this.gcFormPermissions.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvFormPermissions});
-			this.gcFormPermissions.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gvFormPermissions_KeyUp);
 			// 
 			// gvFormPermissions
 			// 

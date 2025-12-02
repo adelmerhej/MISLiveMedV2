@@ -11,6 +11,7 @@ using MISLiveMed.DataLayers.DataAccess;
 using MISLiveMed.DataLayers.Users;
 using MISLiveMed.Models.Models.Common.Companies;
 using MISLiveMed.Models.Models.Users;
+using MISLiveMed.UI.Main;
 using MISLiveMed.UI.Properties;
 using MISLiveMed.UI.Utilities;
 using MISLiveMed.Utils.Common;
@@ -359,6 +360,12 @@ namespace MISLiveMed.UI.Forms.Users
 		private void cboCompanies_EditValueChanged(object sender, EventArgs e)
 		{
 			if (cboCompanies.EditValue != null) CurrentUser.CompanyId = (int)cboCompanies.EditValue;
+		}
+
+		private void lnkAbout_Click(object sender, EventArgs e)
+		{
+            AboutForm frm = new AboutForm();
+            frm.ShowDialog();
 		}
 	}
 }

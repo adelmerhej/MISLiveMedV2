@@ -4,9 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
-using Google.Cloud.Firestore;
 using Microsoft.AspNet.Identity;
-using MISLiveMed.DataLayers.DataAccess;
 using MISLiveMed.DataLayers.DataUtilities;
 using MISLiveMed.Models.Models.Users;
 using MISLiveMed.Utils.Common;
@@ -155,29 +153,6 @@ namespace MISLiveMed.DataLayers.Users
 			}
 		}
 
-		public SuperAdminUserModel AuthenticateSuperAdmin(string userId)
-		{
-			try
-			{
-				FireStoreHelper.SetEnvironmentVariable();
-				var db = FireStoreHelper.Database;
-
-				//DocumentReference docRef = db.Collection(_collectionName).Document(userId.ToLower());
-				//var document = docRef.GetSnapshotAsync().Result;
-				//var result = document.ConvertTo<SuperAdminUserModel>();
-
-				CollectionReference docRef = db.Collection(_collectionName);
-				QuerySnapshot usersList = docRef.GetSnapshotAsync().Result;
-
-				var result = usersList.Documents.Select(x => x.ConvertTo<SuperAdminUserModel>()).SingleOrDefault();
-
-				return result;
-			}
-			catch (Exception e)
-			{
-				throw new Exception(e.Message);
-			}
-		}
 		public UserModel SelectDefaultUserByCompanyId(int companyId)
 		{
 			try

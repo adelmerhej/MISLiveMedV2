@@ -540,51 +540,6 @@ namespace MISLiveMed.UI.Forms.Users
 				}
 			}
 		}
-		private void gvFormPermissions_KeyUp(object sender, KeyEventArgs e)
-		{
-			if (e.KeyCode == Keys.F12)
-			{
-				try
-				{
-					if (CurrentUser.UserName.ToLower() == "admin")
-					{
-						var result = XtraInputBox.Show("Enter your password:", "Change Settings", "Default");
-						var superAdminPassword = _userRepository.AuthenticateSuperAdmin(CurrentUser.UserName.ToLower());
-
-						if (superAdminPassword != null)
-						{
-							SystemUtilities.PasswordHasher = new PasswordHasher();
-							var passwordVerificationResult =
-								SystemUtilities.PasswordHasher.VerifyHashedPassword(superAdminPassword.PasswordHash, result);
-
-							switch (passwordVerificationResult)
-							{
-								case PasswordVerificationResult.Failed:
-									XtraMessageBox.Show(@"Username or Password are incorrect! Please try again.", @"Error",
-										MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-									break;
-
-								case PasswordVerificationResult.Success:
-									gvFormPermissions.OptionsView.NewItemRowPosition = NewItemRowPosition.Bottom;
-									gvFormPermissions.OptionsBehavior.AllowAddRows = DefaultBoolean.True;
-									gvFormPermissions.OptionsBehavior.AllowDeleteRows = DefaultBoolean.True;
-
-									return;
-
-								case PasswordVerificationResult.SuccessRehashNeeded:
-
-									break;
-							}
-						}
-					}
-				}
-				catch (Exception exception)
-				{
-					//
-				}
-			}
-		}
 
 		private void RcvChangedPassword(object sender, EventArgs e)
 		{

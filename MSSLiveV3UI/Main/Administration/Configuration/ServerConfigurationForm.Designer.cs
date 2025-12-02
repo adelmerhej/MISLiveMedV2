@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServerConfigurationForm));
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.mainPanel = new DevExpress.XtraEditors.PanelControl();
 			this.btnLogConfiguration = new DevExpress.XtraEditors.SimpleButton();
 			this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -41,7 +46,6 @@
 			this.lblDatabaseHost = new DevExpress.XtraEditors.LabelControl();
 			this.lblDatabaseType = new DevExpress.XtraEditors.LabelControl();
 			this.txtDatabaseName = new DevExpress.XtraEditors.TextEdit();
-			this.txtPassword = new DevExpress.XtraEditors.TextEdit();
 			this.txtUserName = new DevExpress.XtraEditors.TextEdit();
 			this.txtDatabasePort = new DevExpress.XtraEditors.TextEdit();
 			this.txtDatabaseHost = new DevExpress.XtraEditors.TextEdit();
@@ -54,12 +58,12 @@
 			this.lblLogConfiguration = new DevExpress.XtraEditors.LabelControl();
 			this.cboLevelFile = new DevExpress.XtraEditors.LookUpEdit();
 			this.cboLevelNHibernate = new DevExpress.XtraEditors.LookUpEdit();
+			this.txtPassword = new DevExpress.XtraEditors.ButtonEdit();
 			((System.ComponentModel.ISupportInitialize)(this.mainPanel)).BeginInit();
 			this.mainPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.databasePanel)).BeginInit();
 			this.databasePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtDatabaseName.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDatabasePort.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDatabaseHost.Properties)).BeginInit();
@@ -68,6 +72,7 @@
 			this.infoPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cboLevelFile.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cboLevelNHibernate.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// mainPanel
@@ -127,13 +132,13 @@
 			this.databasePanel.Controls.Add(this.lblDatabaseHost);
 			this.databasePanel.Controls.Add(this.lblDatabaseType);
 			this.databasePanel.Controls.Add(this.txtDatabaseName);
-			this.databasePanel.Controls.Add(this.txtPassword);
 			this.databasePanel.Controls.Add(this.txtUserName);
 			this.databasePanel.Controls.Add(this.txtDatabasePort);
 			this.databasePanel.Controls.Add(this.txtDatabaseHost);
 			this.databasePanel.Controls.Add(this.lblInfo);
 			this.databasePanel.Controls.Add(this.lblTitle);
 			this.databasePanel.Controls.Add(this.cboDatabaseType);
+			this.databasePanel.Controls.Add(this.txtPassword);
 			this.databasePanel.Location = new System.Drawing.Point(12, 12);
 			this.databasePanel.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
 			this.databasePanel.Name = "databasePanel";
@@ -201,15 +206,6 @@
 			this.txtDatabaseName.Name = "txtDatabaseName";
 			this.txtDatabaseName.Size = new System.Drawing.Size(134, 22);
 			this.txtDatabaseName.TabIndex = 5;
-			// 
-			// txtPassword
-			// 
-			this.txtPassword.Location = new System.Drawing.Point(530, 194);
-			this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-			this.txtPassword.Name = "txtPassword";
-			this.txtPassword.Properties.PasswordChar = '*';
-			this.txtPassword.Size = new System.Drawing.Size(134, 22);
-			this.txtPassword.TabIndex = 4;
 			// 
 			// txtUserName
 			// 
@@ -349,6 +345,21 @@
 			this.cboLevelNHibernate.Size = new System.Drawing.Size(195, 22);
 			this.cboLevelNHibernate.TabIndex = 3;
 			// 
+			// txtPassword
+			// 
+			this.txtPassword.Location = new System.Drawing.Point(530, 194);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+			this.txtPassword.Name = "txtPassword";
+			editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
+			editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(12, 12);
+			this.txtPassword.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+			this.txtPassword.Properties.PasswordChar = '*';
+			this.txtPassword.Size = new System.Drawing.Size(134, 25);
+			this.txtPassword.TabIndex = 4;
+			this.txtPassword.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtPassword_ButtonClick);
+			this.txtPassword.MouseLeave += new System.EventHandler(this.txtPassword_MouseLeave);
+			// 
 			// ServerConfigurationForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -366,7 +377,6 @@
 			this.databasePanel.ResumeLayout(false);
 			this.databasePanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtDatabaseName.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDatabasePort.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDatabaseHost.Properties)).EndInit();
@@ -376,6 +386,7 @@
 			this.infoPanel.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cboLevelFile.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cboLevelNHibernate.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -394,7 +405,6 @@
         private DevExpress.XtraEditors.LabelControl lblDatabaseHost;
         private DevExpress.XtraEditors.LabelControl lblDatabaseType;
         private DevExpress.XtraEditors.TextEdit txtDatabaseName;
-        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.TextEdit txtDatabasePort;
         private DevExpress.XtraEditors.TextEdit txtDatabaseHost;
@@ -407,5 +417,6 @@
         private DevExpress.XtraEditors.LabelControl lblLogConfiguration;
         private DevExpress.XtraEditors.LookUpEdit cboLevelFile;
         private DevExpress.XtraEditors.LookUpEdit cboLevelNHibernate;
+		private DevExpress.XtraEditors.ButtonEdit txtPassword;
 	}
 }
