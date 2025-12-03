@@ -94,7 +94,7 @@ namespace MISLiveMed.UI.Accounting.Invoices
 
 		private void WireUpBindings()
 		{
-			bsInvoice.DataSource = _invoiceModel;
+			//bsInvoice.DataSource = _invoiceModel;
 		}
 
 		private void ApplyPermissions()
@@ -124,9 +124,9 @@ namespace MISLiveMed.UI.Accounting.Invoices
 			btnPrint.Enabled = _isAdmin || _canPrint;
 			btnDelete.Enabled = _isAdmin || _canDelete;
 
-			gvInvoiceDetails.OptionsView.NewItemRowPosition = _canAdd ? NewItemRowPosition.Bottom : NewItemRowPosition.None;
-			gvInvoiceDetails.OptionsBehavior.AllowAddRows = !_canAdd ? DefaultBoolean.True : DefaultBoolean.False; ;
-			gvInvoiceDetails.OptionsBehavior.AllowDeleteRows = !_canDelete ? DefaultBoolean.True : DefaultBoolean.False;
+			//gvInvoiceDetails.OptionsView.NewItemRowPosition = _canAdd ? NewItemRowPosition.Bottom : NewItemRowPosition.None;
+			//gvInvoiceDetails.OptionsBehavior.AllowAddRows = !_canAdd ? DefaultBoolean.True : DefaultBoolean.False; ;
+			//gvInvoiceDetails.OptionsBehavior.AllowDeleteRows = !_canDelete ? DefaultBoolean.True : DefaultBoolean.False;
 		}
 
 		private void ApplyDefaults()

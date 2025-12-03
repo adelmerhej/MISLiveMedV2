@@ -4,7 +4,8 @@ namespace MISLiveMed.Models.Models.Accounting.Invoices
 {
     public class InvoiceDetailModel : EntityObject, ICloneable
     {
-        public int InvoiceId { get; set; }
+        public int LineNo { get; set; }
+		public int InvoiceId { get; set; }
         public int ItemId { get; set; }
         public int ItemCode { get; set; }
         public string Description { get; set; }

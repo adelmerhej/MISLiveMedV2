@@ -1504,6 +1504,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\DataSources\MISLiveMed.Models.Models.Accounting.Invoices.InvoiceDetailModel.datasource" />
+    <None Include="Properties\DataSources\MISLiveMed.Models.Models.Accounting.Invoices.InvoiceModel.datasource" />
     <None Include="Resources\favico.ico" />
     <None Include="Resources\logo_med.png" />
     <None Include="Properties\DataSources\CRMLive.DataLib.Models.Users.UserDetailModel.datasource" />

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.Utils;
-using DevExpress.Utils.Menu;
+﻿using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Views.Grid;
@@ -24,6 +17,12 @@ using MISLiveMed.UI.Properties;
 using MISLiveMed.UI.Utilities;
 using MISLiveMed.Utils.Common;
 using MISLiveMed.Utils.Enums;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
 namespace MISLiveMed.UI.Forms.Users
 {
@@ -102,7 +101,7 @@ namespace MISLiveMed.UI.Forms.Users
 					if (isProtected != null) _isProtected = (bool)isProtected;
 				}
 				//
-				
+
 				_countries = _countryRepository.SelectCountries();
 				_provinces = _provincesRepository.SelectProvinces();
 				_districts = _districtRepository.SelectDistricts();
@@ -206,7 +205,6 @@ namespace MISLiveMed.UI.Forms.Users
 		{
 			txtUserName.Focus();
 			userTabControl.TabIndex = 0;
-			txtPassword.Text = Settings.Default.UserPassword;
 		}
 		void InitializeMenuItems()
 		{
@@ -234,8 +232,8 @@ namespace MISLiveMed.UI.Forms.Users
 			if (id != 0)
 			{
 				if (XtraMessageBox.Show($"Are you sure you want to delete `{name}`?",
-					    "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-					    MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+						"Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+						MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 				{
 					gvFormPermissions.SetRowCellValue(gvFormPermissions.FocusedRowHandle, "Deleted", true);
 
@@ -414,7 +412,7 @@ namespace MISLiveMed.UI.Forms.Users
 					SplashScreenManager.Default.SetWaitFormCaption("Please wait");
 					SplashScreenManager.Default.SetWaitFormDescription("Adding forms");
 
-					_userPermissionRepository.SeedUserPermissionsData(_userModel.Id,_userModel.UserName.ToLower() == "admin");
+					_userPermissionRepository.SeedUserPermissionsData(_userModel.Id, _userModel.UserName.ToLower() == "admin");
 
 					SplashScreenManager.CloseForm(false);
 

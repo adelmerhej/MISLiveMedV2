@@ -45,7 +45,6 @@ namespace MISLiveMed.Models.Models.Accounting.Invoices
         public decimal TotalCreditNote { get; set; }
         public decimal TotalDebitNote { get; set; }
         public decimal TotalDue { get; set; }
-        public bool Locked { get; set; }
         public DateTime? PrintOriginalDate { get; set; }
         public int PrintOriginalByUser { get; set; }
         public DateTime? LastPrintOrigDate { get; set; }

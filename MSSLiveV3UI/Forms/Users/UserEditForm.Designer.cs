@@ -74,7 +74,6 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.lblFirstName = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lblLastName = new DevExpress.XtraLayout.LayoutControlItem();
-			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lblNotes = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lcgInfo = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.lblMobile = new DevExpress.XtraLayout.LayoutControlItem();
@@ -223,7 +222,6 @@ namespace MISLiveMed.UI.Forms.Users
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblFirstName)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblLastName)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblNotes)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lcgInfo)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblMobile)).BeginInit();
@@ -344,7 +342,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.mainLayout.Location = new System.Drawing.Point(0, 0);
 			this.mainLayout.Name = "mainLayout";
 			this.mainLayout.Root = this.Root;
-			this.mainLayout.Size = new System.Drawing.Size(1143, 758);
+			this.mainLayout.Size = new System.Drawing.Size(1143, 783);
 			this.mainLayout.TabIndex = 3;
 			this.mainLayout.Text = "layoutControl1";
 			// 
@@ -353,7 +351,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.userTabControl.Location = new System.Drawing.Point(14, 14);
 			this.userTabControl.Name = "userTabControl";
 			this.userTabControl.SelectedTabPage = this.xtpUserInfo;
-			this.userTabControl.Size = new System.Drawing.Size(1115, 699);
+			this.userTabControl.Size = new System.Drawing.Size(1115, 724);
 			this.userTabControl.TabIndex = 4;
 			this.userTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpUserInfo,
@@ -364,7 +362,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			this.xtpUserInfo.Controls.Add(this.layoutControl1);
 			this.xtpUserInfo.Name = "xtpUserInfo";
-			this.xtpUserInfo.Size = new System.Drawing.Size(1113, 669);
+			this.xtpUserInfo.Size = new System.Drawing.Size(1113, 694);
 			this.xtpUserInfo.Text = "User Info";
 			// 
 			// layoutControl1
@@ -374,7 +372,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl1.Name = "layoutControl1";
 			this.layoutControl1.Root = this.layoutControlGroup1;
-			this.layoutControl1.Size = new System.Drawing.Size(1113, 669);
+			this.layoutControl1.Size = new System.Drawing.Size(1113, 694);
 			this.layoutControl1.TabIndex = 0;
 			this.layoutControl1.Text = "layoutControl1";
 			// 
@@ -392,7 +390,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			this.spcUserInfo.Panel2.Controls.Add(this.layoutControl3);
 			this.spcUserInfo.Panel2.Text = "Panel2";
-			this.spcUserInfo.Size = new System.Drawing.Size(1085, 641);
+			this.spcUserInfo.Size = new System.Drawing.Size(1085, 666);
 			this.spcUserInfo.SplitterPosition = 284;
 			this.spcUserInfo.TabIndex = 4;
 			// 
@@ -403,7 +401,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl2.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl2.Name = "layoutControl2";
 			this.layoutControl2.Root = this.layoutControlGroup2;
-			this.layoutControl2.Size = new System.Drawing.Size(284, 641);
+			this.layoutControl2.Size = new System.Drawing.Size(284, 666);
 			this.layoutControl2.TabIndex = 0;
 			this.layoutControl2.Text = "layoutControl2";
 			// 
@@ -414,7 +412,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.userPic.Properties.ReadOnly = true;
 			this.userPic.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
 			this.userPic.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-			this.userPic.Size = new System.Drawing.Size(256, 210);
+			this.userPic.Size = new System.Drawing.Size(256, 219);
 			this.userPic.StyleController = this.layoutControl2;
 			this.userPic.TabIndex = 5;
 			// 
@@ -426,7 +424,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.layoutControlItem4,
             this.emptySpaceItem1});
 			this.layoutControlGroup2.Name = "layoutControlGroup2";
-			this.layoutControlGroup2.Size = new System.Drawing.Size(284, 641);
+			this.layoutControlGroup2.Size = new System.Drawing.Size(284, 666);
 			this.layoutControlGroup2.TextVisible = false;
 			// 
 			// layoutControlItem4
@@ -434,14 +432,14 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem4.Control = this.userPic;
 			this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem4.Name = "layoutControlItem4";
-			this.layoutControlItem4.Size = new System.Drawing.Size(260, 214);
+			this.layoutControlItem4.Size = new System.Drawing.Size(260, 223);
 			this.layoutControlItem4.TextVisible = false;
 			// 
 			// emptySpaceItem1
 			// 
-			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 214);
+			this.emptySpaceItem1.Location = new System.Drawing.Point(0, 223);
 			this.emptySpaceItem1.Name = "emptySpaceItem1";
-			this.emptySpaceItem1.Size = new System.Drawing.Size(260, 403);
+			this.emptySpaceItem1.Size = new System.Drawing.Size(260, 419);
 			// 
 			// layoutControl3
 			// 
@@ -450,13 +448,14 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControl3.Location = new System.Drawing.Point(0, 0);
 			this.layoutControl3.Name = "layoutControl3";
 			this.layoutControl3.Root = this.layoutControlGroup3;
-			this.layoutControl3.Size = new System.Drawing.Size(789, 641);
+			this.layoutControl3.Size = new System.Drawing.Size(789, 666);
 			this.layoutControl3.TabIndex = 0;
 			this.layoutControl3.Text = "layoutControl3";
 			// 
 			// lcMain
 			// 
 			this.lcMain.AllowCustomization = false;
+			this.lcMain.Controls.Add(this.txtPassword);
 			this.lcMain.Controls.Add(this.txtPhone);
 			this.lcMain.Controls.Add(this.chkMobileNumberConfirmed);
 			this.lcMain.Controls.Add(this.chkConfirmedEmail);
@@ -475,13 +474,12 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lcMain.Controls.Add(this.cboProvinces);
 			this.lcMain.Controls.Add(this.cboDistricts);
 			this.lcMain.Controls.Add(this.cboTitles);
-			this.lcMain.Controls.Add(this.txtPassword);
 			this.lcMain.Location = new System.Drawing.Point(14, 14);
 			this.lcMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.lcMain.Name = "lcMain";
 			this.lcMain.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1062, 287, 450, 596);
 			this.lcMain.Root = this.layoutControlGroup8;
-			this.lcMain.Size = new System.Drawing.Size(761, 613);
+			this.lcMain.Size = new System.Drawing.Size(761, 638);
 			this.lcMain.TabIndex = 6;
 			this.lcMain.Text = "layoutControl1";
 			// 
@@ -547,7 +545,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboCities
 			// 
-			this.cboCities.Location = new System.Drawing.Point(474, 393);
+			this.cboCities.Location = new System.Drawing.Point(474, 425);
 			this.cboCities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboCities.Name = "cboCities";
 			this.cboCities.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -565,7 +563,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboCountries
 			// 
-			this.cboCountries.Location = new System.Drawing.Point(124, 393);
+			this.cboCountries.Location = new System.Drawing.Point(124, 425);
 			this.cboCountries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboCountries.Name = "cboCountries";
 			this.cboCountries.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -607,11 +605,11 @@ namespace MISLiveMed.UI.Forms.Users
 			// txtNotes
 			// 
 			this.txtNotes.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsUser, "Notes", true));
-			this.txtNotes.Location = new System.Drawing.Point(14, 503);
+			this.txtNotes.Location = new System.Drawing.Point(14, 535);
 			this.txtNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtNotes.Name = "txtNotes";
 			this.txtNotes.Properties.ReadOnly = true;
-			this.txtNotes.Size = new System.Drawing.Size(733, 25);
+			this.txtNotes.Size = new System.Drawing.Size(733, 89);
 			this.txtNotes.StyleController = this.lcMain;
 			this.txtNotes.TabIndex = 12;
 			// 
@@ -636,7 +634,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.txtAddress.Name = "txtAddress";
 			this.txtAddress.Properties.ReadOnly = true;
-			this.txtAddress.Size = new System.Drawing.Size(595, 22);
+			this.txtAddress.Size = new System.Drawing.Size(595, 54);
 			this.txtAddress.StyleController = this.lcMain;
 			this.txtAddress.TabIndex = 4;
 			// 
@@ -684,7 +682,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboProvinces
 			// 
-			this.cboProvinces.Location = new System.Drawing.Point(124, 419);
+			this.cboProvinces.Location = new System.Drawing.Point(124, 451);
 			this.cboProvinces.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboProvinces.Name = "cboProvinces";
 			this.cboProvinces.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -702,7 +700,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			// cboDistricts
 			// 
-			this.cboDistricts.Location = new System.Drawing.Point(474, 419);
+			this.cboDistricts.Location = new System.Drawing.Point(474, 451);
 			this.cboDistricts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.cboDistricts.Name = "cboDistricts";
 			this.cboDistricts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -754,7 +752,6 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.lblFirstName,
             this.lblLastName,
-            this.emptySpaceItem3,
             this.lblNotes,
             this.lcgInfo,
             this.emptySpaceItem11,
@@ -771,7 +768,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.lblUserName,
             this.emptySpaceItem5});
 			this.layoutControlGroup8.Name = "Root";
-			this.layoutControlGroup8.Size = new System.Drawing.Size(761, 613);
+			this.layoutControlGroup8.Size = new System.Drawing.Size(761, 638);
 			this.layoutControlGroup8.TextVisible = false;
 			// 
 			// lblFirstName
@@ -794,24 +791,13 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblLastName.Text = "Last Name:";
 			this.lblLastName.TextSize = new System.Drawing.Size(67, 16);
 			// 
-			// emptySpaceItem3
-			// 
-			this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-			this.emptySpaceItem3.Location = new System.Drawing.Point(0, 518);
-			this.emptySpaceItem3.MaxSize = new System.Drawing.Size(0, 71);
-			this.emptySpaceItem3.MinSize = new System.Drawing.Size(111, 71);
-			this.emptySpaceItem3.Name = "emptySpaceItem3";
-			this.emptySpaceItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-			this.emptySpaceItem3.Size = new System.Drawing.Size(737, 71);
-			this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-			// 
 			// lblNotes
 			// 
 			this.lblNotes.Control = this.txtNotes;
 			this.lblNotes.CustomizationFormText = "layoutControlItem3";
-			this.lblNotes.Location = new System.Drawing.Point(0, 469);
+			this.lblNotes.Location = new System.Drawing.Point(0, 501);
 			this.lblNotes.Name = "lblNotes";
-			this.lblNotes.Size = new System.Drawing.Size(737, 49);
+			this.lblNotes.Size = new System.Drawing.Size(737, 113);
 			this.lblNotes.Text = "Notes:";
 			this.lblNotes.TextLocation = DevExpress.Utils.Locations.Top;
 			this.lblNotes.TextSize = new System.Drawing.Size(67, 16);
@@ -833,7 +819,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.emptySpaceItem2});
 			this.lcgInfo.Location = new System.Drawing.Point(0, 165);
 			this.lcgInfo.Name = "lcgInfo";
-			this.lcgInfo.Size = new System.Drawing.Size(737, 304);
+			this.lcgInfo.Size = new System.Drawing.Size(737, 336);
 			this.lcgInfo.Text = "Personal Info";
 			// 
 			// lblMobile
@@ -866,7 +852,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// emptySpaceItem4
 			// 
 			this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem1";
-			this.emptySpaceItem4.Location = new System.Drawing.Point(0, 240);
+			this.emptySpaceItem4.Location = new System.Drawing.Point(0, 272);
 			this.emptySpaceItem4.Name = "emptySpaceItem1";
 			this.emptySpaceItem4.Size = new System.Drawing.Size(709, 10);
 			// 
@@ -907,7 +893,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.lblCountries});
 			this.lcgAddress.Location = new System.Drawing.Point(0, 108);
 			this.lcgAddress.Name = "lcgAddress";
-			this.lcgAddress.Size = new System.Drawing.Size(709, 132);
+			this.lcgAddress.Size = new System.Drawing.Size(709, 164);
 			this.lcgAddress.Text = "Address Info";
 			// 
 			// lblAddress
@@ -918,7 +904,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblAddress.CustomizationFormText = "layoutControlItem6";
 			this.lblAddress.Location = new System.Drawing.Point(0, 0);
 			this.lblAddress.Name = "lblAddress";
-			this.lblAddress.Size = new System.Drawing.Size(681, 26);
+			this.lblAddress.Size = new System.Drawing.Size(681, 58);
 			this.lblAddress.Text = "Address";
 			this.lblAddress.TextSize = new System.Drawing.Size(67, 16);
 			// 
@@ -928,7 +914,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblDistricts.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lblDistricts.Control = this.cboDistricts;
 			this.lblDistricts.CustomizationFormText = "layoutControlItem8";
-			this.lblDistricts.Location = new System.Drawing.Point(350, 52);
+			this.lblDistricts.Location = new System.Drawing.Point(350, 84);
 			this.lblDistricts.Name = "lblDistricts";
 			this.lblDistricts.Size = new System.Drawing.Size(331, 26);
 			this.lblDistricts.Text = "District";
@@ -938,7 +924,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// 
 			this.lblProvinces.Control = this.cboProvinces;
 			this.lblProvinces.CustomizationFormText = "layoutControlItem9";
-			this.lblProvinces.Location = new System.Drawing.Point(0, 52);
+			this.lblProvinces.Location = new System.Drawing.Point(0, 84);
 			this.lblProvinces.Name = "lblProvinces";
 			this.lblProvinces.Size = new System.Drawing.Size(350, 26);
 			this.lblProvinces.Text = "Province";
@@ -949,7 +935,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.lblCities.AppearanceItemCaption.Options.UseTextOptions = true;
 			this.lblCities.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
 			this.lblCities.Control = this.cboCities;
-			this.lblCities.Location = new System.Drawing.Point(350, 26);
+			this.lblCities.Location = new System.Drawing.Point(350, 58);
 			this.lblCities.Name = "lblCities";
 			this.lblCities.Size = new System.Drawing.Size(331, 26);
 			this.lblCities.Text = "City";
@@ -958,7 +944,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// lblCountries
 			// 
 			this.lblCountries.Control = this.cboCountries;
-			this.lblCountries.Location = new System.Drawing.Point(0, 26);
+			this.lblCountries.Location = new System.Drawing.Point(0, 58);
 			this.lblCountries.Name = "lblCountries";
 			this.lblCountries.Size = new System.Drawing.Size(350, 26);
 			this.lblCountries.Text = "Country";
@@ -1079,7 +1065,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem6});
 			this.layoutControlGroup3.Name = "layoutControlGroup3";
-			this.layoutControlGroup3.Size = new System.Drawing.Size(789, 641);
+			this.layoutControlGroup3.Size = new System.Drawing.Size(789, 666);
 			this.layoutControlGroup3.TextVisible = false;
 			// 
 			// layoutControlItem6
@@ -1087,7 +1073,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem6.Control = this.lcMain;
 			this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Size = new System.Drawing.Size(765, 617);
+			this.layoutControlItem6.Size = new System.Drawing.Size(765, 642);
 			this.layoutControlItem6.TextVisible = false;
 			// 
 			// layoutControlGroup1
@@ -1097,7 +1083,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
 			this.layoutControlGroup1.Name = "layoutControlGroup1";
-			this.layoutControlGroup1.Size = new System.Drawing.Size(1113, 669);
+			this.layoutControlGroup1.Size = new System.Drawing.Size(1113, 694);
 			this.layoutControlGroup1.TextVisible = false;
 			// 
 			// layoutControlItem2
@@ -1105,7 +1091,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem2.Control = this.spcUserInfo;
 			this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem2.Name = "layoutControlItem2";
-			this.layoutControlItem2.Size = new System.Drawing.Size(1089, 645);
+			this.layoutControlItem2.Size = new System.Drawing.Size(1089, 670);
 			this.layoutControlItem2.TextVisible = false;
 			// 
 			// xtpUserPermissions
@@ -1697,7 +1683,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// btnCancel
 			// 
 			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnCancel.Location = new System.Drawing.Point(936, 717);
+			this.btnCancel.Location = new System.Drawing.Point(936, 742);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(193, 27);
 			this.btnCancel.StyleController = this.mainLayout;
@@ -1708,7 +1694,7 @@ namespace MISLiveMed.UI.Forms.Users
 			// btnSave
 			// 
 			this.btnSave.Enabled = false;
-			this.btnSave.Location = new System.Drawing.Point(770, 717);
+			this.btnSave.Location = new System.Drawing.Point(770, 742);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(162, 27);
 			this.btnSave.StyleController = this.mainLayout;
@@ -1726,7 +1712,7 @@ namespace MISLiveMed.UI.Forms.Users
             this.layoutControlItem11,
             this.emptySpaceItem16});
 			this.Root.Name = "Root";
-			this.Root.Size = new System.Drawing.Size(1143, 758);
+			this.Root.Size = new System.Drawing.Size(1143, 783);
 			this.Root.TextVisible = false;
 			// 
 			// layoutControlItem1
@@ -1734,13 +1720,13 @@ namespace MISLiveMed.UI.Forms.Users
 			this.layoutControlItem1.Control = this.userTabControl;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1119, 703);
+			this.layoutControlItem1.Size = new System.Drawing.Size(1119, 728);
 			this.layoutControlItem1.TextVisible = false;
 			// 
 			// layoutControlItem10
 			// 
 			this.layoutControlItem10.Control = this.btnSave;
-			this.layoutControlItem10.Location = new System.Drawing.Point(756, 703);
+			this.layoutControlItem10.Location = new System.Drawing.Point(756, 728);
 			this.layoutControlItem10.Name = "layoutControlItem10";
 			this.layoutControlItem10.Size = new System.Drawing.Size(166, 31);
 			this.layoutControlItem10.TextVisible = false;
@@ -1748,14 +1734,14 @@ namespace MISLiveMed.UI.Forms.Users
 			// layoutControlItem11
 			// 
 			this.layoutControlItem11.Control = this.btnCancel;
-			this.layoutControlItem11.Location = new System.Drawing.Point(922, 703);
+			this.layoutControlItem11.Location = new System.Drawing.Point(922, 728);
 			this.layoutControlItem11.Name = "layoutControlItem11";
 			this.layoutControlItem11.Size = new System.Drawing.Size(197, 31);
 			this.layoutControlItem11.TextVisible = false;
 			// 
 			// emptySpaceItem16
 			// 
-			this.emptySpaceItem16.Location = new System.Drawing.Point(0, 703);
+			this.emptySpaceItem16.Location = new System.Drawing.Point(0, 728);
 			this.emptySpaceItem16.Name = "emptySpaceItem16";
 			this.emptySpaceItem16.Size = new System.Drawing.Size(756, 31);
 			// 
@@ -1765,7 +1751,7 @@ namespace MISLiveMed.UI.Forms.Users
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnCancel;
-			this.ClientSize = new System.Drawing.Size(1143, 758);
+			this.ClientSize = new System.Drawing.Size(1143, 783);
 			this.Controls.Add(this.mainLayout);
 			this.MaximizeBox = false;
 			this.Name = "UserEditForm";
@@ -1820,7 +1806,6 @@ namespace MISLiveMed.UI.Forms.Users
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblFirstName)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblLastName)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblNotes)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lcgInfo)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblMobile)).EndInit();
@@ -1960,7 +1945,6 @@ namespace MISLiveMed.UI.Forms.Users
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
 		private DevExpress.XtraLayout.LayoutControlItem lblFirstName;
 		private DevExpress.XtraLayout.LayoutControlItem lblLastName;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
 		private DevExpress.XtraLayout.LayoutControlItem lblNotes;
 		private DevExpress.XtraLayout.LayoutControlGroup lcgInfo;
 		private DevExpress.XtraLayout.LayoutControlItem lblMobile;

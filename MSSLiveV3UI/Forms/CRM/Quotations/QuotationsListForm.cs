@@ -559,50 +559,54 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 
         private void gvQuotation_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
-            GridView view = sender as GridView;
+			GridView view = sender as GridView;
 
-            if (e.RowHandle < 0) return;
+			if (e.RowHandle < 0) return;
 
-            bool requestChangeFollowup = false;
+			bool requestChangeFollowup = false;
 
-            bool isUrgent = (bool)view.GetRowCellValue(e.RowHandle, "Urgent");
-            if (isUrgent)
-            {
-                e.Appearance.ForeColor = Color.Green;
-                //e.Appearance.ForeColor = Color.White;
-            }
+			bool isUrgent = (bool)view.GetRowCellValue(e.RowHandle, "Urgent");
+			if (isUrgent)
+			{
+				e.Appearance.ForeColor = Color.Red;
+			}
 
-            int status = (int)view.GetRowCellValue(e.RowHandle, "Status");
-            var followupValue = view.GetRowCellValue(e.RowHandle, "FollowupDate");
+			int status = (int)view.GetRowCellValue(e.RowHandle, "Status");
+			var followupValue = view.GetRowCellValue(e.RowHandle, "FollowupDate");
 
-            if (followupValue != null)
-            {
-                requestChangeFollowup = (DateTime)view.GetRowCellValue(e.RowHandle, "FollowupDate") < DateTime.Today;
-            }
+			if (followupValue != null)
+			{
+				requestChangeFollowup = (DateTime)view.GetRowCellValue(e.RowHandle, "FollowupDate") <= DateTime.Today;
+			}
 
-            int _id = (int)view.GetRowCellValue(e.RowHandle, "Id");
+			int _id = (int)view.GetRowCellValue(e.RowHandle, "Id");
 
-            if (requestChangeFollowup && status != 2 && status != 3 && status != 4)
-            {
-                e.Appearance.BackColor = Color.LightCoral;
-                e.Appearance.ForeColor = Color.White;
-            }
+			if (requestChangeFollowup && status != 2 && status != 3 && status != 4)
+			{
+				e.Appearance.BackColor = Color.LightCoral;
+				e.Appearance.ForeColor = Color.White;
+			}
 
-            if (status == 3)
-            {
-                e.Appearance.ForeColor = Color.Red;
-                e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Strikeout);
-            }
+			if (status == 2)
+			{
+				//e.Appearance.BackColor = Color.LightGreen;
+				e.Appearance.ForeColor = Color.Green;
+			}
 
-            if (status == 4)
-            {
-                e.Appearance.ForeColor = Color.Gray;
-                e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Italic);
-            }
+			if (status == 3)
+			{
+				e.Appearance.ForeColor = Color.Red;
+				e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Strikeout);
+			}
 
-        }
+			if (status == 4)
+			{
+				e.Appearance.ForeColor = Color.Gray;
+				e.Appearance.Font = new Font("Tahoma", 8, FontStyle.Italic);
+			}
+		}
 
-        #endregion
+		#endregion
 
-    }
+	}
 }
