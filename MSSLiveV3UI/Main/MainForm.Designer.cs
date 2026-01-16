@@ -82,24 +82,17 @@
 			this.mnuQuotationsJobsReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator11 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.mnuGroupDepartments = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuAccountingDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuTransactionPaymentsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuTransactionReceiptsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuTransactionDebitNotesList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuTransactionCreditNotesList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlSeparator8 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-			this.mnuCommissionsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuImportDepartmentMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuSeaFreightDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuJobsSeaImportList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator19 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-			this.mnuJobsAirImportList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuExportDepartmentMenu = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuJobsSeaExportList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.accordionControlSeparator31 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.mnuJobsSeaCrossList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuAirFreightDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuJobsAirImportList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator20 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.mnuJobsAirExportList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuCrossDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuJobsSeaCrossList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.accordionControlSeparator21 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.accordionControlSeparator30 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.mnuJobsAirCrossList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuClearanceDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuJobsSeaClearanceList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -108,11 +101,19 @@
 			this.mnuLandFreightDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuJobsLandFreightList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator23 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.mnuWarehouseDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuJobsWarehouseList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuTejrimDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuTejrimJobsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuClosedJobsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuWarehouseDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-			this.mnuJobsWarehouseList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.accordionControlSeparator29 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.mnuAccountingDepartment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuTransactionPaymentsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuTransactionReceiptsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuTransactionDebitNotesList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.mnuTransactionCreditNotesList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.accordionControlSeparator8 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.mnuCommissionsList = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuGroupReports = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuClientsReportsGroup = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.mnuClientInvoicesDetailReport = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -589,6 +590,7 @@
             this.accordionControlSeparator2,
             this.mnuQuotationsJobsReport,
             this.accordionControlSeparator11});
+			this.mnuDashboard.Expanded = true;
 			this.mnuDashboard.Name = "mnuDashboard";
 			this.mnuDashboard.Text = "Dashboard";
 			// 
@@ -688,16 +690,229 @@
 			// mnuGroupDepartments
 			// 
 			this.mnuGroupDepartments.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuAccountingDepartment,
-            this.mnuImportDepartmentMenu,
-            this.mnuExportDepartmentMenu,
-            this.mnuCrossDepartment,
+            this.mnuSeaFreightDepartment,
+            this.mnuAirFreightDepartment,
             this.mnuClearanceDepartment,
             this.mnuLandFreightDepartment,
+            this.mnuWarehouseDepartment,
             this.mnuTejrimDepartment,
-            this.mnuWarehouseDepartment});
+            this.accordionControlSeparator29,
+            this.mnuAccountingDepartment});
 			this.mnuGroupDepartments.Name = "mnuGroupDepartments";
 			this.mnuGroupDepartments.Text = "Departments";
+			// 
+			// mnuSeaFreightDepartment
+			// 
+			this.mnuSeaFreightDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuJobsSeaImportList,
+            this.accordionControlSeparator19,
+            this.mnuJobsSeaExportList,
+            this.accordionControlSeparator31,
+            this.mnuJobsSeaCrossList});
+			this.mnuSeaFreightDepartment.Expanded = true;
+			this.mnuSeaFreightDepartment.Name = "mnuSeaFreightDepartment";
+			this.mnuSeaFreightDepartment.Text = "Sea Freight";
+			this.mnuSeaFreightDepartment.Visible = false;
+			// 
+			// mnuJobsSeaImportList
+			// 
+			this.mnuJobsSeaImportList.Enabled = false;
+			this.mnuJobsSeaImportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaImportList.ImageOptions.SvgImage")));
+			this.mnuJobsSeaImportList.Name = "mnuJobsSeaImportList";
+			this.mnuJobsSeaImportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsSeaImportList.Text = "Jobs Sea Import List";
+			this.mnuJobsSeaImportList.Visible = false;
+			this.mnuJobsSeaImportList.Click += new System.EventHandler(this.mnuJobsSeaImportList_Click);
+			// 
+			// accordionControlSeparator19
+			// 
+			this.accordionControlSeparator19.Name = "accordionControlSeparator19";
+			// 
+			// mnuJobsSeaExportList
+			// 
+			this.mnuJobsSeaExportList.Enabled = false;
+			this.mnuJobsSeaExportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaExportList.ImageOptions.SvgImage")));
+			this.mnuJobsSeaExportList.Name = "mnuJobsSeaExportList";
+			this.mnuJobsSeaExportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsSeaExportList.Text = "Jobs Sea Export List";
+			this.mnuJobsSeaExportList.Visible = false;
+			this.mnuJobsSeaExportList.Click += new System.EventHandler(this.mnuJobsSeaExport_Click);
+			// 
+			// accordionControlSeparator31
+			// 
+			this.accordionControlSeparator31.Name = "accordionControlSeparator31";
+			// 
+			// mnuJobsSeaCrossList
+			// 
+			this.mnuJobsSeaCrossList.Enabled = false;
+			this.mnuJobsSeaCrossList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaCrossList.ImageOptions.SvgImage")));
+			this.mnuJobsSeaCrossList.Name = "mnuJobsSeaCrossList";
+			this.mnuJobsSeaCrossList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsSeaCrossList.Text = "Sea Cross Jobs List";
+			this.mnuJobsSeaCrossList.Visible = false;
+			this.mnuJobsSeaCrossList.Click += new System.EventHandler(this.mnuJobsSeaCross_Click);
+			// 
+			// mnuAirFreightDepartment
+			// 
+			this.mnuAirFreightDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuJobsAirImportList,
+            this.accordionControlSeparator20,
+            this.mnuJobsAirExportList,
+            this.accordionControlSeparator30,
+            this.mnuJobsAirCrossList});
+			this.mnuAirFreightDepartment.Name = "mnuAirFreightDepartment";
+			this.mnuAirFreightDepartment.Text = "Air Freight";
+			this.mnuAirFreightDepartment.Visible = false;
+			// 
+			// mnuJobsAirImportList
+			// 
+			this.mnuJobsAirImportList.Enabled = false;
+			this.mnuJobsAirImportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirImportList.ImageOptions.SvgImage")));
+			this.mnuJobsAirImportList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuJobsAirImportList.Name = "mnuJobsAirImportList";
+			this.mnuJobsAirImportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsAirImportList.Text = "Jobs Air Import List";
+			this.mnuJobsAirImportList.Visible = false;
+			this.mnuJobsAirImportList.Click += new System.EventHandler(this.mnuJobsAirImport_Click);
+			// 
+			// accordionControlSeparator20
+			// 
+			this.accordionControlSeparator20.Name = "accordionControlSeparator20";
+			// 
+			// mnuJobsAirExportList
+			// 
+			this.mnuJobsAirExportList.Enabled = false;
+			this.mnuJobsAirExportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirExportList.ImageOptions.SvgImage")));
+			this.mnuJobsAirExportList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuJobsAirExportList.Name = "mnuJobsAirExportList";
+			this.mnuJobsAirExportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsAirExportList.Text = "Jobs Air Export List";
+			this.mnuJobsAirExportList.Visible = false;
+			this.mnuJobsAirExportList.Click += new System.EventHandler(this.mnuJobsAirExport_Click);
+			// 
+			// accordionControlSeparator30
+			// 
+			this.accordionControlSeparator30.Name = "accordionControlSeparator30";
+			// 
+			// mnuJobsAirCrossList
+			// 
+			this.mnuJobsAirCrossList.Enabled = false;
+			this.mnuJobsAirCrossList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirCrossList.ImageOptions.SvgImage")));
+			this.mnuJobsAirCrossList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuJobsAirCrossList.Name = "mnuJobsAirCrossList";
+			this.mnuJobsAirCrossList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsAirCrossList.Text = "Air Cross Jobs List";
+			this.mnuJobsAirCrossList.Visible = false;
+			this.mnuJobsAirCrossList.Click += new System.EventHandler(this.mnuJobsAirCross_Click);
+			// 
+			// mnuClearanceDepartment
+			// 
+			this.mnuClearanceDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuJobsSeaClearanceList,
+            this.accordionControlSeparator22,
+            this.mnuJobsAirClearanceList});
+			this.mnuClearanceDepartment.Name = "mnuClearanceDepartment";
+			this.mnuClearanceDepartment.Text = "Clearance Department";
+			this.mnuClearanceDepartment.Visible = false;
+			// 
+			// mnuJobsSeaClearanceList
+			// 
+			this.mnuJobsSeaClearanceList.Enabled = false;
+			this.mnuJobsSeaClearanceList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaClearanceList.ImageOptions.SvgImage")));
+			this.mnuJobsSeaClearanceList.Name = "mnuJobsSeaClearanceList";
+			this.mnuJobsSeaClearanceList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsSeaClearanceList.Text = "Jobs Sea Clearance List";
+			this.mnuJobsSeaClearanceList.Visible = false;
+			this.mnuJobsSeaClearanceList.Click += new System.EventHandler(this.mnuJobsSeaClearance_Click);
+			// 
+			// accordionControlSeparator22
+			// 
+			this.accordionControlSeparator22.Name = "accordionControlSeparator22";
+			// 
+			// mnuJobsAirClearanceList
+			// 
+			this.mnuJobsAirClearanceList.Enabled = false;
+			this.mnuJobsAirClearanceList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirClearanceList.ImageOptions.SvgImage")));
+			this.mnuJobsAirClearanceList.Name = "mnuJobsAirClearanceList";
+			this.mnuJobsAirClearanceList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsAirClearanceList.Text = "Jobs Air Clearance List";
+			this.mnuJobsAirClearanceList.Visible = false;
+			this.mnuJobsAirClearanceList.Click += new System.EventHandler(this.mnuJobsAirClearance_Click);
+			// 
+			// mnuLandFreightDepartment
+			// 
+			this.mnuLandFreightDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuJobsLandFreightList,
+            this.accordionControlSeparator23});
+			this.mnuLandFreightDepartment.Name = "mnuLandFreightDepartment";
+			this.mnuLandFreightDepartment.Text = "Land Freight Department";
+			this.mnuLandFreightDepartment.Visible = false;
+			// 
+			// mnuJobsLandFreightList
+			// 
+			this.mnuJobsLandFreightList.Enabled = false;
+			this.mnuJobsLandFreightList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsLandFreightList.ImageOptions.SvgImage")));
+			this.mnuJobsLandFreightList.Name = "mnuJobsLandFreightList";
+			this.mnuJobsLandFreightList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsLandFreightList.Text = "Jobs Land Freight List";
+			this.mnuJobsLandFreightList.Visible = false;
+			this.mnuJobsLandFreightList.Click += new System.EventHandler(this.mnuJobsLandFreight_Click);
+			// 
+			// accordionControlSeparator23
+			// 
+			this.accordionControlSeparator23.Name = "accordionControlSeparator23";
+			// 
+			// mnuWarehouseDepartment
+			// 
+			this.mnuWarehouseDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuJobsWarehouseList});
+			this.mnuWarehouseDepartment.Name = "mnuWarehouseDepartment";
+			this.mnuWarehouseDepartment.Text = "Warehouse Department";
+			this.mnuWarehouseDepartment.Visible = false;
+			// 
+			// mnuJobsWarehouseList
+			// 
+			this.mnuJobsWarehouseList.Enabled = false;
+			this.mnuJobsWarehouseList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsWarehouseList.ImageOptions.SvgImage")));
+			this.mnuJobsWarehouseList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			this.mnuJobsWarehouseList.Name = "mnuJobsWarehouseList";
+			this.mnuJobsWarehouseList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuJobsWarehouseList.Text = "Jobs Warehouse List";
+			this.mnuJobsWarehouseList.Visible = false;
+			this.mnuJobsWarehouseList.Click += new System.EventHandler(this.mnuJobsWarehouseList_Click);
+			// 
+			// mnuTejrimDepartment
+			// 
+			this.mnuTejrimDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.mnuTejrimJobsList,
+            this.mnuClosedJobsList});
+			this.mnuTejrimDepartment.Name = "mnuTejrimDepartment";
+			this.mnuTejrimDepartment.Text = "Tejrim Department";
+			this.mnuTejrimDepartment.Visible = false;
+			// 
+			// mnuTejrimJobsList
+			// 
+			this.mnuTejrimJobsList.Enabled = false;
+			this.mnuTejrimJobsList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuTejrimJobsList.ImageOptions.SvgImage")));
+			this.mnuTejrimJobsList.Name = "mnuTejrimJobsList";
+			this.mnuTejrimJobsList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuTejrimJobsList.Text = "Tejrim Jobs";
+			this.mnuTejrimJobsList.Visible = false;
+			this.mnuTejrimJobsList.Click += new System.EventHandler(this.mnuTejrimJobsList_Click);
+			// 
+			// mnuClosedJobsList
+			// 
+			this.mnuClosedJobsList.Enabled = false;
+			this.mnuClosedJobsList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuClosedJobsList.ImageOptions.SvgImage")));
+			this.mnuClosedJobsList.Name = "mnuClosedJobsList";
+			this.mnuClosedJobsList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.mnuClosedJobsList.Text = "Closed Jobs";
+			this.mnuClosedJobsList.Visible = false;
+			this.mnuClosedJobsList.Click += new System.EventHandler(this.mnuClosedJobs_Click);
+			// 
+			// accordionControlSeparator29
+			// 
+			this.accordionControlSeparator29.Name = "accordionControlSeparator29";
 			// 
 			// mnuAccountingDepartment
 			// 
@@ -769,218 +984,6 @@
 			this.mnuCommissionsList.Text = "Commissions";
 			this.mnuCommissionsList.Visible = false;
 			this.mnuCommissionsList.Click += new System.EventHandler(this.mnuCommissionsList_Click);
-			// 
-			// mnuImportDepartmentMenu
-			// 
-			this.mnuImportDepartmentMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuJobsSeaImportList,
-            this.accordionControlSeparator19,
-            this.mnuJobsAirImportList});
-			this.mnuImportDepartmentMenu.Expanded = true;
-			this.mnuImportDepartmentMenu.Name = "mnuImportDepartmentMenu";
-			this.mnuImportDepartmentMenu.Text = "Import Department";
-			this.mnuImportDepartmentMenu.Visible = false;
-			// 
-			// mnuJobsSeaImportList
-			// 
-			this.mnuJobsSeaImportList.Enabled = false;
-			this.mnuJobsSeaImportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaImportList.ImageOptions.SvgImage")));
-			this.mnuJobsSeaImportList.Name = "mnuJobsSeaImportList";
-			this.mnuJobsSeaImportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsSeaImportList.Text = "Jobs Sea Import List";
-			this.mnuJobsSeaImportList.Visible = false;
-			this.mnuJobsSeaImportList.Click += new System.EventHandler(this.mnuJobsSeaImportList_Click);
-			// 
-			// accordionControlSeparator19
-			// 
-			this.accordionControlSeparator19.Name = "accordionControlSeparator19";
-			// 
-			// mnuJobsAirImportList
-			// 
-			this.mnuJobsAirImportList.Enabled = false;
-			this.mnuJobsAirImportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirImportList.ImageOptions.SvgImage")));
-			this.mnuJobsAirImportList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuJobsAirImportList.Name = "mnuJobsAirImportList";
-			this.mnuJobsAirImportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsAirImportList.Text = "Jobs Air Import List";
-			this.mnuJobsAirImportList.Visible = false;
-			this.mnuJobsAirImportList.Click += new System.EventHandler(this.mnuJobsAirImport_Click);
-			// 
-			// mnuExportDepartmentMenu
-			// 
-			this.mnuExportDepartmentMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuJobsSeaExportList,
-            this.accordionControlSeparator20,
-            this.mnuJobsAirExportList});
-			this.mnuExportDepartmentMenu.Name = "mnuExportDepartmentMenu";
-			this.mnuExportDepartmentMenu.Text = "Export Department";
-			this.mnuExportDepartmentMenu.Visible = false;
-			// 
-			// mnuJobsSeaExportList
-			// 
-			this.mnuJobsSeaExportList.Enabled = false;
-			this.mnuJobsSeaExportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaExportList.ImageOptions.SvgImage")));
-			this.mnuJobsSeaExportList.Name = "mnuJobsSeaExportList";
-			this.mnuJobsSeaExportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsSeaExportList.Text = "Jobs Sea Export List";
-			this.mnuJobsSeaExportList.Visible = false;
-			this.mnuJobsSeaExportList.Click += new System.EventHandler(this.mnuJobsSeaExport_Click);
-			// 
-			// accordionControlSeparator20
-			// 
-			this.accordionControlSeparator20.Name = "accordionControlSeparator20";
-			// 
-			// mnuJobsAirExportList
-			// 
-			this.mnuJobsAirExportList.Enabled = false;
-			this.mnuJobsAirExportList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirExportList.ImageOptions.SvgImage")));
-			this.mnuJobsAirExportList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuJobsAirExportList.Name = "mnuJobsAirExportList";
-			this.mnuJobsAirExportList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsAirExportList.Text = "Jobs Air Export List";
-			this.mnuJobsAirExportList.Visible = false;
-			this.mnuJobsAirExportList.Click += new System.EventHandler(this.mnuJobsAirExport_Click);
-			// 
-			// mnuCrossDepartment
-			// 
-			this.mnuCrossDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuJobsSeaCrossList,
-            this.accordionControlSeparator21,
-            this.mnuJobsAirCrossList});
-			this.mnuCrossDepartment.Name = "mnuCrossDepartment";
-			this.mnuCrossDepartment.Text = "Cross Department";
-			this.mnuCrossDepartment.Visible = false;
-			// 
-			// mnuJobsSeaCrossList
-			// 
-			this.mnuJobsSeaCrossList.Enabled = false;
-			this.mnuJobsSeaCrossList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaCrossList.ImageOptions.SvgImage")));
-			this.mnuJobsSeaCrossList.Name = "mnuJobsSeaCrossList";
-			this.mnuJobsSeaCrossList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsSeaCrossList.Text = "Sea Cross Jobs List";
-			this.mnuJobsSeaCrossList.Visible = false;
-			this.mnuJobsSeaCrossList.Click += new System.EventHandler(this.mnuJobsSeaCross_Click);
-			// 
-			// accordionControlSeparator21
-			// 
-			this.accordionControlSeparator21.Name = "accordionControlSeparator21";
-			// 
-			// mnuJobsAirCrossList
-			// 
-			this.mnuJobsAirCrossList.Enabled = false;
-			this.mnuJobsAirCrossList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirCrossList.ImageOptions.SvgImage")));
-			this.mnuJobsAirCrossList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuJobsAirCrossList.Name = "mnuJobsAirCrossList";
-			this.mnuJobsAirCrossList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsAirCrossList.Text = "Air Cross Jobs List";
-			this.mnuJobsAirCrossList.Visible = false;
-			this.mnuJobsAirCrossList.Click += new System.EventHandler(this.mnuJobsAirCross_Click);
-			// 
-			// mnuClearanceDepartment
-			// 
-			this.mnuClearanceDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuJobsSeaClearanceList,
-            this.accordionControlSeparator22,
-            this.mnuJobsAirClearanceList});
-			this.mnuClearanceDepartment.Name = "mnuClearanceDepartment";
-			this.mnuClearanceDepartment.Text = "Clearance Department";
-			this.mnuClearanceDepartment.Visible = false;
-			// 
-			// mnuJobsSeaClearanceList
-			// 
-			this.mnuJobsSeaClearanceList.Enabled = false;
-			this.mnuJobsSeaClearanceList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsSeaClearanceList.ImageOptions.SvgImage")));
-			this.mnuJobsSeaClearanceList.Name = "mnuJobsSeaClearanceList";
-			this.mnuJobsSeaClearanceList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsSeaClearanceList.Text = "Jobs Sea Clearance List";
-			this.mnuJobsSeaClearanceList.Visible = false;
-			this.mnuJobsSeaClearanceList.Click += new System.EventHandler(this.mnuJobsSeaClearance_Click);
-			// 
-			// accordionControlSeparator22
-			// 
-			this.accordionControlSeparator22.Name = "accordionControlSeparator22";
-			// 
-			// mnuJobsAirClearanceList
-			// 
-			this.mnuJobsAirClearanceList.Enabled = false;
-			this.mnuJobsAirClearanceList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsAirClearanceList.ImageOptions.SvgImage")));
-			this.mnuJobsAirClearanceList.Name = "mnuJobsAirClearanceList";
-			this.mnuJobsAirClearanceList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsAirClearanceList.Text = "Jobs Air Clearance List";
-			this.mnuJobsAirClearanceList.Visible = false;
-			this.mnuJobsAirClearanceList.Click += new System.EventHandler(this.mnuJobsAirClearance_Click);
-			// 
-			// mnuLandFreightDepartment
-			// 
-			this.mnuLandFreightDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuJobsLandFreightList,
-            this.accordionControlSeparator23});
-			this.mnuLandFreightDepartment.Name = "mnuLandFreightDepartment";
-			this.mnuLandFreightDepartment.Text = "Land Freight Department";
-			this.mnuLandFreightDepartment.Visible = false;
-			// 
-			// mnuJobsLandFreightList
-			// 
-			this.mnuJobsLandFreightList.Enabled = false;
-			this.mnuJobsLandFreightList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsLandFreightList.ImageOptions.SvgImage")));
-			this.mnuJobsLandFreightList.Name = "mnuJobsLandFreightList";
-			this.mnuJobsLandFreightList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsLandFreightList.Text = "Jobs Land Freight List";
-			this.mnuJobsLandFreightList.Visible = false;
-			this.mnuJobsLandFreightList.Click += new System.EventHandler(this.mnuJobsLandFreight_Click);
-			// 
-			// accordionControlSeparator23
-			// 
-			this.accordionControlSeparator23.Name = "accordionControlSeparator23";
-			// 
-			// mnuTejrimDepartment
-			// 
-			this.mnuTejrimDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuTejrimJobsList,
-            this.mnuClosedJobsList});
-			this.mnuTejrimDepartment.Expanded = true;
-			this.mnuTejrimDepartment.Name = "mnuTejrimDepartment";
-			this.mnuTejrimDepartment.Text = "Tejrim Department";
-			this.mnuTejrimDepartment.Visible = false;
-			// 
-			// mnuTejrimJobsList
-			// 
-			this.mnuTejrimJobsList.Enabled = false;
-			this.mnuTejrimJobsList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuTejrimJobsList.ImageOptions.SvgImage")));
-			this.mnuTejrimJobsList.Name = "mnuTejrimJobsList";
-			this.mnuTejrimJobsList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuTejrimJobsList.Text = "Tejrim Jobs";
-			this.mnuTejrimJobsList.Visible = false;
-			this.mnuTejrimJobsList.Click += new System.EventHandler(this.mnuTejrimJobsList_Click);
-			// 
-			// mnuClosedJobsList
-			// 
-			this.mnuClosedJobsList.Enabled = false;
-			this.mnuClosedJobsList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuClosedJobsList.ImageOptions.SvgImage")));
-			this.mnuClosedJobsList.Name = "mnuClosedJobsList";
-			this.mnuClosedJobsList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuClosedJobsList.Text = "Closed Jobs";
-			this.mnuClosedJobsList.Visible = false;
-			this.mnuClosedJobsList.Click += new System.EventHandler(this.mnuClosedJobs_Click);
-			// 
-			// mnuWarehouseDepartment
-			// 
-			this.mnuWarehouseDepartment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.mnuJobsWarehouseList});
-			this.mnuWarehouseDepartment.Name = "mnuWarehouseDepartment";
-			this.mnuWarehouseDepartment.Text = "Warehouse Department";
-			this.mnuWarehouseDepartment.Visible = false;
-			// 
-			// mnuJobsWarehouseList
-			// 
-			this.mnuJobsWarehouseList.Enabled = false;
-			this.mnuJobsWarehouseList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mnuJobsWarehouseList.ImageOptions.SvgImage")));
-			this.mnuJobsWarehouseList.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			this.mnuJobsWarehouseList.Name = "mnuJobsWarehouseList";
-			this.mnuJobsWarehouseList.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.mnuJobsWarehouseList.Text = "Jobs Warehouse List";
-			this.mnuJobsWarehouseList.Visible = false;
-			this.mnuJobsWarehouseList.Click += new System.EventHandler(this.mnuJobsWarehouseList_Click);
 			// 
 			// mnuGroupReports
 			// 
@@ -1770,6 +1773,7 @@
             this.mnuDailyJournal,
             this.mnuPrintDop,
             this.mnuPrintSalesCommission});
+			this.mnuReportsMenu.Expanded = true;
 			this.mnuReportsMenu.Name = "mnuReportsMenu";
 			this.mnuReportsMenu.Text = "Reports";
 			this.mnuReportsMenu.Visible = false;
@@ -2072,6 +2076,7 @@
 			this.mnuMigrations.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.mnuMigrateCharts,
             this.mnuMigrateJournals});
+			this.mnuMigrations.Expanded = true;
 			this.mnuMigrations.Name = "mnuMigrations";
 			this.mnuMigrations.Text = "Migration";
 			this.mnuMigrations.Visible = false;
@@ -2366,8 +2371,8 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuClosedJobsList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuTejrimJobsList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuGroupDepartments;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement mnuImportDepartmentMenu;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement mnuExportDepartmentMenu;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement mnuSeaFreightDepartment;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement mnuAirFreightDepartment;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuClearanceDepartment;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuExportOnWater;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuJobClearanceReport;
@@ -2379,7 +2384,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuItemsMenu;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuItemsList;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuRequirementsList;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement mnuCrossDepartment;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuLandFreightDepartment;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuExportDepartmentReports;
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuCrossDepartmentReports;
@@ -2451,7 +2455,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement mnuJobsAirCrossList;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator19;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator20;
-        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator21;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator22;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator23;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement mnuCompaniesList;
@@ -2484,5 +2487,8 @@
 		private DevExpress.XtraBars.BarButtonItem btnLiveUpdate;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
 		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator27;
+		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator29;
+		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator31;
+		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator30;
 	}
 }

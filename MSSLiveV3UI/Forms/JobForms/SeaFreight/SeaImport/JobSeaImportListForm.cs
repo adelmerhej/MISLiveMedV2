@@ -73,8 +73,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private int? _salesFilter = 0;
         private EnumStatusType _statusFilter = EnumStatusType.NotSelected;
 
-        public RibbonControl MainRibbon => rcJobSeaImportList;
-        public RibbonPage DefaultPage => rpJobSeaImportList;
+        public RibbonControl MainRibbon => rcJobSeaImport;
+        public RibbonPage DefaultPage => rpJobSeaImport;
 
         public JobSeaImportListForm()
         {

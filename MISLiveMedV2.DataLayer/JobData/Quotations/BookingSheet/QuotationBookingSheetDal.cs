@@ -16,10 +16,10 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
 
         #region INSERT EVENT
 
-        public static QuotationHeaderCostSellingModel InsertQuotationHeaderCostSelling(QuotationHeaderCostSellingModel quotationHeader)
+        public static QuotationHeaderModel InsertQuotationHeaderCostSelling(QuotationHeaderModel quotationHeader)
         {
             var p = new DynamicParameters();
-            QuotationHeaderCostSellingModel newQuoteHeader = new QuotationHeaderCostSellingModel();
+            QuotationHeaderModel newQuoteHeader = new QuotationHeaderModel();
 
             //Header
             newQuoteHeader = InsertQuotationHeader(quotationHeader);
@@ -47,7 +47,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
 
         #region UPDATE EVENT
 
-        public static void UpdateQuotationHeaderCostSelling(QuotationHeaderCostSellingModel quotationHeader)
+        public static void UpdateQuotationHeaderCostSelling(QuotationHeaderModel quotationHeader)
         {
             UpdateQuotationHeader(quotationHeader);
 
@@ -118,7 +118,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
 
         #region QUOTATION HEADER EVENTS
         
-        private static QuotationHeaderCostSellingModel InsertQuotationHeader(QuotationHeaderCostSellingModel quotationHeader)
+        private static QuotationHeaderModel InsertQuotationHeader(QuotationHeaderModel quotationHeader)
         {
             using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
             {
@@ -141,7 +141,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
                 p.Add("@Notes", quotationHeader.Notes);
                 p.Add("@CreatedBy", CurrentUser.UserId);
 
-                return connection.QueryFirstOrDefault<QuotationHeaderCostSellingModel>(
+                return connection.QueryFirstOrDefault<QuotationHeaderModel>(
                     "dbo.job_AddNewQHeaderCostSelling_V001 @QuoteDate, @BookingDate, @DepartmentId, @QuotationId," +
                     "@VersionNo, @TransitTime, @Validity, @ValidityDate, @UserId, @DisplayProvisionColumns, " +
                     "@CompanyId, @Notes, @CreatedBy",
@@ -149,7 +149,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
             }
         }
 
-        private static void UpdateQuotationHeader(QuotationHeaderCostSellingModel quotationHeader)
+        private static void UpdateQuotationHeader(QuotationHeaderModel quotationHeader)
         {
             using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
             {
@@ -213,7 +213,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
                 p.Add("@Notes", quotationCost.Notes);
                 p.Add("@CreatedBy", CurrentUser.UserId);
 
-                _ = connection.ExecuteScalar<QuotationHeaderCostSellingModel>(
+                _ = connection.ExecuteScalar<QuotationHeaderModel>(
                     "dbo.job_AddNewCostQuotation_V001 @QHeaderId, @AgentId, @PaymentId, @ItemId, @Description, @CurrencyId, " +
                     "@Rate, @Amount, @LocalAmount, @ForeignAmount, @ProvisionAmount, @ProvisionAmountLL, @ProvisionAmountUSD, " +
                     "@Vat, @VatRate, @VatAmount, @LocalVatAmount, @ForeignVatAmount, " +
@@ -337,7 +337,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations.BookingSheet
                 p.Add("@Notes", quotationSelling.Notes);
                 p.Add("@CreatedBy", CurrentUser.UserId);
 
-                _ = connection.ExecuteScalar<QuotationHeaderCostSellingModel>(
+                _ = connection.ExecuteScalar<QuotationHeaderModel>(
                     "dbo.job_AddNewQuotationSelling_V001 @QHeaderId, @MemberId, @PaymentId, @ItemId, @Description, @CurrencyId, " +
                     "@Rate, @Amount, @LocalAmount, @ForeignAmount, @Vat, @VatRate, @VatAmount, @LocalVatAmount, " +
                     "@ForeignVatAmount, @CompanyId, @Notes, @CreatedBy",

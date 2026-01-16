@@ -51,7 +51,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 		private DataEntityState _objState = DataEntityState.Unchanged;
 
 		private QuotationModel _quotationModel;
-		private IList<QuotationHeaderCostSellingModel> _quotationsHeaders = new List<QuotationHeaderCostSellingModel>();
+		private IList<QuotationHeaderModel> _quotationsHeaders = new List<QuotationHeaderModel>();
 
 		private IList<DepartmentModel> _departments = new List<DepartmentModel>();
 		private IList<UserModel> _users = new List<UserModel>();
@@ -825,7 +825,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
                 return;
             }
 
-            CostSellingSheetForm costSellingForm = new CostSellingSheetForm(new QuotationHeaderCostSellingModel
+            CostSellingSheetForm costSellingForm = new CostSellingSheetForm(new QuotationHeaderModel
             {
                 QuotationId = _quotationModel.Id,
                 VersionNo = newVersionNo,
@@ -865,11 +865,11 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 
             if (_quotationModel.Id <= 0 || gvRealCosts.RowCount <= 0) return;
 
-            QuotationHeaderCostSellingModel costSelling;
+            QuotationHeaderModel costSelling;
 
             int currentRowId = (int)gvRealCosts.GetFocusedRowCellValue("Id");
 
-            costSelling = _quotationHeaderRepository.QuotationLastVersion(currentRowId) ?? new QuotationHeaderCostSellingModel();
+            costSelling = _quotationHeaderRepository.QuotationLastVersion(currentRowId) ?? new QuotationHeaderModel();
 
             costSelling.BookingDate = _quotationModel.BookedDate;
             CostSellingSheetForm costSellingForm = new CostSellingSheetForm(costSelling);
@@ -883,12 +883,12 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 
 			if (_quotationModel.Id <= 0) return;
 
-            QuotationHeaderCostSellingModel costSelling;
+            QuotationHeaderModel costSelling;
 
             int currentRowId = (int)gvRealCosts.GetFocusedRowCellValue("Id");
 
-            costSelling = (_quotationHeaderRepository.QuotationLastVersion(currentRowId) ?? new QuotationHeaderCostSellingModel()) ??
-                          new QuotationHeaderCostSellingModel();
+            costSelling = (_quotationHeaderRepository.QuotationLastVersion(currentRowId) ?? new QuotationHeaderModel()) ??
+                          new QuotationHeaderModel();
 
             CostSellingSheetForm costSellingForm = new CostSellingSheetForm(costSelling);
             costSellingForm.SendUpdatedCostSelling += RcvUpdatedCostSelling;
@@ -901,12 +901,12 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 
 			if (_quotationModel.Id <= 0) return;
 
-            QuotationHeaderCostSellingModel costSelling;
+            QuotationHeaderModel costSelling;
 
             int currentRowId = (int)gvSellings.GetFocusedRowCellValue("Id");
 
-            costSelling = (_quotationHeaderRepository.QuotationLastVersion(currentRowId) ?? new QuotationHeaderCostSellingModel()) ??
-                          new QuotationHeaderCostSellingModel();
+            costSelling = (_quotationHeaderRepository.QuotationLastVersion(currentRowId) ?? new QuotationHeaderModel()) ??
+                          new QuotationHeaderModel();
 
             CostSellingSheetForm costSellingForm = new CostSellingSheetForm(costSelling);
             costSellingForm.SendUpdatedCostSelling += RcvUpdatedCostSelling;
@@ -1344,7 +1344,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
             if (_quotationModel.ReferenceNo > 0) return;
             if (!ValidateForm()) return;
 
-            CostSellingSheetForm costForm = new CostSellingSheetForm(new QuotationHeaderCostSellingModel());
+            CostSellingSheetForm costForm = new CostSellingSheetForm(new QuotationHeaderModel());
             costForm.SendUpdatedCostSelling += RcvUpdatedCostSelling;
             costForm.ShowDialog();
 

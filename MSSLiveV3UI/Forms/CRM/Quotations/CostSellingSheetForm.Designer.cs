@@ -546,7 +546,7 @@ namespace MISLiveMed.UI.Forms.CRM.Quotations
 			// 
 			// bsQuotationHeaderCostSelling
 			// 
-			this.bsQuotationHeaderCostSelling.DataSource = typeof(QuotationHeaderCostSellingModel);
+			this.bsQuotationHeaderCostSelling.DataSource = typeof(QuotationHeaderModel);
 			// 
 			// mainLayout
 			// 

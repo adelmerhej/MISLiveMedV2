@@ -168,7 +168,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
 
         #region Insert/Update Quotation Price --> Cost/Selling section
 
-        public static QuotationHeaderCostSellingModel InsertQuoteHeaderPricing(QuotationHeaderCostSellingModel quotationModel)
+        public static QuotationHeaderModel InsertQuoteHeaderPricing(QuotationHeaderModel quotationModel)
         {
             using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
             {
@@ -184,7 +184,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
                 p.Add("@Notes", quotationModel.Notes);
 
 
-                quotationModel = connection.QueryFirst<QuotationHeaderCostSellingModel>(
+                quotationModel = connection.QueryFirst<QuotationHeaderModel>(
                     "dbo.job_InsertQuoteHeaderPricing @DepartmentId, @QuotationId, @VersionNo, @TransitTime, @Validity, @ValidityDate, " +
                     "@UserId, @Notes",
                     p);
@@ -193,7 +193,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
             }
         }
 
-        public static void UpdateQuoteHeaderPricing(QuotationHeaderCostSellingModel quotationModel)
+        public static void UpdateQuoteHeaderPricing(QuotationHeaderModel quotationModel)
         {
             using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
             {
@@ -209,7 +209,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
                 p.Add("@Notes", quotationModel.Notes);
 
 
-                _ = connection.ExecuteScalar<QuotationHeaderCostSellingModel>(
+                _ = connection.ExecuteScalar<QuotationHeaderModel>(
                     "dbo.job_UpdateQuoteHeaderPricing @DepartmentId, @QuotationId, @VersionNo, @TransitTime, @Validity, @ValidityDate, " +
                     "@UserId, @Notes",
                     p);
@@ -340,7 +340,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
             }
         }
 
-        public static IEnumerable<QuotationHeaderCostSellingModel> GetQuotationsCostSellingById(int pQuotationId = 0)
+        public static IEnumerable<QuotationHeaderModel> GetQuotationsCostSellingById(int pQuotationId = 0)
         {
             try
             {
@@ -350,7 +350,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
                     p.Add("@QuotationId", pQuotationId);
 
                     var costSellingHeader =
-                        connection.Query<QuotationHeaderCostSellingModel>("dbo.job_GetQuotationsCostSelling @QuotationId", p);
+                        connection.Query<QuotationHeaderModel>("dbo.job_GetQuotationsCostSelling @QuotationId", p);
 
                     return costSellingHeader;
                 }
@@ -389,7 +389,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
         #endregion
 
 
-          public static QuotationHeaderCostSellingModel SelectQuotationHeaderById(int pId = 0)
+          public static QuotationHeaderModel SelectQuotationHeaderById(int pId = 0)
         {
             try
             {
@@ -399,7 +399,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
                     p.Add("@Id", pId);
 
                     var quotationLastVersion =
-                        connection.QuerySingle<QuotationHeaderCostSellingModel>("dbo.job_SelectQuotationHeaders @Id", p);
+                        connection.QuerySingle<QuotationHeaderModel>("dbo.job_SelectQuotationHeaders @Id", p);
 
                     return quotationLastVersion;
                 }
@@ -411,7 +411,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
             }
         }
 
-        public static QuotationHeaderCostSellingModel GetLastQuotationHeaderById(int pId = 0)
+        public static QuotationHeaderModel GetLastQuotationHeaderById(int pId = 0)
         {
             try
             {
@@ -421,7 +421,7 @@ namespace MISLiveMed.DataLayers.JobData.Quotations
                     p.Add("@Id", pId);
 
                     var quotationLastVersion =  
-                        connection.QuerySingle<QuotationHeaderCostSellingModel>("dbo.job_GetQuotationHeaderLastVersion @Id", p);
+                        connection.QuerySingle<QuotationHeaderModel>("dbo.job_GetQuotationHeaderLastVersion @Id", p);
 
                     return quotationLastVersion;
                 }

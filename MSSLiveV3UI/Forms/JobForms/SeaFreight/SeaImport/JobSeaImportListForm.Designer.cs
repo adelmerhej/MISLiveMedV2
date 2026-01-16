@@ -171,7 +171,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
 			this.chkSortByBookedDate = new DevExpress.XtraBars.BarCheckItem();
 			this.barCheckItem8 = new DevExpress.XtraBars.BarCheckItem();
-			this.rcJobSeaImportList = new DevExpress.XtraBars.Ribbon.RibbonControl();
+			this.rcJobSeaImport = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnNew = new DevExpress.XtraBars.BarButtonItem();
 			this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
 			this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -216,7 +216,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.rgSortByReports = new DevExpress.XtraBars.RibbonGalleryBarItem();
 			this.rgOrderByReports = new DevExpress.XtraBars.RibbonGalleryBarItem();
 			this.btnResetGridStyle = new DevExpress.XtraBars.BarButtonItem();
-			this.rpJobSeaImportList = new DevExpress.XtraBars.Ribbon.RibbonPage();
+			this.rpJobSeaImport = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -249,7 +249,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.repSalesList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCheckList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repNumberFormat)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaImportList)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaImport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repOperatingUsers)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repSales)).BeginInit();
@@ -347,7 +347,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			gridLevelNode1.RelationName = "FK_JobDetails";
 			this.gcSeaImports.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-			this.gcSeaImports.Location = new System.Drawing.Point(12, 12);
+			this.gcSeaImports.Location = new System.Drawing.Point(14, 14);
 			this.gcSeaImports.MainView = this.gvSeaImports;
 			this.gcSeaImports.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.gcSeaImports.Name = "gcSeaImports";
@@ -364,7 +364,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.repNumberFormat,
             this.repAgentCategories,
             this.repSideId});
-			this.gcSeaImports.Size = new System.Drawing.Size(1417, 531);
+			this.gcSeaImports.Size = new System.Drawing.Size(1413, 527);
 			this.gcSeaImports.TabIndex = 5;
 			this.gcSeaImports.UseEmbeddedNavigator = true;
 			this.gcSeaImports.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -374,7 +374,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// bsSeaImportJobs
 			// 
-			this.bsSeaImportJobs.DataSource = typeof(JobSeaImportModel);
+			this.bsSeaImportJobs.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportModel);
 			// 
 			// gvSeaImports
 			// 
@@ -1500,12 +1500,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.barCheckItem8.Id = 52;
 			this.barCheckItem8.Name = "barCheckItem8";
 			// 
-			// rcJobSeaImportList
+			// rcJobSeaImport
 			// 
-			this.rcJobSeaImportList.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 39, 35, 39);
-			this.rcJobSeaImportList.ExpandCollapseItem.Id = 0;
-			this.rcJobSeaImportList.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.rcJobSeaImportList.ExpandCollapseItem,
+			this.rcJobSeaImport.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 39, 35, 39);
+			this.rcJobSeaImport.ExpandCollapseItem.Id = 0;
+			this.rcJobSeaImport.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.rcJobSeaImport.ExpandCollapseItem,
             this.btnNew,
             this.btnDelete,
             this.barButtonItem1,
@@ -1540,21 +1540,21 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.rgSortByReports,
             this.rgOrderByReports,
             this.btnResetGridStyle});
-			this.rcJobSeaImportList.Location = new System.Drawing.Point(0, 0);
-			this.rcJobSeaImportList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.rcJobSeaImportList.MaxItemId = 62;
-			this.rcJobSeaImportList.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
-			this.rcJobSeaImportList.Name = "rcJobSeaImportList";
-			this.rcJobSeaImportList.OptionsMenuMinWidth = 385;
-			this.rcJobSeaImportList.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.rpJobSeaImportList,
+			this.rcJobSeaImport.Location = new System.Drawing.Point(0, 0);
+			this.rcJobSeaImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.rcJobSeaImport.MaxItemId = 62;
+			this.rcJobSeaImport.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
+			this.rcJobSeaImport.Name = "rcJobSeaImport";
+			this.rcJobSeaImport.OptionsMenuMinWidth = 385;
+			this.rcJobSeaImport.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.rpJobSeaImport,
             this.rpViewSettings});
-			this.rcJobSeaImportList.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+			this.rcJobSeaImport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repOperatingUsers,
             this.repSales,
             this.repStatusList});
-			this.rcJobSeaImportList.Size = new System.Drawing.Size(1441, 193);
-			this.rcJobSeaImportList.StatusBar = this.ribbonStatusBar1;
+			this.rcJobSeaImport.Size = new System.Drawing.Size(1441, 193);
+			this.rcJobSeaImport.StatusBar = this.ribbonStatusBar1;
 			// 
 			// btnNew
 			// 
@@ -2028,9 +2028,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnResetGridStyle.Name = "btnResetGridStyle";
 			this.btnResetGridStyle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnResetGridStyle_ItemClick);
 			// 
-			// rpJobSeaImportList
+			// rpJobSeaImport
 			// 
-			this.rpJobSeaImportList.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+			this.rpJobSeaImport.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
             this.ribbonPageGroup6,
             this.ribbonPageGroup8,
@@ -2039,8 +2039,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.rpgDepartments,
             this.rpgPermissions,
             this.ribbonPageGroup11});
-			this.rpJobSeaImportList.Name = "rpJobSeaImportList";
-			this.rpJobSeaImportList.Text = "Job Sea Import List";
+			this.rpJobSeaImport.Name = "rpJobSeaImport";
+			this.rpJobSeaImport.Text = "Job Sea Import";
 			// 
 			// ribbonPageGroup1
 			// 
@@ -2125,7 +2125,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 748);
 			this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-			this.ribbonStatusBar1.Ribbon = this.rcJobSeaImportList;
+			this.ribbonStatusBar1.Ribbon = this.rcJobSeaImport;
 			this.ribbonStatusBar1.Size = new System.Drawing.Size(1441, 30);
 			// 
 			// mainLayout
@@ -2154,7 +2154,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlItem1.Control = this.gcSeaImports;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1421, 535);
+			this.layoutControlItem1.Size = new System.Drawing.Size(1417, 531);
 			this.layoutControlItem1.TextVisible = false;
 			// 
 			// JobSeaImportListForm
@@ -2164,9 +2164,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.ClientSize = new System.Drawing.Size(1441, 778);
 			this.Controls.Add(this.mainLayout);
 			this.Controls.Add(this.ribbonStatusBar1);
-			this.Controls.Add(this.rcJobSeaImportList);
+			this.Controls.Add(this.rcJobSeaImport);
 			this.Name = "JobSeaImportListForm";
-			this.Ribbon = this.rcJobSeaImportList;
+			this.Ribbon = this.rcJobSeaImport;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.StatusBar = this.ribbonStatusBar1;
 			this.Text = "Sea Import List";
@@ -2189,7 +2189,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.repSalesList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCheckList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repNumberFormat)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaImportList)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaImport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repOperatingUsers)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repSales)).EndInit();
@@ -2222,7 +2222,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
         private DevExpress.XtraBars.BarCheckItem chkSortByBookedDate;
         private DevExpress.XtraBars.BarCheckItem barCheckItem8;
-        public DevExpress.XtraBars.Ribbon.RibbonControl rcJobSeaImportList;
+        public DevExpress.XtraBars.Ribbon.RibbonControl rcJobSeaImport;
         private DevExpress.XtraBars.BarButtonItem btnNew;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
@@ -2255,7 +2255,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private DevExpress.XtraBars.BarCheckItem barCheckItem2;
         private DevExpress.XtraBars.BarCheckItem barCheckItem9;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgSortByReports;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rpJobSeaImportList;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpJobSeaImport;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;

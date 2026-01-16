@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MISLiveMed.Models.Models.JobModels.Quotations
 {
-    public class QuotationHeaderCostSellingModel : EntityObject
+    public class QuotationHeaderModel : EntityObject
     {
         public DateTime? QuoteDate { get; set; }
         public DateTime? BookingDate { get; set; }

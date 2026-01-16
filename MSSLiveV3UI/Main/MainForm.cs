@@ -268,13 +268,12 @@ namespace MISLiveMed.UI.Main
 				[FormNames.DebitNotesList] = (v, a) => { mnuTransactionDebitNotesList.Visible = v; mnuTransactionDebitNotesList.Enabled = a; },
 				[FormNames.CreditNotesList] = (v, a) => { mnuTransactionCreditNotesList.Visible = v; mnuTransactionCreditNotesList.Enabled = a; },
 				[FormNames.CommissionsHistoryList] = (v, a) => { mnuCommissionsList.Visible = v; mnuCommissionsList.Enabled = a; },
-				[FormNames.ImportDepartmentMenu] = (v, a) => { mnuImportDepartmentMenu.Visible = v; mnuImportDepartmentMenu.Enabled = a; },
+				[FormNames.ImportDepartmentMenu] = (v, a) => { mnuSeaFreightDepartment.Visible = v; mnuSeaFreightDepartment.Enabled = a; },
 				[FormNames.JobSeaImportList] = (v, a) => { mnuJobsSeaImportList.Visible = v; mnuJobsSeaImportList.Enabled = a; },
 				[FormNames.JobAirImportList] = (v, a) => { mnuJobsAirImportList.Visible = v; mnuJobsAirImportList.Enabled = a; },
-				[FormNames.ExportDepartmentMenu] = (v, a) => { mnuExportDepartmentMenu.Visible = v; mnuExportDepartmentMenu.Enabled = a; },
+				[FormNames.ExportDepartmentMenu] = (v, a) => { mnuAirFreightDepartment.Visible = v; mnuAirFreightDepartment.Enabled = a; },
 				[FormNames.JobSeaExportList] = (v, a) => { mnuJobsSeaExportList.Visible = v; mnuJobsSeaExportList.Enabled = a; },
 				[FormNames.JobAirExportList] = (v, a) => { mnuJobsAirExportList.Visible = v; mnuJobsAirExportList.Enabled = a; },
-				[FormNames.CrossDepartment] = (v, a) => { mnuCrossDepartment.Visible = v; mnuCrossDepartment.Enabled = a; },
 				[FormNames.JobSeaCrossList] = (v, a) => { mnuJobsSeaCrossList.Visible = v; mnuJobsSeaCrossList.Enabled = a; },
 				[FormNames.JobAirCrossList] = (v, a) => { mnuJobsAirCrossList.Visible = v; mnuJobsAirCrossList.Enabled = a; },
 				[FormNames.ClearanceDepartment] = (v, a) => { mnuClearanceDepartment.Visible = v; mnuClearanceDepartment.Enabled = a; },
@@ -648,17 +647,12 @@ namespace MISLiveMed.UI.Main
 
 		#endregion
 
-		#region Import Department Sub Menu
+		#region Sea Freight Sub Menu
 
 		//Sea Import
 		private void mnuJobsSeaImportList_Click(object sender, EventArgs e)
 		{
 			OpenForm(new JobSeaImportListForm());
-		}
-
-		private void mnuJobsAirImport_Click(object sender, EventArgs e)
-		{
-			OpenForm(new JobAirImportListForm());
 		}
 
 		//Sea Export
@@ -667,21 +661,35 @@ namespace MISLiveMed.UI.Main
 			OpenForm(new JobSeaExportListForm());
 		}
 
-		private void mnuJobsAirExport_Click(object sender, EventArgs e)
-		{
-			OpenForm(new JobAirExportListForm());
-		}
-
-		//Cross Department
+		//Sea Cross
 		private void mnuJobsSeaCross_Click(object sender, EventArgs e)
 		{
 			OpenForm(new JobSeaCrossListForm());
+		}
+
+		#endregion
+
+		#region Air Freight Sub Menu
+
+		private void mnuJobsAirImport_Click(object sender, EventArgs e)
+		{
+			OpenForm(new JobAirImportListForm());
+		}
+
+
+		private void mnuJobsAirExport_Click(object sender, EventArgs e)
+		{
+			OpenForm(new JobAirExportListForm());
 		}
 
 		private void mnuJobsAirCross_Click(object sender, EventArgs e)
 		{
 			OpenForm(new JobAirCrossListForm());
 		}
+
+		#endregion
+
+		#region Clearance Sub Menu
 
 		//Clearance Department
 		private void mnuJobsSeaClearance_Click(object sender, EventArgs e)
@@ -694,11 +702,24 @@ namespace MISLiveMed.UI.Main
 			OpenForm(new JobAirClearanceListForm());
 		}
 
+		#endregion
+
+		#region Other Departments Sub Menu
+
 		//Land Freight Department
 		private void mnuJobsLandFreight_Click(object sender, EventArgs e)
 		{
 
 		}
+		//Warehouse Department
+		private void mnuJobsWarehouseList_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		#endregion
+
+		#region Tejrim Sub Menu
 
 		//Tejrim Department
 		private void mnuTejrimJobs_Click(object sender, EventArgs e)
@@ -711,11 +732,6 @@ namespace MISLiveMed.UI.Main
 			//OpenForm(new ClosedJobsListForm());
 		}
 
-		//Warehouse Department
-		private void mnuJobsWarehouseList_Click(object sender, EventArgs e)
-		{
-
-		}
 		#endregion
 
 		#region Reports Menu

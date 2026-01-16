@@ -11,7 +11,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
 {
     public class QuotationHeaderCostSellingRepository : IDisposable
     {
-        public IList<QuotationHeaderCostSellingModel> QuotationHeaderList(int quotationId)
+        public IList<QuotationHeaderModel> QuotationHeaderList(int quotationId)
         {
             try
             {
@@ -21,7 +21,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
                     p.Add("@QuotationId", quotationId);
 
                     var quotationsRecords =
-                        connection.Query<QuotationHeaderCostSellingModel>("SELECT * FROM QuotationHeaderCostSelling " +
+                        connection.Query<QuotationHeaderModel>("SELECT * FROM QuotationHeaderCostSelling " +
                                         "WHERE QuotationId = @QuotationId ", p);
 
                     return quotationsRecords.ToList();
@@ -33,7 +33,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
             }
         }
 
-        public QuotationHeaderCostSellingModel QuotationHeaderByVersionNo(int quotationId, int versionNo)
+        public QuotationHeaderModel QuotationHeaderByVersionNo(int quotationId, int versionNo)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
                     p.Add("@VersionNo", versionNo);
 
                     var quotationsRecords =
-                        connection.QuerySingleOrDefault<QuotationHeaderCostSellingModel>("SELECT * FROM QuotationHeaderCostSelling " +
+                        connection.QuerySingleOrDefault<QuotationHeaderModel>("SELECT * FROM QuotationHeaderCostSelling " +
                                             "WHERE QuotationId = @QuotationId AND VersionNo = @VersionNo", p);
 
                     return quotationsRecords;
@@ -56,7 +56,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
             }
         }
 
-        public QuotationHeaderCostSellingModel QuotationHeaderById(int id)
+        public QuotationHeaderModel QuotationHeaderById(int id)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
                     p.Add("@Id", id);
 
                     var quotationsRecords =
-                        connection.QuerySingleOrDefault<QuotationHeaderCostSellingModel>("SELECT * FROM QuotationHeaderCostSelling " +
+                        connection.QuerySingleOrDefault<QuotationHeaderModel>("SELECT * FROM QuotationHeaderCostSelling " +
                             "WHERE Id = @Id;", p);
 
                     return quotationsRecords;
@@ -127,7 +127,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
             }
         }
 
-        public QuotationHeaderCostSellingModel QuotationLastVersion(int pId = 0)
+        public QuotationHeaderModel QuotationLastVersion(int pId = 0)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace MISLiveMed.DataLayers.CRM.Quotations
                     p.Add("@Id", pId);
 
                     var quotationLastVersion =
-                        connection.QuerySingle<QuotationHeaderCostSellingModel>("dbo.job_QuotationLastVersion @Id", p);
+                        connection.QuerySingle<QuotationHeaderModel>("dbo.job_QuotationLastVersion @Id", p);
 
                     return quotationLastVersion;
                 }
