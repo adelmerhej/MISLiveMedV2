@@ -204,6 +204,7 @@
     <Compile Include="DataAccess\Types\SqlServerDatabaseModel.cs" />
     <Compile Include="DataUtilities\ConnectionHelper.cs" />
     <Compile Include="CRM\Quotations\QuotationRepository.cs" />
+    <Compile Include="JobData\Common\RequiredDocumentModel.cs" />
     <Compile Include="JobData\SeaExport\JobSeaExportDetailRepository.cs" />
     <Compile Include="JobData\SeaExport\JobSeaExportRepository.cs" />
     <Compile Include="JobData\SeaImport\JobSeaImportDal.cs" />

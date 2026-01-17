@@ -286,7 +286,7 @@
 			this.gcVessels.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
 			this.gcVessels.EmbeddedNavigator.Buttons.Remove.Visible = false;
 			this.gcVessels.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.gcVessels.Location = new System.Drawing.Point(12, 12);
+			this.gcVessels.Location = new System.Drawing.Point(14, 14);
 			this.gcVessels.MainView = this.gvVessels;
 			this.gcVessels.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.gcVessels.Name = "gcVessels";
@@ -307,12 +307,11 @@
             this.repAgentsList,
             this.repSeaLinesList,
             this.repShipmentNatureList});
-			this.gcVessels.Size = new System.Drawing.Size(1431, 532);
+			this.gcVessels.Size = new System.Drawing.Size(1427, 528);
 			this.gcVessels.TabIndex = 5;
 			this.gcVessels.UseEmbeddedNavigator = true;
 			this.gcVessels.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVessels});
-			this.gcVessels.DoubleClick += new System.EventHandler(this.gcVessels_DoubleClick);
 			// 
 			// gvVessels
 			// 
@@ -349,6 +348,8 @@
 			this.gvVessels.OptionsView.ShowGroupPanel = false;
 			this.gvVessels.OptionsView.ShowIndicator = false;
 			this.gvVessels.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+			this.gvVessels.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvVessels_RowCellStyle);
+			this.gvVessels.DoubleClick += new System.EventHandler(this.gvVessels_DoubleClick);
 			// 
 			// colId
 			// 
@@ -682,8 +683,7 @@
 			this.layoutControlItem1.Control = this.gcVessels;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1435, 536);
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(1431, 532);
 			this.layoutControlItem1.TextVisible = false;
 			// 
 			// VesselsListForm
@@ -692,8 +692,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1455, 779);
 			this.Controls.Add(this.mainLayout);
-			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.rcVessels);
+			this.Controls.Add(this.ribbonStatusBar1);
 			this.Name = "VesselsListForm";
 			this.Ribbon = this.rcVessels;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

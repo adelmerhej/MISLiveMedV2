@@ -291,7 +291,7 @@
 			this.gcAirlines.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
 			this.gcAirlines.EmbeddedNavigator.Buttons.Remove.Visible = false;
 			this.gcAirlines.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			this.gcAirlines.Location = new System.Drawing.Point(12, 12);
+			this.gcAirlines.Location = new System.Drawing.Point(14, 14);
 			this.gcAirlines.MainView = this.gvAirlines;
 			this.gcAirlines.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 			this.gcAirlines.Name = "gcAirlines";
@@ -310,12 +310,11 @@
             this.repositoryItemDateEdit2,
             this.repositoryItemCheckEdit1,
             this.repNationalitiesList});
-			this.gcAirlines.Size = new System.Drawing.Size(1377, 494);
+			this.gcAirlines.Size = new System.Drawing.Size(1373, 490);
 			this.gcAirlines.TabIndex = 5;
 			this.gcAirlines.UseEmbeddedNavigator = true;
 			this.gcAirlines.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvAirlines});
-			this.gcAirlines.DoubleClick += new System.EventHandler(this.gcAirlines_DoubleClick);
 			// 
 			// gvAirlines
 			// 
@@ -353,6 +352,8 @@
 			this.gvAirlines.OptionsView.ShowGroupPanel = false;
 			this.gvAirlines.OptionsView.ShowIndicator = false;
 			this.gvAirlines.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
+			this.gvAirlines.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvAirlines_RowCellStyle);
+			this.gvAirlines.DoubleClick += new System.EventHandler(this.gvAirlines_DoubleClick);
 			// 
 			// colAirlinesId
 			// 
@@ -662,8 +663,7 @@
 			this.layoutControlItem1.Control = this.gcAirlines;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1381, 498);
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(1377, 494);
 			this.layoutControlItem1.TextVisible = false;
 			// 
 			// AirlinesListForm
@@ -672,8 +672,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1401, 741);
 			this.Controls.Add(this.mainLayout);
-			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.rcAirlinesList);
+			this.Controls.Add(this.ribbonStatusBar1);
 			this.Name = "AirlinesListForm";
 			this.Ribbon = this.rcAirlinesList;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

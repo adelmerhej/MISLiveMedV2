@@ -51,6 +51,13 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
 			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			this.bsJobSeaImport = new System.Windows.Forms.BindingSource(this.components);
+			this.bsJobSeaImportDetails = new System.Windows.Forms.BindingSource(this.components);
+			this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+			this.bsCosts = new System.Windows.Forms.BindingSource(this.components);
+			this.bsInvoices = new System.Windows.Forms.BindingSource(this.components);
+			this.bsDocuments = new System.Windows.Forms.BindingSource(this.components);
 			this.rcMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnSave = new DevExpress.XtraBars.BarButtonItem();
 			this.btnClose = new DevExpress.XtraBars.BarButtonItem();
@@ -71,22 +78,19 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnNewInvoice = new DevExpress.XtraBars.BarButtonItem();
 			this.btnNewCost = new DevExpress.XtraBars.BarButtonItem();
 			this.btnProtected = new DevExpress.XtraBars.BarCheckItem();
-			this.bsJobSeaImport = new System.Windows.Forms.BindingSource(this.components);
 			this.btnCloseInvoice = new DevExpress.XtraBars.BarButtonItem();
-			this.btnSaveInvoice = new DevExpress.XtraBars.BarButtonItem();
 			this.btnSaveAndCloseInvoice = new DevExpress.XtraBars.BarButtonItem();
 			this.btnRefreshInvoice = new DevExpress.XtraBars.BarButtonItem();
 			this.btnDeleteInvoice = new DevExpress.XtraBars.BarButtonItem();
 			this.btnPrintInvoice = new DevExpress.XtraBars.BarButtonItem();
-			this.btnInvoiceProtected = new DevExpress.XtraBars.BarButtonItem();
 			this.btnPrintOriginalInvoice = new DevExpress.XtraBars.BarButtonItem();
 			this.btnCloseCost = new DevExpress.XtraBars.BarButtonItem();
-			this.btnSaveCost = new DevExpress.XtraBars.BarButtonItem();
-			this.btnSaveAndCloseCost = new DevExpress.XtraBars.BarButtonItem();
+			this.btnEditCost = new DevExpress.XtraBars.BarButtonItem();
 			this.btnRefreshCost = new DevExpress.XtraBars.BarButtonItem();
 			this.btnDeleteCost = new DevExpress.XtraBars.BarButtonItem();
 			this.btnPrintCost = new DevExpress.XtraBars.BarButtonItem();
-			this.btnCostProtected = new DevExpress.XtraBars.BarButtonItem();
+			this.btnEditInvoice = new DevExpress.XtraBars.BarButtonItem();
+			this.btnEditJobDetails = new DevExpress.XtraBars.BarButtonItem();
 			this.rpMain = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -98,27 +102,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.rpgSecurity = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpInvoice = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.rpCost = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup19 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonPageGroup20 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonPageGroup21 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-			this.bsJobSeaImportDetails = new System.Windows.Forms.BindingSource(this.components);
-			this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-			this.bsCosts = new System.Windows.Forms.BindingSource(this.components);
-			this.bsInvoices = new System.Windows.Forms.BindingSource(this.components);
-			this.bsDocuments = new System.Windows.Forms.BindingSource(this.components);
 			this.mainLayout = new DevExpress.XtraDataLayout.DataLayoutControl();
 			this.tabGroupNotes = new DevExpress.XtraTab.XtraTabControl();
 			this.tabStatus = new DevExpress.XtraTab.XtraTabPage();
@@ -216,7 +208,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtMissingDocumentsDate = new DevExpress.XtraEditors.DateEdit();
 			this.dtPaidDoDate = new DevExpress.XtraEditors.DateEdit();
 			this.dtTejrimDate = new DevExpress.XtraEditors.DateEdit();
-			this.dateEdit10 = new DevExpress.XtraEditors.DateEdit();
+			this.dtDeliveryDate = new DevExpress.XtraEditors.DateEdit();
 			this.dtPendingForDelivery = new DevExpress.XtraEditors.DateEdit();
 			this.dtReadyForClearance = new DevExpress.XtraEditors.DateEdit();
 			this.dtReadyForTejrim = new DevExpress.XtraEditors.DateEdit();
@@ -258,8 +250,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-			this.lblVessels = new DevExpress.XtraLayout.LayoutControlItem();
-			this.lblFeederVessels = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lblAgents = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lblSeaCarriers = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lblIncoTerms = new DevExpress.XtraLayout.LayoutControlItem();
@@ -283,6 +273,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblConfirmEmptyContainerDate = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
 			this.lblShippedWith = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lblVessels = new DevExpress.XtraLayout.LayoutControlItem();
+			this.lblFeederVessels = new DevExpress.XtraLayout.LayoutControlItem();
 			this.tabPackageDetails = new DevExpress.XtraTab.XtraTabPage();
 			this.layoutPackageDetails = new DevExpress.XtraLayout.LayoutControl();
 			this.txtValueOfGoods = new DevExpress.XtraEditors.TextEdit();
@@ -338,9 +330,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.colJobId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colHbl = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colOriginId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repCountries = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.repCountries = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+			this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colSupplierId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repShippers = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.repShippers = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+			this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colContainerNo = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colQuantities = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colUnitId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -370,19 +368,28 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gcRequiredOnWater = new DevExpress.XtraGrid.GridControl();
 			this.gvRequiredOnWater = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.repCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+			this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repOWConditionsList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
 			this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gcRequiredToBeLoaded = new DevExpress.XtraGrid.GridControl();
 			this.gvRequiredToBeLoaded = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.repCheckBox = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repTblConditionsList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
 			this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repRequirmentsDateEdit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
 			this.layoutControlGroup12 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -396,35 +403,65 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutInvoicesGrid = new DevExpress.XtraLayout.LayoutControl();
 			this.gcInvoices = new DevExpress.XtraGrid.GridControl();
 			this.gvInvoices = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colSellingId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingQHeaderId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingCustomerId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repSellingMemberList = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-			this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colSellingMemberNameId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingMemberName = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingItemId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repSellingItemsList = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-			this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colItemId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingPaymentId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repSellingPayemntsList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.colSellingCurrencyId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repSellingCurrenciesList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.colSellingRate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingAmount = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingL_Amount = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingF_Amount = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingVat = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingVatRate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingDeleted = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingVatAmountLL = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingVatAmountUSD = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSellingVatAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colInvoiceNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colInvoiceRef = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colJobId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDepartmentId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colInvoiceDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repDateEdit = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+			this.colMemberId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colAttn = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSubject = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSubject1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSubject2 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSubject3 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCurrencyId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCurrencyRate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colFAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalItemVAT = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalItemNonVAT = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalVAT = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLTotalVAT = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colFTotalVAT = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colNotify1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colToNotified = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colIsAgent = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repInvCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+			this.colSalesId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colUserId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colOperationDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colModifyDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPosted = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colOriginal1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colClosed = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colClosedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCanceled = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCanceledDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colReason = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCurSLRate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalReceived = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDiffOfExchange = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalCreditNote = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalDebitNote = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalDue = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLocked = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPrintOriginalDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPrintOriginalByUser = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLastPrintOrigDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLastPrintOrigByUser = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colJVNO = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDebitNote = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCreditNote = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDueDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colRefNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSettledAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPaid = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colNotes1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colIsDefault = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colActive = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
 			this.tabCostGroup = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -529,12 +566,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblTotalInvoicesUSD = new DevExpress.XtraLayout.LayoutControlItem();
 			this.lblProfitUSD = new DevExpress.XtraLayout.LayoutControlItem();
 			this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-			((System.ComponentModel.ISupportInitialize)(this.rcMain)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsJobSeaImport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsJobSeaImportDetails)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsCosts)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsInvoices)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsDocuments)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.rcMain)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).BeginInit();
 			this.mainLayout.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.tabGroupNotes)).BeginInit();
@@ -641,8 +678,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.dtPaidDoDate.Properties.CalendarTimeProperties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtTejrimDate.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtTejrimDate.Properties.CalendarTimeProperties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dateEdit10.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dateEdit10.Properties.CalendarTimeProperties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtDeliveryDate.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtDeliveryDate.Properties.CalendarTimeProperties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtPendingForDelivery.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtPendingForDelivery.Properties.CalendarTimeProperties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtReadyForClearance.Properties)).BeginInit();
@@ -676,8 +713,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lblVessels)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lblFeederVessels)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblAgents)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblSeaCarriers)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblIncoTerms)).BeginInit();
@@ -701,6 +736,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.lblConfirmEmptyContainerDate)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblShippedWith)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lblVessels)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lblFeederVessels)).BeginInit();
 			this.tabPackageDetails.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.layoutPackageDetails)).BeginInit();
 			this.layoutPackageDetails.SuspendLayout();
@@ -751,7 +788,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.gcJobDetails)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvJobDetails)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCountries)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repShippers)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
 			this.tabRequirements.SuspendLayout();
@@ -765,9 +804,13 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.gcRequiredOnWater)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvRequiredOnWater)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCheckEdit)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repOWConditionsList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gcRequiredToBeLoaded)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvRequiredToBeLoaded)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCheckBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repTblConditionsList)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repRequirmentsDateEdit)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repRequirmentsDateEdit.CalendarTimeProperties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup12)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
@@ -782,12 +825,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutInvoicesGrid.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gcInvoices)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvInvoices)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingMemberList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingItemsList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingPayemntsList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingCurrenciesList)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repDateEdit)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repDateEdit.CalendarTimeProperties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repInvCheckEdit)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
 			this.tabCostGroup.SuspendLayout();
@@ -840,6 +880,36 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
 			this.SuspendLayout();
 			// 
+			// bsJobSeaImport
+			// 
+			this.bsJobSeaImport.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportModel);
+			// 
+			// bsJobSeaImportDetails
+			// 
+			this.bsJobSeaImportDetails.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportDetailModel);
+			// 
+			// xtraTabPage1
+			// 
+			this.xtraTabPage1.Name = "xtraTabPage1";
+			this.xtraTabPage1.Size = new System.Drawing.Size(98, 94);
+			// 
+			// xtraTabPage2
+			// 
+			this.xtraTabPage2.Name = "xtraTabPage2";
+			this.xtraTabPage2.Size = new System.Drawing.Size(98, 80);
+			// 
+			// bsCosts
+			// 
+			this.bsCosts.DataSource = typeof(MISLiveMed.Models.Models.Accounting.CostSheets.CostModel);
+			// 
+			// bsInvoices
+			// 
+			this.bsInvoices.DataSource = typeof(MISLiveMed.Models.Models.Accounting.Invoices.InvoiceModel);
+			// 
+			// bsDocuments
+			// 
+			this.bsDocuments.DataSource = typeof(MISLiveMed.Models.Models.Common.Documents.DocumentModel);
+			// 
 			// rcMain
 			// 
 			this.rcMain.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 39, 35, 39);
@@ -866,23 +936,21 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.btnNewCost,
             this.btnProtected,
             this.btnCloseInvoice,
-            this.btnSaveInvoice,
             this.btnSaveAndCloseInvoice,
             this.btnRefreshInvoice,
             this.btnDeleteInvoice,
             this.btnPrintInvoice,
-            this.btnInvoiceProtected,
             this.btnPrintOriginalInvoice,
             this.btnCloseCost,
-            this.btnSaveCost,
-            this.btnSaveAndCloseCost,
+            this.btnEditCost,
             this.btnRefreshCost,
             this.btnDeleteCost,
             this.btnPrintCost,
-            this.btnCostProtected});
+            this.btnEditInvoice,
+            this.btnEditJobDetails});
 			this.rcMain.Location = new System.Drawing.Point(0, 0);
 			this.rcMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.rcMain.MaxItemId = 44;
+			this.rcMain.MaxItemId = 47;
 			this.rcMain.Name = "rcMain";
 			this.rcMain.OptionsMenuMinWidth = 385;
 			this.rcMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -1097,11 +1165,11 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.rgJobStatusAction.Gallery.ShowItemText = true;
 			this.rgJobStatusAction.Id = 23;
 			this.rgJobStatusAction.Name = "rgJobStatusAction";
-			this.rgJobStatusAction.GalleryItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.rgJobStatusAction_GalleryItemClick);
 			// 
 			// btnNewInvoice
 			// 
 			this.btnNewInvoice.Caption = "New Invoice";
+			this.btnNewInvoice.Enabled = false;
 			this.btnNewInvoice.Id = 24;
 			this.btnNewInvoice.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnNewInvoice.ImageOptions.SvgImage")));
 			this.btnNewInvoice.Name = "btnNewInvoice";
@@ -1124,11 +1192,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnProtected.Id = 28;
 			this.btnProtected.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnProtected.ImageOptions.SvgImage")));
 			this.btnProtected.Name = "btnProtected";
-			this.btnProtected.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProtected_CheckedChanged);
-			// 
-			// bsJobSeaImport
-			// 
-			this.bsJobSeaImport.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportModel);
+			this.btnProtected.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProtected_CheckedChanged);
 			// 
 			// btnCloseInvoice
 			// 
@@ -1138,15 +1202,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnCloseInvoice.Name = "btnCloseInvoice";
 			this.btnCloseInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCloseInvoice_ItemClick);
 			// 
-			// btnSaveInvoice
-			// 
-			this.btnSaveInvoice.Caption = "Save";
-			this.btnSaveInvoice.Enabled = false;
-			this.btnSaveInvoice.Id = 30;
-			this.btnSaveInvoice.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveInvoice.ImageOptions.SvgImage")));
-			this.btnSaveInvoice.Name = "btnSaveInvoice";
-			this.btnSaveInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaveInvoice_ItemClick);
-			// 
 			// btnSaveAndCloseInvoice
 			// 
 			this.btnSaveAndCloseInvoice.Caption = "Save && Close";
@@ -1154,7 +1209,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnSaveAndCloseInvoice.Id = 31;
 			this.btnSaveAndCloseInvoice.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndCloseInvoice.ImageOptions.SvgImage")));
 			this.btnSaveAndCloseInvoice.Name = "btnSaveAndCloseInvoice";
-			this.btnSaveAndCloseInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaveAndCloseInvoice_ItemClick);
 			// 
 			// btnRefreshInvoice
 			// 
@@ -1182,15 +1236,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnPrintInvoice.Name = "btnPrintInvoice";
 			this.btnPrintInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintInvoice_ItemClick);
 			// 
-			// btnInvoiceProtected
-			// 
-			this.btnInvoiceProtected.Caption = "Invoice Protected";
-			this.btnInvoiceProtected.Enabled = false;
-			this.btnInvoiceProtected.Id = 35;
-			this.btnInvoiceProtected.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnInvoiceProtected.ImageOptions.SvgImage")));
-			this.btnInvoiceProtected.Name = "btnInvoiceProtected";
-			this.btnInvoiceProtected.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnInvoiceProtected_ItemClick);
-			// 
 			// btnPrintOriginalInvoice
 			// 
 			this.btnPrintOriginalInvoice.Caption = "Print Original Invoice";
@@ -1208,23 +1253,13 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnCloseCost.Name = "btnCloseCost";
 			this.btnCloseCost.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCloseCost_ItemClick);
 			// 
-			// btnSaveCost
+			// btnEditCost
 			// 
-			this.btnSaveCost.Caption = "Save";
-			this.btnSaveCost.Enabled = false;
-			this.btnSaveCost.Id = 38;
-			this.btnSaveCost.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveCost.ImageOptions.SvgImage")));
-			this.btnSaveCost.Name = "btnSaveCost";
-			this.btnSaveCost.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaveCost_ItemClick);
-			// 
-			// btnSaveAndCloseCost
-			// 
-			this.btnSaveAndCloseCost.Caption = "Save && Close";
-			this.btnSaveAndCloseCost.Enabled = false;
-			this.btnSaveAndCloseCost.Id = 39;
-			this.btnSaveAndCloseCost.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveAndCloseCost.ImageOptions.SvgImage")));
-			this.btnSaveAndCloseCost.Name = "btnSaveAndCloseCost";
-			this.btnSaveAndCloseCost.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSaveAndCloseCost_ItemClick);
+			this.btnEditCost.Caption = "Edit";
+			this.btnEditCost.Enabled = false;
+			this.btnEditCost.Id = 38;
+			this.btnEditCost.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditCost.ImageOptions.SvgImage")));
+			this.btnEditCost.Name = "btnEditCost";
 			// 
 			// btnRefreshCost
 			// 
@@ -1241,7 +1276,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnDeleteCost.Id = 41;
 			this.btnDeleteCost.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteCost.ImageOptions.SvgImage")));
 			this.btnDeleteCost.Name = "btnDeleteCost";
-			this.btnDeleteCost.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteCost_ItemClick);
 			// 
 			// btnPrintCost
 			// 
@@ -1252,14 +1286,22 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnPrintCost.Name = "btnPrintCost";
 			this.btnPrintCost.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrintCost_ItemClick);
 			// 
-			// btnCostProtected
+			// btnEditInvoice
 			// 
-			this.btnCostProtected.Caption = "Costsheet Protected";
-			this.btnCostProtected.Enabled = false;
-			this.btnCostProtected.Id = 43;
-			this.btnCostProtected.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCostProtected.ImageOptions.SvgImage")));
-			this.btnCostProtected.Name = "btnCostProtected";
-			this.btnCostProtected.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCostProtected_ItemClick);
+			this.btnEditInvoice.Caption = "Edit";
+			this.btnEditInvoice.Enabled = false;
+			this.btnEditInvoice.Id = 44;
+			this.btnEditInvoice.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditInvoice.ImageOptions.SvgImage")));
+			this.btnEditInvoice.Name = "btnEditInvoice";
+			this.btnEditInvoice.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditInvoice_ItemClick);
+			// 
+			// btnEditJobDetails
+			// 
+			this.btnEditJobDetails.Caption = "Edit Job Details";
+			this.btnEditJobDetails.Enabled = false;
+			this.btnEditJobDetails.Id = 46;
+			this.btnEditJobDetails.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditJobDetails.ImageOptions.SvgImage")));
+			this.btnEditJobDetails.Name = "btnEditJobDetails";
 			// 
 			// rpMain
 			// 
@@ -1294,6 +1336,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.ribbonPageGroup7.AllowTextClipping = false;
 			this.ribbonPageGroup7.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
 			this.ribbonPageGroup7.ItemLinks.Add(this.btnRefresh);
+			this.ribbonPageGroup7.ItemLinks.Add(this.btnEditJobDetails, true);
 			this.ribbonPageGroup7.Name = "ribbonPageGroup7";
 			this.ribbonPageGroup7.Text = "Edit";
 			// 
@@ -1337,11 +1380,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.rpInvoice.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6,
-            this.ribbonPageGroup10,
             this.ribbonPageGroup11,
             this.ribbonPageGroup12,
-            this.ribbonPageGroup13,
-            this.ribbonPageGroup14,
             this.ribbonPageGroup15});
 			this.rpInvoice.Name = "rpInvoice";
 			this.rpInvoice.Text = "Invoices";
@@ -1351,39 +1391,22 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.ribbonPageGroup6.ItemLinks.Add(this.btnNewInvoice);
 			this.ribbonPageGroup6.Name = "ribbonPageGroup6";
-			this.ribbonPageGroup6.Text = "New";
-			// 
-			// ribbonPageGroup10
-			// 
-			this.ribbonPageGroup10.ItemLinks.Add(this.btnSaveInvoice);
-			this.ribbonPageGroup10.ItemLinks.Add(this.btnSaveAndCloseInvoice);
-			this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-			this.ribbonPageGroup10.Text = "Save";
+			this.ribbonPageGroup6.Text = "Invoice Events";
 			// 
 			// ribbonPageGroup11
 			// 
+			this.ribbonPageGroup11.ItemLinks.Add(this.btnEditInvoice);
 			this.ribbonPageGroup11.ItemLinks.Add(this.btnRefreshInvoice);
+			this.ribbonPageGroup11.ItemLinks.Add(this.btnPrintInvoice, true);
+			this.ribbonPageGroup11.ItemLinks.Add(this.btnPrintOriginalInvoice);
 			this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-			this.ribbonPageGroup11.Text = "Edit";
+			this.ribbonPageGroup11.Text = "Actions";
 			// 
 			// ribbonPageGroup12
 			// 
 			this.ribbonPageGroup12.ItemLinks.Add(this.btnDeleteInvoice);
 			this.ribbonPageGroup12.Name = "ribbonPageGroup12";
 			this.ribbonPageGroup12.Text = "Delete";
-			// 
-			// ribbonPageGroup13
-			// 
-			this.ribbonPageGroup13.ItemLinks.Add(this.btnPrintInvoice);
-			this.ribbonPageGroup13.ItemLinks.Add(this.btnPrintOriginalInvoice, true);
-			this.ribbonPageGroup13.Name = "ribbonPageGroup13";
-			this.ribbonPageGroup13.Text = "Quick Print Invoice";
-			// 
-			// ribbonPageGroup14
-			// 
-			this.ribbonPageGroup14.ItemLinks.Add(this.btnInvoiceProtected);
-			this.ribbonPageGroup14.Name = "ribbonPageGroup14";
-			this.ribbonPageGroup14.Text = "Security";
 			// 
 			// ribbonPageGroup15
 			// 
@@ -1399,10 +1422,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.rpCost.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
             this.ribbonPageGroup16,
-            this.ribbonPageGroup17,
             this.ribbonPageGroup18,
-            this.ribbonPageGroup19,
-            this.ribbonPageGroup20,
             this.ribbonPageGroup21});
 			this.rpCost.Name = "rpCost";
 			this.rpCost.Text = "Costs";
@@ -1416,34 +1436,17 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// ribbonPageGroup16
 			// 
-			this.ribbonPageGroup16.ItemLinks.Add(this.btnSaveCost);
-			this.ribbonPageGroup16.ItemLinks.Add(this.btnSaveAndCloseCost);
+			this.ribbonPageGroup16.ItemLinks.Add(this.btnEditCost);
+			this.ribbonPageGroup16.ItemLinks.Add(this.btnRefreshCost);
+			this.ribbonPageGroup16.ItemLinks.Add(this.btnPrintCost, true);
 			this.ribbonPageGroup16.Name = "ribbonPageGroup16";
-			this.ribbonPageGroup16.Text = "Save";
-			// 
-			// ribbonPageGroup17
-			// 
-			this.ribbonPageGroup17.ItemLinks.Add(this.btnRefreshCost);
-			this.ribbonPageGroup17.Name = "ribbonPageGroup17";
-			this.ribbonPageGroup17.Text = "Edit";
+			this.ribbonPageGroup16.Text = "Actions";
 			// 
 			// ribbonPageGroup18
 			// 
 			this.ribbonPageGroup18.ItemLinks.Add(this.btnDeleteCost);
 			this.ribbonPageGroup18.Name = "ribbonPageGroup18";
 			this.ribbonPageGroup18.Text = "Delete";
-			// 
-			// ribbonPageGroup19
-			// 
-			this.ribbonPageGroup19.ItemLinks.Add(this.btnPrintCost);
-			this.ribbonPageGroup19.Name = "ribbonPageGroup19";
-			this.ribbonPageGroup19.Text = "Quick Reports";
-			// 
-			// ribbonPageGroup20
-			// 
-			this.ribbonPageGroup20.ItemLinks.Add(this.btnCostProtected);
-			this.ribbonPageGroup20.Name = "ribbonPageGroup20";
-			this.ribbonPageGroup20.Text = "Security";
 			// 
 			// ribbonPageGroup21
 			// 
@@ -1461,32 +1464,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.ribbonStatusBar1.Ribbon = this.rcMain;
 			this.ribbonStatusBar1.Size = new System.Drawing.Size(1448, 30);
 			// 
-			// bsJobSeaImportDetails
-			// 
-			this.bsJobSeaImportDetails.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportDetailModel);
-			// 
-			// xtraTabPage1
-			// 
-			this.xtraTabPage1.Name = "xtraTabPage1";
-			this.xtraTabPage1.Size = new System.Drawing.Size(98, 94);
-			// 
-			// xtraTabPage2
-			// 
-			this.xtraTabPage2.Name = "xtraTabPage2";
-			this.xtraTabPage2.Size = new System.Drawing.Size(98, 80);
-			// 
-			// bsCosts
-			// 
-			this.bsCosts.DataSource = typeof(MISLiveMed.Models.Models.Accounting.CostSheets.CostModel);
-			// 
-			// bsInvoices
-			// 
-			this.bsInvoices.DataSource = typeof(MISLiveMed.Models.Models.Accounting.Invoices.InvoiceModel);
-			// 
-			// bsDocuments
-			// 
-			this.bsDocuments.DataSource = typeof(MISLiveMed.Models.Models.Common.Documents.DocumentModel);
-			// 
 			// mainLayout
 			// 
 			this.mainLayout.Controls.Add(this.tabGroupNotes);
@@ -1501,9 +1478,10 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.mainLayout.Location = new System.Drawing.Point(0, 193);
 			this.mainLayout.Name = "mainLayout";
+			this.mainLayout.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1108, 442, 812, 500);
 			this.mainLayout.Root = this.Root;
 			this.mainLayout.Size = new System.Drawing.Size(1448, 726);
-			this.mainLayout.TabIndex = 2;
+			this.mainLayout.TabIndex = 7;
 			this.mainLayout.Text = "dataLayoutControl1";
 			// 
 			// tabGroupNotes
@@ -1678,6 +1656,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// txtTotalInvoicesUSD
 			// 
+			this.txtTotalInvoicesUSD.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "TotalInvoicesUsd", true));
 			this.txtTotalInvoicesUSD.Location = new System.Drawing.Point(1244, 94);
 			this.txtTotalInvoicesUSD.MenuManager = this.rcMain;
 			this.txtTotalInvoicesUSD.Name = "txtTotalInvoicesUSD";
@@ -1688,6 +1667,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// txtTotalInvoicesLL
 			// 
+			this.txtTotalInvoicesLL.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "TotalInvoicesLl", true));
 			this.txtTotalInvoicesLL.Location = new System.Drawing.Point(954, 94);
 			this.txtTotalInvoicesLL.MenuManager = this.rcMain;
 			this.txtTotalInvoicesLL.Name = "txtTotalInvoicesLL";
@@ -1698,6 +1678,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// txtTotalCostsUSD
 			// 
+			this.txtTotalCostsUSD.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "TotalCostsUsd", true));
 			this.txtTotalCostsUSD.Location = new System.Drawing.Point(1244, 68);
 			this.txtTotalCostsUSD.MenuManager = this.rcMain;
 			this.txtTotalCostsUSD.Name = "txtTotalCostsUSD";
@@ -1708,6 +1689,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// txtTotalCostsLL
 			// 
+			this.txtTotalCostsLL.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "TotalCostsLl", true));
 			this.txtTotalCostsLL.Location = new System.Drawing.Point(954, 68);
 			this.txtTotalCostsLL.MenuManager = this.rcMain;
 			this.txtTotalCostsLL.Name = "txtTotalCostsLL";
@@ -1776,7 +1758,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// txtJobNo
 			// 
 			this.txtJobNo.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "JobNo", true));
-			this.txtJobNo.Location = new System.Drawing.Point(373, 14);
+			this.txtJobNo.Location = new System.Drawing.Point(374, 14);
 			this.txtJobNo.Name = "txtJobNo";
 			this.txtJobNo.Properties.ReadOnly = true;
 			this.txtJobNo.Size = new System.Drawing.Size(128, 22);
@@ -1789,7 +1771,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.txtReferenceNo.Location = new System.Drawing.Point(155, 14);
 			this.txtReferenceNo.Name = "txtReferenceNo";
 			this.txtReferenceNo.Properties.ReadOnly = true;
-			this.txtReferenceNo.Size = new System.Drawing.Size(171, 22);
+			this.txtReferenceNo.Size = new System.Drawing.Size(172, 22);
 			this.txtReferenceNo.StyleController = this.layoutClientInformation;
 			this.txtReferenceNo.TabIndex = 5;
 			// 
@@ -1797,7 +1779,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.dtJobDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "JobDate", true));
 			this.dtJobDate.EditValue = null;
-			this.dtJobDate.Location = new System.Drawing.Point(559, 14);
+			this.dtJobDate.Location = new System.Drawing.Point(560, 14);
 			this.dtJobDate.Name = "dtJobDate";
 			this.dtJobDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1812,7 +1794,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtJobDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
 			this.dtJobDate.Properties.ReadOnly = true;
 			this.dtJobDate.Properties.UseMaskAsDisplayFormat = true;
-			this.dtJobDate.Size = new System.Drawing.Size(239, 22);
+			this.dtJobDate.Size = new System.Drawing.Size(238, 22);
 			this.dtJobDate.StyleController = this.layoutClientInformation;
 			this.dtJobDate.TabIndex = 8;
 			// 
@@ -1911,7 +1893,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboJobsType.Properties.DisplayMember = "Description";
 			this.cboJobsType.Properties.NullText = "";
 			this.cboJobsType.Properties.PopupView = this.gridView2;
-			this.cboJobsType.Properties.ShowAddNewButton = true;
 			this.cboJobsType.Properties.ValueMember = "Id";
 			this.cboJobsType.Size = new System.Drawing.Size(249, 22);
 			this.cboJobsType.StyleController = this.layoutClientInformation;
@@ -2193,7 +2174,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblJobNo.Control = this.txtJobNo;
 			this.lblJobNo.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblJobNo.CustomizationFormText = "Job No";
-			this.lblJobNo.Location = new System.Drawing.Point(316, 0);
+			this.lblJobNo.Location = new System.Drawing.Point(317, 0);
 			this.lblJobNo.Name = "lblJobNo";
 			this.lblJobNo.Size = new System.Drawing.Size(175, 26);
 			this.lblJobNo.Text = "Job No";
@@ -2208,7 +2189,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblReferenceNo.CustomizationFormText = "Reference No";
 			this.lblReferenceNo.Location = new System.Drawing.Point(0, 0);
 			this.lblReferenceNo.Name = "lblReferenceNo";
-			this.lblReferenceNo.Size = new System.Drawing.Size(316, 26);
+			this.lblReferenceNo.Size = new System.Drawing.Size(317, 26);
 			this.lblReferenceNo.Text = "Reference No";
 			this.lblReferenceNo.TextSize = new System.Drawing.Size(126, 16);
 			// 
@@ -2217,9 +2198,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblJobDate.Control = this.dtJobDate;
 			this.lblJobDate.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblJobDate.CustomizationFormText = "Job Date";
-			this.lblJobDate.Location = new System.Drawing.Point(491, 0);
+			this.lblJobDate.Location = new System.Drawing.Point(492, 0);
 			this.lblJobDate.Name = "lblJobDate";
-			this.lblJobDate.Size = new System.Drawing.Size(297, 26);
+			this.lblJobDate.Size = new System.Drawing.Size(296, 26);
 			this.lblJobDate.Text = "Job Date";
 			this.lblJobDate.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
 			this.lblJobDate.TextSize = new System.Drawing.Size(49, 16);
@@ -2427,7 +2408,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutShipmentTracking.Controls.Add(this.dtMissingDocumentsDate);
 			this.layoutShipmentTracking.Controls.Add(this.dtPaidDoDate);
 			this.layoutShipmentTracking.Controls.Add(this.dtTejrimDate);
-			this.layoutShipmentTracking.Controls.Add(this.dateEdit10);
+			this.layoutShipmentTracking.Controls.Add(this.dtDeliveryDate);
 			this.layoutShipmentTracking.Controls.Add(this.dtPendingForDelivery);
 			this.layoutShipmentTracking.Controls.Add(this.dtReadyForClearance);
 			this.layoutShipmentTracking.Controls.Add(this.dtReadyForTejrim);
@@ -2454,7 +2435,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// cboShippedWith
 			// 
-			this.cboShippedWith.Location = new System.Drawing.Point(133, 66);
+			this.cboShippedWith.Location = new System.Drawing.Point(133, 40);
 			this.cboShippedWith.MenuManager = this.rcMain;
 			this.cboShippedWith.Name = "cboShippedWith";
 			this.cboShippedWith.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2466,7 +2447,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboShippedWith.Size = new System.Drawing.Size(240, 22);
 			this.cboShippedWith.StyleController = this.layoutShipmentTracking;
 			this.cboShippedWith.TabIndex = 35;
-			this.cboShippedWith.EditValueChanged += new System.EventHandler(this.cboShippedWith_EditValueChanged);
 			// 
 			// gridView1
 			// 
@@ -2653,24 +2633,24 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.dtTejrimDate.StyleController = this.layoutShipmentTracking;
 			this.dtTejrimDate.TabIndex = 25;
 			// 
-			// dateEdit10
+			// dtDeliveryDate
 			// 
-			this.dateEdit10.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "DeliveredDate", true));
-			this.dateEdit10.EditValue = null;
-			this.dateEdit10.Location = new System.Drawing.Point(195, 238);
-			this.dateEdit10.MenuManager = this.rcMain;
-			this.dateEdit10.Name = "dateEdit10";
-			this.dateEdit10.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.dtDeliveryDate.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bsJobSeaImport, "DeliveredDate", true));
+			this.dtDeliveryDate.EditValue = null;
+			this.dtDeliveryDate.Location = new System.Drawing.Point(195, 238);
+			this.dtDeliveryDate.MenuManager = this.rcMain;
+			this.dtDeliveryDate.Name = "dtDeliveryDate";
+			this.dtDeliveryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.dateEdit10.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.dtDeliveryDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.dateEdit10.Properties.CalendarTimeProperties.MaskSettings.Set("mask", "dd/MM/yyyy");
-			this.dateEdit10.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
-			this.dateEdit10.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
-			this.dateEdit10.Properties.UseMaskAsDisplayFormat = true;
-			this.dateEdit10.Size = new System.Drawing.Size(178, 22);
-			this.dateEdit10.StyleController = this.layoutShipmentTracking;
-			this.dateEdit10.TabIndex = 24;
+			this.dtDeliveryDate.Properties.CalendarTimeProperties.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.dtDeliveryDate.Properties.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+			this.dtDeliveryDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.dtDeliveryDate.Properties.UseMaskAsDisplayFormat = true;
+			this.dtDeliveryDate.Size = new System.Drawing.Size(178, 22);
+			this.dtDeliveryDate.StyleController = this.layoutShipmentTracking;
+			this.dtDeliveryDate.TabIndex = 24;
 			// 
 			// dtPendingForDelivery
 			// 
@@ -2808,7 +2788,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// cboAgents
 			// 
-			this.cboAgents.Location = new System.Drawing.Point(133, 40);
+			this.cboAgents.Location = new System.Drawing.Point(133, 14);
 			this.cboAgents.Name = "cboAgents";
 			this.cboAgents.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2902,7 +2882,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// cboSeaCarriers
 			// 
-			this.cboSeaCarriers.Location = new System.Drawing.Point(496, 66);
+			this.cboSeaCarriers.Location = new System.Drawing.Point(496, 40);
 			this.cboSeaCarriers.Name = "cboSeaCarriers";
 			this.cboSeaCarriers.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2931,7 +2911,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.ColumnSeaCarrierId.Name = "ColumnSeaCarrierId";
 			this.ColumnSeaCarrierId.Visible = true;
 			this.ColumnSeaCarrierId.VisibleIndex = 0;
-			this.ColumnSeaCarrierId.Width = 97;
+			this.ColumnSeaCarrierId.Width = 96;
 			// 
 			// ColumnSeaCarrierName
 			// 
@@ -2940,11 +2920,11 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.ColumnSeaCarrierName.Name = "ColumnSeaCarrierName";
 			this.ColumnSeaCarrierName.Visible = true;
 			this.ColumnSeaCarrierName.VisibleIndex = 1;
-			this.ColumnSeaCarrierName.Width = 939;
+			this.ColumnSeaCarrierName.Width = 940;
 			// 
 			// cboVessels
 			// 
-			this.cboVessels.Location = new System.Drawing.Point(133, 14);
+			this.cboVessels.Location = new System.Drawing.Point(133, 66);
 			this.cboVessels.Name = "cboVessels";
 			this.cboVessels.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2987,7 +2967,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// cboFeederVessels
 			// 
-			this.cboFeederVessels.Location = new System.Drawing.Point(496, 14);
+			this.cboFeederVessels.Location = new System.Drawing.Point(496, 66);
 			this.cboFeederVessels.Name = "cboFeederVessels";
 			this.cboFeederVessels.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -3050,8 +3030,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.layoutControlItem20,
             this.layoutControlItem21,
             this.emptySpaceItem5,
-            this.lblVessels,
-            this.lblFeederVessels,
             this.lblAgents,
             this.lblSeaCarriers,
             this.lblIncoTerms,
@@ -3074,7 +3052,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.lblEmptyContainerDate,
             this.lblConfirmEmptyContainerDate,
             this.emptySpaceItem2,
-            this.lblShippedWith});
+            this.lblShippedWith,
+            this.lblVessels,
+            this.lblFeederVessels});
 			this.layoutControlGroup9.Name = "Root";
 			this.layoutControlGroup9.Size = new System.Drawing.Size(814, 374);
 			this.layoutControlGroup9.TextVisible = false;
@@ -3141,34 +3121,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.emptySpaceItem5.Name = "emptySpaceItem5";
 			this.emptySpaceItem5.Size = new System.Drawing.Size(790, 10);
 			// 
-			// lblVessels
-			// 
-			this.lblVessels.Control = this.cboVessels;
-			this.lblVessels.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-			this.lblVessels.CustomizationFormText = "Vessel";
-			this.lblVessels.Location = new System.Drawing.Point(0, 0);
-			this.lblVessels.Name = "lblVessels";
-			this.lblVessels.Size = new System.Drawing.Size(363, 26);
-			this.lblVessels.Text = "Vessel";
-			this.lblVessels.TextSize = new System.Drawing.Size(104, 16);
-			// 
-			// lblFeederVessels
-			// 
-			this.lblFeederVessels.Control = this.cboFeederVessels;
-			this.lblFeederVessels.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-			this.lblFeederVessels.CustomizationFormText = "Feeder Vessel";
-			this.lblFeederVessels.Location = new System.Drawing.Point(363, 0);
-			this.lblFeederVessels.Name = "lblFeederVessels";
-			this.lblFeederVessels.Size = new System.Drawing.Size(427, 26);
-			this.lblFeederVessels.Text = "Feeder Vessel";
-			this.lblFeederVessels.TextSize = new System.Drawing.Size(104, 16);
-			// 
 			// lblAgents
 			// 
 			this.lblAgents.Control = this.cboAgents;
 			this.lblAgents.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblAgents.CustomizationFormText = "Agents";
-			this.lblAgents.Location = new System.Drawing.Point(0, 26);
+			this.lblAgents.Location = new System.Drawing.Point(0, 0);
 			this.lblAgents.Name = "lblAgents";
 			this.lblAgents.Size = new System.Drawing.Size(790, 26);
 			this.lblAgents.Text = "Agents";
@@ -3179,7 +3137,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblSeaCarriers.Control = this.cboSeaCarriers;
 			this.lblSeaCarriers.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
 			this.lblSeaCarriers.CustomizationFormText = "Sea Carriers";
-			this.lblSeaCarriers.Location = new System.Drawing.Point(363, 52);
+			this.lblSeaCarriers.Location = new System.Drawing.Point(363, 26);
 			this.lblSeaCarriers.Name = "lblSeaCarriers";
 			this.lblSeaCarriers.Size = new System.Drawing.Size(427, 26);
 			this.lblSeaCarriers.Text = "Sea Carriers";
@@ -3326,7 +3284,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// layoutControlItem25
 			// 
-			this.layoutControlItem25.Control = this.dateEdit10;
+			this.layoutControlItem25.Control = this.dtDeliveryDate;
 			this.layoutControlItem25.Location = new System.Drawing.Point(172, 224);
 			this.layoutControlItem25.Name = "layoutControlItem25";
 			this.layoutControlItem25.Size = new System.Drawing.Size(191, 28);
@@ -3377,11 +3335,33 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lblShippedWith
 			// 
 			this.lblShippedWith.Control = this.cboShippedWith;
-			this.lblShippedWith.Location = new System.Drawing.Point(0, 52);
+			this.lblShippedWith.Location = new System.Drawing.Point(0, 26);
 			this.lblShippedWith.Name = "lblShippedWith";
 			this.lblShippedWith.Size = new System.Drawing.Size(363, 26);
 			this.lblShippedWith.Text = "Shipped With";
 			this.lblShippedWith.TextSize = new System.Drawing.Size(104, 16);
+			// 
+			// lblVessels
+			// 
+			this.lblVessels.Control = this.cboVessels;
+			this.lblVessels.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+			this.lblVessels.CustomizationFormText = "Vessel";
+			this.lblVessels.Location = new System.Drawing.Point(0, 52);
+			this.lblVessels.Name = "lblVessels";
+			this.lblVessels.Size = new System.Drawing.Size(363, 26);
+			this.lblVessels.Text = "Vessel";
+			this.lblVessels.TextSize = new System.Drawing.Size(104, 16);
+			// 
+			// lblFeederVessels
+			// 
+			this.lblFeederVessels.Control = this.cboFeederVessels;
+			this.lblFeederVessels.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
+			this.lblFeederVessels.CustomizationFormText = "Feeder Vessel";
+			this.lblFeederVessels.Location = new System.Drawing.Point(363, 52);
+			this.lblFeederVessels.Name = "lblFeederVessels";
+			this.lblFeederVessels.Size = new System.Drawing.Size(427, 26);
+			this.lblFeederVessels.Text = "Feeder Vessel";
+			this.lblFeederVessels.TextSize = new System.Drawing.Size(104, 16);
 			// 
 			// tabPackageDetails
 			// 
@@ -3618,7 +3598,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboUsers.Properties.DisplayMember = "UserName";
 			this.cboUsers.Properties.NullText = "";
 			this.cboUsers.Properties.PopupView = this.gridView3;
-			this.cboUsers.Properties.ReadOnly = true;
 			this.cboUsers.Properties.ValueMember = "Id";
 			this.cboUsers.Size = new System.Drawing.Size(290, 22);
 			this.cboUsers.StyleController = this.layoutUserInformation;
@@ -3661,7 +3640,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboSales.Properties.DisplayMember = "UserName";
 			this.cboSales.Properties.NullText = "";
 			this.cboSales.Properties.PopupView = this.gridView4;
-			this.cboSales.Properties.ReadOnly = true;
 			this.cboSales.Properties.ValueMember = "Id";
 			this.cboSales.Size = new System.Drawing.Size(290, 22);
 			this.cboSales.StyleController = this.layoutUserInformation;
@@ -3704,7 +3682,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.cboOperatingUsers.Properties.DisplayMember = "UserName";
 			this.cboOperatingUsers.Properties.NullText = "";
 			this.cboOperatingUsers.Properties.PopupView = this.gridView5;
-			this.cboOperatingUsers.Properties.ReadOnly = true;
 			this.cboOperatingUsers.Properties.ValueMember = "Id";
 			this.cboOperatingUsers.Size = new System.Drawing.Size(290, 22);
 			this.cboOperatingUsers.StyleController = this.layoutUserInformation;
@@ -3853,7 +3830,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.tabDetails.Size = new System.Drawing.Size(1420, 292);
 			this.tabDetails.TabIndex = 15;
 			this.tabDetails.Text = "tabPane1";
-			this.tabDetails.Click += new System.EventHandler(this.tabDetails_Click);
 			// 
 			// tabJobDetails
 			// 
@@ -3966,13 +3942,38 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.repCountries.AutoHeight = false;
 			this.repCountries.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repCountries.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CountryName", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
 			this.repCountries.DisplayMember = "CountryName";
 			this.repCountries.Name = "repCountries";
 			this.repCountries.NullText = "";
+			this.repCountries.PopupView = this.repositoryItemSearchLookUpEdit1View;
+			this.repCountries.ShowAddNewButton = true;
 			this.repCountries.ValueMember = "Id";
+			// 
+			// repositoryItemSearchLookUpEdit1View
+			// 
+			this.repositoryItemSearchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn44,
+            this.gridColumn52});
+			this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+			this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+			// 
+			// gridColumn44
+			// 
+			this.gridColumn44.Caption = "Id";
+			this.gridColumn44.FieldName = "Id";
+			this.gridColumn44.Name = "gridColumn44";
+			this.gridColumn44.Width = 178;
+			// 
+			// gridColumn52
+			// 
+			this.gridColumn52.Caption = "Country Name";
+			this.gridColumn52.FieldName = "CountryName";
+			this.gridColumn52.Name = "gridColumn52";
+			this.gridColumn52.Visible = true;
+			this.gridColumn52.VisibleIndex = 0;
+			this.gridColumn52.Width = 963;
 			// 
 			// colSupplierId
 			// 
@@ -3990,13 +3991,38 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.repShippers.AutoHeight = false;
 			this.repShippers.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repShippers.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
 			this.repShippers.DisplayMember = "Name";
 			this.repShippers.Name = "repShippers";
 			this.repShippers.NullText = "";
+			this.repShippers.PopupView = this.gridView6;
+			this.repShippers.ShowAddNewButton = true;
 			this.repShippers.ValueMember = "Id";
+			// 
+			// gridView6
+			// 
+			this.gridView6.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn53,
+            this.gridColumn54});
+			this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView6.Name = "gridView6";
+			this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView6.OptionsView.ShowGroupPanel = false;
+			// 
+			// gridColumn53
+			// 
+			this.gridColumn53.Caption = "Id";
+			this.gridColumn53.FieldName = "Id";
+			this.gridColumn53.Name = "gridColumn53";
+			this.gridColumn53.Width = 214;
+			// 
+			// gridColumn54
+			// 
+			this.gridColumn54.Caption = "Name";
+			this.gridColumn54.FieldName = "Name";
+			this.gridColumn54.Name = "gridColumn54";
+			this.gridColumn54.Visible = true;
+			this.gridColumn54.VisibleIndex = 0;
+			this.gridColumn54.Width = 927;
 			// 
 			// colContainerNo
 			// 
@@ -4218,7 +4244,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.lblAllInOrderToBeloaded.Appearance.Options.UseBackColor = true;
 			this.lblAllInOrderToBeloaded.Appearance.Options.UseFont = true;
 			this.lblAllInOrderToBeloaded.Appearance.Options.UseForeColor = true;
-			this.lblAllInOrderToBeloaded.Location = new System.Drawing.Point(602, 14);
+			this.lblAllInOrderToBeloaded.Location = new System.Drawing.Point(603, 14);
 			this.lblAllInOrderToBeloaded.Name = "lblAllInOrderToBeloaded";
 			this.lblAllInOrderToBeloaded.Size = new System.Drawing.Size(94, 21);
 			this.lblAllInOrderToBeloaded.StyleController = this.layoutRequirements;
@@ -4236,18 +4262,17 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// btnAllInOrderTBL
 			// 
-			this.btnAllInOrderTBL.Location = new System.Drawing.Point(602, 210);
+			this.btnAllInOrderTBL.Location = new System.Drawing.Point(603, 210);
 			this.btnAllInOrderTBL.Name = "btnAllInOrderTBL";
 			this.btnAllInOrderTBL.Size = new System.Drawing.Size(95, 27);
 			this.btnAllInOrderTBL.StyleController = this.layoutRequirements;
 			this.btnAllInOrderTBL.TabIndex = 6;
 			this.btnAllInOrderTBL.Text = "<< All In Order";
-			this.btnAllInOrderTBL.Click += new System.EventHandler(this.btnAllInOrderTBL_Click);
 			// 
 			// gridSplitContainer1
 			// 
 			this.gridSplitContainer1.Grid = this.gcRequiredOnWater;
-			this.gridSplitContainer1.Location = new System.Drawing.Point(701, 14);
+			this.gridSplitContainer1.Location = new System.Drawing.Point(702, 14);
 			this.gridSplitContainer1.Name = "gridSplitContainer1";
 			// 
 			// gridSplitContainer1.Panel1
@@ -4258,7 +4283,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// gridSplitContainer1.Panel2
 			// 
 			this.gridSplitContainer1.Panel2.Text = "Panel2";
-			this.gridSplitContainer1.Size = new System.Drawing.Size(606, 223);
+			this.gridSplitContainer1.Size = new System.Drawing.Size(605, 223);
 			this.gridSplitContainer1.TabIndex = 5;
 			// 
 			// gcRequiredOnWater
@@ -4268,8 +4293,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gcRequiredOnWater.MainView = this.gvRequiredOnWater;
 			this.gcRequiredOnWater.Name = "gcRequiredOnWater";
 			this.gcRequiredOnWater.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repCheckEdit});
-			this.gcRequiredOnWater.Size = new System.Drawing.Size(606, 223);
+            this.repCheckEdit,
+            this.repOWConditionsList});
+			this.gcRequiredOnWater.Size = new System.Drawing.Size(605, 223);
 			this.gcRequiredOnWater.TabIndex = 0;
 			this.gcRequiredOnWater.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRequiredOnWater});
@@ -4278,8 +4304,11 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.gvRequiredOnWater.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn47,
+            this.gridColumn39,
             this.gridColumn48,
+            this.gridColumn40,
             this.gridColumn49,
+            this.gridColumn42,
             this.gridColumn50,
             this.gridColumn51});
 			this.gvRequiredOnWater.GridControl = this.gcRequiredOnWater;
@@ -4300,6 +4329,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gridColumn47.Name = "gridColumn47";
 			this.gridColumn47.Width = 87;
 			// 
+			// gridColumn39
+			// 
+			this.gridColumn39.Caption = "Sorting Line No";
+			this.gridColumn39.FieldName = "SortingLineNo";
+			this.gridColumn39.MinWidth = 25;
+			this.gridColumn39.Name = "gridColumn39";
+			this.gridColumn39.Width = 94;
+			// 
 			// gridColumn48
 			// 
 			this.gridColumn48.Caption = "Required";
@@ -4315,6 +4352,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.repCheckEdit.AutoHeight = false;
 			this.repCheckEdit.Name = "repCheckEdit";
 			// 
+			// gridColumn40
+			// 
+			this.gridColumn40.Caption = "Reference No";
+			this.gridColumn40.FieldName = "ReferenceNo";
+			this.gridColumn40.MinWidth = 25;
+			this.gridColumn40.Name = "gridColumn40";
+			this.gridColumn40.Width = 94;
+			// 
 			// gridColumn49
 			// 
 			this.gridColumn49.Caption = "Job No";
@@ -4323,16 +4368,38 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gridColumn49.Name = "gridColumn49";
 			this.gridColumn49.Width = 94;
 			// 
+			// gridColumn42
+			// 
+			this.gridColumn42.Caption = "Department";
+			this.gridColumn42.FieldName = "DepartmentId";
+			this.gridColumn42.MinWidth = 25;
+			this.gridColumn42.Name = "gridColumn42";
+			this.gridColumn42.Width = 94;
+			// 
 			// gridColumn50
 			// 
 			this.gridColumn50.Caption = "Description";
-			this.gridColumn50.FieldName = "Description";
+			this.gridColumn50.ColumnEdit = this.repOWConditionsList;
+			this.gridColumn50.FieldName = "ConditionDetailId";
 			this.gridColumn50.MinWidth = 25;
 			this.gridColumn50.Name = "gridColumn50";
 			this.gridColumn50.OptionsColumn.ReadOnly = true;
 			this.gridColumn50.Visible = true;
 			this.gridColumn50.VisibleIndex = 1;
 			this.gridColumn50.Width = 326;
+			// 
+			// repOWConditionsList
+			// 
+			this.repOWConditionsList.AutoHeight = false;
+			this.repOWConditionsList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repOWConditionsList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repOWConditionsList.DisplayMember = "Description";
+			this.repOWConditionsList.Name = "repOWConditionsList";
+			this.repOWConditionsList.NullText = "";
+			this.repOWConditionsList.ValueMember = "Id";
 			// 
 			// gridColumn51
 			// 
@@ -4352,8 +4419,10 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gcRequiredToBeLoaded.MenuManager = this.rcMain;
 			this.gcRequiredToBeLoaded.Name = "gcRequiredToBeLoaded";
 			this.gcRequiredToBeLoaded.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repCheckBox});
-			this.gcRequiredToBeLoaded.Size = new System.Drawing.Size(584, 223);
+            this.repCheckBox,
+            this.repTblConditionsList,
+            this.repRequirmentsDateEdit});
+			this.gcRequiredToBeLoaded.Size = new System.Drawing.Size(585, 223);
 			this.gcRequiredToBeLoaded.TabIndex = 4;
 			this.gcRequiredToBeLoaded.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvRequiredToBeLoaded});
@@ -4362,9 +4431,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.gvRequiredToBeLoaded.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn41,
+            this.gridColumn1,
             this.gridColumn45,
+            this.gridColumn2,
             this.gridColumn43,
-            this.gridColumn44,
+            this.gridColumn3,
+            this.gridColumn4,
             this.gridColumn46});
 			this.gvRequiredToBeLoaded.GridControl = this.gcRequiredToBeLoaded;
 			this.gvRequiredToBeLoaded.Name = "gvRequiredToBeLoaded";
@@ -4384,6 +4456,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gridColumn41.Name = "gridColumn41";
 			this.gridColumn41.Width = 87;
 			// 
+			// gridColumn1
+			// 
+			this.gridColumn1.Caption = "Sorting Line No";
+			this.gridColumn1.FieldName = "SortingLineNo";
+			this.gridColumn1.MinWidth = 25;
+			this.gridColumn1.Name = "gridColumn1";
+			this.gridColumn1.Width = 103;
+			// 
 			// gridColumn45
 			// 
 			this.gridColumn45.Caption = "Required";
@@ -4399,6 +4479,14 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.repCheckBox.AutoHeight = false;
 			this.repCheckBox.Name = "repCheckBox";
 			// 
+			// gridColumn2
+			// 
+			this.gridColumn2.Caption = "Reference No";
+			this.gridColumn2.FieldName = "ReferenceNo";
+			this.gridColumn2.MinWidth = 25;
+			this.gridColumn2.Name = "gridColumn2";
+			this.gridColumn2.Width = 94;
+			// 
 			// gridColumn43
 			// 
 			this.gridColumn43.Caption = "Job No";
@@ -4407,16 +4495,37 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gridColumn43.Name = "gridColumn43";
 			this.gridColumn43.Width = 94;
 			// 
-			// gridColumn44
+			// gridColumn3
 			// 
-			this.gridColumn44.Caption = "Description";
-			this.gridColumn44.FieldName = "Description";
-			this.gridColumn44.MinWidth = 25;
-			this.gridColumn44.Name = "gridColumn44";
-			this.gridColumn44.OptionsColumn.ReadOnly = true;
-			this.gridColumn44.Visible = true;
-			this.gridColumn44.VisibleIndex = 1;
-			this.gridColumn44.Width = 358;
+			this.gridColumn3.Caption = "Departmemt";
+			this.gridColumn3.FieldName = "DepartmemtId";
+			this.gridColumn3.MinWidth = 25;
+			this.gridColumn3.Name = "gridColumn3";
+			this.gridColumn3.Width = 94;
+			// 
+			// gridColumn4
+			// 
+			this.gridColumn4.Caption = "Description";
+			this.gridColumn4.ColumnEdit = this.repTblConditionsList;
+			this.gridColumn4.FieldName = "ConditionDetailId";
+			this.gridColumn4.MinWidth = 25;
+			this.gridColumn4.Name = "gridColumn4";
+			this.gridColumn4.Visible = true;
+			this.gridColumn4.VisibleIndex = 1;
+			this.gridColumn4.Width = 301;
+			// 
+			// repTblConditionsList
+			// 
+			this.repTblConditionsList.AutoHeight = false;
+			this.repTblConditionsList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repTblConditionsList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repTblConditionsList.DisplayMember = "Description";
+			this.repTblConditionsList.Name = "repTblConditionsList";
+			this.repTblConditionsList.NullText = "";
+			this.repTblConditionsList.ValueMember = "Id";
 			// 
 			// gridColumn46
 			// 
@@ -4428,6 +4537,19 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gridColumn46.Visible = true;
 			this.gridColumn46.VisibleIndex = 2;
 			this.gridColumn46.Width = 65;
+			// 
+			// repRequirmentsDateEdit
+			// 
+			this.repRequirmentsDateEdit.AutoHeight = false;
+			this.repRequirmentsDateEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repRequirmentsDateEdit.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repRequirmentsDateEdit.CalendarTimeProperties.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.repRequirmentsDateEdit.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+			this.repRequirmentsDateEdit.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.repRequirmentsDateEdit.Name = "repRequirmentsDateEdit";
+			this.repRequirmentsDateEdit.UseMaskAsDisplayFormat = true;
 			// 
 			// layoutControlGroup12
 			// 
@@ -4451,20 +4573,20 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlItem10.Control = this.gcRequiredToBeLoaded;
 			this.layoutControlItem10.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem10.Name = "layoutControlItem10";
-			this.layoutControlItem10.Size = new System.Drawing.Size(588, 227);
+			this.layoutControlItem10.Size = new System.Drawing.Size(589, 227);
 			this.layoutControlItem10.TextVisible = false;
 			// 
 			// layoutControlItem11
 			// 
 			this.layoutControlItem11.Control = this.gridSplitContainer1;
-			this.layoutControlItem11.Location = new System.Drawing.Point(687, 0);
+			this.layoutControlItem11.Location = new System.Drawing.Point(688, 0);
 			this.layoutControlItem11.Name = "layoutControlItem11";
-			this.layoutControlItem11.Size = new System.Drawing.Size(610, 227);
+			this.layoutControlItem11.Size = new System.Drawing.Size(609, 227);
 			this.layoutControlItem11.TextVisible = false;
 			// 
 			// emptySpaceItem6
 			// 
-			this.emptySpaceItem6.Location = new System.Drawing.Point(588, 25);
+			this.emptySpaceItem6.Location = new System.Drawing.Point(589, 25);
 			this.emptySpaceItem6.Name = "emptySpaceItem4";
 			this.emptySpaceItem6.Size = new System.Drawing.Size(99, 171);
 			// 
@@ -4477,7 +4599,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// layoutControlItem12
 			// 
 			this.layoutControlItem12.Control = this.btnAllInOrderTBL;
-			this.layoutControlItem12.Location = new System.Drawing.Point(588, 196);
+			this.layoutControlItem12.Location = new System.Drawing.Point(589, 196);
 			this.layoutControlItem12.Name = "layoutControlItem12";
 			this.layoutControlItem12.Size = new System.Drawing.Size(99, 31);
 			this.layoutControlItem12.TextVisible = false;
@@ -4493,7 +4615,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// lcAllInOrderToBeloaded
 			// 
 			this.lcAllInOrderToBeloaded.Control = this.lblAllInOrderToBeloaded;
-			this.lcAllInOrderToBeloaded.Location = new System.Drawing.Point(588, 0);
+			this.lcAllInOrderToBeloaded.Location = new System.Drawing.Point(589, 0);
 			this.lcAllInOrderToBeloaded.Name = "lcAllInOrderToBeloaded";
 			this.lcAllInOrderToBeloaded.Size = new System.Drawing.Size(99, 25);
 			this.lcAllInOrderToBeloaded.TextVisible = false;
@@ -4529,16 +4651,13 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// gcInvoices
 			// 
 			this.gcInvoices.DataSource = this.bsInvoices;
-			this.gcInvoices.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			this.gcInvoices.Location = new System.Drawing.Point(14, 14);
 			this.gcInvoices.MainView = this.gvInvoices;
-			this.gcInvoices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.gcInvoices.MenuManager = this.rcMain;
 			this.gcInvoices.Name = "gcInvoices";
 			this.gcInvoices.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repSellingItemsList,
-            this.repSellingCurrenciesList,
-            this.repSellingPayemntsList,
-            this.repSellingMemberList});
+            this.repDateEdit,
+            this.repInvCheckEdit});
 			this.gcInvoices.Size = new System.Drawing.Size(1392, 223);
 			this.gcInvoices.TabIndex = 4;
 			this.gcInvoices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -4547,29 +4666,67 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// gvInvoices
 			// 
 			this.gvInvoices.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSellingId,
-            this.colSellingQHeaderId,
-            this.colSellingCustomerId,
-            this.colSellingItemId,
-            this.colSellingDescription,
-            this.colSellingPaymentId,
-            this.colSellingCurrencyId,
-            this.colSellingRate,
-            this.colSellingAmount,
-            this.colSellingL_Amount,
-            this.colSellingF_Amount,
-            this.colSellingVat,
-            this.colSellingVatRate,
-            this.colSellingNotes,
-            this.colSellingDeleted,
-            this.colSellingVatAmountLL,
-            this.colSellingVatAmountUSD,
-            this.colSellingVatAmount});
-			this.gvInvoices.DetailHeight = 431;
+            this.colId,
+            this.colInvoiceNo,
+            this.colInvoiceRef,
+            this.colJobId1,
+            this.colDepartmentId,
+            this.colInvoiceDate,
+            this.colMemberId,
+            this.colAttn,
+            this.colSubject,
+            this.colSubject1,
+            this.colSubject2,
+            this.colSubject3,
+            this.colCurrencyId,
+            this.colCurrencyRate,
+            this.colAmount,
+            this.colLAmount,
+            this.colFAmount,
+            this.colTotalItemVAT,
+            this.colTotalItemNonVAT,
+            this.colTotalVAT,
+            this.colLTotalVAT,
+            this.colFTotalVAT,
+            this.colNotify1,
+            this.colToNotified,
+            this.colIsAgent,
+            this.colSalesId,
+            this.colUserId,
+            this.colOperationDate,
+            this.colModifyDate,
+            this.colPosted,
+            this.colOriginal1,
+            this.colClosed,
+            this.colClosedDate,
+            this.colCanceled,
+            this.colCanceledDate,
+            this.colReason,
+            this.colCurSLRate,
+            this.colTotalReceived,
+            this.colDiffOfExchange,
+            this.colTotalCreditNote,
+            this.colTotalDebitNote,
+            this.colTotalDue,
+            this.colLocked,
+            this.colPrintOriginalDate,
+            this.colPrintOriginalByUser,
+            this.colLastPrintOrigDate,
+            this.colLastPrintOrigByUser,
+            this.colJVNO,
+            this.colDebitNote,
+            this.colCreditNote,
+            this.colDueDate,
+            this.colRefNo,
+            this.colSettledAmount,
+            this.colPaid,
+            this.colNotes1,
+            this.colIsDefault,
+            this.colActive});
 			this.gvInvoices.GridControl = this.gcInvoices;
 			this.gvInvoices.Name = "gvInvoices";
-			this.gvInvoices.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
-			this.gvInvoices.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+			this.gvInvoices.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+			this.gvInvoices.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
 			this.gvInvoices.OptionsBehavior.Editable = false;
 			this.gvInvoices.OptionsBehavior.ReadOnly = true;
 			this.gvInvoices.OptionsNavigation.AutoFocusNewRow = true;
@@ -4579,336 +4736,578 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gvInvoices.OptionsView.ShowFooter = true;
 			this.gvInvoices.OptionsView.ShowGroupPanel = false;
 			// 
-			// colSellingId
+			// colId
 			// 
-			this.colSellingId.Caption = "Id";
-			this.colSellingId.FieldName = "Id";
-			this.colSellingId.MinWidth = 25;
-			this.colSellingId.Name = "colSellingId";
-			this.colSellingId.OptionsColumn.TabStop = false;
-			this.colSellingId.Width = 76;
+			this.colId.FieldName = "Id";
+			this.colId.MinWidth = 25;
+			this.colId.Name = "colId";
+			this.colId.Width = 76;
 			// 
-			// colSellingQHeaderId
+			// colInvoiceNo
 			// 
-			this.colSellingQHeaderId.Caption = "QHeaderId";
-			this.colSellingQHeaderId.FieldName = "QHeaderId";
-			this.colSellingQHeaderId.MinWidth = 25;
-			this.colSellingQHeaderId.Name = "colSellingQHeaderId";
-			this.colSellingQHeaderId.OptionsColumn.TabStop = false;
-			this.colSellingQHeaderId.Width = 94;
+			this.colInvoiceNo.FieldName = "InvoiceNo";
+			this.colInvoiceNo.MinWidth = 25;
+			this.colInvoiceNo.Name = "colInvoiceNo";
+			this.colInvoiceNo.Visible = true;
+			this.colInvoiceNo.VisibleIndex = 0;
+			this.colInvoiceNo.Width = 94;
 			// 
-			// colSellingCustomerId
+			// colInvoiceRef
 			// 
-			this.colSellingCustomerId.Caption = "Customer Name";
-			this.colSellingCustomerId.ColumnEdit = this.repSellingMemberList;
-			this.colSellingCustomerId.FieldName = "MemberId";
-			this.colSellingCustomerId.MinWidth = 25;
-			this.colSellingCustomerId.Name = "colSellingCustomerId";
-			this.colSellingCustomerId.OptionsColumn.TabStop = false;
-			this.colSellingCustomerId.Visible = true;
-			this.colSellingCustomerId.VisibleIndex = 0;
-			this.colSellingCustomerId.Width = 148;
+			this.colInvoiceRef.FieldName = "InvoiceRef";
+			this.colInvoiceRef.MinWidth = 25;
+			this.colInvoiceRef.Name = "colInvoiceRef";
+			this.colInvoiceRef.Visible = true;
+			this.colInvoiceRef.VisibleIndex = 1;
+			this.colInvoiceRef.Width = 150;
 			// 
-			// repSellingMemberList
+			// colJobId1
 			// 
-			this.repSellingMemberList.AutoHeight = false;
-			this.repSellingMemberList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.colJobId1.Caption = "Job No";
+			this.colJobId1.FieldName = "JobId";
+			this.colJobId1.MinWidth = 25;
+			this.colJobId1.Name = "colJobId1";
+			this.colJobId1.Width = 94;
+			// 
+			// colDepartmentId
+			// 
+			this.colDepartmentId.FieldName = "DepartmentId";
+			this.colDepartmentId.MinWidth = 25;
+			this.colDepartmentId.Name = "colDepartmentId";
+			this.colDepartmentId.Width = 94;
+			// 
+			// colInvoiceDate
+			// 
+			this.colInvoiceDate.ColumnEdit = this.repDateEdit;
+			this.colInvoiceDate.FieldName = "InvoiceDate";
+			this.colInvoiceDate.MinWidth = 25;
+			this.colInvoiceDate.Name = "colInvoiceDate";
+			this.colInvoiceDate.Visible = true;
+			this.colInvoiceDate.VisibleIndex = 2;
+			this.colInvoiceDate.Width = 94;
+			// 
+			// repDateEdit
+			// 
+			this.repDateEdit.AutoHeight = false;
+			this.repDateEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repSellingMemberList.DisplayMember = "CustomerName";
-			this.repSellingMemberList.Name = "repSellingMemberList";
-			this.repSellingMemberList.NullText = "";
-			this.repSellingMemberList.PopupView = this.repositoryItemSearchLookUpEdit1View;
-			this.repSellingMemberList.ValueMember = "Id";
-			// 
-			// repositoryItemSearchLookUpEdit1View
-			// 
-			this.repositoryItemSearchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSellingMemberNameId,
-            this.colSellingMemberName});
-			this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-			this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
-			this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-			this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-			// 
-			// colSellingMemberNameId
-			// 
-			this.colSellingMemberNameId.Caption = "Id";
-			this.colSellingMemberNameId.FieldName = "Id";
-			this.colSellingMemberNameId.Name = "colSellingMemberNameId";
-			this.colSellingMemberNameId.Visible = true;
-			this.colSellingMemberNameId.VisibleIndex = 0;
-			this.colSellingMemberNameId.Width = 122;
-			// 
-			// colSellingMemberName
-			// 
-			this.colSellingMemberName.Caption = "Customer Name";
-			this.colSellingMemberName.FieldName = "CustomerName";
-			this.colSellingMemberName.Name = "colSellingMemberName";
-			this.colSellingMemberName.Visible = true;
-			this.colSellingMemberName.VisibleIndex = 1;
-			this.colSellingMemberName.Width = 1116;
-			// 
-			// colSellingItemId
-			// 
-			this.colSellingItemId.Caption = "Item";
-			this.colSellingItemId.ColumnEdit = this.repSellingItemsList;
-			this.colSellingItemId.FieldName = "ItemId";
-			this.colSellingItemId.MinWidth = 25;
-			this.colSellingItemId.Name = "colSellingItemId";
-			this.colSellingItemId.Visible = true;
-			this.colSellingItemId.VisibleIndex = 1;
-			this.colSellingItemId.Width = 79;
-			// 
-			// repSellingItemsList
-			// 
-			this.repSellingItemsList.AutoHeight = false;
-			this.repSellingItemsList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+			this.repDateEdit.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repSellingItemsList.DisplayMember = "ItemCode";
-			this.repSellingItemsList.Name = "repSellingItemsList";
-			this.repSellingItemsList.NullText = "";
-			this.repSellingItemsList.PopupView = this.gridView8;
-			this.repSellingItemsList.ValueMember = "Id";
+			this.repDateEdit.CalendarTimeProperties.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.repDateEdit.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+			this.repDateEdit.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.repDateEdit.Name = "repDateEdit";
+			this.repDateEdit.UseMaskAsDisplayFormat = true;
 			// 
-			// gridView8
+			// colMemberId
 			// 
-			this.gridView8.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colItemId,
-            this.gridColumn2,
-            this.gridColumn3});
-			this.gridView8.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-			this.gridView8.Name = "gridView8";
-			this.gridView8.OptionsSelection.EnableAppearanceFocusedCell = false;
-			this.gridView8.OptionsView.ShowGroupPanel = false;
+			this.colMemberId.Caption = "Member Name";
+			this.colMemberId.FieldName = "MemberId";
+			this.colMemberId.MinWidth = 25;
+			this.colMemberId.Name = "colMemberId";
+			this.colMemberId.Visible = true;
+			this.colMemberId.VisibleIndex = 3;
+			this.colMemberId.Width = 300;
 			// 
-			// colItemId
+			// colAttn
 			// 
-			this.colItemId.Caption = "Id";
-			this.colItemId.FieldName = "Id";
-			this.colItemId.Name = "colItemId";
-			this.colItemId.Visible = true;
-			this.colItemId.VisibleIndex = 0;
-			this.colItemId.Width = 74;
+			this.colAttn.FieldName = "Attn";
+			this.colAttn.MinWidth = 25;
+			this.colAttn.Name = "colAttn";
+			this.colAttn.Visible = true;
+			this.colAttn.VisibleIndex = 6;
+			this.colAttn.Width = 200;
 			// 
-			// gridColumn2
+			// colSubject
 			// 
-			this.gridColumn2.Caption = "Code";
-			this.gridColumn2.FieldName = "ItemCode";
-			this.gridColumn2.Name = "gridColumn2";
-			this.gridColumn2.Visible = true;
-			this.gridColumn2.VisibleIndex = 1;
-			this.gridColumn2.Width = 106;
+			this.colSubject.FieldName = "Subject";
+			this.colSubject.MinWidth = 25;
+			this.colSubject.Name = "colSubject";
+			this.colSubject.Visible = true;
+			this.colSubject.VisibleIndex = 7;
+			this.colSubject.Width = 200;
 			// 
-			// gridColumn3
+			// colSubject1
 			// 
-			this.gridColumn3.Caption = "Name";
-			this.gridColumn3.FieldName = "Description";
-			this.gridColumn3.Name = "gridColumn3";
-			this.gridColumn3.Visible = true;
-			this.gridColumn3.VisibleIndex = 2;
-			this.gridColumn3.Width = 742;
+			this.colSubject1.FieldName = "Subject1";
+			this.colSubject1.MinWidth = 25;
+			this.colSubject1.Name = "colSubject1";
+			this.colSubject1.Visible = true;
+			this.colSubject1.VisibleIndex = 8;
+			this.colSubject1.Width = 200;
 			// 
-			// colSellingDescription
+			// colSubject2
 			// 
-			this.colSellingDescription.Caption = "Description";
-			this.colSellingDescription.FieldName = "Description";
-			this.colSellingDescription.MinWidth = 25;
-			this.colSellingDescription.Name = "colSellingDescription";
-			this.colSellingDescription.Visible = true;
-			this.colSellingDescription.VisibleIndex = 2;
-			this.colSellingDescription.Width = 225;
+			this.colSubject2.FieldName = "Subject2";
+			this.colSubject2.MinWidth = 25;
+			this.colSubject2.Name = "colSubject2";
+			this.colSubject2.Visible = true;
+			this.colSubject2.VisibleIndex = 9;
+			this.colSubject2.Width = 200;
 			// 
-			// colSellingPaymentId
+			// colSubject3
 			// 
-			this.colSellingPaymentId.Caption = "Payment";
-			this.colSellingPaymentId.ColumnEdit = this.repSellingPayemntsList;
-			this.colSellingPaymentId.FieldName = "PaymentId";
-			this.colSellingPaymentId.MinWidth = 25;
-			this.colSellingPaymentId.Name = "colSellingPaymentId";
-			this.colSellingPaymentId.OptionsColumn.TabStop = false;
-			this.colSellingPaymentId.Visible = true;
-			this.colSellingPaymentId.VisibleIndex = 3;
-			this.colSellingPaymentId.Width = 94;
+			this.colSubject3.FieldName = "Subject3";
+			this.colSubject3.MinWidth = 25;
+			this.colSubject3.Name = "colSubject3";
+			this.colSubject3.Visible = true;
+			this.colSubject3.VisibleIndex = 10;
+			this.colSubject3.Width = 200;
 			// 
-			// repSellingPayemntsList
+			// colCurrencyId
 			// 
-			this.repSellingPayemntsList.AutoHeight = false;
-			this.repSellingPayemntsList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repSellingPayemntsList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Description", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repSellingPayemntsList.DisplayMember = "Description";
-			this.repSellingPayemntsList.Name = "repSellingPayemntsList";
-			this.repSellingPayemntsList.NullText = "";
-			this.repSellingPayemntsList.ValueMember = "Id";
+			this.colCurrencyId.FieldName = "CurrencyId";
+			this.colCurrencyId.MinWidth = 25;
+			this.colCurrencyId.Name = "colCurrencyId";
+			this.colCurrencyId.Visible = true;
+			this.colCurrencyId.VisibleIndex = 11;
+			this.colCurrencyId.Width = 94;
 			// 
-			// colSellingCurrencyId
+			// colCurrencyRate
 			// 
-			this.colSellingCurrencyId.Caption = "Currency";
-			this.colSellingCurrencyId.ColumnEdit = this.repSellingCurrenciesList;
-			this.colSellingCurrencyId.FieldName = "CurrencyId";
-			this.colSellingCurrencyId.MinWidth = 25;
-			this.colSellingCurrencyId.Name = "colSellingCurrencyId";
-			this.colSellingCurrencyId.OptionsColumn.TabStop = false;
-			this.colSellingCurrencyId.Visible = true;
-			this.colSellingCurrencyId.VisibleIndex = 4;
-			this.colSellingCurrencyId.Width = 94;
+			this.colCurrencyRate.DisplayFormat.FormatString = "{0:n2}";
+			this.colCurrencyRate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colCurrencyRate.FieldName = "CurrencyRate";
+			this.colCurrencyRate.GroupFormat.FormatString = "{0:n2}";
+			this.colCurrencyRate.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colCurrencyRate.MinWidth = 25;
+			this.colCurrencyRate.Name = "colCurrencyRate";
+			this.colCurrencyRate.Visible = true;
+			this.colCurrencyRate.VisibleIndex = 12;
+			this.colCurrencyRate.Width = 100;
 			// 
-			// repSellingCurrenciesList
+			// colAmount
 			// 
-			this.repSellingCurrenciesList.AutoHeight = false;
-			this.repSellingCurrenciesList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repSellingCurrenciesList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CurrencyCode", "Code"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CurrencyName", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repSellingCurrenciesList.DisplayMember = "CurrencyCode";
-			this.repSellingCurrenciesList.Name = "repSellingCurrenciesList";
-			this.repSellingCurrenciesList.NullText = "";
-			this.repSellingCurrenciesList.ValueMember = "Id";
+			this.colAmount.DisplayFormat.FormatString = "{0:n2}";
+			this.colAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colAmount.FieldName = "Amount";
+			this.colAmount.GroupFormat.FormatString = "{0:n2}";
+			this.colAmount.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colAmount.MinWidth = 25;
+			this.colAmount.Name = "colAmount";
+			this.colAmount.Visible = true;
+			this.colAmount.VisibleIndex = 13;
+			this.colAmount.Width = 150;
 			// 
-			// colSellingRate
+			// colLAmount
 			// 
-			this.colSellingRate.Caption = "Rate";
-			this.colSellingRate.DisplayFormat.FormatString = "n";
-			this.colSellingRate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingRate.FieldName = "Rate";
-			this.colSellingRate.MinWidth = 25;
-			this.colSellingRate.Name = "colSellingRate";
-			this.colSellingRate.OptionsColumn.TabStop = false;
-			this.colSellingRate.Visible = true;
-			this.colSellingRate.VisibleIndex = 5;
-			this.colSellingRate.Width = 94;
+			this.colLAmount.DisplayFormat.FormatString = "{0:n2}";
+			this.colLAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colLAmount.FieldName = "LAmount";
+			this.colLAmount.GroupFormat.FormatString = "{0:n2}";
+			this.colLAmount.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colLAmount.MinWidth = 25;
+			this.colLAmount.Name = "colLAmount";
+			this.colLAmount.Visible = true;
+			this.colLAmount.VisibleIndex = 14;
+			this.colLAmount.Width = 150;
 			// 
-			// colSellingAmount
+			// colFAmount
 			// 
-			this.colSellingAmount.Caption = "Amount";
-			this.colSellingAmount.DisplayFormat.FormatString = "n";
-			this.colSellingAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingAmount.FieldName = "Amount";
-			this.colSellingAmount.MinWidth = 25;
-			this.colSellingAmount.Name = "colSellingAmount";
-			this.colSellingAmount.Visible = true;
-			this.colSellingAmount.VisibleIndex = 6;
-			this.colSellingAmount.Width = 100;
+			this.colFAmount.DisplayFormat.FormatString = "{0:n2}";
+			this.colFAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colFAmount.FieldName = "FAmount";
+			this.colFAmount.GroupFormat.FormatString = "{0:n2}";
+			this.colFAmount.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colFAmount.MinWidth = 25;
+			this.colFAmount.Name = "colFAmount";
+			this.colFAmount.Visible = true;
+			this.colFAmount.VisibleIndex = 15;
+			this.colFAmount.Width = 150;
 			// 
-			// colSellingL_Amount
+			// colTotalItemVAT
 			// 
-			this.colSellingL_Amount.Caption = "L.L.";
-			this.colSellingL_Amount.DisplayFormat.FormatString = "{0:n2}";
-			this.colSellingL_Amount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingL_Amount.FieldName = "LocalAmount";
-			this.colSellingL_Amount.MinWidth = 25;
-			this.colSellingL_Amount.Name = "colSellingL_Amount";
-			this.colSellingL_Amount.OptionsColumn.ReadOnly = true;
-			this.colSellingL_Amount.OptionsColumn.TabStop = false;
-			this.colSellingL_Amount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "LocalAmount", "{0:n2}", "1")});
-			this.colSellingL_Amount.Visible = true;
-			this.colSellingL_Amount.VisibleIndex = 7;
-			this.colSellingL_Amount.Width = 170;
+			this.colTotalItemVAT.DisplayFormat.FormatString = "{0:n2}";
+			this.colTotalItemVAT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalItemVAT.FieldName = "TotalItemVAT";
+			this.colTotalItemVAT.GroupFormat.FormatString = "{0:n2}";
+			this.colTotalItemVAT.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalItemVAT.MinWidth = 25;
+			this.colTotalItemVAT.Name = "colTotalItemVAT";
+			this.colTotalItemVAT.Visible = true;
+			this.colTotalItemVAT.VisibleIndex = 16;
+			this.colTotalItemVAT.Width = 150;
 			// 
-			// colSellingF_Amount
+			// colTotalItemNonVAT
 			// 
-			this.colSellingF_Amount.Caption = "USD";
-			this.colSellingF_Amount.DisplayFormat.FormatString = "{0:n2}";
-			this.colSellingF_Amount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingF_Amount.FieldName = "ForeignAmount";
-			this.colSellingF_Amount.MinWidth = 25;
-			this.colSellingF_Amount.Name = "colSellingF_Amount";
-			this.colSellingF_Amount.OptionsColumn.ReadOnly = true;
-			this.colSellingF_Amount.OptionsColumn.TabStop = false;
-			this.colSellingF_Amount.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom, "ForeignAmount", "{0:n2}", "2")});
-			this.colSellingF_Amount.Visible = true;
-			this.colSellingF_Amount.VisibleIndex = 8;
-			this.colSellingF_Amount.Width = 170;
+			this.colTotalItemNonVAT.DisplayFormat.FormatString = "{0:n2}";
+			this.colTotalItemNonVAT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalItemNonVAT.FieldName = "TotalItemNonVAT";
+			this.colTotalItemNonVAT.GroupFormat.FormatString = "{0:n2}";
+			this.colTotalItemNonVAT.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalItemNonVAT.MinWidth = 25;
+			this.colTotalItemNonVAT.Name = "colTotalItemNonVAT";
+			this.colTotalItemNonVAT.Visible = true;
+			this.colTotalItemNonVAT.VisibleIndex = 17;
+			this.colTotalItemNonVAT.Width = 150;
 			// 
-			// colSellingVat
+			// colTotalVAT
 			// 
-			this.colSellingVat.Caption = "VAT";
-			this.colSellingVat.FieldName = "Vat";
-			this.colSellingVat.MinWidth = 25;
-			this.colSellingVat.Name = "colSellingVat";
-			this.colSellingVat.OptionsColumn.TabStop = false;
-			this.colSellingVat.Visible = true;
-			this.colSellingVat.VisibleIndex = 9;
-			this.colSellingVat.Width = 94;
+			this.colTotalVAT.Caption = "VAT";
+			this.colTotalVAT.FieldName = "TotalVAT";
+			this.colTotalVAT.MinWidth = 25;
+			this.colTotalVAT.Name = "colTotalVAT";
+			this.colTotalVAT.Visible = true;
+			this.colTotalVAT.VisibleIndex = 18;
+			this.colTotalVAT.Width = 150;
 			// 
-			// colSellingVatRate
+			// colLTotalVAT
 			// 
-			this.colSellingVatRate.Caption = "VAT Rate";
-			this.colSellingVatRate.DisplayFormat.FormatString = "{0:n2}%";
-			this.colSellingVatRate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-			this.colSellingVatRate.FieldName = "VatRate";
-			this.colSellingVatRate.MinWidth = 25;
-			this.colSellingVatRate.Name = "colSellingVatRate";
-			this.colSellingVatRate.OptionsColumn.TabStop = false;
-			this.colSellingVatRate.Visible = true;
-			this.colSellingVatRate.VisibleIndex = 10;
-			this.colSellingVatRate.Width = 94;
+			this.colLTotalVAT.Caption = "VAT (L.L.)";
+			this.colLTotalVAT.DisplayFormat.FormatString = "{0:n2}";
+			this.colLTotalVAT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colLTotalVAT.FieldName = "LTotalVAT";
+			this.colLTotalVAT.GroupFormat.FormatString = "{0:n2}";
+			this.colLTotalVAT.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colLTotalVAT.MinWidth = 25;
+			this.colLTotalVAT.Name = "colLTotalVAT";
+			this.colLTotalVAT.Visible = true;
+			this.colLTotalVAT.VisibleIndex = 19;
+			this.colLTotalVAT.Width = 150;
 			// 
-			// colSellingNotes
+			// colFTotalVAT
 			// 
-			this.colSellingNotes.Caption = "Notes";
-			this.colSellingNotes.FieldName = "Notes";
-			this.colSellingNotes.MinWidth = 25;
-			this.colSellingNotes.Name = "colSellingNotes";
-			this.colSellingNotes.Visible = true;
-			this.colSellingNotes.VisibleIndex = 11;
-			this.colSellingNotes.Width = 364;
+			this.colFTotalVAT.Caption = "VAT (USD)";
+			this.colFTotalVAT.DisplayFormat.FormatString = "{0:n2}";
+			this.colFTotalVAT.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colFTotalVAT.FieldName = "FTotalVAT";
+			this.colFTotalVAT.GroupFormat.FormatString = "{0:n2}";
+			this.colFTotalVAT.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colFTotalVAT.MinWidth = 25;
+			this.colFTotalVAT.Name = "colFTotalVAT";
+			this.colFTotalVAT.Visible = true;
+			this.colFTotalVAT.VisibleIndex = 20;
+			this.colFTotalVAT.Width = 150;
 			// 
-			// colSellingDeleted
+			// colNotify1
 			// 
-			this.colSellingDeleted.Caption = "Deleted";
-			this.colSellingDeleted.FieldName = "Deleted";
-			this.colSellingDeleted.MinWidth = 25;
-			this.colSellingDeleted.Name = "colSellingDeleted";
-			this.colSellingDeleted.Width = 94;
+			this.colNotify1.FieldName = "Notify";
+			this.colNotify1.MinWidth = 25;
+			this.colNotify1.Name = "colNotify1";
+			this.colNotify1.Visible = true;
+			this.colNotify1.VisibleIndex = 5;
+			this.colNotify1.Width = 94;
 			// 
-			// colSellingVatAmountLL
+			// colToNotified
 			// 
-			this.colSellingVatAmountLL.Caption = "Vat Amount LL";
-			this.colSellingVatAmountLL.DisplayFormat.FormatString = "{0:n2}";
-			this.colSellingVatAmountLL.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingVatAmountLL.FieldName = "LocalVatAmount";
-			this.colSellingVatAmountLL.MinWidth = 25;
-			this.colSellingVatAmountLL.Name = "colSellingVatAmountLL";
-			this.colSellingVatAmountLL.OptionsColumn.ReadOnly = true;
-			this.colSellingVatAmountLL.OptionsColumn.TabStop = false;
-			this.colSellingVatAmountLL.Visible = true;
-			this.colSellingVatAmountLL.VisibleIndex = 12;
-			this.colSellingVatAmountLL.Width = 170;
+			this.colToNotified.FieldName = "ToNotified";
+			this.colToNotified.MinWidth = 25;
+			this.colToNotified.Name = "colToNotified";
+			this.colToNotified.Visible = true;
+			this.colToNotified.VisibleIndex = 4;
+			this.colToNotified.Width = 94;
 			// 
-			// colSellingVatAmountUSD
+			// colIsAgent
 			// 
-			this.colSellingVatAmountUSD.Caption = "Vat Amount USD";
-			this.colSellingVatAmountUSD.DisplayFormat.FormatString = "{0:n2}";
-			this.colSellingVatAmountUSD.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingVatAmountUSD.FieldName = "ForeignVatAmount";
-			this.colSellingVatAmountUSD.MinWidth = 25;
-			this.colSellingVatAmountUSD.Name = "colSellingVatAmountUSD";
-			this.colSellingVatAmountUSD.OptionsColumn.ReadOnly = true;
-			this.colSellingVatAmountUSD.OptionsColumn.TabStop = false;
-			this.colSellingVatAmountUSD.Visible = true;
-			this.colSellingVatAmountUSD.VisibleIndex = 13;
-			this.colSellingVatAmountUSD.Width = 170;
+			this.colIsAgent.ColumnEdit = this.repInvCheckEdit;
+			this.colIsAgent.FieldName = "IsAgent";
+			this.colIsAgent.MinWidth = 25;
+			this.colIsAgent.Name = "colIsAgent";
+			this.colIsAgent.Visible = true;
+			this.colIsAgent.VisibleIndex = 21;
+			this.colIsAgent.Width = 94;
 			// 
-			// colSellingVatAmount
+			// repInvCheckEdit
 			// 
-			this.colSellingVatAmount.Caption = "Vat Amount";
-			this.colSellingVatAmount.DisplayFormat.FormatString = "{0:n2}";
-			this.colSellingVatAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-			this.colSellingVatAmount.FieldName = "VatAmount";
-			this.colSellingVatAmount.MinWidth = 25;
-			this.colSellingVatAmount.Name = "colSellingVatAmount";
-			this.colSellingVatAmount.OptionsColumn.ReadOnly = true;
-			this.colSellingVatAmount.OptionsColumn.TabStop = false;
-			this.colSellingVatAmount.Visible = true;
-			this.colSellingVatAmount.VisibleIndex = 14;
-			this.colSellingVatAmount.Width = 170;
+			this.repInvCheckEdit.AutoHeight = false;
+			this.repInvCheckEdit.Name = "repInvCheckEdit";
+			// 
+			// colSalesId
+			// 
+			this.colSalesId.FieldName = "SalesId";
+			this.colSalesId.MinWidth = 25;
+			this.colSalesId.Name = "colSalesId";
+			this.colSalesId.Visible = true;
+			this.colSalesId.VisibleIndex = 22;
+			this.colSalesId.Width = 94;
+			// 
+			// colUserId
+			// 
+			this.colUserId.FieldName = "UserId";
+			this.colUserId.MinWidth = 25;
+			this.colUserId.Name = "colUserId";
+			this.colUserId.Visible = true;
+			this.colUserId.VisibleIndex = 23;
+			this.colUserId.Width = 94;
+			// 
+			// colOperationDate
+			// 
+			this.colOperationDate.FieldName = "OperationDate";
+			this.colOperationDate.MinWidth = 25;
+			this.colOperationDate.Name = "colOperationDate";
+			this.colOperationDate.Visible = true;
+			this.colOperationDate.VisibleIndex = 24;
+			this.colOperationDate.Width = 94;
+			// 
+			// colModifyDate
+			// 
+			this.colModifyDate.FieldName = "ModifyDate";
+			this.colModifyDate.MinWidth = 25;
+			this.colModifyDate.Name = "colModifyDate";
+			this.colModifyDate.Visible = true;
+			this.colModifyDate.VisibleIndex = 25;
+			this.colModifyDate.Width = 94;
+			// 
+			// colPosted
+			// 
+			this.colPosted.FieldName = "Posted";
+			this.colPosted.MinWidth = 25;
+			this.colPosted.Name = "colPosted";
+			this.colPosted.Visible = true;
+			this.colPosted.VisibleIndex = 26;
+			this.colPosted.Width = 94;
+			// 
+			// colOriginal1
+			// 
+			this.colOriginal1.FieldName = "Original";
+			this.colOriginal1.MinWidth = 25;
+			this.colOriginal1.Name = "colOriginal1";
+			this.colOriginal1.Visible = true;
+			this.colOriginal1.VisibleIndex = 27;
+			this.colOriginal1.Width = 94;
+			// 
+			// colClosed
+			// 
+			this.colClosed.FieldName = "Closed";
+			this.colClosed.MinWidth = 25;
+			this.colClosed.Name = "colClosed";
+			this.colClosed.Visible = true;
+			this.colClosed.VisibleIndex = 28;
+			this.colClosed.Width = 94;
+			// 
+			// colClosedDate
+			// 
+			this.colClosedDate.FieldName = "ClosedDate";
+			this.colClosedDate.MinWidth = 25;
+			this.colClosedDate.Name = "colClosedDate";
+			this.colClosedDate.Visible = true;
+			this.colClosedDate.VisibleIndex = 29;
+			this.colClosedDate.Width = 94;
+			// 
+			// colCanceled
+			// 
+			this.colCanceled.FieldName = "Canceled";
+			this.colCanceled.MinWidth = 25;
+			this.colCanceled.Name = "colCanceled";
+			this.colCanceled.Visible = true;
+			this.colCanceled.VisibleIndex = 30;
+			this.colCanceled.Width = 94;
+			// 
+			// colCanceledDate
+			// 
+			this.colCanceledDate.FieldName = "CanceledDate";
+			this.colCanceledDate.MinWidth = 25;
+			this.colCanceledDate.Name = "colCanceledDate";
+			this.colCanceledDate.Visible = true;
+			this.colCanceledDate.VisibleIndex = 31;
+			this.colCanceledDate.Width = 94;
+			// 
+			// colReason
+			// 
+			this.colReason.FieldName = "Reason";
+			this.colReason.MinWidth = 25;
+			this.colReason.Name = "colReason";
+			this.colReason.Visible = true;
+			this.colReason.VisibleIndex = 32;
+			this.colReason.Width = 94;
+			// 
+			// colCurSLRate
+			// 
+			this.colCurSLRate.FieldName = "CurSLRate";
+			this.colCurSLRate.MinWidth = 25;
+			this.colCurSLRate.Name = "colCurSLRate";
+			this.colCurSLRate.Visible = true;
+			this.colCurSLRate.VisibleIndex = 33;
+			this.colCurSLRate.Width = 150;
+			// 
+			// colTotalReceived
+			// 
+			this.colTotalReceived.FieldName = "TotalReceived";
+			this.colTotalReceived.MinWidth = 25;
+			this.colTotalReceived.Name = "colTotalReceived";
+			this.colTotalReceived.Visible = true;
+			this.colTotalReceived.VisibleIndex = 34;
+			this.colTotalReceived.Width = 150;
+			// 
+			// colDiffOfExchange
+			// 
+			this.colDiffOfExchange.FieldName = "DiffOfExchange";
+			this.colDiffOfExchange.MinWidth = 25;
+			this.colDiffOfExchange.Name = "colDiffOfExchange";
+			this.colDiffOfExchange.Visible = true;
+			this.colDiffOfExchange.VisibleIndex = 35;
+			this.colDiffOfExchange.Width = 150;
+			// 
+			// colTotalCreditNote
+			// 
+			this.colTotalCreditNote.FieldName = "TotalCreditNote";
+			this.colTotalCreditNote.MinWidth = 25;
+			this.colTotalCreditNote.Name = "colTotalCreditNote";
+			this.colTotalCreditNote.Visible = true;
+			this.colTotalCreditNote.VisibleIndex = 36;
+			this.colTotalCreditNote.Width = 94;
+			// 
+			// colTotalDebitNote
+			// 
+			this.colTotalDebitNote.FieldName = "TotalDebitNote";
+			this.colTotalDebitNote.MinWidth = 25;
+			this.colTotalDebitNote.Name = "colTotalDebitNote";
+			this.colTotalDebitNote.Visible = true;
+			this.colTotalDebitNote.VisibleIndex = 37;
+			this.colTotalDebitNote.Width = 150;
+			// 
+			// colTotalDue
+			// 
+			this.colTotalDue.FieldName = "TotalDue";
+			this.colTotalDue.MinWidth = 25;
+			this.colTotalDue.Name = "colTotalDue";
+			this.colTotalDue.Visible = true;
+			this.colTotalDue.VisibleIndex = 38;
+			this.colTotalDue.Width = 150;
+			// 
+			// colLocked
+			// 
+			this.colLocked.ColumnEdit = this.repInvCheckEdit;
+			this.colLocked.FieldName = "Locked";
+			this.colLocked.MinWidth = 25;
+			this.colLocked.Name = "colLocked";
+			this.colLocked.Visible = true;
+			this.colLocked.VisibleIndex = 39;
+			this.colLocked.Width = 94;
+			// 
+			// colPrintOriginalDate
+			// 
+			this.colPrintOriginalDate.FieldName = "PrintOriginalDate";
+			this.colPrintOriginalDate.MinWidth = 25;
+			this.colPrintOriginalDate.Name = "colPrintOriginalDate";
+			this.colPrintOriginalDate.Visible = true;
+			this.colPrintOriginalDate.VisibleIndex = 40;
+			this.colPrintOriginalDate.Width = 94;
+			// 
+			// colPrintOriginalByUser
+			// 
+			this.colPrintOriginalByUser.FieldName = "PrintOriginalByUser";
+			this.colPrintOriginalByUser.MinWidth = 25;
+			this.colPrintOriginalByUser.Name = "colPrintOriginalByUser";
+			this.colPrintOriginalByUser.Visible = true;
+			this.colPrintOriginalByUser.VisibleIndex = 41;
+			this.colPrintOriginalByUser.Width = 94;
+			// 
+			// colLastPrintOrigDate
+			// 
+			this.colLastPrintOrigDate.FieldName = "LastPrintOrigDate";
+			this.colLastPrintOrigDate.MinWidth = 25;
+			this.colLastPrintOrigDate.Name = "colLastPrintOrigDate";
+			this.colLastPrintOrigDate.Visible = true;
+			this.colLastPrintOrigDate.VisibleIndex = 42;
+			this.colLastPrintOrigDate.Width = 94;
+			// 
+			// colLastPrintOrigByUser
+			// 
+			this.colLastPrintOrigByUser.FieldName = "LastPrintOrigByUser";
+			this.colLastPrintOrigByUser.MinWidth = 25;
+			this.colLastPrintOrigByUser.Name = "colLastPrintOrigByUser";
+			this.colLastPrintOrigByUser.Visible = true;
+			this.colLastPrintOrigByUser.VisibleIndex = 43;
+			this.colLastPrintOrigByUser.Width = 94;
+			// 
+			// colJVNO
+			// 
+			this.colJVNO.FieldName = "JVNO";
+			this.colJVNO.MinWidth = 25;
+			this.colJVNO.Name = "colJVNO";
+			this.colJVNO.Visible = true;
+			this.colJVNO.VisibleIndex = 44;
+			this.colJVNO.Width = 94;
+			// 
+			// colDebitNote
+			// 
+			this.colDebitNote.ColumnEdit = this.repInvCheckEdit;
+			this.colDebitNote.FieldName = "DebitNote";
+			this.colDebitNote.MinWidth = 25;
+			this.colDebitNote.Name = "colDebitNote";
+			this.colDebitNote.Visible = true;
+			this.colDebitNote.VisibleIndex = 45;
+			this.colDebitNote.Width = 94;
+			// 
+			// colCreditNote
+			// 
+			this.colCreditNote.ColumnEdit = this.repInvCheckEdit;
+			this.colCreditNote.FieldName = "CreditNote";
+			this.colCreditNote.MinWidth = 25;
+			this.colCreditNote.Name = "colCreditNote";
+			this.colCreditNote.Visible = true;
+			this.colCreditNote.VisibleIndex = 46;
+			this.colCreditNote.Width = 94;
+			// 
+			// colDueDate
+			// 
+			this.colDueDate.ColumnEdit = this.repDateEdit;
+			this.colDueDate.FieldName = "DueDate";
+			this.colDueDate.MinWidth = 25;
+			this.colDueDate.Name = "colDueDate";
+			this.colDueDate.Visible = true;
+			this.colDueDate.VisibleIndex = 47;
+			this.colDueDate.Width = 94;
+			// 
+			// colRefNo
+			// 
+			this.colRefNo.FieldName = "RefNo";
+			this.colRefNo.MinWidth = 25;
+			this.colRefNo.Name = "colRefNo";
+			this.colRefNo.Visible = true;
+			this.colRefNo.VisibleIndex = 48;
+			this.colRefNo.Width = 94;
+			// 
+			// colSettledAmount
+			// 
+			this.colSettledAmount.DisplayFormat.FormatString = "{0:n2}";
+			this.colSettledAmount.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colSettledAmount.FieldName = "SettledAmount";
+			this.colSettledAmount.GroupFormat.FormatString = "{0:n2}";
+			this.colSettledAmount.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colSettledAmount.MinWidth = 25;
+			this.colSettledAmount.Name = "colSettledAmount";
+			this.colSettledAmount.Visible = true;
+			this.colSettledAmount.VisibleIndex = 49;
+			this.colSettledAmount.Width = 94;
+			// 
+			// colPaid
+			// 
+			this.colPaid.ColumnEdit = this.repInvCheckEdit;
+			this.colPaid.FieldName = "Paid";
+			this.colPaid.MinWidth = 25;
+			this.colPaid.Name = "colPaid";
+			this.colPaid.Visible = true;
+			this.colPaid.VisibleIndex = 50;
+			this.colPaid.Width = 94;
+			// 
+			// colNotes1
+			// 
+			this.colNotes1.FieldName = "Notes";
+			this.colNotes1.MinWidth = 25;
+			this.colNotes1.Name = "colNotes1";
+			this.colNotes1.Visible = true;
+			this.colNotes1.VisibleIndex = 51;
+			this.colNotes1.Width = 94;
+			// 
+			// colIsDefault
+			// 
+			this.colIsDefault.FieldName = "IsDefault";
+			this.colIsDefault.MinWidth = 25;
+			this.colIsDefault.Name = "colIsDefault";
+			this.colIsDefault.Visible = true;
+			this.colIsDefault.VisibleIndex = 52;
+			this.colIsDefault.Width = 94;
+			// 
+			// colActive
+			// 
+			this.colActive.FieldName = "Active";
+			this.colActive.MinWidth = 25;
+			this.colActive.Name = "colActive";
+			this.colActive.Visible = true;
+			this.colActive.VisibleIndex = 53;
+			this.colActive.Width = 94;
 			// 
 			// layoutControlGroup3
 			// 
@@ -4933,7 +5332,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.tabCostGroup.Caption = "Cost Sheets";
 			this.tabCostGroup.Controls.Add(this.layoutCostSheetsGrid);
 			this.tabCostGroup.Name = "tabCostGroup";
-			this.tabCostGroup.Size = new System.Drawing.Size(1424, 242);
+			this.tabCostGroup.Size = new System.Drawing.Size(1420, 251);
 			// 
 			// layoutCostSheetsGrid
 			// 
@@ -4942,7 +5341,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutCostSheetsGrid.Location = new System.Drawing.Point(0, 0);
 			this.layoutCostSheetsGrid.Name = "layoutCostSheetsGrid";
 			this.layoutCostSheetsGrid.Root = this.layoutControlGroup4;
-			this.layoutCostSheetsGrid.Size = new System.Drawing.Size(1424, 242);
+			this.layoutCostSheetsGrid.Size = new System.Drawing.Size(1420, 251);
 			this.layoutCostSheetsGrid.TabIndex = 0;
 			this.layoutCostSheetsGrid.Text = "layoutControl1";
 			// 
@@ -4959,7 +5358,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.repCostItemsList,
             this.repCostMethodofPaymentList,
             this.repCostCurrenciesList});
-			this.gcCosts.Size = new System.Drawing.Size(1396, 214);
+			this.gcCosts.Size = new System.Drawing.Size(1392, 223);
 			this.gcCosts.TabIndex = 4;
 			this.gcCosts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCosts});
@@ -5413,7 +5812,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem4});
 			this.layoutControlGroup4.Name = "layoutControlGroup4";
-			this.layoutControlGroup4.Size = new System.Drawing.Size(1424, 242);
+			this.layoutControlGroup4.Size = new System.Drawing.Size(1420, 251);
 			this.layoutControlGroup4.TextVisible = false;
 			// 
 			// layoutControlItem4
@@ -5421,7 +5820,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlItem4.Control = this.gcCosts;
 			this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem4.Name = "layoutControlItem4";
-			this.layoutControlItem4.Size = new System.Drawing.Size(1400, 218);
+			this.layoutControlItem4.Size = new System.Drawing.Size(1396, 227);
 			this.layoutControlItem4.TextVisible = false;
 			// 
 			// tabDocuments
@@ -5526,7 +5925,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.openDocuments.Size = new System.Drawing.Size(1392, 30);
 			this.openDocuments.StyleController = this.layoutAttachedDocumnets;
 			this.openDocuments.TabIndex = 6;
-			this.openDocuments.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.openFolder_ButtonClick);
 			// 
 			// layoutControlGroup5
 			// 
@@ -5561,7 +5959,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.tabCommissions.Caption = "Sales Management";
 			this.tabCommissions.Controls.Add(this.layoutSalesManagement);
 			this.tabCommissions.Name = "tabCommissions";
-			this.tabCommissions.Size = new System.Drawing.Size(1424, 242);
+			this.tabCommissions.Size = new System.Drawing.Size(1420, 251);
 			// 
 			// layoutSalesManagement
 			// 
@@ -5570,7 +5968,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutSalesManagement.Location = new System.Drawing.Point(0, 0);
 			this.layoutSalesManagement.Name = "layoutSalesManagement";
 			this.layoutSalesManagement.Root = this.layoutControlGroup6;
-			this.layoutSalesManagement.Size = new System.Drawing.Size(1424, 242);
+			this.layoutSalesManagement.Size = new System.Drawing.Size(1420, 251);
 			this.layoutSalesManagement.TabIndex = 0;
 			this.layoutSalesManagement.Text = "Sales Management";
 			// 
@@ -5584,7 +5982,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gridControl2.Name = "gridControl2";
 			this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-			this.gridControl2.Size = new System.Drawing.Size(1396, 214);
+			this.gridControl2.Size = new System.Drawing.Size(1392, 223);
 			this.gridControl2.TabIndex = 6;
 			this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView10});
@@ -5865,7 +6263,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem6});
 			this.layoutControlGroup6.Name = "layoutControlGroup6";
-			this.layoutControlGroup6.Size = new System.Drawing.Size(1424, 242);
+			this.layoutControlGroup6.Size = new System.Drawing.Size(1420, 251);
 			this.layoutControlGroup6.TextVisible = false;
 			// 
 			// layoutControlItem6
@@ -5873,7 +6271,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutControlItem6.Control = this.gridControl2;
 			this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem6.Name = "layoutControlItem6";
-			this.layoutControlItem6.Size = new System.Drawing.Size(1400, 218);
+			this.layoutControlItem6.Size = new System.Drawing.Size(1396, 227);
 			this.layoutControlItem6.TextVisible = false;
 			// 
 			// tabShipmentStatus
@@ -6050,19 +6448,19 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1448, 949);
 			this.Controls.Add(this.mainLayout);
-			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.rcMain);
+			this.Controls.Add(this.ribbonStatusBar1);
 			this.Name = "JobSeaImportEditForm";
 			this.Ribbon = this.rcMain;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.StatusBar = this.ribbonStatusBar1;
 			this.Text = "Edit Job Sea Import Record";
-			((System.ComponentModel.ISupportInitialize)(this.rcMain)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsJobSeaImport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsJobSeaImportDetails)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsCosts)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsInvoices)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsDocuments)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.rcMain)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).EndInit();
 			this.mainLayout.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.tabGroupNotes)).EndInit();
@@ -6169,8 +6567,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.dtPaidDoDate.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtTejrimDate.Properties.CalendarTimeProperties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtTejrimDate.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dateEdit10.Properties.CalendarTimeProperties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dateEdit10.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtDeliveryDate.Properties.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dtDeliveryDate.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtPendingForDelivery.Properties.CalendarTimeProperties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtPendingForDelivery.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtReadyForClearance.Properties.CalendarTimeProperties)).EndInit();
@@ -6204,8 +6602,6 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lblVessels)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lblFeederVessels)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblAgents)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblSeaCarriers)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblIncoTerms)).EndInit();
@@ -6229,6 +6625,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.lblConfirmEmptyContainerDate)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.lblShippedWith)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lblVessels)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lblFeederVessels)).EndInit();
 			this.tabPackageDetails.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.layoutPackageDetails)).EndInit();
 			this.layoutPackageDetails.ResumeLayout(false);
@@ -6279,7 +6677,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.gcJobDetails)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvJobDetails)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCountries)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repShippers)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
 			this.tabRequirements.ResumeLayout(false);
@@ -6293,9 +6693,13 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			((System.ComponentModel.ISupportInitialize)(this.gcRequiredOnWater)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvRequiredOnWater)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCheckEdit)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repOWConditionsList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gcRequiredToBeLoaded)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvRequiredToBeLoaded)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCheckBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repTblConditionsList)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repRequirmentsDateEdit.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repRequirmentsDateEdit)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup12)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
@@ -6310,12 +6714,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.layoutInvoicesGrid.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.gcInvoices)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvInvoices)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingMemberList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingItemsList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingPayemntsList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repSellingCurrenciesList)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repDateEdit.CalendarTimeProperties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repDateEdit)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repInvCheckEdit)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
 			this.tabCostGroup.ResumeLayout(false);
@@ -6372,86 +6773,278 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl rcMain;
-        private DevExpress.XtraBars.BarButtonItem btnSave;
-        private DevExpress.XtraBars.BarButtonItem btnClose;
-        private DevExpress.XtraBars.BarButtonItem btnSaveAndClose;
-        private DevExpress.XtraBars.BarButtonItem btnDelete;
-        private DevExpress.XtraBars.BarButtonItem biMailMerge;
-        private DevExpress.XtraBars.BarButtonItem biMeeting;
-        private DevExpress.XtraBars.BarButtonItem bmiPrintProfile;
-        private DevExpress.XtraBars.BarButtonItem bmiPrintSummary;
-        private DevExpress.XtraBars.BarButtonItem btnPrint;
-        private DevExpress.XtraBars.BarButtonItem bmiPrintDirectory;
-        private DevExpress.XtraBars.BarButtonItem bmiPrintTaskList;
-        private DevExpress.XtraBars.RibbonGalleryBarItem galleryQuickLetters;
-        private DevExpress.XtraBars.BarButtonItem biShowMap;
-        private DevExpress.XtraBars.BarButtonItem btnRefresh;
-        private DevExpress.XtraBars.BarButtonItem btnNew;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rpMain;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private System.Windows.Forms.BindingSource bsJobSeaImport;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private System.Windows.Forms.BindingSource bsJobSeaImportDetails;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private System.Windows.Forms.BindingSource bsDocuments;
         private System.Windows.Forms.BindingSource bsInvoices;
         private System.Windows.Forms.BindingSource bsCosts;
-        private DevExpress.XtraBars.RibbonGalleryBarItem rgJobStatusAction;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rpInvoice;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem btnNewInvoice;
+		private DevExpress.XtraBars.Ribbon.RibbonControl rcMain;
+		private DevExpress.XtraBars.BarButtonItem btnSave;
+		private DevExpress.XtraBars.BarButtonItem btnClose;
+		private DevExpress.XtraBars.BarButtonItem btnSaveAndClose;
+		private DevExpress.XtraBars.BarButtonItem btnDelete;
+		private DevExpress.XtraBars.BarButtonItem biMailMerge;
+		private DevExpress.XtraBars.BarButtonItem biMeeting;
+		private DevExpress.XtraBars.BarButtonItem bmiPrintProfile;
+		private DevExpress.XtraBars.BarButtonItem bmiPrintSummary;
+		private DevExpress.XtraBars.BarButtonItem btnPrint;
+		private DevExpress.XtraBars.BarButtonItem bmiPrintDirectory;
+		private DevExpress.XtraBars.BarButtonItem bmiPrintTaskList;
+		private DevExpress.XtraBars.RibbonGalleryBarItem galleryQuickLetters;
+		private DevExpress.XtraBars.BarButtonItem biShowMap;
+		private DevExpress.XtraBars.BarButtonItem btnRefresh;
+		private DevExpress.XtraBars.BarButtonItem btnNew;
+		private DevExpress.XtraBars.RibbonGalleryBarItem rgJobStatusAction;
+		private DevExpress.XtraBars.BarButtonItem btnNewInvoice;
 		private DevExpress.XtraBars.BarButtonItem btnNewCost;
-		private DevExpress.XtraBars.Ribbon.RibbonPage rpCost;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
 		private DevExpress.XtraBars.BarCheckItem btnProtected;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSecurity;
 		private DevExpress.XtraBars.BarButtonItem btnCloseInvoice;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
-		private DevExpress.XtraBars.BarButtonItem btnSaveInvoice;
 		private DevExpress.XtraBars.BarButtonItem btnSaveAndCloseInvoice;
 		private DevExpress.XtraBars.BarButtonItem btnRefreshInvoice;
 		private DevExpress.XtraBars.BarButtonItem btnDeleteInvoice;
 		private DevExpress.XtraBars.BarButtonItem btnPrintInvoice;
-		private DevExpress.XtraBars.BarButtonItem btnInvoiceProtected;
 		private DevExpress.XtraBars.BarButtonItem btnPrintOriginalInvoice;
 		private DevExpress.XtraBars.BarButtonItem btnCloseCost;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup19;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup20;
-		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
-		private DevExpress.XtraBars.BarButtonItem btnSaveCost;
-		private DevExpress.XtraBars.BarButtonItem btnSaveAndCloseCost;
+		private DevExpress.XtraBars.BarButtonItem btnEditCost;
 		private DevExpress.XtraBars.BarButtonItem btnRefreshCost;
 		private DevExpress.XtraBars.BarButtonItem btnDeleteCost;
 		private DevExpress.XtraBars.BarButtonItem btnPrintCost;
-		private DevExpress.XtraBars.BarButtonItem btnCostProtected;
+		private DevExpress.XtraBars.BarButtonItem btnEditInvoice;
+		private DevExpress.XtraBars.BarButtonItem btnEditJobDetails;
+		private DevExpress.XtraBars.Ribbon.RibbonPage rpMain;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgSecurity;
+		private DevExpress.XtraBars.Ribbon.RibbonPage rpInvoice;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+		private DevExpress.XtraBars.Ribbon.RibbonPage rpCost;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup21;
+		private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
 		private DevExpress.XtraDataLayout.DataLayoutControl mainLayout;
-		private DevExpress.XtraLayout.LayoutControlGroup Root;
+		private DevExpress.XtraTab.XtraTabControl tabGroupNotes;
+		private DevExpress.XtraTab.XtraTabPage tabStatus;
+		private DevExpress.XtraLayout.LayoutControl layoutStatus;
+		private DevExpress.XtraEditors.MemoEdit txtStatus;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+		private DevExpress.XtraTab.XtraTabPage tabBlStatus;
+		private DevExpress.XtraLayout.LayoutControl layoutBlStatus;
+		private DevExpress.XtraEditors.MemoEdit txtBlStatus;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup13;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+		private DevExpress.XtraTab.XtraTabPage tabNotes;
+		private DevExpress.XtraLayout.LayoutControl layoutNotes;
+		private DevExpress.XtraEditors.MemoEdit txtNotes;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup14;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+		private DevExpress.XtraEditors.TextEdit txtProfitLL;
+		private DevExpress.XtraEditors.TextEdit txtProfitUSD;
+		private DevExpress.XtraEditors.TextEdit txtTotalInvoicesUSD;
+		private DevExpress.XtraEditors.TextEdit txtTotalInvoicesLL;
+		private DevExpress.XtraEditors.TextEdit txtTotalCostsUSD;
+		private DevExpress.XtraEditors.TextEdit txtTotalCostsLL;
+		private DevExpress.XtraTab.XtraTabControl grpJobInformation;
+		private DevExpress.XtraTab.XtraTabPage tabJobInformation;
+		private DevExpress.XtraLayout.LayoutControl layoutClientInformation;
+		private DevExpress.XtraEditors.TextEdit txtMbl;
+		private DevExpress.XtraEditors.TextEdit txtJobNo;
+		private DevExpress.XtraEditors.TextEdit txtReferenceNo;
+		private DevExpress.XtraEditors.DateEdit dtJobDate;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboCustomers;
+		private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+		private DevExpress.XtraGrid.Columns.GridColumn gcId;
+		private DevExpress.XtraGrid.Columns.GridColumn gcName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboConsignees;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
+		private DevExpress.XtraGrid.Columns.GridColumn gcConsigneeId;
+		private DevExpress.XtraGrid.Columns.GridColumn gcConsigneeName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboJobsType;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+		private DevExpress.XtraGrid.Columns.GridColumn colTypeId;
+		private DevExpress.XtraGrid.Columns.GridColumn colTypeDescription;
+		private DevExpress.XtraEditors.DateEdit EtdDate;
+		private DevExpress.XtraEditors.DateEdit AtdDate;
+		private DevExpress.XtraEditors.DateEdit LoadingDate;
+		private DevExpress.XtraEditors.DateEdit AtaDate;
+		private DevExpress.XtraEditors.DateEdit EtaDate;
+		private DevExpress.XtraEditors.DateEdit CutOffDate;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboDeparture;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView14;
+		private DevExpress.XtraGrid.Columns.GridColumn colSeaportDepartureId;
+		private DevExpress.XtraGrid.Columns.GridColumn colSeaportDepartureName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboDestination;
+		private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit2View;
+		private DevExpress.XtraGrid.Columns.GridColumn colcboDestinationId;
+		private DevExpress.XtraGrid.Columns.GridColumn colcboDestinationName;
+		private DevExpress.XtraEditors.TextEdit txtCountryOfDeparture;
+		private DevExpress.XtraEditors.TextEdit txtCountryOfDestination;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
+		private DevExpress.XtraLayout.LayoutControlItem lblJobNo;
+		private DevExpress.XtraLayout.LayoutControlItem lblReferenceNo;
+		private DevExpress.XtraLayout.LayoutControlItem lblJobDate;
+		private DevExpress.XtraLayout.LayoutControlItem lblCustomerName;
+		private DevExpress.XtraLayout.LayoutControlItem lblConsigneeName;
+		private DevExpress.XtraLayout.LayoutControlItem lblJobType;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+		private DevExpress.XtraLayout.LayoutControlItem lblEtd;
+		private DevExpress.XtraLayout.LayoutControlItem lblAtd;
+		private DevExpress.XtraLayout.LayoutControlItem lblLoadingDate;
+		private DevExpress.XtraLayout.LayoutControlItem lblAta;
+		private DevExpress.XtraLayout.LayoutControlItem lblEta;
+		private DevExpress.XtraLayout.LayoutControlItem lblCutOffDate;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
+		private DevExpress.XtraLayout.LayoutControlItem lblDeparture;
+		private DevExpress.XtraLayout.LayoutControlItem lblDestination;
+		private DevExpress.XtraLayout.LayoutControlItem lblCountryOfDeparture;
+		private DevExpress.XtraLayout.LayoutControlItem lblCountryOfDestination;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
+		private DevExpress.XtraLayout.LayoutControlItem lblMbl;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem24;
+		private DevExpress.XtraTab.XtraTabPage tabShipmentInformation;
+		private DevExpress.XtraLayout.LayoutControl layoutShipmentTracking;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboShippedWith;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+		private DevExpress.XtraGrid.Columns.GridColumn colShippedWithId;
+		private DevExpress.XtraGrid.Columns.GridColumn colShippedWith;
+		private DevExpress.XtraEditors.DateEdit dtConfirmEmptyContainer;
+		private DevExpress.XtraEditors.DateEdit dtEmptyContainer;
+		private DevExpress.XtraEditors.DateEdit dtContainerToCnee;
+		private DevExpress.XtraEditors.CheckEdit chkEmptyContainer;
+		private DevExpress.XtraEditors.CheckEdit chkConfirmEmptyContainer;
+		private DevExpress.XtraEditors.CheckEdit chkContainerToCnee;
+		private DevExpress.XtraEditors.TextEdit txtBookingNo;
+		private DevExpress.XtraEditors.DateEdit dtMissingDocumentsDate;
+		private DevExpress.XtraEditors.DateEdit dtPaidDoDate;
+		private DevExpress.XtraEditors.DateEdit dtTejrimDate;
+		private DevExpress.XtraEditors.DateEdit dtDeliveryDate;
+		private DevExpress.XtraEditors.DateEdit dtPendingForDelivery;
+		private DevExpress.XtraEditors.DateEdit dtReadyForClearance;
+		private DevExpress.XtraEditors.DateEdit dtReadyForTejrim;
+		private DevExpress.XtraEditors.CheckEdit chkDeliveryDate;
+		private DevExpress.XtraEditors.CheckEdit chkMissingDocuments;
+		private DevExpress.XtraEditors.CheckEdit chkPendingForDelivery;
+		private DevExpress.XtraEditors.CheckEdit chkPaidDo;
+		private DevExpress.XtraEditors.CheckEdit chkReadyForClearance;
+		private DevExpress.XtraEditors.CheckEdit chkTejrim;
+		private DevExpress.XtraEditors.CheckEdit chkRTejrim;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboAgents;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnAgentId;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnAgentName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboIncoTerms;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView13;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnTermsId;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnTermCode;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnTermsDescription;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboSeaCarriers;
+		private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit3View;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnSeaCarrierId;
+		private DevExpress.XtraGrid.Columns.GridColumn ColumnSeaCarrierName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboVessels;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView61;
+		private DevExpress.XtraGrid.Columns.GridColumn colVesselId;
+		private DevExpress.XtraGrid.Columns.GridColumn colVesselName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboFeederVessels;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
+		private DevExpress.XtraGrid.Columns.GridColumn colFeederVesselId;
+		private DevExpress.XtraGrid.Columns.GridColumn colFeederVesselName;
+		private DevExpress.XtraEditors.TextEdit txtFreeOfDemurage;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup9;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+		private DevExpress.XtraLayout.LayoutControlItem lblAgents;
+		private DevExpress.XtraLayout.LayoutControlItem lblSeaCarriers;
+		private DevExpress.XtraLayout.LayoutControlItem lblIncoTerms;
+		private DevExpress.XtraLayout.LayoutControlItem lblTejrimDate;
+		private DevExpress.XtraLayout.LayoutControlItem lblPaidDoDate;
+		private DevExpress.XtraLayout.LayoutControlItem lblMissingDocumentsDate;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem15;
+		private DevExpress.XtraLayout.LayoutControlItem lblFreeOfDemurage;
+		private DevExpress.XtraLayout.LayoutControlItem lblBookingNo;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem26;
+		private DevExpress.XtraLayout.LayoutControlItem lblReadyForTejrim;
+		private DevExpress.XtraLayout.LayoutControlItem lblReadyForClearance;
+		private DevExpress.XtraLayout.LayoutControlItem lblPendingForDelivery;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
+		private DevExpress.XtraLayout.LayoutControlItem lblContainerToCneeDate;
+		private DevExpress.XtraLayout.LayoutControlItem lblEmptyContainerDate;
+		private DevExpress.XtraLayout.LayoutControlItem lblConfirmEmptyContainerDate;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+		private DevExpress.XtraLayout.LayoutControlItem lblShippedWith;
+		private DevExpress.XtraLayout.LayoutControlItem lblVessels;
+		private DevExpress.XtraLayout.LayoutControlItem lblFeederVessels;
+		private DevExpress.XtraTab.XtraTabPage tabPackageDetails;
+		private DevExpress.XtraLayout.LayoutControl layoutPackageDetails;
+		private DevExpress.XtraEditors.TextEdit txtValueOfGoods;
+		private DevExpress.XtraEditors.TextEdit txtVolume;
+		private DevExpress.XtraEditors.TextEdit txtWeight;
+		private DevExpress.XtraEditors.TextEdit txtPieces;
+		private DevExpress.XtraEditors.TextEdit txtQuantities;
+		private DevExpress.XtraEditors.MemoEdit txtNatureOfGoods;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup11;
+		private DevExpress.XtraLayout.LayoutControlItem lblQuantities;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem18;
+		private DevExpress.XtraLayout.LayoutControlItem lblPieces;
+		private DevExpress.XtraLayout.LayoutControlItem lblWeight;
+		private DevExpress.XtraLayout.LayoutControlItem lblCommodities;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem19;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem20;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem21;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem22;
+		private DevExpress.XtraLayout.LayoutControlItem lblVolume;
+		private DevExpress.XtraLayout.LayoutControlItem lblValueOfGoods;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem25;
+		private DevExpress.XtraTab.XtraTabPage tabUserInformation;
+		private DevExpress.XtraLayout.LayoutControl layoutUserInformation;
+		private DevExpress.XtraEditors.MemoEdit txtUserLogData;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboUsers;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+		private DevExpress.XtraGrid.Columns.GridColumn columnUserId;
+		private DevExpress.XtraGrid.Columns.GridColumn columnUserName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboSales;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+		private DevExpress.XtraGrid.Columns.GridColumn columnSalesmanId;
+		private DevExpress.XtraGrid.Columns.GridColumn columnSalesmanName;
+		private DevExpress.XtraEditors.SearchLookUpEdit cboOperatingUsers;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+		private DevExpress.XtraGrid.Columns.GridColumn columnOperatingUserId;
+		private DevExpress.XtraGrid.Columns.GridColumn columnOperatingUserName;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+		private DevExpress.XtraLayout.LayoutControlItem lblUserName;
+		private DevExpress.XtraLayout.LayoutControlItem lblSalesman;
+		private DevExpress.XtraLayout.LayoutControlItem lblOperatingUser;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem13;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem14;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem16;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem17;
+		private DevExpress.XtraLayout.LayoutControlItem lblUserLogData;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem23;
 		private DevExpress.XtraBars.Navigation.TabPane tabDetails;
 		private DevExpress.XtraBars.Navigation.TabNavigationPage tabJobDetails;
-		private DevExpress.XtraBars.Navigation.TabNavigationPage tabRequirements;
-		private DevExpress.XtraLayout.LayoutControlItem lblDetailedTransactions;
-		private DevExpress.XtraBars.Navigation.TabNavigationPage tabSellingGroup;
-		private DevExpress.XtraBars.Navigation.TabNavigationPage tabCostGroup;
-		private DevExpress.XtraBars.Navigation.TabNavigationPage tabDocuments;
-		private DevExpress.XtraBars.Navigation.TabNavigationPage tabCommissions;
-		private DevExpress.XtraBars.Navigation.TabNavigationPage tabShipmentStatus;
 		private DevExpress.XtraLayout.LayoutControl layoutJobDetails;
 		private DevExpress.XtraGrid.GridControl gcJobDetails;
 		private DevExpress.XtraGrid.Views.Grid.GridView gvJobDetails;
@@ -6459,9 +7052,15 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 		private DevExpress.XtraGrid.Columns.GridColumn colJobId;
 		private DevExpress.XtraGrid.Columns.GridColumn colHbl;
 		private DevExpress.XtraGrid.Columns.GridColumn colOriginId;
-		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repCountries;
+		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repCountries;
+		private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
 		private DevExpress.XtraGrid.Columns.GridColumn colSupplierId;
-		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repShippers;
+		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repShippers;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
 		private DevExpress.XtraGrid.Columns.GridColumn colContainerNo;
 		private DevExpress.XtraGrid.Columns.GridColumn colQuantities;
 		private DevExpress.XtraGrid.Columns.GridColumn colUnitId;
@@ -6481,40 +7080,113 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 		private DevExpress.XtraGrid.Columns.GridColumn colNotes;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+		private DevExpress.XtraBars.Navigation.TabNavigationPage tabRequirements;
+		private DevExpress.XtraLayout.LayoutControl layoutRequirements;
+		private DevExpress.XtraEditors.LabelControl lblAllInOrderOnWater;
+		private DevExpress.XtraEditors.LabelControl lblAllInOrderToBeloaded;
+		private DevExpress.XtraEditors.SimpleButton btnAllInOrderOW;
+		private DevExpress.XtraEditors.SimpleButton btnAllInOrderTBL;
+		private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
+		private DevExpress.XtraGrid.GridControl gcRequiredOnWater;
+		private DevExpress.XtraGrid.Views.Grid.GridView gvRequiredOnWater;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+		private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repCheckEdit;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repOWConditionsList;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+		private DevExpress.XtraGrid.GridControl gcRequiredToBeLoaded;
+		private DevExpress.XtraGrid.Views.Grid.GridView gvRequiredToBeLoaded;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+		private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repCheckBox;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repTblConditionsList;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+		private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repRequirmentsDateEdit;
+		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup12;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+		private DevExpress.XtraLayout.LayoutControlItem lcAllInOrderToBeloaded;
+		private DevExpress.XtraLayout.LayoutControlItem lcAllInOrderOnWater;
+		private DevExpress.XtraBars.Navigation.TabNavigationPage tabSellingGroup;
 		private DevExpress.XtraLayout.LayoutControl layoutInvoicesGrid;
 		private DevExpress.XtraGrid.GridControl gcInvoices;
 		private DevExpress.XtraGrid.Views.Grid.GridView gvInvoices;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingId;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingQHeaderId;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingCustomerId;
-		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repSellingMemberList;
-		private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingMemberNameId;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingMemberName;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingItemId;
-		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repSellingItemsList;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
-		private DevExpress.XtraGrid.Columns.GridColumn colItemId;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingDescription;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingPaymentId;
-		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repSellingPayemntsList;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingCurrencyId;
-		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repSellingCurrenciesList;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingRate;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingAmount;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingL_Amount;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingF_Amount;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingVat;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingVatRate;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingNotes;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingDeleted;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingVatAmountLL;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingVatAmountUSD;
-		private DevExpress.XtraGrid.Columns.GridColumn colSellingVatAmount;
+		private DevExpress.XtraGrid.Columns.GridColumn colId;
+		private DevExpress.XtraGrid.Columns.GridColumn colInvoiceNo;
+		private DevExpress.XtraGrid.Columns.GridColumn colInvoiceRef;
+		private DevExpress.XtraGrid.Columns.GridColumn colJobId1;
+		private DevExpress.XtraGrid.Columns.GridColumn colDepartmentId;
+		private DevExpress.XtraGrid.Columns.GridColumn colInvoiceDate;
+		private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repDateEdit;
+		private DevExpress.XtraGrid.Columns.GridColumn colMemberId;
+		private DevExpress.XtraGrid.Columns.GridColumn colAttn;
+		private DevExpress.XtraGrid.Columns.GridColumn colSubject;
+		private DevExpress.XtraGrid.Columns.GridColumn colSubject1;
+		private DevExpress.XtraGrid.Columns.GridColumn colSubject2;
+		private DevExpress.XtraGrid.Columns.GridColumn colSubject3;
+		private DevExpress.XtraGrid.Columns.GridColumn colCurrencyId;
+		private DevExpress.XtraGrid.Columns.GridColumn colCurrencyRate;
+		private DevExpress.XtraGrid.Columns.GridColumn colAmount;
+		private DevExpress.XtraGrid.Columns.GridColumn colLAmount;
+		private DevExpress.XtraGrid.Columns.GridColumn colFAmount;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalItemVAT;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalItemNonVAT;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalVAT;
+		private DevExpress.XtraGrid.Columns.GridColumn colLTotalVAT;
+		private DevExpress.XtraGrid.Columns.GridColumn colFTotalVAT;
+		private DevExpress.XtraGrid.Columns.GridColumn colNotify1;
+		private DevExpress.XtraGrid.Columns.GridColumn colToNotified;
+		private DevExpress.XtraGrid.Columns.GridColumn colIsAgent;
+		private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repInvCheckEdit;
+		private DevExpress.XtraGrid.Columns.GridColumn colSalesId;
+		private DevExpress.XtraGrid.Columns.GridColumn colUserId;
+		private DevExpress.XtraGrid.Columns.GridColumn colOperationDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colModifyDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colPosted;
+		private DevExpress.XtraGrid.Columns.GridColumn colOriginal1;
+		private DevExpress.XtraGrid.Columns.GridColumn colClosed;
+		private DevExpress.XtraGrid.Columns.GridColumn colClosedDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colCanceled;
+		private DevExpress.XtraGrid.Columns.GridColumn colCanceledDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colReason;
+		private DevExpress.XtraGrid.Columns.GridColumn colCurSLRate;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalReceived;
+		private DevExpress.XtraGrid.Columns.GridColumn colDiffOfExchange;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalCreditNote;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalDebitNote;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalDue;
+		private DevExpress.XtraGrid.Columns.GridColumn colLocked;
+		private DevExpress.XtraGrid.Columns.GridColumn colPrintOriginalDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colPrintOriginalByUser;
+		private DevExpress.XtraGrid.Columns.GridColumn colLastPrintOrigDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colLastPrintOrigByUser;
+		private DevExpress.XtraGrid.Columns.GridColumn colJVNO;
+		private DevExpress.XtraGrid.Columns.GridColumn colDebitNote;
+		private DevExpress.XtraGrid.Columns.GridColumn colCreditNote;
+		private DevExpress.XtraGrid.Columns.GridColumn colDueDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colRefNo;
+		private DevExpress.XtraGrid.Columns.GridColumn colSettledAmount;
+		private DevExpress.XtraGrid.Columns.GridColumn colPaid;
+		private DevExpress.XtraGrid.Columns.GridColumn colNotes1;
+		private DevExpress.XtraGrid.Columns.GridColumn colIsDefault;
+		private DevExpress.XtraGrid.Columns.GridColumn colActive;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+		private DevExpress.XtraBars.Navigation.TabNavigationPage tabCostGroup;
 		private DevExpress.XtraLayout.LayoutControl layoutCostSheetsGrid;
 		private DevExpress.XtraGrid.GridControl gcCosts;
 		private DevExpress.XtraGrid.Views.Grid.GridView gvCosts;
@@ -6555,6 +7227,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 		private DevExpress.XtraGrid.Columns.GridColumn colCostDeleted;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+		private DevExpress.XtraBars.Navigation.TabNavigationPage tabDocuments;
 		private DevExpress.XtraLayout.LayoutControl layoutAttachedDocumnets;
 		private DevExpress.XtraGrid.GridControl gcDocuments;
 		private DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView gvDocuments;
@@ -6565,6 +7238,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
 		private DevExpress.XtraLayout.LayoutControlItem lblAddFiles;
+		private DevExpress.XtraBars.Navigation.TabNavigationPage tabCommissions;
 		private DevExpress.XtraLayout.LayoutControl layoutSalesManagement;
 		private DevExpress.XtraGrid.GridControl gridControl2;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
@@ -6596,101 +7270,13 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 		private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+		private DevExpress.XtraBars.Navigation.TabNavigationPage tabShipmentStatus;
 		private DevExpress.XtraLayout.LayoutControl layoutShipmentStatus;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
-		private DevExpress.XtraTab.XtraTabControl grpJobInformation;
-		private DevExpress.XtraTab.XtraTabPage tabJobInformation;
-		private DevExpress.XtraTab.XtraTabPage tabShipmentInformation;
+		private DevExpress.XtraLayout.LayoutControlGroup Root;
+		private DevExpress.XtraLayout.LayoutControlItem lblDetailedTransactions;
 		private DevExpress.XtraLayout.LayoutControlItem tabJobInfo;
-		private DevExpress.XtraLayout.LayoutControl layoutClientInformation;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
-		private DevExpress.XtraEditors.TextEdit txtJobNo;
-		private DevExpress.XtraLayout.LayoutControlItem lblJobNo;
-		private DevExpress.XtraEditors.TextEdit txtReferenceNo;
-		private DevExpress.XtraLayout.LayoutControlItem lblReferenceNo;
-		private DevExpress.XtraEditors.DateEdit dtJobDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblJobDate;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboCustomers;
-		private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
-		private DevExpress.XtraLayout.LayoutControlItem lblCustomerName;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboConsignees;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
-		private DevExpress.XtraLayout.LayoutControlItem lblConsigneeName;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboJobsType;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-		private DevExpress.XtraLayout.LayoutControlItem lblJobType;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
-		private DevExpress.XtraTab.XtraTabPage tabUserInformation;
-		private DevExpress.XtraLayout.LayoutControl layoutShipmentTracking;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup9;
-		private DevExpress.XtraEditors.TextEdit txtProfitUSD;
-		private DevExpress.XtraEditors.TextEdit txtTotalInvoicesUSD;
-		private DevExpress.XtraEditors.TextEdit txtTotalInvoicesLL;
-		private DevExpress.XtraEditors.TextEdit txtTotalCostsUSD;
-		private DevExpress.XtraEditors.TextEdit txtTotalCostsLL;
-		private DevExpress.XtraEditors.TextEdit txtProfitLL;
-		private DevExpress.XtraLayout.LayoutControl layoutRequirements;
-		private DevExpress.XtraEditors.LabelControl lblAllInOrderOnWater;
-		private DevExpress.XtraEditors.LabelControl lblAllInOrderToBeloaded;
-		private DevExpress.XtraEditors.SimpleButton btnAllInOrderOW;
-		private DevExpress.XtraEditors.SimpleButton btnAllInOrderTBL;
-		private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
-		private DevExpress.XtraGrid.GridControl gcRequiredOnWater;
-		private DevExpress.XtraGrid.Views.Grid.GridView gvRequiredOnWater;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
-		private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repCheckEdit;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
-		private DevExpress.XtraGrid.GridControl gcRequiredToBeLoaded;
-		private DevExpress.XtraGrid.Views.Grid.GridView gvRequiredToBeLoaded;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
-		private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repCheckBox;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
-		private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup12;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
-		private DevExpress.XtraLayout.LayoutControlItem lcAllInOrderToBeloaded;
-		private DevExpress.XtraLayout.LayoutControlItem lcAllInOrderOnWater;
-		private DevExpress.XtraLayout.LayoutControl layoutUserInformation;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboUsers;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
-		private DevExpress.XtraLayout.LayoutControlItem lblUserName;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboSales;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-		private DevExpress.XtraLayout.LayoutControlItem lblSalesman;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboOperatingUsers;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-		private DevExpress.XtraLayout.LayoutControlItem lblOperatingUser;
-		private DevExpress.XtraTab.XtraTabPage tabPackageDetails;
-		private DevExpress.XtraLayout.LayoutControl layoutPackageDetails;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup11;
-		private DevExpress.XtraTab.XtraTabControl tabGroupNotes;
-		private DevExpress.XtraTab.XtraTabPage tabStatus;
-		private DevExpress.XtraTab.XtraTabPage tabBlStatus;
 		private DevExpress.XtraLayout.LayoutControlItem lblGroupNotes;
-		private DevExpress.XtraTab.XtraTabPage tabNotes;
-		private DevExpress.XtraLayout.LayoutControl layoutStatus;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
-		private DevExpress.XtraLayout.LayoutControl layoutBlStatus;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup13;
-		private DevExpress.XtraLayout.LayoutControl layoutNotes;
-		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup14;
-		private DevExpress.XtraEditors.MemoEdit txtStatus;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-		private DevExpress.XtraEditors.MemoEdit txtBlStatus;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
-		private DevExpress.XtraEditors.MemoEdit txtNotes;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
 		private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup15;
 		private DevExpress.XtraLayout.LayoutControlGroup grpTotalLL;
 		private DevExpress.XtraLayout.LayoutControlItem lblTotalCostsLL;
@@ -6702,154 +7288,5 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 		private DevExpress.XtraLayout.LayoutControlItem lblTotalInvoicesUSD;
 		private DevExpress.XtraLayout.LayoutControlItem lblProfitUSD;
 		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-		private DevExpress.XtraEditors.CheckEdit chkRTejrim;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
-		private DevExpress.XtraEditors.CheckEdit chkDeliveryDate;
-		private DevExpress.XtraEditors.CheckEdit chkMissingDocuments;
-		private DevExpress.XtraEditors.CheckEdit chkPendingForDelivery;
-		private DevExpress.XtraEditors.CheckEdit chkPaidDo;
-		private DevExpress.XtraEditors.CheckEdit chkReadyForClearance;
-		private DevExpress.XtraEditors.CheckEdit chkTejrim;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
-		private DevExpress.XtraEditors.DateEdit dateEdit10;
-		private DevExpress.XtraEditors.DateEdit dtPendingForDelivery;
-		private DevExpress.XtraEditors.DateEdit dtReadyForClearance;
-		private DevExpress.XtraEditors.DateEdit dtReadyForTejrim;
-		private DevExpress.XtraLayout.LayoutControlItem lblReadyForTejrim;
-		private DevExpress.XtraLayout.LayoutControlItem lblReadyForClearance;
-		private DevExpress.XtraLayout.LayoutControlItem lblPendingForDelivery;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
-		private DevExpress.XtraEditors.DateEdit EtdDate;
-		private DevExpress.XtraEditors.DateEdit AtdDate;
-		private DevExpress.XtraEditors.DateEdit LoadingDate;
-		private DevExpress.XtraEditors.DateEdit AtaDate;
-		private DevExpress.XtraEditors.DateEdit EtaDate;
-		private DevExpress.XtraEditors.DateEdit CutOffDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblEtd;
-		private DevExpress.XtraLayout.LayoutControlItem lblAtd;
-		private DevExpress.XtraLayout.LayoutControlItem lblLoadingDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblAta;
-		private DevExpress.XtraLayout.LayoutControlItem lblEta;
-		private DevExpress.XtraLayout.LayoutControlItem lblCutOffDate;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboDeparture;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView14;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboDestination;
-		private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit2View;
-		private DevExpress.XtraEditors.TextEdit txtCountryOfDeparture;
-		private DevExpress.XtraEditors.TextEdit txtCountryOfDestination;
-		private DevExpress.XtraLayout.LayoutControlItem lblDeparture;
-		private DevExpress.XtraLayout.LayoutControlItem lblDestination;
-		private DevExpress.XtraLayout.LayoutControlItem lblCountryOfDeparture;
-		private DevExpress.XtraLayout.LayoutControlItem lblCountryOfDestination;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem11;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboAgents;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboIncoTerms;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView13;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboSeaCarriers;
-		private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit3View;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboVessels;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView61;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboFeederVessels;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
-		private DevExpress.XtraLayout.LayoutControlItem lblVessels;
-		private DevExpress.XtraLayout.LayoutControlItem lblFeederVessels;
-		private DevExpress.XtraLayout.LayoutControlItem lblAgents;
-		private DevExpress.XtraLayout.LayoutControlItem lblSeaCarriers;
-		private DevExpress.XtraLayout.LayoutControlItem lblIncoTerms;
-		private DevExpress.XtraEditors.DateEdit dtMissingDocumentsDate;
-		private DevExpress.XtraEditors.DateEdit dtPaidDoDate;
-		private DevExpress.XtraEditors.DateEdit dtTejrimDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblTejrimDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblPaidDoDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblMissingDocumentsDate;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem12;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem13;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem14;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem16;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem17;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem15;
-		private DevExpress.XtraEditors.TextEdit txtWeight;
-		private DevExpress.XtraEditors.TextEdit txtPieces;
-		private DevExpress.XtraEditors.TextEdit txtQuantities;
-		private DevExpress.XtraEditors.MemoEdit txtNatureOfGoods;
-		private DevExpress.XtraLayout.LayoutControlItem lblQuantities;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem18;
-		private DevExpress.XtraLayout.LayoutControlItem lblPieces;
-		private DevExpress.XtraLayout.LayoutControlItem lblWeight;
-		private DevExpress.XtraLayout.LayoutControlItem lblCommodities;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem19;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem20;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem21;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem22;
-		private DevExpress.XtraEditors.TextEdit txtMbl;
-		private DevExpress.XtraLayout.LayoutControlItem lblMbl;
-		private DevExpress.XtraEditors.TextEdit txtFreeOfDemurage;
-		private DevExpress.XtraLayout.LayoutControlItem lblFreeOfDemurage;
-		private DevExpress.XtraEditors.TextEdit txtBookingNo;
-		private DevExpress.XtraLayout.LayoutControlItem lblBookingNo;
-		private DevExpress.XtraEditors.CheckEdit chkEmptyContainer;
-		private DevExpress.XtraEditors.CheckEdit chkConfirmEmptyContainer;
-		private DevExpress.XtraEditors.CheckEdit chkContainerToCnee;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
-		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
-		private DevExpress.XtraEditors.MemoEdit txtUserLogData;
-		private DevExpress.XtraLayout.LayoutControlItem lblUserLogData;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem23;
-		private DevExpress.XtraEditors.DateEdit dtConfirmEmptyContainer;
-		private DevExpress.XtraEditors.DateEdit dtEmptyContainer;
-		private DevExpress.XtraEditors.DateEdit dtContainerToCnee;
-		private DevExpress.XtraLayout.LayoutControlItem lblContainerToCneeDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblEmptyContainerDate;
-		private DevExpress.XtraLayout.LayoutControlItem lblConfirmEmptyContainerDate;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-		private DevExpress.XtraGrid.Columns.GridColumn gcId;
-		private DevExpress.XtraGrid.Columns.GridColumn gcName;
-		private DevExpress.XtraGrid.Columns.GridColumn gcConsigneeId;
-		private DevExpress.XtraGrid.Columns.GridColumn gcConsigneeName;
-		private DevExpress.XtraGrid.Columns.GridColumn colTypeId;
-		private DevExpress.XtraGrid.Columns.GridColumn colTypeDescription;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem24;
-		private DevExpress.XtraGrid.Columns.GridColumn colSeaportDepartureId;
-		private DevExpress.XtraGrid.Columns.GridColumn colSeaportDepartureName;
-		private DevExpress.XtraGrid.Columns.GridColumn colcboDestinationId;
-		private DevExpress.XtraGrid.Columns.GridColumn colcboDestinationName;
-		private DevExpress.XtraGrid.Columns.GridColumn colVesselId;
-		private DevExpress.XtraGrid.Columns.GridColumn colVesselName;
-		private DevExpress.XtraGrid.Columns.GridColumn colFeederVesselId;
-		private DevExpress.XtraGrid.Columns.GridColumn colFeederVesselName;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnAgentId;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnAgentName;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnSeaCarrierId;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnSeaCarrierName;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnTermsId;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnTermCode;
-		private DevExpress.XtraGrid.Columns.GridColumn ColumnTermsDescription;
-		private DevExpress.XtraGrid.Columns.GridColumn columnUserId;
-		private DevExpress.XtraGrid.Columns.GridColumn columnUserName;
-		private DevExpress.XtraGrid.Columns.GridColumn columnSalesmanId;
-		private DevExpress.XtraGrid.Columns.GridColumn columnSalesmanName;
-		private DevExpress.XtraGrid.Columns.GridColumn columnOperatingUserId;
-		private DevExpress.XtraGrid.Columns.GridColumn columnOperatingUserName;
-		private DevExpress.XtraEditors.TextEdit txtVolume;
-		private DevExpress.XtraLayout.LayoutControlItem lblVolume;
-		private DevExpress.XtraEditors.TextEdit txtValueOfGoods;
-		private DevExpress.XtraLayout.LayoutControlItem lblValueOfGoods;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem25;
-		private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem26;
-		private DevExpress.XtraEditors.SearchLookUpEdit cboShippedWith;
-		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-		private DevExpress.XtraLayout.LayoutControlItem lblShippedWith;
-		private DevExpress.XtraGrid.Columns.GridColumn colShippedWithId;
-		private DevExpress.XtraGrid.Columns.GridColumn colShippedWith;
 	}
 }

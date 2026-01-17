@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using MISLiveMed.DataLayers.Common.Forms;
@@ -10,7 +6,12 @@ using MISLiveMed.DataLayers.Users;
 using MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs;
 using MISLiveMed.Models.Models.Users;
 using MISLiveMed.UI.Utilities;
+using MISLiveMed.Utils.Enums;
 using MISLiveMed.Utils.Layout;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirImport
 {
@@ -45,7 +46,7 @@ namespace MISLiveMed.UI.Forms.JobForms.AirFreight.AirImport
 
         #endregion
 
-        public JobAirImportListForm()
+        public JobAirImportListForm(JobsType jobType)
         {
             InitializeComponent();
 

@@ -35,12 +35,10 @@ using MISLiveMed.UI.Forms.CRM.Agents.Groups;
 using MISLiveMed.UI.Forms.CRM.Customers;
 using MISLiveMed.UI.Forms.CRM.Customers.Categories;
 using MISLiveMed.UI.Forms.CRM.Quotations;
-using MISLiveMed.UI.Forms.JobForms.AirFreight.AirCross;
 using MISLiveMed.UI.Forms.JobForms.AirFreight.AirExport;
 using MISLiveMed.UI.Forms.JobForms.AirFreight.AirImport;
 using MISLiveMed.UI.Forms.JobForms.Clearance.AirFreight;
 using MISLiveMed.UI.Forms.JobForms.Clearance.SeaFreight;
-using MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaCross;
 using MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaExport;
 using MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport;
 using MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport.Reports;
@@ -182,7 +180,7 @@ namespace MISLiveMed.UI.Main
 			// Determine admin rights from MainForm permissions once
 			_isAdmin = _userPermission?.FirstOrDefault(x => x.ControlName == "IsAdmin")?.Value ?? false;
 
-			if (_forms == null || _forms.Count ==0) return;
+			if (_forms == null || _forms.Count == 0) return;
 
 			// Helper: safely collapse group if not active
 			Action<DevExpress.XtraBars.Navigation.AccordionControlElement, bool> collapseIfNeeded = (elem, active) =>
@@ -652,7 +650,7 @@ namespace MISLiveMed.UI.Main
 		//Sea Import
 		private void mnuJobsSeaImportList_Click(object sender, EventArgs e)
 		{
-			OpenForm(new JobSeaImportListForm());
+			OpenForm(new JobSeaImportListForm(JobsType.SeaImport));
 		}
 
 		//Sea Export
@@ -664,7 +662,7 @@ namespace MISLiveMed.UI.Main
 		//Sea Cross
 		private void mnuJobsSeaCross_Click(object sender, EventArgs e)
 		{
-			OpenForm(new JobSeaCrossListForm());
+			OpenForm(new JobSeaImportListForm(JobsType.SeaCross));
 		}
 
 		#endregion
@@ -673,7 +671,7 @@ namespace MISLiveMed.UI.Main
 
 		private void mnuJobsAirImport_Click(object sender, EventArgs e)
 		{
-			OpenForm(new JobAirImportListForm());
+			OpenForm(new JobAirImportListForm(JobsType.AirImport));
 		}
 
 
@@ -684,7 +682,7 @@ namespace MISLiveMed.UI.Main
 
 		private void mnuJobsAirCross_Click(object sender, EventArgs e)
 		{
-			OpenForm(new JobAirCrossListForm());
+			OpenForm(new JobAirImportListForm(JobsType.AirCross));
 		}
 
 		#endregion

@@ -206,6 +206,7 @@
     <Compile Include="Models\JobModels\Export\SeaFreight\Jobs\JobSeaExportDetailsModel.cs" />
     <Compile Include="Models\JobModels\Export\SeaFreight\Jobs\JobSeaExportModel.cs" />
     <Compile Include="Models\JobModels\Import\SeaFreight\Reports\EmptyContainerReportModel.cs" />
+    <Compile Include="Models\JobModels\RequiredDocumentModel.cs" />
     <Compile Include="Models\Members\Agents\Shippers\ShipperModel.cs" />
     <Compile Include="Models\Reports\Accounting\PaymentReportModel.cs" />
     <Compile Include="Models\Reports\Profit\OptimizedTotalProfitReportModel.cs" />

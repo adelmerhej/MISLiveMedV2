@@ -641,12 +641,6 @@
     <Compile Include="Forms\Common\Tejrim\TejrimJobsListForm.Designer.cs">
       <DependentUpon>TejrimJobsListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\JobForms\AirFreight\AirCross\JobAirCrossListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\JobForms\AirFreight\AirCross\JobAirCrossListForm.Designer.cs">
-      <DependentUpon>JobAirCrossListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\JobForms\AirFreight\AirExport\JobAirExportListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -676,12 +670,6 @@
     </Compile>
     <Compile Include="Forms\JobForms\LandFreight\LandImport\JobLandFreightListForm.Designer.cs">
       <DependentUpon>JobLandFreightListForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\JobForms\SeaFreight\SeaCross\JobSeaCrossListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\JobForms\SeaFreight\SeaCross\JobSeaCrossListForm.Designer.cs">
-      <DependentUpon>JobSeaCrossListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\JobForms\SeaFreight\SeaExport\JobSeaExportListForm.cs">
       <SubType>Form</SubType>
@@ -1265,9 +1253,6 @@
     <EmbeddedResource Include="Forms\Common\Tejrim\TejrimJobsListForm.resx">
       <DependentUpon>TejrimJobsListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\JobForms\AirFreight\AirCross\JobAirCrossListForm.resx">
-      <DependentUpon>JobAirCrossListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\JobForms\AirFreight\AirExport\JobAirExportListForm.resx">
       <DependentUpon>JobAirExportListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1282,9 +1267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JobForms\LandFreight\LandImport\JobLandFreightListForm.resx">
       <DependentUpon>JobLandFreightListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\JobForms\SeaFreight\SeaCross\JobSeaCrossListForm.resx">
-      <DependentUpon>JobSeaCrossListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JobForms\SeaFreight\SeaExport\JobSeaExportListForm.resx">
       <DependentUpon>JobSeaExportListForm.cs</DependentUpon>
@@ -1559,9 +1541,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Accounting\Journals\Reports\Settings\BalanceHeaders\" />
-    <Folder Include="Forms\JobForms\LandFreight\LandCross\" />
     <Folder Include="Forms\JobForms\LandFreight\LandExport\" />
-    <Folder Include="Forms\JobForms\SeaFreight\SeaCross\Reports\" />
     <Folder Include="Forms\JobForms\SeaFreight\SeaExport\Reports\" />
     <Folder Include="Forms\JobForms\Tejrim\" />
     <Folder Include="Forms\JobForms\Transit\" />

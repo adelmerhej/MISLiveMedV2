@@ -76,7 +76,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         public RibbonControl MainRibbon => rcJobSeaImport;
         public RibbonPage DefaultPage => rpJobSeaImport;
 
-        public JobSeaImportListForm()
+        public JobSeaImportListForm(JobsType jobType)
         {
             InitializeComponent();
 
