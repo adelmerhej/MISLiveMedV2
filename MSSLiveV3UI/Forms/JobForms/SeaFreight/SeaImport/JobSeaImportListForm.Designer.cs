@@ -60,9 +60,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.colDetailOrigin = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colDetailSupplier = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colDetailContNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gcSeaImports = new DevExpress.XtraGrid.GridControl();
+			this.gcSeaImport = new DevExpress.XtraGrid.GridControl();
 			this.bsSeaImportJobs = new System.Windows.Forms.BindingSource(this.components);
-			this.gvSeaImports = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.gvSeaImport = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.colRefNo = new DevExpress.XtraGrid.Columns.GridColumn();
 			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -232,9 +232,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
 			((System.ComponentModel.ISupportInitialize)(this.gvSeaImportDetails)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gcSeaImports)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gcSeaImport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsSeaImportJobs)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gvSeaImports)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gvSeaImport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat.CalendarTimeProperties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCustomers)).BeginInit();
@@ -271,7 +271,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.colDetailOrigin,
             this.colDetailSupplier,
             this.colDetailContNo});
-			this.gvSeaImportDetails.GridControl = this.gcSeaImports;
+			this.gvSeaImportDetails.GridControl = this.gcSeaImport;
 			this.gvSeaImportDetails.Name = "gvSeaImportDetails";
 			// 
 			// colDetailId
@@ -334,24 +334,24 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.colDetailContNo.VisibleIndex = 5;
 			this.colDetailContNo.Width = 94;
 			// 
-			// gcSeaImports
+			// gcSeaImport
 			// 
-			this.gcSeaImports.DataSource = this.bsSeaImportJobs;
-			this.gcSeaImports.EmbeddedNavigator.Buttons.Append.Visible = false;
-			this.gcSeaImports.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-			this.gcSeaImports.EmbeddedNavigator.Buttons.Edit.Visible = false;
-			this.gcSeaImports.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-			this.gcSeaImports.EmbeddedNavigator.Buttons.Remove.Visible = false;
-			this.gcSeaImports.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			this.gcSeaImport.DataSource = this.bsSeaImportJobs;
+			this.gcSeaImport.EmbeddedNavigator.Buttons.Append.Visible = false;
+			this.gcSeaImport.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+			this.gcSeaImport.EmbeddedNavigator.Buttons.Edit.Visible = false;
+			this.gcSeaImport.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+			this.gcSeaImport.EmbeddedNavigator.Buttons.Remove.Visible = false;
+			this.gcSeaImport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
 			gridLevelNode1.LevelTemplate = this.gvSeaImportDetails;
 			gridLevelNode1.RelationName = "FK_JobDetails";
-			this.gcSeaImports.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+			this.gcSeaImport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-			this.gcSeaImports.Location = new System.Drawing.Point(14, 14);
-			this.gcSeaImports.MainView = this.gvSeaImports;
-			this.gcSeaImports.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.gcSeaImports.Name = "gcSeaImports";
-			this.gcSeaImports.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+			this.gcSeaImport.Location = new System.Drawing.Point(14, 14);
+			this.gcSeaImport.MainView = this.gvSeaImport;
+			this.gcSeaImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.gcSeaImport.Name = "gcSeaImport";
+			this.gcSeaImport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repUsersList,
             this.repSalesList,
             this.repCustomers,
@@ -364,21 +364,21 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.repNumberFormat,
             this.repAgentCategories,
             this.repSideId});
-			this.gcSeaImports.Size = new System.Drawing.Size(1413, 527);
-			this.gcSeaImports.TabIndex = 5;
-			this.gcSeaImports.UseEmbeddedNavigator = true;
-			this.gcSeaImports.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvSeaImports,
+			this.gcSeaImport.Size = new System.Drawing.Size(1413, 527);
+			this.gcSeaImport.TabIndex = 5;
+			this.gcSeaImport.UseEmbeddedNavigator = true;
+			this.gcSeaImport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvSeaImport,
             this.gvSeaImportDetails});
-			this.gcSeaImports.DoubleClick += new System.EventHandler(this.gcSeaImports_DoubleClick);
+			this.gcSeaImport.DoubleClick += new System.EventHandler(this.gcSeaImports_DoubleClick);
 			// 
 			// bsSeaImportJobs
 			// 
 			this.bsSeaImportJobs.DataSource = typeof(MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs.JobSeaImportModel);
 			// 
-			// gvSeaImports
+			// gvSeaImport
 			// 
-			this.gvSeaImports.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+			this.gvSeaImport.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colRefNo,
             this.gridColumn1,
@@ -456,25 +456,25 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             this.colCostReady,
             this.colCostReadyDate,
             this.colNotes});
-			this.gvSeaImports.DetailHeight = 458;
-			this.gvSeaImports.GridControl = this.gcSeaImports;
-			this.gvSeaImports.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+			this.gvSeaImport.DetailHeight = 458;
+			this.gvSeaImport.GridControl = this.gcSeaImport;
+			this.gvSeaImport.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Name", null, "")});
-			this.gvSeaImports.Name = "gvSeaImports";
-			this.gvSeaImports.OptionsBehavior.Editable = false;
-			this.gvSeaImports.OptionsBehavior.ReadOnly = true;
-			this.gvSeaImports.OptionsFind.AlwaysVisible = true;
-			this.gvSeaImports.OptionsPrint.AutoWidth = false;
-			this.gvSeaImports.OptionsPrint.PrintHorzLines = false;
-			this.gvSeaImports.OptionsPrint.PrintVertLines = false;
-			this.gvSeaImports.OptionsView.ColumnAutoWidth = false;
-			this.gvSeaImports.OptionsView.ShowGroupedColumns = true;
-			this.gvSeaImports.OptionsView.ShowGroupPanel = false;
-			this.gvSeaImports.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvSeaImportList_RowCellStyle);
-			this.gvSeaImports.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvSeaImports_MasterRowEmpty);
-			this.gvSeaImports.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvSeaImports_MasterRowGetChildList);
-			this.gvSeaImports.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvSeaImports_MasterRowGetRelationName);
-			this.gvSeaImports.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvSeaImports_MasterRowGetRelationCount);
+			this.gvSeaImport.Name = "gvSeaImport";
+			this.gvSeaImport.OptionsBehavior.Editable = false;
+			this.gvSeaImport.OptionsBehavior.ReadOnly = true;
+			this.gvSeaImport.OptionsFind.AlwaysVisible = true;
+			this.gvSeaImport.OptionsPrint.AutoWidth = false;
+			this.gvSeaImport.OptionsPrint.PrintHorzLines = false;
+			this.gvSeaImport.OptionsPrint.PrintVertLines = false;
+			this.gvSeaImport.OptionsView.ColumnAutoWidth = false;
+			this.gvSeaImport.OptionsView.ShowGroupedColumns = true;
+			this.gvSeaImport.OptionsView.ShowGroupPanel = false;
+			this.gvSeaImport.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvSeaImportList_RowCellStyle);
+			this.gvSeaImport.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvSeaImports_MasterRowEmpty);
+			this.gvSeaImport.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvSeaImports_MasterRowGetChildList);
+			this.gvSeaImport.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvSeaImports_MasterRowGetRelationName);
+			this.gvSeaImport.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvSeaImports_MasterRowGetRelationCount);
 			// 
 			// colId
 			// 
@@ -2130,7 +2130,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// mainLayout
 			// 
-			this.mainLayout.Controls.Add(this.gcSeaImports);
+			this.mainLayout.Controls.Add(this.gcSeaImport);
 			this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.mainLayout.Location = new System.Drawing.Point(0, 193);
 			this.mainLayout.Name = "mainLayout";
@@ -2151,7 +2151,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			// layoutControlItem1
 			// 
-			this.layoutControlItem1.Control = this.gcSeaImports;
+			this.layoutControlItem1.Control = this.gcSeaImport;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
 			this.layoutControlItem1.Size = new System.Drawing.Size(1417, 531);
@@ -2163,8 +2163,8 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1441, 778);
 			this.Controls.Add(this.mainLayout);
-			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.rcJobSeaImport);
+			this.Controls.Add(this.ribbonStatusBar1);
 			this.Name = "JobSeaImportListForm";
 			this.Ribbon = this.rcJobSeaImport;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2172,9 +2172,9 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.Text = "Sea Import List";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JobSeaImportListForm_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.gvSeaImportDetails)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gcSeaImports)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gcSeaImport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.bsSeaImportJobs)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gvSeaImports)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gvSeaImport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat.CalendarTimeProperties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCustomers)).EndInit();
@@ -2278,7 +2278,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private DevExpress.XtraGrid.Columns.GridColumn colSalesId;
         private DevExpress.XtraGrid.Columns.GridColumn colSalesName;
         private DevExpress.XtraBars.RibbonGalleryBarItem rgOrderByReports;
-        private DevExpress.XtraGrid.GridControl gcSeaImports;
+        private DevExpress.XtraGrid.GridControl gcSeaImport;
         private DevExpress.XtraGrid.Views.Grid.GridView gvSeaImportDetails;
         private DevExpress.XtraGrid.Columns.GridColumn colDetailId;
         private DevExpress.XtraGrid.Columns.GridColumn colDetailJobNo;
@@ -2286,7 +2286,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private DevExpress.XtraGrid.Columns.GridColumn colDetailOrigin;
         private DevExpress.XtraGrid.Columns.GridColumn colDetailSupplier;
         private DevExpress.XtraGrid.Columns.GridColumn colDetailContNo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvSeaImports;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvSeaImport;
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colRefNo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;

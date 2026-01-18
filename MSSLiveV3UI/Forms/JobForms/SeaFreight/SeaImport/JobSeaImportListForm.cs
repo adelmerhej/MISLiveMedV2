@@ -121,7 +121,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void WireUpBindings()
         {
-            gcSeaImports.DataSource = _seaImports;
+            gcSeaImport.DataSource = _seaImports;
             repCustomers.DataSource = _customers;
             repAgents.DataSource = _agents;
             repSideId.DataSource = _agents;
@@ -155,20 +155,20 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void ApplyDefaults()
         {
-            LayoutsStyle.LoadLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
+            LayoutsStyle.LoadLayoutGrid(gvSeaImport, CurrentUser.UserName, CurrentUser.CompanyName);
 
             foreach (var value in new[] { "showActive", "showClosed", "showCancelled", "showAll" })
                 rgFilterReports.Gallery.GetItemByValue(value).Checked = false;
 
             rgSortByReports.Gallery.GetItemByValue("SortByJobNo").Checked = true;
             rgOrderByReports.Gallery.GetItemByValue("Descending").Checked = true;
-            gvSeaImports.Columns["JobNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
+            gvSeaImport.Columns["JobNo"].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
 
-            gvSeaImports.ActiveFilter.Clear();
-            gvSeaImports.ActiveFilter.Add(gvSeaImports.Columns["Tejrim"],
+            gvSeaImport.ActiveFilter.Clear();
+            gvSeaImport.ActiveFilter.Add(gvSeaImport.Columns["Tejrim"],
                 new ColumnFilterInfo("[Tejrim] = 'False'", "Tejrim = False"));
 
-            LayoutsStyle.LoadLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
+            LayoutsStyle.LoadLayoutGrid(gvSeaImport, CurrentUser.UserName, CurrentUser.CompanyName);
         }
 
         private void RcvUpdatedJobSeaImport(object sender, EventArgs e)
@@ -183,7 +183,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             }
             else
             {
-                gvSeaImports.UpdateCurrentRow();
+                gvSeaImport.UpdateCurrentRow();
             }
         }
 
@@ -197,7 +197,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         private void btnEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (_seaImports == null) return;
-            if (gvSeaImports.GetFocusedRowCellValue("Id") is not int currentRowId) return;
+            if (gvSeaImport.GetFocusedRowCellValue("Id") is not int currentRowId) return;
             _jobSeaImportModel = _seaImports.SingleOrDefault(x => x.Id == currentRowId);
 
             var seaImportForm = new JobSeaImportEditForm(_jobSeaImportModel);
@@ -213,7 +213,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void btnPrint_ItemClick(object sender, ItemClickEventArgs e)
         {
-            gcSeaImports.ShowRibbonPrintPreview();
+            gcSeaImport.ShowRibbonPrintPreview();
         }
 
         private void btnDelete_ItemClick(object sender, ItemClickEventArgs e)
@@ -258,7 +258,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 
         private void GridFilterBy()
         {
-            var view = gvSeaImports;
+            var view = gvSeaImport;
             view.ActiveFilter.Clear();
 
             var itemIsActive = rgFilterReports.Gallery.GetItemByValue("showActive");
@@ -311,7 +311,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
                 view.ActiveFilter.Add(view.Columns["Tejrim"],
                     new ColumnFilterInfo("[Tejrim] = 'False'", "Tejrim = False"));
             }
-            gvSeaImports.MoveFirst();
+            gvSeaImport.MoveFirst();
         }
 
         private void rgSortByReports_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
@@ -326,23 +326,23 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
             var orderByAscending = rgOrderByReports.Gallery.GetItemByValue("Ascending");
             var orderByDescending = rgOrderByReports.Gallery.GetItemByValue("Descending");
 
-            gvSeaImports.ClearSorting();
+            gvSeaImport.ClearSorting();
             if (rgSortByReports.Gallery != null)
             {
                 if (sortByJobNo.Checked)
                 {
-                    gvSeaImports.Columns["JobNo"].SortOrder = orderByAscending.Checked
+                    gvSeaImport.Columns["JobNo"].SortOrder = orderByAscending.Checked
                         ? DevExpress.Data.ColumnSortOrder.Ascending
                         : DevExpress.Data.ColumnSortOrder.Descending;
                 }
                 if (sortByRefNo.Checked)
                 {
-                    gvSeaImports.Columns["ReferenceNo"].SortOrder = orderByAscending.Checked
+                    gvSeaImport.Columns["ReferenceNo"].SortOrder = orderByAscending.Checked
                         ? DevExpress.Data.ColumnSortOrder.Ascending
                         : DevExpress.Data.ColumnSortOrder.Descending;
                 }
             }
-            gvSeaImports.MoveFirst();
+            gvSeaImport.MoveFirst();
         }
 
         private void gvSeaImports_MasterRowEmpty(object sender, MasterRowEmptyEventArgs e)
@@ -377,7 +377,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
             if (!_isAdmin && !_canEdit) return;
             if (_seaImports == null) return;
-            if (gvSeaImports.GetFocusedRowCellValue("Id") is not int currentRowId) return;
+            if (gvSeaImport.GetFocusedRowCellValue("Id") is not int currentRowId) return;
             _jobSeaImportModel = _seaImports.SingleOrDefault(x => x.Id == currentRowId);
 
             var seaImportForm = new JobSeaImportEditForm(_jobSeaImportModel);
@@ -402,7 +402,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
                 DialogResult.Yes)
             {
                 _resetMenu = true;
-                LayoutsStyle.ResetLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
+                LayoutsStyle.ResetLayoutGrid(gvSeaImport, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
 
@@ -410,7 +410,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
             if (!_resetMenu)
             {
-                LayoutsStyle.SaveLayoutGrid(gvSeaImports, CurrentUser.UserName, CurrentUser.CompanyName);
+                LayoutsStyle.SaveLayoutGrid(gvSeaImport, CurrentUser.UserName, CurrentUser.CompanyName);
             }
         }
     }

@@ -683,6 +683,12 @@
     <Compile Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportEditForm.Designer.cs">
       <DependentUpon>JobSeaImportEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportHblEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportHblEditForm.Designer.cs">
+      <DependentUpon>JobSeaImportHblEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1273,6 +1279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportEditForm.resx">
       <DependentUpon>JobSeaImportEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportHblEditForm.resx">
+      <DependentUpon>JobSeaImportHblEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JobForms\SeaFreight\SeaImport\JobSeaImportListForm.resx">
       <DependentUpon>JobSeaImportListForm.cs</DependentUpon>

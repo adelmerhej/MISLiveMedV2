@@ -35,22 +35,22 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobSeaImportEditForm));
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
-			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges3 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges4 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem9 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem10 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem11 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem12 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.Utils.ContextButton contextButton2 = new DevExpress.Utils.ContextButton();
+			DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+			DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
 			this.bsJobSeaImport = new System.Windows.Forms.BindingSource(this.components);
 			this.bsJobSeaImportDetails = new System.Windows.Forms.BindingSource(this.components);
 			this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -1076,16 +1076,16 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.galleryQuickLetters.Gallery.ColumnCount = 2;
 			this.galleryQuickLetters.Gallery.DrawImageBackground = false;
-			galleryItemGroup1.Caption = "Group1";
+			galleryItemGroup3.Caption = "Group1";
 			this.galleryQuickLetters.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup3});
 			this.galleryQuickLetters.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-			skinPaddingEdges1.Bottom = -4;
-			skinPaddingEdges1.Top = -4;
-			this.galleryQuickLetters.Gallery.ItemImagePadding = skinPaddingEdges1;
-			skinPaddingEdges2.Bottom = -1;
-			skinPaddingEdges2.Top = -1;
-			this.galleryQuickLetters.Gallery.ItemTextPadding = skinPaddingEdges2;
+			skinPaddingEdges3.Bottom = -4;
+			skinPaddingEdges3.Top = -4;
+			this.galleryQuickLetters.Gallery.ItemImagePadding = skinPaddingEdges3;
+			skinPaddingEdges4.Bottom = -1;
+			skinPaddingEdges4.Top = -1;
+			this.galleryQuickLetters.Gallery.ItemTextPadding = skinPaddingEdges4;
 			this.galleryQuickLetters.Gallery.ShowItemText = true;
 			this.galleryQuickLetters.Id = 14;
 			this.galleryQuickLetters.Name = "galleryQuickLetters";
@@ -1125,41 +1125,41 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			// 
 			this.rgJobStatusAction.Gallery.ColumnCount = 3;
 			this.rgJobStatusAction.Gallery.DrawImageBackground = false;
-			galleryItemGroup2.Caption = "ActionGroup";
-			galleryItem1.Caption = "Normal Mod";
-			galleryItem1.Checked = true;
-			galleryItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
-			galleryItem1.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem1.Value = 0;
-			galleryItem2.Caption = "Close current Job";
-			galleryItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
-			galleryItem2.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem2.Value = 1;
-			galleryItem3.Caption = "Edit closed Job";
-			galleryItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
-			galleryItem3.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem3.Value = 2;
-			galleryItem4.Caption = "Cancel current File";
-			galleryItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
-			galleryItem4.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem4.Value = 3;
-			galleryItem5.Caption = "ReOpen canceled File";
-			galleryItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
-			galleryItem5.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem5.Value = 4;
-			galleryItem6.Caption = "N/A";
-			galleryItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
-			galleryItem6.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
-			galleryItem6.Value = 5;
-			galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1,
-            galleryItem2,
-            galleryItem3,
-            galleryItem4,
-            galleryItem5,
-            galleryItem6});
+			galleryItemGroup4.Caption = "ActionGroup";
+			galleryItem7.Caption = "Normal Mod";
+			galleryItem7.Checked = true;
+			galleryItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+			galleryItem7.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem7.Value = 0;
+			galleryItem8.Caption = "Close current Job";
+			galleryItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
+			galleryItem8.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem8.Value = 1;
+			galleryItem9.Caption = "Edit closed Job";
+			galleryItem9.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
+			galleryItem9.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem9.Value = 2;
+			galleryItem10.Caption = "Cancel current File";
+			galleryItem10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
+			galleryItem10.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem10.Value = 3;
+			galleryItem11.Caption = "ReOpen canceled File";
+			galleryItem11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
+			galleryItem11.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem11.Value = 4;
+			galleryItem12.Caption = "N/A";
+			galleryItem12.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
+			galleryItem12.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+			galleryItem12.Value = 5;
+			galleryItemGroup4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem7,
+            galleryItem8,
+            galleryItem9,
+            galleryItem10,
+            galleryItem11,
+            galleryItem12});
 			this.rgJobStatusAction.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup4});
 			this.rgJobStatusAction.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleCheck;
 			this.rgJobStatusAction.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
 			this.rgJobStatusAction.Gallery.ShowItemText = true;
@@ -4259,6 +4259,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnAllInOrderOW.StyleController = this.layoutRequirements;
 			this.btnAllInOrderOW.TabIndex = 7;
 			this.btnAllInOrderOW.Text = "<< All In Order";
+			this.btnAllInOrderOW.Click += new System.EventHandler(this.btnAllInOrderOW_Click);
 			// 
 			// btnAllInOrderTBL
 			// 
@@ -4268,6 +4269,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.btnAllInOrderTBL.StyleController = this.layoutRequirements;
 			this.btnAllInOrderTBL.TabIndex = 6;
 			this.btnAllInOrderTBL.Text = "<< All In Order";
+			this.btnAllInOrderTBL.Click += new System.EventHandler(this.btnAllInOrderTBL_Click);
 			// 
 			// gridSplitContainer1
 			// 
@@ -4320,6 +4322,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gvRequiredOnWater.OptionsView.ColumnAutoWidth = false;
 			this.gvRequiredOnWater.OptionsView.ShowGroupExpandCollapseButtons = false;
 			this.gvRequiredOnWater.OptionsView.ShowGroupPanel = false;
+			this.gvRequiredOnWater.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvRequiredOnWater_RowCellStyle);
 			// 
 			// gridColumn47
 			// 
@@ -4447,6 +4450,7 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gvRequiredToBeLoaded.OptionsView.ColumnAutoWidth = false;
 			this.gvRequiredToBeLoaded.OptionsView.ShowGroupExpandCollapseButtons = false;
 			this.gvRequiredToBeLoaded.OptionsView.ShowGroupPanel = false;
+			this.gvRequiredToBeLoaded.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvRequiredToBeLoaded_RowCellStyle);
 			// 
 			// gridColumn41
 			// 
@@ -5865,12 +5869,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.gvDocuments.ColumnSet.DescriptionColumn = this.colDate1;
 			this.gvDocuments.ColumnSet.TextColumn = this.colName;
 			this.gvDocuments.ContextButtonOptions.AllowGlyphSkinning = true;
-			contextButton1.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Right;
-			contextButton1.Id = new System.Guid("29468572-0411-449a-bc2d-0c333134705c");
-			contextButton1.ImageOptionsCollection.ItemNormal.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage6")));
-			contextButton1.ImageOptionsCollection.ItemNormal.SvgImageSize = new System.Drawing.Size(16, 16);
-			contextButton1.Name = "removeButton";
-			this.gvDocuments.ContextButtons.Add(contextButton1);
+			contextButton2.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Right;
+			contextButton2.Id = new System.Guid("29468572-0411-449a-bc2d-0c333134705c");
+			contextButton2.ImageOptionsCollection.ItemNormal.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage6")));
+			contextButton2.ImageOptionsCollection.ItemNormal.SvgImageSize = new System.Drawing.Size(16, 16);
+			contextButton2.Name = "removeButton";
+			this.gvDocuments.ContextButtons.Add(contextButton2);
 			this.gvDocuments.GridControl = this.gcDocuments;
 			this.gvDocuments.Name = "gvDocuments";
 			this.gvDocuments.OptionsBehavior.Editable = false;
@@ -5915,12 +5919,12 @@ namespace MISLiveMed.UI.Forms.JobForms.SeaFreight.SeaImport
 			this.openDocuments.Name = "openDocuments";
 			this.openDocuments.Properties.AutoHeight = false;
 			this.openDocuments.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-			editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-			editorButtonImageOptions1.SvgImageSize = new System.Drawing.Size(16, 16);
+			editorButtonImageOptions2.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions2.SvgImage")));
+			editorButtonImageOptions2.SvgImageSize = new System.Drawing.Size(16, 16);
 			this.openDocuments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton(),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", "loadFile", null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, true, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", "loadFile", null, DevExpress.Utils.ToolTipAnchor.Default)});
 			this.openDocuments.Properties.Client = this.gcDocuments;
 			this.openDocuments.Size = new System.Drawing.Size(1392, 30);
 			this.openDocuments.StyleController = this.layoutAttachedDocumnets;

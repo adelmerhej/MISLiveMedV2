@@ -1,129 +1,131 @@
-﻿using System;
+﻿using Dapper;
+using MISLiveMed.DataLayers.DataUtilities;
+using MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs;
+using MISLiveMed.Models.Models.JobModels.Quotations;
+using MISLiveMed.Models.Models.Reports;
+using MISLiveMed.Models.Models.Users;
+using MISLiveMed.Utils.Enums;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using Dapper;
-using MISLiveMed.DataLayers.DataUtilities;
-using MISLiveMed.Models.Models.JobModels.Import.SeaFreight.Jobs;
-using MISLiveMed.Models.Models.Reports;
-using MISLiveMed.Models.Models.Users;
 
 namespace MISLiveMed.DataLayers.JobData.SeaImport
 {
-    public class JobSeaImportRepository : IDisposable
-    {
-        public IList<JobSeaImportModel> JobSeaImportList(bool showProtected = false)
-        {
-            try
-            {
-	            using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
-	            var p = new DynamicParameters();
-	            p.Add("@CompanyId", CurrentUser.CompanyId);
-	            p.Add("@IsProtected", showProtected);
+	public class JobSeaImportRepository : IDisposable
+	{
+		public IList<JobSeaImportModel> JobSeaImportList(bool showProtected = false)
+		{
+			try
+			{
+				using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
+				var p = new DynamicParameters();
+				p.Add("@CompanyId", CurrentUser.CompanyId);
+				p.Add("@IsProtected", showProtected);
 
-	            var jobsList =
-		            connection.Query<JobSeaImportModel>("SELECT * FROM JobSImport " +
-		                                                "WHERE (@IsProtected = 1 OR IsProtected = @IsProtected) " +
-		                                                "AND CompanyId = @CompanyId;", p);
+				var jobsList =
+					connection.Query<JobSeaImportModel>("SELECT * FROM JobSImport " +
+														"WHERE (@IsProtected = 1 OR IsProtected = @IsProtected) " +
+														"AND CompanyId = @CompanyId;", p);
 
-	            return jobsList.ToList();
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
+				return jobsList.ToList();
+			}
+			catch (Exception e)
+			{
+				throw new Exception(e.Message);
+			}
+		}
 
 
-        public JobSeaImportModel JobSeaImportByJobId(int id, bool showProtected = false)
-        {
-            try
-            {
-	            using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
-	            var p = new DynamicParameters();
-	            p.Add("@Id", id);
-	            p.Add("@CompanyId", CurrentUser.CompanyId);
-	            p.Add("@IsProtected", showProtected);
+		public JobSeaImportModel JobSeaImportByJobId(int id, bool showProtected = false)
+		{
+			try
+			{
+				using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
+				var p = new DynamicParameters();
+				p.Add("@Id", id);
+				p.Add("@CompanyId", CurrentUser.CompanyId);
+				p.Add("@IsProtected", showProtected);
 
-	            var jobRecord =
-		            connection.QuerySingleOrDefault("SELECT * FROM JobSImport WHERE CompanyId = @CompanyId AND Id = @Id " +
-		                                            "AND (@IsProtected = 0 OR IsProtected = @IsProtected);", p);
+				var jobRecord =
+					connection.QuerySingleOrDefault("SELECT * FROM JobSImport WHERE CompanyId = @CompanyId AND Id = @Id " +
+													"AND (@IsProtected = 0 OR IsProtected = @IsProtected);", p);
 
-	            return jobRecord;
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
-            }
-        }
+				return jobRecord;
+			}
+			catch (Exception e)
+			{
+				throw new Exception(e.Message);
+			}
+		}
 
-        public JobSeaImportModel JobSeaImportByJobNo(int jobNo, bool showProtected = false)
-        {
-            try
-            {
-	            using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
-	            var p = new DynamicParameters();
-	            p.Add("@JobNo", jobNo);
-	            p.Add("@CompanyId", CurrentUser.CompanyId);
-	            p.Add("@IsProtected", showProtected);
+		public JobSeaImportModel JobSeaImportByJobNo(int jobNo, bool showProtected = false)
+		{
+			try
+			{
+				using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
+				var p = new DynamicParameters();
+				p.Add("@JobNo", jobNo);
+				p.Add("@CompanyId", CurrentUser.CompanyId);
+				p.Add("@IsProtected", showProtected);
 
-	            var jobRecord =
-		            connection.QuerySingleOrDefault("SELECT * FROM JobSImport WHERE CompanyId = @CompanyId AND JobNo = @JobNo" +
-		                                            "AND (@IsProtected = 0 OR IsProtected = @IsProtected);", p);
+				var jobRecord =
+					connection.QuerySingleOrDefault("SELECT * FROM JobSImport WHERE CompanyId = @CompanyId AND JobNo = @JobNo" +
+													"AND (@IsProtected = 0 OR IsProtected = @IsProtected);", p);
 
-	            return jobRecord;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw new Exception(e.Message);
-            }
-        }
+				return jobRecord;
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				throw new Exception(e.Message);
+			}
+		}
 
-        public IList<DataReportModel> GetClosedBookingList()
-        {
-	        try
-	        {
-		        using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
-		        var p = new DynamicParameters();
-		        p.Add("@CompanyId", CurrentUser.CompanyId);
+		public IList<DataReportModel> GetClosedBookingList()
+		{
+			try
+			{
+				using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
+				var p = new DynamicParameters();
+				p.Add("@CompanyId", CurrentUser.CompanyId);
 
-		        var quotationModels =
-			        connection.Query<DataReportModel>("dbo.rep_ClosedBookingList_V001 @CompanyId", p);
+				var quotationModels =
+					connection.Query<DataReportModel>("dbo.rep_ClosedBookingList_V001 @CompanyId", p);
 
-		        return quotationModels.ToList();
-	        }
-	        catch (Exception e)
-	        {
-		        throw new Exception(e.Message);
-	        }
-        }
-		public IList<DataReportModel> GetClosedBookingList(DateTime? dateFrom, DateTime? dateTo, 
+				return quotationModels.ToList();
+			}
+			catch (Exception e)
+			{
+				throw new Exception(e.Message);
+			}
+		}
+		public IList<DataReportModel> GetClosedBookingList(DateTime? dateFrom, DateTime? dateTo,
 							int memberId = 0, int userid = 0, int salesId = 0, bool invoiced = false)
 		{
-	        try
-	        {
-		        using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
-		        var p = new DynamicParameters();
-		        p.Add("@DateFrom", dateFrom);
-		        p.Add("@DateTo", dateTo);
-		        p.Add("@MemberId", memberId);
-		        p.Add("@UserId", userid);
-		        p.Add("@SalesId", salesId);
-		        p.Add("@Invoiced", invoiced);
-		        p.Add("@CompanyId", CurrentUser.CompanyId);
+			try
+			{
+				using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
+				var p = new DynamicParameters();
+				p.Add("@DateFrom", dateFrom);
+				p.Add("@DateTo", dateTo);
+				p.Add("@MemberId", memberId);
+				p.Add("@UserId", userid);
+				p.Add("@SalesId", salesId);
+				p.Add("@Invoiced", invoiced);
+				p.Add("@CompanyId", CurrentUser.CompanyId);
 
-		        var quotationModels =
-			        connection.Query<DataReportModel>("dbo.rep_ClosedBookingList_V002 @DateFrom, @DateTo, @MemberId, @UserId, @SalesId, @Invoiced, @CompanyId", p);
+				var quotationModels =
+					connection.Query<DataReportModel>("dbo.rep_ClosedBookingList_V002 @DateFrom, @DateTo, @MemberId, @UserId, @SalesId, @Invoiced, @CompanyId", p);
 
-		        return quotationModels.ToList();
-	        }
-	        catch (Exception e)
-	        {
-		        throw new Exception(e.Message);
-	        }
-        }
+				return quotationModels.ToList();
+			}
+			catch (Exception e)
+			{
+				throw new Exception(e.Message);
+			}
+		}
 
 		public int AddNewJobSeaImport(JobSeaImportModel model)
 		{
@@ -145,9 +147,6 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@SeaportDestination", model.SeaportDestination);
 				p.Add("@CountryDestination", model.CountryDestination);
 				p.Add("@AgentId", model.AgentId);
-				p.Add("@ShippedWithId", model.ShippedWithId);
-				p.Add("@SideId", model.SideId);
-
 				p.Add("@FreeOfDemurrage", model.FreeOfDemurrage);
 				p.Add("@BookingNo", model.BookingNo);
 				p.Add("@NatureOfGoods", model.NatureOfGoods);
@@ -189,6 +188,8 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@IncoTerms", model.IncoTerms);
 				p.Add("@AllInOrderToBeLoaded", model.AllInOrderToBeLoaded);
 				p.Add("@AllInOrderOnWater", model.AllInOrderOnWater);
+				p.Add("@PendingForDelivery", model.PendingForDelivery);
+				p.Add("@PendingDeliveryDate", model.PendingDeliveryDate);
 				p.Add("@Delivered", model.Delivered);
 				p.Add("@DeliveredTo", model.DeliveredTo);
 				p.Add("@DeliveredDate", model.DeliveredDate);
@@ -213,9 +214,6 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@PaidDODate", model.PaidDODate);
 				p.Add("@MissingDocuments", model.MissingDocuments);
 				p.Add("@MissingDocumentsDate", model.MissingDocumentsDate);
-				p.Add("@PendingForDelivery", model.PendingForDelivery);
-				p.Add("@PendingDeliveryDate", model.PendingDeliveryDate);
-				p.Add("@ArrivalDate", model.ArrivalDate);
 
 				p.Add("@Notes", model.Notes);
 				p.Add("@CompanyId", model.CompanyId);
@@ -224,17 +222,16 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 
 				model.Id = connection.ExecuteScalar<int>(
 					"dbo.job_AddNewJobSeaImport @ReferenceNo, @DepartmentId, @JobTypeId, @JobNo, @JobDate, @Mbl, @CustomerId, @ConsigneeId, " +
-					"@SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @ShippedWithId, @SideId, " +
-					"@FreeOfDemurrage, @BookingNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId, " +
-					"@FeederVesselId, @PreferredCurrencyId, @TotalInvoicesLl, @TotalInvoicesUsd, @TotalCostsLl, @TotalCostsUsd, " +
-					"@OperatingUserId, @SalesId, @UserId, @Project, @Transit, @FullPaid, @FullPaidDate, @ClearingAgentId, " +
-					"@Etd, @Eta, @Atd, @Ata, @CutOffDate, @LoadingDate, " +
+					"@SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @FreeOfDemurrage, @BookingNo, " +
+					"@NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId, @FeederVesselId, " +
+					"@PreferredCurrencyId, @TotalInvoicesLl, @TotalInvoicesUsd, @TotalCostsLl, @TotalCostsUsd, @OperatingUserId, @SalesId, @UserId, " +
+					"@Project, @Transit, @FullPaid, @FullPaidDate, @ClearingAgentId, @Etd, @Eta, @Atd, @Ata, @CutOffDate, @LoadingDate, " +
 					"@Ppcc, @Status, @BlStatus, @RTejrim, @RTejrimDate, @Tejrim, @TejrimDate, @RClearance, @RClearanceDate, @IncoTerms, " +
-					"@AllInOrderToBeLoaded, @AllInOrderOnWater, @Delivered, @DeliveredTo, @DeliveredDate, @ContainerToCnee, @ContainerToCneeDate, " +
+					"@AllInOrderToBeLoaded, @AllInOrderOnWater, @PendingDelivery, @PendingDeliveryDate, @Delivered, @DeliveredTo, " +
+					"@DeliveredDate, @ContainerToCnee, @ContainerToCneeDate, " +
 					"@EmptyContainer, @EmptyContainerDate, @ConfirmEmptyContainer, @ConfirmEmptyContainerDate, @JobScId, @JobStatus, @Closed, " +
 					"@ClosedDate, @CancelledJob, @CancelledJobDate, @CancelledJobByUserId, @LastJobReopenedBy, @LastJobReopenedDate, " +
-					"@CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate, @PendingForDelivery, " +
-					"@PendingDeliveryDate, @ArrivalDate, @Notes, @CompanyId, @CreatedBy, @IsProtected;",
+					"@CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate, @Notes, @CompanyId, @CreatedBy, @IsProtected;",
 					p);
 				return model.Id;
 			}
@@ -265,9 +262,6 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@SeaportDestination", model.SeaportDestination);
 				p.Add("@CountryDestination", model.CountryDestination);
 				p.Add("@AgentId", model.AgentId);
-				p.Add("@ShippedWithId", model.ShippedWithId);
-				p.Add("@SideId", model.SideId);
-
 				p.Add("@FreeOfDemurrage", model.FreeOfDemurrage);
 				p.Add("@BookingNo", model.BookingNo);
 				p.Add("@NatureOfGoods", model.NatureOfGoods);
@@ -309,6 +303,8 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@IncoTerms", model.IncoTerms);
 				p.Add("@AllInOrderToBeLoaded", model.AllInOrderToBeLoaded);
 				p.Add("@AllInOrderOnWater", model.AllInOrderOnWater);
+				p.Add("@PendingForDelivery", model.PendingForDelivery);
+				p.Add("@PendingDeliveryDate", model.PendingDeliveryDate);
 				p.Add("@Delivered", model.Delivered);
 				p.Add("@DeliveredTo", model.DeliveredTo);
 				p.Add("@DeliveredDate", model.DeliveredDate);
@@ -333,10 +329,6 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				p.Add("@PaidDODate", model.PaidDODate);
 				p.Add("@MissingDocuments", model.MissingDocuments);
 				p.Add("@MissingDocumentsDate", model.MissingDocumentsDate);
-				p.Add("@PendingForDelivery", model.PendingForDelivery);
-				p.Add("@PendingDeliveryDate", model.PendingDeliveryDate);
-				p.Add("@ArrivalDate", model.ArrivalDate);
-
 				// Preserved from EntityObject
 				p.Add("@Notes", model.Notes);
 				p.Add("@LastModifiedBy", model.LastModifiedBy);
@@ -346,17 +338,18 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 				_ = connection.Execute(
 					@"dbo.job_UpdateJobSeaImport
 				        @Id, @ReferenceNo, @DepartmentId, @JobTypeId, @JobNo, @JobDate, @Mbl, @CustomerId, @ConsigneeId,
-				        @SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @ShippedWithId, @SideId, 
-						@FreeOfDemurrage, @BookingNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId,
+				        @SeaportDeparture, @CountryDeparture, @SeaportDestination, @CountryDestination, @AgentId, @FreeOfDemurrage,
+				        @BookingNo, @NatureOfGoods, @ValueOfGoods, @Quantities, @Volume, @Pieces, @Weight, @VesselId,
 				        @FeederVesselId, @PreferredCurrencyId, @TotalInvoicesLl, @TotalInvoicesUsd, @TotalCostsLl, @TotalCostsUsd,
 				        @OperatingUserId, @SalesId, @UserId, @Project, @Transit, @FullPaid, @FullPaidDate, @ClearingAgentId, @Etd, @Eta,
 				        @Atd, @Ata, @CutOffDate, @LoadingDate, @Ppcc, @Status, @BlStatus, @RTejrim, @RTejrimDate, @Tejrim, @TejrimDate,
-				        @RClearance, @RClearanceDate, @IncoTerms, @AllInOrderToBeLoaded, @AllInOrderOnWater, @Delivered, @DeliveredTo,
+				        @RClearance, @RClearanceDate, @IncoTerms, @AllInOrderToBeLoaded, @AllInOrderOnWater, 
+						@PendingDelivery, @PendingDeliveryDate, @Delivered, @DeliveredTo,
 				        @DeliveredDate, @ContainerToCnee, @ContainerToCneeDate, @EmptyContainer, @EmptyContainerDate,
 				        @ConfirmEmptyContainer, @ConfirmEmptyContainerDate, @JobScId, @JobStatus, @Closed, @ClosedDate,
 				        @CancelledJob, @CancelledJobDate, @CancelledJobByUserId, @LastJobReopenedBy, @LastJobReopenedDate,
-				        @CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate, @PendingForDelivery, 
-						@PendingDeliveryDate, @ArrivalDate, @Notes, @LastModifiedBy, @Active, @IsProtected;",
+				        @CostReady, @CostReadyDate, @PaidDO, @PaidDODate, @MissingDocuments, @MissingDocumentsDate,
+				        @Notes, @LastModifiedBy, @Active, @IsProtected;",
 					p);
 			}
 			catch (Exception e)
@@ -367,30 +360,81 @@ namespace MISLiveMed.DataLayers.JobData.SeaImport
 		}
 
 		public bool DeleteJobSeaImport(int id)
-        {
-            try
-            {
-	            using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
-	            var p = new DynamicParameters();
-	            p.Add("@Id", id);
+		{
+			try
+			{
+				using IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString());
+				var p = new DynamicParameters();
+				p.Add("@Id", id);
 
-	            _ = connection.ExecuteScalar("DELETE FROM JobSImport WHERE Id = @Id;", p);
+				_ = connection.ExecuteScalar("DELETE FROM JobSImport WHERE Id = @Id;", p);
 
-	            return true;
-            }
-            catch (Exception e)
-            {
-	            throw new Exception(e.Message);
+				return true;
 			}
-        }
-        
-        #region Implementation of IDisposable
+			catch (Exception e)
+			{
+				throw new Exception(e.Message);
+			}
+		}
 
-        public void Dispose()
-        {
 
-        }
+		#region To be moved to the corrected module
 
-        #endregion
-    }
+		public void UpdateInvoicedTejrim(int jobNo, bool invoiced)
+		{
+			using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
+			{
+				var p = new DynamicParameters();
+				p.Add("@JobNo", jobNo);
+				p.Add("@Invoiced", invoiced);
+
+				_ = connection.ExecuteScalar("dbo.job_UpdateInvoicedTejrim @JobNo, @Invoiced", p);
+			}
+		}
+
+		public IList<QuotationModel> GetQuotationsList(int pDepartmentFilter = 0,
+		bool pBooked = false, bool pCancelled = false, bool pLost = false, bool pAll = false, int pSalesFilter = 0,
+		EnumStatusType pStatusFilter = EnumStatusType.NotSelected, int pOrderBy = 0)
+		{
+			try
+			{
+				using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
+				{
+					var p = new DynamicParameters();
+					p.Add("@DepartmentFilter", pDepartmentFilter);
+					p.Add("@Booked", pBooked);
+					p.Add("@Cancelled", pCancelled);
+					p.Add("@Lost", pLost);
+					p.Add("@All", pAll);
+					p.Add("@SalesFilter", pSalesFilter);
+					p.Add("@StatusFilter", pStatusFilter);
+					p.Add("@OrderBy", pOrderBy);
+
+					var quotationsList =
+						connection.Query<QuotationModel>(
+							"dbo.job_GetQuotationsList @DepartmentFilter, @Booked, @Cancelled, @Lost, @All, @SalesFilter, " +
+							"@StatusFilter, @OrderBy", p);
+
+					return quotationsList.ToList();
+				}
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				throw new Exception(e.Message);
+			}
+
+		}
+
+		#endregion
+
+		#region Implementation of IDisposable
+
+		public void Dispose()
+		{
+
+		}
+
+		#endregion
+	}
 }

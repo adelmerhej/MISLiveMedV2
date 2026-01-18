@@ -162,7 +162,7 @@ namespace MISLiveMed.UI.Reports.JobStatus
             chkPrintDetailed.Checked = true;
             chkOnlyNegative.Checked = false;
 
-            _defaultZoomValue = 1;
+            _defaultZoomValue = 100;
             zoomValue.EditValue = _defaultZoomValue;
 
             btnPrint.Focus();

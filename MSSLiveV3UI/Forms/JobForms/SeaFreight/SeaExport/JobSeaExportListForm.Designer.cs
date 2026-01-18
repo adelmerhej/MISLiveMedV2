@@ -28,129 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-			DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JobSeaExportListForm));
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup16 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem41 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem42 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem43 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem44 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges31 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges32 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup17 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem45 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem46 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges33 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges34 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup18 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem47 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem48 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges35 = new DevExpress.Skins.SkinPaddingEdges();
-			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges36 = new DevExpress.Skins.SkinPaddingEdges();
-			this.gvSeaExportDetails = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colDetailId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDetailJobNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDetailBOL = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDetailOrigin = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDetailSupplier = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDetailContNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gcSeaExports = new DevExpress.XtraGrid.GridControl();
-			this.gvSeaExports = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colRefNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colJobNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colJobDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repDateFormat = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-			this.colMbol = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colContainerNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colBookingNo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCustomerId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repCustomers = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-			this.colMemberId1 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colMemberName1 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colConsigneeId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colAgentId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repAgents = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.colSeaportDeparture = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repPOLPortCodeList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.colCountryDeparture = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSeaportDestination = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repPODPortCodeList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.colCountryDestination = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colBayan = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repCheckList = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-			this.colJobType = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repJobTypes = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.colType = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colSideId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCommodity = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colQuantities = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colPieces = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colWeight = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colValueOfGoods = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colShippedWithId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colVesselId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colFeederVesselId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDelivered = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDeliveredTo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDeliveredDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCurrencyId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTotalInvoicesLl = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTotalInvoicesUsd = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTotalCostsLl = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTotalCostsUsd = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colOperatingUserId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colUserId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colProject = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTransit = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colFullPaid = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colFullPaidDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colClearingAgentId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colATD = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colATA = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colETD = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colETA = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCutOffDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDOL = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colPPCC = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colBlstatus = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colRTejrim = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colRTejrimDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTejrim = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colTejrimDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colRClearance = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colRClearanceDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colIncoTerms = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colIncoTermsFrom = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colIncoTermsTo = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colAllInOrderToBeLoaded = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colAllInOrderOnWater = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colContainerToCnee = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDtCntrToCnee = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colEmptyContainer = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colDtEmptyCntr = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colJobSCId = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colLocked = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colClosed = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colClosedDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCanceledJob = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCanceledDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCanceledUser = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colLastJobReopenedBy = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colLastJobReopened = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCostReady = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCostReadyDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCreatedBy = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colCreatedDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colLastModifiedBy = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.colLastModifiedDate = new DevExpress.XtraGrid.Columns.GridColumn();
-			this.repUsersList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-			this.repSalesList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem3 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem4 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem6 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges3 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges4 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem7 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.XtraBars.Ribbon.GalleryItem galleryItem8 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges5 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges6 = new DevExpress.Skins.SkinPaddingEdges();
+			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
 			this.rcJobSeaExport = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnNew = new DevExpress.XtraBars.BarButtonItem();
 			this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
@@ -199,11 +96,116 @@
 			this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
 			this.mainLayout = new DevExpress.XtraDataLayout.DataLayoutControl();
+			this.gcSeaExport = new DevExpress.XtraGrid.GridControl();
+			this.gvSeaExportDetails = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.colDetailId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDetailJobNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDetailBOL = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDetailOrigin = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDetailSupplier = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDetailContNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gvSeaExport = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colRefNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colJobNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colJobDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repDateFormat = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+			this.colMbol = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colContainerNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colBookingNo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCustomerId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repCustomers = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.colMemberId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colMemberName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colConsigneeId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colAgentId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repAgents = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.colSeaportDeparture = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repPOLPortCodeList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.colCountryDeparture = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSeaportDestination = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repPODPortCodeList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.colCountryDestination = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colJobType = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repJobsType = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.colSideId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repSideId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.colCommodity = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colQuantities = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPieces = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colWeight = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colValueOfGoods = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colShippedWithId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repAgentCategories = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.colVesselId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colFeederVesselId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDelivered = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDeliveredTo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDeliveredDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCurrencyId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalInvoicesLl = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalInvoicesUsd = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalCostsLl = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTotalCostsUsd = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colOperatingUserId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colSales = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colUserId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colProject = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTransit = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colFullPaid = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colFullPaidDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colClearingAgentId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colATD = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colATA = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colETD = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colETA = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCutOffDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDOL = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colPPCC = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colBlstatus = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colRTejrim = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colRTejrimDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTejrim = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colTejrimDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colRClearance = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colRClearanceDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colIncoTerms = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colIncoTermsFrom = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colIncoTermsTo = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colAllInOrderToBeLoaded = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colAllInOrderOnWater = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colContainerToCnee = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDtCntrToCnee = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colEmptyContainer = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colDtEmptyCntr = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colJobSCId = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLocked = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colClosed = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colClosedDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCanceledJob = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCanceledDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCanceledUser = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLastJobReopenedBy = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colLastJobReopened = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCostReady = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colCostReadyDate = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.colNotes = new DevExpress.XtraGrid.Columns.GridColumn();
+			this.repUsersList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.repSalesList = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+			this.repCheckList = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+			this.repNumberFormat = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
 			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+			this.bsSeaExportJobs = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaExport)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).BeginInit();
+			this.mainLayout.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gcSeaExport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvSeaExportDetails)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gcSeaExports)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gvSeaExports)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gvSeaExport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat.CalendarTimeProperties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCustomers)).BeginInit();
@@ -211,1105 +213,17 @@
 			((System.ComponentModel.ISupportInitialize)(this.repAgents)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repPOLPortCodeList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repPODPortCodeList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repCheckList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.repJobTypes)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repJobsType)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repSideId)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repAgentCategories)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repUsersList)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repSalesList)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaExport)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).BeginInit();
-			this.mainLayout.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.repCheckList)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repNumberFormat)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.bsSeaExportJobs)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// gvSeaExportDetails
-			// 
-			this.gvSeaExportDetails.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colDetailId,
-            this.colDetailJobNo,
-            this.colDetailBOL,
-            this.colDetailOrigin,
-            this.colDetailSupplier,
-            this.colDetailContNo});
-			this.gvSeaExportDetails.GridControl = this.gcSeaExports;
-			this.gvSeaExportDetails.Name = "gvSeaExportDetails";
-			// 
-			// colDetailId
-			// 
-			this.colDetailId.Caption = "Id";
-			this.colDetailId.FieldName = "Id";
-			this.colDetailId.MinWidth = 25;
-			this.colDetailId.Name = "colDetailId";
-			this.colDetailId.Visible = true;
-			this.colDetailId.VisibleIndex = 0;
-			this.colDetailId.Width = 94;
-			// 
-			// colDetailJobNo
-			// 
-			this.colDetailJobNo.Caption = "Job#";
-			this.colDetailJobNo.FieldName = "JobId";
-			this.colDetailJobNo.MinWidth = 25;
-			this.colDetailJobNo.Name = "colDetailJobNo";
-			this.colDetailJobNo.Visible = true;
-			this.colDetailJobNo.VisibleIndex = 1;
-			this.colDetailJobNo.Width = 94;
-			// 
-			// colDetailBOL
-			// 
-			this.colDetailBOL.Caption = "HBL";
-			this.colDetailBOL.FieldName = "Bol";
-			this.colDetailBOL.MinWidth = 25;
-			this.colDetailBOL.Name = "colDetailBOL";
-			this.colDetailBOL.Visible = true;
-			this.colDetailBOL.VisibleIndex = 2;
-			this.colDetailBOL.Width = 94;
-			// 
-			// colDetailOrigin
-			// 
-			this.colDetailOrigin.Caption = "Origin";
-			this.colDetailOrigin.FieldName = "Origin";
-			this.colDetailOrigin.MinWidth = 25;
-			this.colDetailOrigin.Name = "colDetailOrigin";
-			this.colDetailOrigin.Visible = true;
-			this.colDetailOrigin.VisibleIndex = 3;
-			this.colDetailOrigin.Width = 94;
-			// 
-			// colDetailSupplier
-			// 
-			this.colDetailSupplier.Caption = "Supplier";
-			this.colDetailSupplier.FieldName = "Supplier";
-			this.colDetailSupplier.MinWidth = 25;
-			this.colDetailSupplier.Name = "colDetailSupplier";
-			this.colDetailSupplier.Visible = true;
-			this.colDetailSupplier.VisibleIndex = 4;
-			this.colDetailSupplier.Width = 94;
-			// 
-			// colDetailContNo
-			// 
-			this.colDetailContNo.Caption = "ContNo";
-			this.colDetailContNo.FieldName = "ContNo";
-			this.colDetailContNo.MinWidth = 25;
-			this.colDetailContNo.Name = "colDetailContNo";
-			this.colDetailContNo.Visible = true;
-			this.colDetailContNo.VisibleIndex = 5;
-			this.colDetailContNo.Width = 94;
-			// 
-			// gcSeaExports
-			// 
-			this.gcSeaExports.EmbeddedNavigator.Buttons.Append.Visible = false;
-			this.gcSeaExports.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
-			this.gcSeaExports.EmbeddedNavigator.Buttons.Edit.Visible = false;
-			this.gcSeaExports.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
-			this.gcSeaExports.EmbeddedNavigator.Buttons.Remove.Visible = false;
-			this.gcSeaExports.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-			gridLevelNode2.LevelTemplate = this.gvSeaExportDetails;
-			gridLevelNode2.RelationName = "FK_JobDetails";
-			this.gcSeaExports.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-			this.gcSeaExports.Location = new System.Drawing.Point(12, 12);
-			this.gcSeaExports.MainView = this.gvSeaExports;
-			this.gcSeaExports.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-			this.gcSeaExports.Name = "gcSeaExports";
-			this.gcSeaExports.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repUsersList,
-            this.repSalesList,
-            this.repCustomers,
-            this.repPOLPortCodeList,
-            this.repPODPortCodeList,
-            this.repCheckList,
-            this.repDateFormat,
-            this.repAgents,
-            this.repJobTypes});
-			this.gcSeaExports.Size = new System.Drawing.Size(1421, 541);
-			this.gcSeaExports.TabIndex = 5;
-			this.gcSeaExports.UseEmbeddedNavigator = true;
-			this.gcSeaExports.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvSeaExports,
-            this.gvSeaExportDetails});
-			// 
-			// gvSeaExports
-			// 
-			this.gvSeaExports.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colRefNo,
-            this.gridColumn1,
-            this.colJobNo,
-            this.colJobDate,
-            this.colMbol,
-            this.colContainerNo,
-            this.colBookingNo,
-            this.colCustomerId,
-            this.colConsigneeId,
-            this.colAgentId,
-            this.colSeaportDeparture,
-            this.colCountryDeparture,
-            this.colSeaportDestination,
-            this.colCountryDestination,
-            this.colBayan,
-            this.colJobType,
-            this.colType,
-            this.colSideId,
-            this.colCommodity,
-            this.colQuantities,
-            this.colPieces,
-            this.colWeight,
-            this.colValueOfGoods,
-            this.colShippedWithId,
-            this.colVesselId,
-            this.colFeederVesselId,
-            this.colDelivered,
-            this.colDeliveredTo,
-            this.colDeliveredDate,
-            this.colCurrencyId,
-            this.colTotalInvoicesLl,
-            this.colTotalInvoicesUsd,
-            this.colTotalCostsLl,
-            this.colTotalCostsUsd,
-            this.colOperatingUserId,
-            this.gridColumn2,
-            this.colUserId,
-            this.colProject,
-            this.colTransit,
-            this.colFullPaid,
-            this.colFullPaidDate,
-            this.colClearingAgentId,
-            this.colATD,
-            this.colATA,
-            this.colETD,
-            this.colETA,
-            this.colCutOffDate,
-            this.colDOL,
-            this.colPPCC,
-            this.colStatus,
-            this.colBlstatus,
-            this.colRTejrim,
-            this.colRTejrimDate,
-            this.colTejrim,
-            this.colTejrimDate,
-            this.colRClearance,
-            this.colRClearanceDate,
-            this.colIncoTerms,
-            this.colIncoTermsFrom,
-            this.colIncoTermsTo,
-            this.colAllInOrderToBeLoaded,
-            this.colAllInOrderOnWater,
-            this.colContainerToCnee,
-            this.colDtCntrToCnee,
-            this.colEmptyContainer,
-            this.colDtEmptyCntr,
-            this.colJobSCId,
-            this.colLocked,
-            this.colClosed,
-            this.colClosedDate,
-            this.colCanceledJob,
-            this.colCanceledDate,
-            this.colCanceledUser,
-            this.colLastJobReopenedBy,
-            this.colLastJobReopened,
-            this.colCostReady,
-            this.colCostReadyDate,
-            this.colNotes,
-            this.colCreatedBy,
-            this.colCreatedDate,
-            this.colLastModifiedBy,
-            this.colLastModifiedDate});
-			this.gvSeaExports.DetailHeight = 458;
-			this.gvSeaExports.GridControl = this.gcSeaExports;
-			this.gvSeaExports.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Name", null, "")});
-			this.gvSeaExports.Name = "gvSeaExports";
-			this.gvSeaExports.OptionsBehavior.Editable = false;
-			this.gvSeaExports.OptionsBehavior.ReadOnly = true;
-			this.gvSeaExports.OptionsFind.AlwaysVisible = true;
-			this.gvSeaExports.OptionsPrint.AutoWidth = false;
-			this.gvSeaExports.OptionsPrint.PrintHorzLines = false;
-			this.gvSeaExports.OptionsPrint.PrintVertLines = false;
-			this.gvSeaExports.OptionsView.ColumnAutoWidth = false;
-			this.gvSeaExports.OptionsView.ShowGroupedColumns = true;
-			this.gvSeaExports.OptionsView.ShowGroupPanel = false;
-			// 
-			// colId
-			// 
-			this.colId.FieldName = "Id";
-			this.colId.MinWidth = 25;
-			this.colId.Name = "colId";
-			this.colId.Visible = true;
-			this.colId.VisibleIndex = 0;
-			this.colId.Width = 94;
-			// 
-			// colRefNo
-			// 
-			this.colRefNo.Caption = "XONO";
-			this.colRefNo.FieldName = "ReferenceNo";
-			this.colRefNo.MinWidth = 25;
-			this.colRefNo.Name = "colRefNo";
-			this.colRefNo.Visible = true;
-			this.colRefNo.VisibleIndex = 1;
-			this.colRefNo.Width = 121;
-			// 
-			// gridColumn1
-			// 
-			this.gridColumn1.FieldName = "DepartmentId";
-			this.gridColumn1.MinWidth = 25;
-			this.gridColumn1.Name = "gridColumn1";
-			this.gridColumn1.Width = 94;
-			// 
-			// colJobNo
-			// 
-			this.colJobNo.Caption = "Job#";
-			this.colJobNo.FieldName = "JobNo";
-			this.colJobNo.MinWidth = 25;
-			this.colJobNo.Name = "colJobNo";
-			this.colJobNo.Visible = true;
-			this.colJobNo.VisibleIndex = 2;
-			this.colJobNo.Width = 94;
-			// 
-			// colJobDate
-			// 
-			this.colJobDate.ColumnEdit = this.repDateFormat;
-			this.colJobDate.FieldName = "JobDate";
-			this.colJobDate.MinWidth = 25;
-			this.colJobDate.Name = "colJobDate";
-			this.colJobDate.Visible = true;
-			this.colJobDate.VisibleIndex = 3;
-			this.colJobDate.Width = 94;
-			// 
-			// repDateFormat
-			// 
-			this.repDateFormat.AutoHeight = false;
-			this.repDateFormat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repDateFormat.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repDateFormat.CalendarTimeProperties.MaskSettings.Set("mask", "dd/MM/yyyy");
-			this.repDateFormat.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
-			this.repDateFormat.MaskSettings.Set("mask", "dd/MM/yyyy");
-			this.repDateFormat.Name = "repDateFormat";
-			this.repDateFormat.UseMaskAsDisplayFormat = true;
-			// 
-			// colMbol
-			// 
-			this.colMbol.Caption = "MBOL";
-			this.colMbol.FieldName = "Mbol";
-			this.colMbol.MinWidth = 25;
-			this.colMbol.Name = "colMbol";
-			this.colMbol.Visible = true;
-			this.colMbol.VisibleIndex = 9;
-			this.colMbol.Width = 152;
-			// 
-			// colContainerNo
-			// 
-			this.colContainerNo.Caption = "Container#";
-			this.colContainerNo.FieldName = "ContainerNo";
-			this.colContainerNo.MinWidth = 25;
-			this.colContainerNo.Name = "colContainerNo";
-			this.colContainerNo.Visible = true;
-			this.colContainerNo.VisibleIndex = 10;
-			this.colContainerNo.Width = 159;
-			// 
-			// colBookingNo
-			// 
-			this.colBookingNo.Caption = "Booking#";
-			this.colBookingNo.FieldName = "BookingNo";
-			this.colBookingNo.MinWidth = 25;
-			this.colBookingNo.Name = "colBookingNo";
-			this.colBookingNo.Visible = true;
-			this.colBookingNo.VisibleIndex = 11;
-			this.colBookingNo.Width = 136;
-			// 
-			// colCustomerId
-			// 
-			this.colCustomerId.Caption = "Customer";
-			this.colCustomerId.ColumnEdit = this.repCustomers;
-			this.colCustomerId.FieldName = "CustomerId";
-			this.colCustomerId.MinWidth = 25;
-			this.colCustomerId.Name = "colCustomerId";
-			this.colCustomerId.Visible = true;
-			this.colCustomerId.VisibleIndex = 4;
-			this.colCustomerId.Width = 272;
-			// 
-			// repCustomers
-			// 
-			this.repCustomers.AutoHeight = false;
-			this.repCustomers.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repCustomers.DisplayMember = "CustomerName";
-			this.repCustomers.Name = "repCustomers";
-			this.repCustomers.NullText = "";
-			this.repCustomers.PopupView = this.gridView1;
-			this.repCustomers.ValueMember = "Id";
-			// 
-			// gridView1
-			// 
-			this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMemberId1,
-            this.colMemberName1});
-			this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-			this.gridView1.Name = "gridView1";
-			this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-			this.gridView1.OptionsView.ShowGroupPanel = false;
-			// 
-			// colMemberId1
-			// 
-			this.colMemberId1.Caption = "Id";
-			this.colMemberId1.FieldName = "Id";
-			this.colMemberId1.Name = "colMemberId1";
-			this.colMemberId1.Visible = true;
-			this.colMemberId1.VisibleIndex = 0;
-			this.colMemberId1.Width = 175;
-			// 
-			// colMemberName1
-			// 
-			this.colMemberName1.Caption = "Customer Name";
-			this.colMemberName1.FieldName = "CustomerName";
-			this.colMemberName1.Name = "colMemberName1";
-			this.colMemberName1.Visible = true;
-			this.colMemberName1.VisibleIndex = 1;
-			this.colMemberName1.Width = 892;
-			// 
-			// colConsigneeId
-			// 
-			this.colConsigneeId.Caption = "Consignee";
-			this.colConsigneeId.ColumnEdit = this.repCustomers;
-			this.colConsigneeId.FieldName = "ConsigneeId";
-			this.colConsigneeId.MinWidth = 25;
-			this.colConsigneeId.Name = "colConsigneeId";
-			this.colConsigneeId.Visible = true;
-			this.colConsigneeId.VisibleIndex = 5;
-			this.colConsigneeId.Width = 215;
-			// 
-			// colAgentId
-			// 
-			this.colAgentId.Caption = "Agent";
-			this.colAgentId.ColumnEdit = this.repAgents;
-			this.colAgentId.FieldName = "AgentId";
-			this.colAgentId.MinWidth = 25;
-			this.colAgentId.Name = "colAgentId";
-			this.colAgentId.Visible = true;
-			this.colAgentId.VisibleIndex = 6;
-			this.colAgentId.Width = 222;
-			// 
-			// repAgents
-			// 
-			this.repAgents.AutoHeight = false;
-			this.repAgents.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repAgents.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AgentName", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repAgents.DisplayMember = "AgentName";
-			this.repAgents.Name = "repAgents";
-			this.repAgents.NullText = "";
-			this.repAgents.ValueMember = "Id";
-			// 
-			// colSeaportDeparture
-			// 
-			this.colSeaportDeparture.Caption = "POL";
-			this.colSeaportDeparture.ColumnEdit = this.repPOLPortCodeList;
-			this.colSeaportDeparture.FieldName = "SeaportDeparture";
-			this.colSeaportDeparture.MinWidth = 25;
-			this.colSeaportDeparture.Name = "colSeaportDeparture";
-			this.colSeaportDeparture.Visible = true;
-			this.colSeaportDeparture.VisibleIndex = 7;
-			this.colSeaportDeparture.Width = 138;
-			// 
-			// repPOLPortCodeList
-			// 
-			this.repPOLPortCodeList.AutoHeight = false;
-			this.repPOLPortCodeList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repPOLPortCodeList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repPOLPortCodeList.DisplayMember = "Name";
-			this.repPOLPortCodeList.Name = "repPOLPortCodeList";
-			this.repPOLPortCodeList.NullText = "";
-			this.repPOLPortCodeList.ValueMember = "Id";
-			// 
-			// colCountryDeparture
-			// 
-			this.colCountryDeparture.FieldName = "CountryDeparture";
-			this.colCountryDeparture.MinWidth = 25;
-			this.colCountryDeparture.Name = "colCountryDeparture";
-			this.colCountryDeparture.Width = 94;
-			// 
-			// colSeaportDestination
-			// 
-			this.colSeaportDestination.Caption = "POD";
-			this.colSeaportDestination.ColumnEdit = this.repPODPortCodeList;
-			this.colSeaportDestination.FieldName = "SeaportDestination";
-			this.colSeaportDestination.MinWidth = 25;
-			this.colSeaportDestination.Name = "colSeaportDestination";
-			this.colSeaportDestination.Visible = true;
-			this.colSeaportDestination.VisibleIndex = 8;
-			this.colSeaportDestination.Width = 147;
-			// 
-			// repPODPortCodeList
-			// 
-			this.repPODPortCodeList.AutoHeight = false;
-			this.repPODPortCodeList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repPODPortCodeList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repPODPortCodeList.DisplayMember = "Name";
-			this.repPODPortCodeList.Name = "repPODPortCodeList";
-			this.repPODPortCodeList.NullText = "";
-			this.repPODPortCodeList.ValueMember = "Id";
-			// 
-			// colCountryDestination
-			// 
-			this.colCountryDestination.FieldName = "CountryDestination";
-			this.colCountryDestination.MinWidth = 25;
-			this.colCountryDestination.Name = "colCountryDestination";
-			this.colCountryDestination.Width = 94;
-			// 
-			// colBayan
-			// 
-			this.colBayan.ColumnEdit = this.repCheckList;
-			this.colBayan.FieldName = "Bayan";
-			this.colBayan.MinWidth = 25;
-			this.colBayan.Name = "colBayan";
-			this.colBayan.Visible = true;
-			this.colBayan.VisibleIndex = 12;
-			this.colBayan.Width = 94;
-			// 
-			// repCheckList
-			// 
-			this.repCheckList.AutoHeight = false;
-			this.repCheckList.Name = "repCheckList";
-			// 
-			// colJobType
-			// 
-			this.colJobType.ColumnEdit = this.repJobTypes;
-			this.colJobType.FieldName = "JobType";
-			this.colJobType.MinWidth = 25;
-			this.colJobType.Name = "colJobType";
-			this.colJobType.Visible = true;
-			this.colJobType.VisibleIndex = 13;
-			this.colJobType.Width = 94;
-			// 
-			// repJobTypes
-			// 
-			this.repJobTypes.AutoHeight = false;
-			this.repJobTypes.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repJobTypes.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name4", "Name")});
-			this.repJobTypes.Name = "repJobTypes";
-			// 
-			// colType
-			// 
-			this.colType.FieldName = "Type";
-			this.colType.MinWidth = 25;
-			this.colType.Name = "colType";
-			this.colType.Visible = true;
-			this.colType.VisibleIndex = 14;
-			this.colType.Width = 94;
-			// 
-			// colSideId
-			// 
-			this.colSideId.FieldName = "SideId";
-			this.colSideId.MinWidth = 25;
-			this.colSideId.Name = "colSideId";
-			this.colSideId.Visible = true;
-			this.colSideId.VisibleIndex = 15;
-			this.colSideId.Width = 94;
-			// 
-			// colCommodity
-			// 
-			this.colCommodity.FieldName = "Commodity";
-			this.colCommodity.MinWidth = 25;
-			this.colCommodity.Name = "colCommodity";
-			this.colCommodity.Visible = true;
-			this.colCommodity.VisibleIndex = 16;
-			this.colCommodity.Width = 261;
-			// 
-			// colQuantities
-			// 
-			this.colQuantities.FieldName = "Quantities";
-			this.colQuantities.MinWidth = 25;
-			this.colQuantities.Name = "colQuantities";
-			this.colQuantities.Visible = true;
-			this.colQuantities.VisibleIndex = 17;
-			this.colQuantities.Width = 94;
-			// 
-			// colPieces
-			// 
-			this.colPieces.FieldName = "Pieces";
-			this.colPieces.MinWidth = 25;
-			this.colPieces.Name = "colPieces";
-			this.colPieces.Visible = true;
-			this.colPieces.VisibleIndex = 18;
-			this.colPieces.Width = 94;
-			// 
-			// colWeight
-			// 
-			this.colWeight.FieldName = "Weight";
-			this.colWeight.MinWidth = 25;
-			this.colWeight.Name = "colWeight";
-			this.colWeight.Visible = true;
-			this.colWeight.VisibleIndex = 19;
-			this.colWeight.Width = 94;
-			// 
-			// colValueOfGoods
-			// 
-			this.colValueOfGoods.FieldName = "ValueOfGoods";
-			this.colValueOfGoods.MinWidth = 25;
-			this.colValueOfGoods.Name = "colValueOfGoods";
-			this.colValueOfGoods.Visible = true;
-			this.colValueOfGoods.VisibleIndex = 20;
-			this.colValueOfGoods.Width = 133;
-			// 
-			// colShippedWithId
-			// 
-			this.colShippedWithId.FieldName = "ShippedWithId";
-			this.colShippedWithId.MinWidth = 25;
-			this.colShippedWithId.Name = "colShippedWithId";
-			this.colShippedWithId.Visible = true;
-			this.colShippedWithId.VisibleIndex = 21;
-			this.colShippedWithId.Width = 134;
-			// 
-			// colVesselId
-			// 
-			this.colVesselId.FieldName = "VesselId";
-			this.colVesselId.MinWidth = 25;
-			this.colVesselId.Name = "colVesselId";
-			this.colVesselId.Visible = true;
-			this.colVesselId.VisibleIndex = 22;
-			this.colVesselId.Width = 139;
-			// 
-			// colFeederVesselId
-			// 
-			this.colFeederVesselId.FieldName = "FeederVesselId";
-			this.colFeederVesselId.MinWidth = 25;
-			this.colFeederVesselId.Name = "colFeederVesselId";
-			this.colFeederVesselId.Visible = true;
-			this.colFeederVesselId.VisibleIndex = 23;
-			this.colFeederVesselId.Width = 140;
-			// 
-			// colDelivered
-			// 
-			this.colDelivered.FieldName = "Delivered";
-			this.colDelivered.MinWidth = 25;
-			this.colDelivered.Name = "colDelivered";
-			this.colDelivered.Visible = true;
-			this.colDelivered.VisibleIndex = 24;
-			this.colDelivered.Width = 94;
-			// 
-			// colDeliveredTo
-			// 
-			this.colDeliveredTo.FieldName = "DeliveredTo";
-			this.colDeliveredTo.MinWidth = 25;
-			this.colDeliveredTo.Name = "colDeliveredTo";
-			this.colDeliveredTo.Visible = true;
-			this.colDeliveredTo.VisibleIndex = 25;
-			this.colDeliveredTo.Width = 117;
-			// 
-			// colDeliveredDate
-			// 
-			this.colDeliveredDate.FieldName = "DeliveredDate";
-			this.colDeliveredDate.MinWidth = 25;
-			this.colDeliveredDate.Name = "colDeliveredDate";
-			this.colDeliveredDate.Visible = true;
-			this.colDeliveredDate.VisibleIndex = 26;
-			this.colDeliveredDate.Width = 121;
-			// 
-			// colCurrencyId
-			// 
-			this.colCurrencyId.FieldName = "CurrencyId";
-			this.colCurrencyId.MinWidth = 25;
-			this.colCurrencyId.Name = "colCurrencyId";
-			this.colCurrencyId.Visible = true;
-			this.colCurrencyId.VisibleIndex = 27;
-			this.colCurrencyId.Width = 117;
-			// 
-			// colTotalInvoicesLl
-			// 
-			this.colTotalInvoicesLl.FieldName = "TotalInvoicesLl";
-			this.colTotalInvoicesLl.MinWidth = 25;
-			this.colTotalInvoicesLl.Name = "colTotalInvoicesLl";
-			this.colTotalInvoicesLl.Visible = true;
-			this.colTotalInvoicesLl.VisibleIndex = 28;
-			this.colTotalInvoicesLl.Width = 94;
-			// 
-			// colTotalInvoicesUsd
-			// 
-			this.colTotalInvoicesUsd.FieldName = "TotalInvoicesUsd";
-			this.colTotalInvoicesUsd.MinWidth = 25;
-			this.colTotalInvoicesUsd.Name = "colTotalInvoicesUsd";
-			this.colTotalInvoicesUsd.Visible = true;
-			this.colTotalInvoicesUsd.VisibleIndex = 29;
-			this.colTotalInvoicesUsd.Width = 94;
-			// 
-			// colTotalCostsLl
-			// 
-			this.colTotalCostsLl.FieldName = "TotalCostsLl";
-			this.colTotalCostsLl.MinWidth = 25;
-			this.colTotalCostsLl.Name = "colTotalCostsLl";
-			this.colTotalCostsLl.Visible = true;
-			this.colTotalCostsLl.VisibleIndex = 30;
-			this.colTotalCostsLl.Width = 94;
-			// 
-			// colTotalCostsUsd
-			// 
-			this.colTotalCostsUsd.FieldName = "TotalCostsUsd";
-			this.colTotalCostsUsd.MinWidth = 25;
-			this.colTotalCostsUsd.Name = "colTotalCostsUsd";
-			this.colTotalCostsUsd.Visible = true;
-			this.colTotalCostsUsd.VisibleIndex = 31;
-			this.colTotalCostsUsd.Width = 94;
-			// 
-			// colOperatingUserId
-			// 
-			this.colOperatingUserId.FieldName = "OperatingUserId";
-			this.colOperatingUserId.MinWidth = 25;
-			this.colOperatingUserId.Name = "colOperatingUserId";
-			this.colOperatingUserId.Visible = true;
-			this.colOperatingUserId.VisibleIndex = 32;
-			this.colOperatingUserId.Width = 94;
-			// 
-			// gridColumn2
-			// 
-			this.gridColumn2.FieldName = "SalesId";
-			this.gridColumn2.MinWidth = 25;
-			this.gridColumn2.Name = "gridColumn2";
-			this.gridColumn2.Visible = true;
-			this.gridColumn2.VisibleIndex = 33;
-			this.gridColumn2.Width = 94;
-			// 
-			// colUserId
-			// 
-			this.colUserId.FieldName = "UserId";
-			this.colUserId.MinWidth = 25;
-			this.colUserId.Name = "colUserId";
-			this.colUserId.Visible = true;
-			this.colUserId.VisibleIndex = 34;
-			this.colUserId.Width = 94;
-			// 
-			// colProject
-			// 
-			this.colProject.FieldName = "Project";
-			this.colProject.MinWidth = 25;
-			this.colProject.Name = "colProject";
-			this.colProject.Visible = true;
-			this.colProject.VisibleIndex = 35;
-			this.colProject.Width = 94;
-			// 
-			// colTransit
-			// 
-			this.colTransit.FieldName = "Transit";
-			this.colTransit.MinWidth = 25;
-			this.colTransit.Name = "colTransit";
-			this.colTransit.Visible = true;
-			this.colTransit.VisibleIndex = 36;
-			this.colTransit.Width = 94;
-			// 
-			// colFullPaid
-			// 
-			this.colFullPaid.FieldName = "FullPaid";
-			this.colFullPaid.MinWidth = 25;
-			this.colFullPaid.Name = "colFullPaid";
-			this.colFullPaid.Visible = true;
-			this.colFullPaid.VisibleIndex = 37;
-			this.colFullPaid.Width = 94;
-			// 
-			// colFullPaidDate
-			// 
-			this.colFullPaidDate.FieldName = "FullPaidDate";
-			this.colFullPaidDate.MinWidth = 25;
-			this.colFullPaidDate.Name = "colFullPaidDate";
-			this.colFullPaidDate.Visible = true;
-			this.colFullPaidDate.VisibleIndex = 75;
-			this.colFullPaidDate.Width = 94;
-			// 
-			// colClearingAgentId
-			// 
-			this.colClearingAgentId.FieldName = "ClearingAgentId";
-			this.colClearingAgentId.MinWidth = 25;
-			this.colClearingAgentId.Name = "colClearingAgentId";
-			this.colClearingAgentId.Visible = true;
-			this.colClearingAgentId.VisibleIndex = 38;
-			this.colClearingAgentId.Width = 94;
-			// 
-			// colATD
-			// 
-			this.colATD.FieldName = "ATD";
-			this.colATD.MinWidth = 25;
-			this.colATD.Name = "colATD";
-			this.colATD.Visible = true;
-			this.colATD.VisibleIndex = 39;
-			this.colATD.Width = 94;
-			// 
-			// colATA
-			// 
-			this.colATA.FieldName = "ATA";
-			this.colATA.MinWidth = 25;
-			this.colATA.Name = "colATA";
-			this.colATA.Visible = true;
-			this.colATA.VisibleIndex = 40;
-			this.colATA.Width = 94;
-			// 
-			// colETD
-			// 
-			this.colETD.FieldName = "ETD";
-			this.colETD.MinWidth = 25;
-			this.colETD.Name = "colETD";
-			this.colETD.Visible = true;
-			this.colETD.VisibleIndex = 41;
-			this.colETD.Width = 94;
-			// 
-			// colETA
-			// 
-			this.colETA.FieldName = "ETA";
-			this.colETA.MinWidth = 25;
-			this.colETA.Name = "colETA";
-			this.colETA.Visible = true;
-			this.colETA.VisibleIndex = 42;
-			this.colETA.Width = 94;
-			// 
-			// colCutOffDate
-			// 
-			this.colCutOffDate.FieldName = "CutOffDate";
-			this.colCutOffDate.MinWidth = 25;
-			this.colCutOffDate.Name = "colCutOffDate";
-			this.colCutOffDate.Visible = true;
-			this.colCutOffDate.VisibleIndex = 43;
-			this.colCutOffDate.Width = 94;
-			// 
-			// colDOL
-			// 
-			this.colDOL.FieldName = "DOL";
-			this.colDOL.MinWidth = 25;
-			this.colDOL.Name = "colDOL";
-			this.colDOL.Visible = true;
-			this.colDOL.VisibleIndex = 44;
-			this.colDOL.Width = 94;
-			// 
-			// colPPCC
-			// 
-			this.colPPCC.FieldName = "PPCC";
-			this.colPPCC.MinWidth = 25;
-			this.colPPCC.Name = "colPPCC";
-			this.colPPCC.Visible = true;
-			this.colPPCC.VisibleIndex = 45;
-			this.colPPCC.Width = 94;
-			// 
-			// colStatus
-			// 
-			this.colStatus.FieldName = "Status";
-			this.colStatus.MinWidth = 25;
-			this.colStatus.Name = "colStatus";
-			this.colStatus.Visible = true;
-			this.colStatus.VisibleIndex = 46;
-			this.colStatus.Width = 94;
-			// 
-			// colBlstatus
-			// 
-			this.colBlstatus.FieldName = "Blstatus";
-			this.colBlstatus.MinWidth = 25;
-			this.colBlstatus.Name = "colBlstatus";
-			this.colBlstatus.Visible = true;
-			this.colBlstatus.VisibleIndex = 47;
-			this.colBlstatus.Width = 94;
-			// 
-			// colRTejrim
-			// 
-			this.colRTejrim.FieldName = "RTejrim";
-			this.colRTejrim.MinWidth = 25;
-			this.colRTejrim.Name = "colRTejrim";
-			this.colRTejrim.Visible = true;
-			this.colRTejrim.VisibleIndex = 48;
-			this.colRTejrim.Width = 94;
-			// 
-			// colRTejrimDate
-			// 
-			this.colRTejrimDate.FieldName = "RTejrimDate";
-			this.colRTejrimDate.MinWidth = 25;
-			this.colRTejrimDate.Name = "colRTejrimDate";
-			this.colRTejrimDate.Visible = true;
-			this.colRTejrimDate.VisibleIndex = 49;
-			this.colRTejrimDate.Width = 94;
-			// 
-			// colTejrim
-			// 
-			this.colTejrim.FieldName = "Tejrim";
-			this.colTejrim.MinWidth = 25;
-			this.colTejrim.Name = "colTejrim";
-			this.colTejrim.Visible = true;
-			this.colTejrim.VisibleIndex = 50;
-			this.colTejrim.Width = 94;
-			// 
-			// colTejrimDate
-			// 
-			this.colTejrimDate.FieldName = "TejrimDate";
-			this.colTejrimDate.MinWidth = 25;
-			this.colTejrimDate.Name = "colTejrimDate";
-			this.colTejrimDate.Visible = true;
-			this.colTejrimDate.VisibleIndex = 51;
-			this.colTejrimDate.Width = 94;
-			// 
-			// colRClearance
-			// 
-			this.colRClearance.FieldName = "RClearance";
-			this.colRClearance.MinWidth = 25;
-			this.colRClearance.Name = "colRClearance";
-			this.colRClearance.Visible = true;
-			this.colRClearance.VisibleIndex = 52;
-			this.colRClearance.Width = 94;
-			// 
-			// colRClearanceDate
-			// 
-			this.colRClearanceDate.FieldName = "RClearanceDate";
-			this.colRClearanceDate.MinWidth = 25;
-			this.colRClearanceDate.Name = "colRClearanceDate";
-			this.colRClearanceDate.Visible = true;
-			this.colRClearanceDate.VisibleIndex = 53;
-			this.colRClearanceDate.Width = 94;
-			// 
-			// colIncoTerms
-			// 
-			this.colIncoTerms.FieldName = "IncoTerms";
-			this.colIncoTerms.MinWidth = 25;
-			this.colIncoTerms.Name = "colIncoTerms";
-			this.colIncoTerms.Visible = true;
-			this.colIncoTerms.VisibleIndex = 54;
-			this.colIncoTerms.Width = 94;
-			// 
-			// colIncoTermsFrom
-			// 
-			this.colIncoTermsFrom.FieldName = "IncoTermsFrom";
-			this.colIncoTermsFrom.MinWidth = 25;
-			this.colIncoTermsFrom.Name = "colIncoTermsFrom";
-			this.colIncoTermsFrom.Visible = true;
-			this.colIncoTermsFrom.VisibleIndex = 55;
-			this.colIncoTermsFrom.Width = 94;
-			// 
-			// colIncoTermsTo
-			// 
-			this.colIncoTermsTo.FieldName = "IncoTermsTo";
-			this.colIncoTermsTo.MinWidth = 25;
-			this.colIncoTermsTo.Name = "colIncoTermsTo";
-			this.colIncoTermsTo.Visible = true;
-			this.colIncoTermsTo.VisibleIndex = 56;
-			this.colIncoTermsTo.Width = 94;
-			// 
-			// colAllInOrderToBeLoaded
-			// 
-			this.colAllInOrderToBeLoaded.FieldName = "AllInOrderToBeLoaded";
-			this.colAllInOrderToBeLoaded.MinWidth = 25;
-			this.colAllInOrderToBeLoaded.Name = "colAllInOrderToBeLoaded";
-			this.colAllInOrderToBeLoaded.Visible = true;
-			this.colAllInOrderToBeLoaded.VisibleIndex = 57;
-			this.colAllInOrderToBeLoaded.Width = 94;
-			// 
-			// colAllInOrderOnWater
-			// 
-			this.colAllInOrderOnWater.FieldName = "AllInOrderOnWater";
-			this.colAllInOrderOnWater.MinWidth = 25;
-			this.colAllInOrderOnWater.Name = "colAllInOrderOnWater";
-			this.colAllInOrderOnWater.Visible = true;
-			this.colAllInOrderOnWater.VisibleIndex = 58;
-			this.colAllInOrderOnWater.Width = 94;
-			// 
-			// colContainerToCnee
-			// 
-			this.colContainerToCnee.FieldName = "ContainerToCnee";
-			this.colContainerToCnee.MinWidth = 25;
-			this.colContainerToCnee.Name = "colContainerToCnee";
-			this.colContainerToCnee.Visible = true;
-			this.colContainerToCnee.VisibleIndex = 59;
-			this.colContainerToCnee.Width = 94;
-			// 
-			// colDtCntrToCnee
-			// 
-			this.colDtCntrToCnee.FieldName = "DtCntrToCnee";
-			this.colDtCntrToCnee.MinWidth = 25;
-			this.colDtCntrToCnee.Name = "colDtCntrToCnee";
-			this.colDtCntrToCnee.Visible = true;
-			this.colDtCntrToCnee.VisibleIndex = 60;
-			this.colDtCntrToCnee.Width = 94;
-			// 
-			// colEmptyContainer
-			// 
-			this.colEmptyContainer.FieldName = "EmptyContainer";
-			this.colEmptyContainer.MinWidth = 25;
-			this.colEmptyContainer.Name = "colEmptyContainer";
-			this.colEmptyContainer.Visible = true;
-			this.colEmptyContainer.VisibleIndex = 61;
-			this.colEmptyContainer.Width = 94;
-			// 
-			// colDtEmptyCntr
-			// 
-			this.colDtEmptyCntr.FieldName = "DtEmptyCntr";
-			this.colDtEmptyCntr.MinWidth = 25;
-			this.colDtEmptyCntr.Name = "colDtEmptyCntr";
-			this.colDtEmptyCntr.Visible = true;
-			this.colDtEmptyCntr.VisibleIndex = 62;
-			this.colDtEmptyCntr.Width = 94;
-			// 
-			// colJobSCId
-			// 
-			this.colJobSCId.FieldName = "JobSCId";
-			this.colJobSCId.MinWidth = 25;
-			this.colJobSCId.Name = "colJobSCId";
-			this.colJobSCId.Visible = true;
-			this.colJobSCId.VisibleIndex = 63;
-			this.colJobSCId.Width = 94;
-			// 
-			// colLocked
-			// 
-			this.colLocked.FieldName = "Locked";
-			this.colLocked.MinWidth = 25;
-			this.colLocked.Name = "colLocked";
-			this.colLocked.Visible = true;
-			this.colLocked.VisibleIndex = 64;
-			this.colLocked.Width = 94;
-			// 
-			// colClosed
-			// 
-			this.colClosed.FieldName = "Closed";
-			this.colClosed.MinWidth = 25;
-			this.colClosed.Name = "colClosed";
-			this.colClosed.Visible = true;
-			this.colClosed.VisibleIndex = 65;
-			this.colClosed.Width = 120;
-			// 
-			// colClosedDate
-			// 
-			this.colClosedDate.FieldName = "ClosedDate";
-			this.colClosedDate.MinWidth = 25;
-			this.colClosedDate.Name = "colClosedDate";
-			this.colClosedDate.Visible = true;
-			this.colClosedDate.VisibleIndex = 66;
-			this.colClosedDate.Width = 126;
-			// 
-			// colCanceledJob
-			// 
-			this.colCanceledJob.FieldName = "CanceledJob";
-			this.colCanceledJob.MinWidth = 25;
-			this.colCanceledJob.Name = "colCanceledJob";
-			this.colCanceledJob.Visible = true;
-			this.colCanceledJob.VisibleIndex = 67;
-			this.colCanceledJob.Width = 116;
-			// 
-			// colCanceledDate
-			// 
-			this.colCanceledDate.FieldName = "CanceledDate";
-			this.colCanceledDate.MinWidth = 25;
-			this.colCanceledDate.Name = "colCanceledDate";
-			this.colCanceledDate.Visible = true;
-			this.colCanceledDate.VisibleIndex = 68;
-			this.colCanceledDate.Width = 117;
-			// 
-			// colCanceledUser
-			// 
-			this.colCanceledUser.FieldName = "CanceledUser";
-			this.colCanceledUser.MinWidth = 25;
-			this.colCanceledUser.Name = "colCanceledUser";
-			this.colCanceledUser.Visible = true;
-			this.colCanceledUser.VisibleIndex = 69;
-			this.colCanceledUser.Width = 121;
-			// 
-			// colLastJobReopenedBy
-			// 
-			this.colLastJobReopenedBy.FieldName = "LastJobReopenedBy";
-			this.colLastJobReopenedBy.MinWidth = 25;
-			this.colLastJobReopenedBy.Name = "colLastJobReopenedBy";
-			this.colLastJobReopenedBy.Visible = true;
-			this.colLastJobReopenedBy.VisibleIndex = 70;
-			this.colLastJobReopenedBy.Width = 155;
-			// 
-			// colLastJobReopened
-			// 
-			this.colLastJobReopened.FieldName = "LastJobReopened";
-			this.colLastJobReopened.MinWidth = 25;
-			this.colLastJobReopened.Name = "colLastJobReopened";
-			this.colLastJobReopened.Visible = true;
-			this.colLastJobReopened.VisibleIndex = 71;
-			this.colLastJobReopened.Width = 159;
-			// 
-			// colCostReady
-			// 
-			this.colCostReady.FieldName = "CostReady";
-			this.colCostReady.MinWidth = 25;
-			this.colCostReady.Name = "colCostReady";
-			this.colCostReady.Visible = true;
-			this.colCostReady.VisibleIndex = 72;
-			this.colCostReady.Width = 94;
-			// 
-			// colCostReadyDate
-			// 
-			this.colCostReadyDate.FieldName = "CostReadyDate";
-			this.colCostReadyDate.MinWidth = 25;
-			this.colCostReadyDate.Name = "colCostReadyDate";
-			this.colCostReadyDate.Visible = true;
-			this.colCostReadyDate.VisibleIndex = 73;
-			this.colCostReadyDate.Width = 123;
-			// 
-			// colNotes
-			// 
-			this.colNotes.FieldName = "Notes";
-			this.colNotes.MinWidth = 25;
-			this.colNotes.Name = "colNotes";
-			this.colNotes.Visible = true;
-			this.colNotes.VisibleIndex = 74;
-			this.colNotes.Width = 404;
-			// 
-			// colCreatedBy
-			// 
-			this.colCreatedBy.FieldName = "CreatedBy";
-			this.colCreatedBy.MinWidth = 25;
-			this.colCreatedBy.Name = "colCreatedBy";
-			this.colCreatedBy.Width = 94;
-			// 
-			// colCreatedDate
-			// 
-			this.colCreatedDate.FieldName = "CreatedDate";
-			this.colCreatedDate.MinWidth = 25;
-			this.colCreatedDate.Name = "colCreatedDate";
-			this.colCreatedDate.Width = 94;
-			// 
-			// colLastModifiedBy
-			// 
-			this.colLastModifiedBy.FieldName = "LastModifiedBy";
-			this.colLastModifiedBy.MinWidth = 25;
-			this.colLastModifiedBy.Name = "colLastModifiedBy";
-			this.colLastModifiedBy.Width = 94;
-			// 
-			// colLastModifiedDate
-			// 
-			this.colLastModifiedDate.FieldName = "LastModifiedDate";
-			this.colLastModifiedDate.MinWidth = 25;
-			this.colLastModifiedDate.Name = "colLastModifiedDate";
-			this.colLastModifiedDate.Width = 94;
-			// 
-			// repUsersList
-			// 
-			this.repUsersList.AutoHeight = false;
-			this.repUsersList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repUsersList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repUsersList.DisplayMember = "UserName";
-			this.repUsersList.Name = "repUsersList";
-			this.repUsersList.NullText = "";
-			this.repUsersList.ValueMember = "Id";
-			// 
-			// repSalesList
-			// 
-			this.repSalesList.AutoHeight = false;
-			this.repSalesList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.repSalesList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-			this.repSalesList.DisplayMember = "UserName";
-			this.repSalesList.Name = "repSalesList";
-			this.repSalesList.NullText = "";
-			this.repSalesList.ValueMember = "Id";
 			// 
 			// rcJobSeaExport
 			// 
@@ -1429,34 +343,34 @@
 			// 
 			this.rgFilterReports.Gallery.ColumnCount = 2;
 			this.rgFilterReports.Gallery.DrawImageBackground = false;
-			galleryItemGroup16.Caption = "FilterGroup";
-			galleryItem41.Caption = "Active Jobs";
-			galleryItem41.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
-			galleryItem41.Value = "showActive";
-			galleryItem42.Caption = "Closed Jobs";
-			galleryItem42.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
-			galleryItem42.Value = "showClosed";
-			galleryItem43.Caption = "Cancelled Jobs";
-			galleryItem43.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
-			galleryItem43.Value = "showCancelled";
-			galleryItem44.Caption = "All";
-			galleryItem44.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
-			galleryItem44.Value = "showAll";
-			galleryItemGroup16.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem41,
-            galleryItem42,
-            galleryItem43,
-            galleryItem44});
+			galleryItemGroup1.Caption = "FilterGroup";
+			galleryItem1.Caption = "Active Jobs";
+			galleryItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage")));
+			galleryItem1.Value = "showActive";
+			galleryItem2.Caption = "Closed Jobs";
+			galleryItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage1")));
+			galleryItem2.Value = "showClosed";
+			galleryItem3.Caption = "Cancelled Jobs";
+			galleryItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage2")));
+			galleryItem3.Value = "showCancelled";
+			galleryItem4.Caption = "All";
+			galleryItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage3")));
+			galleryItem4.Value = "showAll";
+			galleryItemGroup1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem1,
+            galleryItem2,
+            galleryItem3,
+            galleryItem4});
 			this.rgFilterReports.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup16});
+            galleryItemGroup1});
 			this.rgFilterReports.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleCheck;
 			this.rgFilterReports.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-			skinPaddingEdges31.Bottom = -4;
-			skinPaddingEdges31.Top = -4;
-			this.rgFilterReports.Gallery.ItemImagePadding = skinPaddingEdges31;
-			skinPaddingEdges32.Bottom = -1;
-			skinPaddingEdges32.Top = -1;
-			this.rgFilterReports.Gallery.ItemTextPadding = skinPaddingEdges32;
+			skinPaddingEdges1.Bottom = -4;
+			skinPaddingEdges1.Top = -4;
+			this.rgFilterReports.Gallery.ItemImagePadding = skinPaddingEdges1;
+			skinPaddingEdges2.Bottom = -1;
+			skinPaddingEdges2.Top = -1;
+			this.rgFilterReports.Gallery.ItemTextPadding = skinPaddingEdges2;
 			this.rgFilterReports.Gallery.ShowItemText = true;
 			this.rgFilterReports.Id = 17;
 			this.rgFilterReports.Name = "rgFilterReports";
@@ -1669,26 +583,26 @@
 			// 
 			this.rgSortByReports.Gallery.ColumnCount = 1;
 			this.rgSortByReports.Gallery.DrawImageBackground = false;
-			galleryItemGroup17.Caption = "groupSortingBy";
-			galleryItem45.Caption = "Sort By Job No";
-			galleryItem45.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
-			galleryItem45.Value = "SortByJobNo";
-			galleryItem46.Caption = "Sort By XONO";
-			galleryItem46.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
-			galleryItem46.Value = "SortByRefNo";
-			galleryItemGroup17.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem45,
-            galleryItem46});
+			galleryItemGroup2.Caption = "groupSortingBy";
+			galleryItem5.Caption = "Sort By Job No";
+			galleryItem5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage4")));
+			galleryItem5.Value = "SortByJobNo";
+			galleryItem6.Caption = "Sort By XONO";
+			galleryItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage5")));
+			galleryItem6.Value = "SortByRefNo";
+			galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem5,
+            galleryItem6});
 			this.rgSortByReports.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup17});
+            galleryItemGroup2});
 			this.rgSortByReports.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleCheck;
 			this.rgSortByReports.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-			skinPaddingEdges33.Bottom = -4;
-			skinPaddingEdges33.Top = -4;
-			this.rgSortByReports.Gallery.ItemImagePadding = skinPaddingEdges33;
-			skinPaddingEdges34.Bottom = -1;
-			skinPaddingEdges34.Top = -1;
-			this.rgSortByReports.Gallery.ItemTextPadding = skinPaddingEdges34;
+			skinPaddingEdges3.Bottom = -4;
+			skinPaddingEdges3.Top = -4;
+			this.rgSortByReports.Gallery.ItemImagePadding = skinPaddingEdges3;
+			skinPaddingEdges4.Bottom = -1;
+			skinPaddingEdges4.Top = -1;
+			this.rgSortByReports.Gallery.ItemTextPadding = skinPaddingEdges4;
 			this.rgSortByReports.Gallery.ShowItemText = true;
 			this.rgSortByReports.Id = 57;
 			this.rgSortByReports.Name = "rgSortByReports";
@@ -1701,27 +615,27 @@
 			// 
 			this.rgOrderByReports.Gallery.ColumnCount = 1;
 			this.rgOrderByReports.Gallery.DrawImageBackground = false;
-			galleryItemGroup18.Caption = "Group1";
-			galleryItem47.Caption = "Ascending";
-			galleryItem47.Checked = true;
-			galleryItem47.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage6")));
-			galleryItem47.Value = "Ascending";
-			galleryItem48.Caption = "Descending";
-			galleryItem48.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage7")));
-			galleryItem48.Value = "Descending";
-			galleryItemGroup18.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem47,
-            galleryItem48});
+			galleryItemGroup3.Caption = "Group1";
+			galleryItem7.Caption = "Ascending";
+			galleryItem7.Checked = true;
+			galleryItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage6")));
+			galleryItem7.Value = "Ascending";
+			galleryItem8.Caption = "Descending";
+			galleryItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("resource.SvgImage7")));
+			galleryItem8.Value = "Descending";
+			galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem7,
+            galleryItem8});
 			this.rgOrderByReports.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup18});
+            galleryItemGroup3});
 			this.rgOrderByReports.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleCheck;
 			this.rgOrderByReports.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
-			skinPaddingEdges35.Bottom = -4;
-			skinPaddingEdges35.Top = -4;
-			this.rgOrderByReports.Gallery.ItemImagePadding = skinPaddingEdges35;
-			skinPaddingEdges36.Bottom = -1;
-			skinPaddingEdges36.Top = -1;
-			this.rgOrderByReports.Gallery.ItemTextPadding = skinPaddingEdges36;
+			skinPaddingEdges5.Bottom = -4;
+			skinPaddingEdges5.Top = -4;
+			this.rgOrderByReports.Gallery.ItemImagePadding = skinPaddingEdges5;
+			skinPaddingEdges6.Bottom = -1;
+			skinPaddingEdges6.Top = -1;
+			this.rgOrderByReports.Gallery.ItemTextPadding = skinPaddingEdges6;
 			this.rgOrderByReports.Gallery.ShowItemText = true;
 			this.rgOrderByReports.Id = 58;
 			this.rgOrderByReports.Name = "rgOrderByReports";
@@ -1837,14 +751,1118 @@
 			// 
 			// mainLayout
 			// 
-			this.mainLayout.Controls.Add(this.gcSeaExports);
+			this.mainLayout.Controls.Add(this.gcSeaExport);
 			this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.mainLayout.Location = new System.Drawing.Point(0, 193);
 			this.mainLayout.Name = "mainLayout";
 			this.mainLayout.Root = this.Root;
 			this.mainLayout.Size = new System.Drawing.Size(1445, 565);
-			this.mainLayout.TabIndex = 15;
+			this.mainLayout.TabIndex = 18;
 			this.mainLayout.Text = "dataLayoutControl1";
+			// 
+			// gcSeaExport
+			// 
+			this.gcSeaExport.EmbeddedNavigator.Buttons.Append.Visible = false;
+			this.gcSeaExport.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+			this.gcSeaExport.EmbeddedNavigator.Buttons.Edit.Visible = false;
+			this.gcSeaExport.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+			this.gcSeaExport.EmbeddedNavigator.Buttons.Remove.Visible = false;
+			this.gcSeaExport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+			gridLevelNode1.LevelTemplate = this.gvSeaExportDetails;
+			gridLevelNode1.RelationName = "FK_JobDetails";
+			this.gcSeaExport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+			this.gcSeaExport.Location = new System.Drawing.Point(14, 14);
+			this.gcSeaExport.MainView = this.gvSeaExport;
+			this.gcSeaExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.gcSeaExport.Name = "gcSeaExport";
+			this.gcSeaExport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repUsersList,
+            this.repSalesList,
+            this.repCustomers,
+            this.repPOLPortCodeList,
+            this.repPODPortCodeList,
+            this.repCheckList,
+            this.repDateFormat,
+            this.repAgents,
+            this.repJobsType,
+            this.repNumberFormat,
+            this.repAgentCategories,
+            this.repSideId});
+			this.gcSeaExport.Size = new System.Drawing.Size(1417, 537);
+			this.gcSeaExport.TabIndex = 5;
+			this.gcSeaExport.UseEmbeddedNavigator = true;
+			this.gcSeaExport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvSeaExportDetails,
+            this.gvSeaExport});
+			// 
+			// gvSeaExportDetails
+			// 
+			this.gvSeaExportDetails.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDetailId,
+            this.colDetailJobNo,
+            this.colDetailBOL,
+            this.colDetailOrigin,
+            this.colDetailSupplier,
+            this.colDetailContNo});
+			this.gvSeaExportDetails.GridControl = this.gcSeaExport;
+			this.gvSeaExportDetails.Name = "gvSeaExportDetails";
+			// 
+			// colDetailId
+			// 
+			this.colDetailId.Caption = "Id";
+			this.colDetailId.FieldName = "Id";
+			this.colDetailId.MinWidth = 25;
+			this.colDetailId.Name = "colDetailId";
+			this.colDetailId.Visible = true;
+			this.colDetailId.VisibleIndex = 0;
+			this.colDetailId.Width = 94;
+			// 
+			// colDetailJobNo
+			// 
+			this.colDetailJobNo.Caption = "Job#";
+			this.colDetailJobNo.FieldName = "JobId";
+			this.colDetailJobNo.MinWidth = 25;
+			this.colDetailJobNo.Name = "colDetailJobNo";
+			this.colDetailJobNo.Visible = true;
+			this.colDetailJobNo.VisibleIndex = 1;
+			this.colDetailJobNo.Width = 94;
+			// 
+			// colDetailBOL
+			// 
+			this.colDetailBOL.Caption = "HBL";
+			this.colDetailBOL.FieldName = "Bol";
+			this.colDetailBOL.MinWidth = 25;
+			this.colDetailBOL.Name = "colDetailBOL";
+			this.colDetailBOL.Visible = true;
+			this.colDetailBOL.VisibleIndex = 2;
+			this.colDetailBOL.Width = 94;
+			// 
+			// colDetailOrigin
+			// 
+			this.colDetailOrigin.Caption = "Origin";
+			this.colDetailOrigin.FieldName = "Origin";
+			this.colDetailOrigin.MinWidth = 25;
+			this.colDetailOrigin.Name = "colDetailOrigin";
+			this.colDetailOrigin.Visible = true;
+			this.colDetailOrigin.VisibleIndex = 3;
+			this.colDetailOrigin.Width = 94;
+			// 
+			// colDetailSupplier
+			// 
+			this.colDetailSupplier.Caption = "Supplier";
+			this.colDetailSupplier.FieldName = "Supplier";
+			this.colDetailSupplier.MinWidth = 25;
+			this.colDetailSupplier.Name = "colDetailSupplier";
+			this.colDetailSupplier.Visible = true;
+			this.colDetailSupplier.VisibleIndex = 4;
+			this.colDetailSupplier.Width = 94;
+			// 
+			// colDetailContNo
+			// 
+			this.colDetailContNo.Caption = "ContNo";
+			this.colDetailContNo.FieldName = "ContNo";
+			this.colDetailContNo.MinWidth = 25;
+			this.colDetailContNo.Name = "colDetailContNo";
+			this.colDetailContNo.Visible = true;
+			this.colDetailContNo.VisibleIndex = 5;
+			this.colDetailContNo.Width = 94;
+			// 
+			// gvSeaExport
+			// 
+			this.gvSeaExport.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId,
+            this.colRefNo,
+            this.gridColumn1,
+            this.colJobNo,
+            this.colJobDate,
+            this.colMbol,
+            this.colContainerNo,
+            this.colBookingNo,
+            this.colCustomerId,
+            this.colConsigneeId,
+            this.colAgentId,
+            this.colSeaportDeparture,
+            this.colCountryDeparture,
+            this.colSeaportDestination,
+            this.colCountryDestination,
+            this.colJobType,
+            this.colSideId,
+            this.colCommodity,
+            this.colQuantities,
+            this.colPieces,
+            this.colWeight,
+            this.colValueOfGoods,
+            this.colShippedWithId,
+            this.colVesselId,
+            this.colFeederVesselId,
+            this.colDelivered,
+            this.colDeliveredTo,
+            this.colDeliveredDate,
+            this.colCurrencyId,
+            this.colTotalInvoicesLl,
+            this.colTotalInvoicesUsd,
+            this.colTotalCostsLl,
+            this.colTotalCostsUsd,
+            this.colOperatingUserId,
+            this.colSales,
+            this.colUserId,
+            this.colProject,
+            this.colTransit,
+            this.colFullPaid,
+            this.colFullPaidDate,
+            this.colClearingAgentId,
+            this.colATD,
+            this.colATA,
+            this.colETD,
+            this.colETA,
+            this.colCutOffDate,
+            this.colDOL,
+            this.colPPCC,
+            this.colStatus,
+            this.colBlstatus,
+            this.colRTejrim,
+            this.colRTejrimDate,
+            this.colTejrim,
+            this.colTejrimDate,
+            this.colRClearance,
+            this.colRClearanceDate,
+            this.colIncoTerms,
+            this.colIncoTermsFrom,
+            this.colIncoTermsTo,
+            this.colAllInOrderToBeLoaded,
+            this.colAllInOrderOnWater,
+            this.colContainerToCnee,
+            this.colDtCntrToCnee,
+            this.colEmptyContainer,
+            this.colDtEmptyCntr,
+            this.colJobSCId,
+            this.colLocked,
+            this.colClosed,
+            this.colClosedDate,
+            this.colCanceledJob,
+            this.colCanceledDate,
+            this.colCanceledUser,
+            this.colLastJobReopenedBy,
+            this.colLastJobReopened,
+            this.colCostReady,
+            this.colCostReadyDate,
+            this.colNotes});
+			this.gvSeaExport.DetailHeight = 458;
+			this.gvSeaExport.GridControl = this.gcSeaExport;
+			this.gvSeaExport.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Name", null, "")});
+			this.gvSeaExport.Name = "gvSeaExport";
+			this.gvSeaExport.OptionsBehavior.Editable = false;
+			this.gvSeaExport.OptionsBehavior.ReadOnly = true;
+			this.gvSeaExport.OptionsFind.AlwaysVisible = true;
+			this.gvSeaExport.OptionsPrint.AutoWidth = false;
+			this.gvSeaExport.OptionsPrint.PrintHorzLines = false;
+			this.gvSeaExport.OptionsPrint.PrintVertLines = false;
+			this.gvSeaExport.OptionsView.ColumnAutoWidth = false;
+			this.gvSeaExport.OptionsView.ShowGroupedColumns = true;
+			this.gvSeaExport.OptionsView.ShowGroupPanel = false;
+			// 
+			// colId
+			// 
+			this.colId.FieldName = "Id";
+			this.colId.MinWidth = 25;
+			this.colId.Name = "colId";
+			this.colId.Width = 94;
+			// 
+			// colRefNo
+			// 
+			this.colRefNo.Caption = "XONO";
+			this.colRefNo.FieldName = "ReferenceNo";
+			this.colRefNo.MinWidth = 25;
+			this.colRefNo.Name = "colRefNo";
+			this.colRefNo.Visible = true;
+			this.colRefNo.VisibleIndex = 0;
+			this.colRefNo.Width = 121;
+			// 
+			// gridColumn1
+			// 
+			this.gridColumn1.FieldName = "DepartmentId";
+			this.gridColumn1.MinWidth = 25;
+			this.gridColumn1.Name = "gridColumn1";
+			this.gridColumn1.Width = 94;
+			// 
+			// colJobNo
+			// 
+			this.colJobNo.Caption = "Job#";
+			this.colJobNo.FieldName = "JobNo";
+			this.colJobNo.MinWidth = 25;
+			this.colJobNo.Name = "colJobNo";
+			this.colJobNo.Visible = true;
+			this.colJobNo.VisibleIndex = 1;
+			this.colJobNo.Width = 94;
+			// 
+			// colJobDate
+			// 
+			this.colJobDate.ColumnEdit = this.repDateFormat;
+			this.colJobDate.FieldName = "JobDate";
+			this.colJobDate.MinWidth = 25;
+			this.colJobDate.Name = "colJobDate";
+			this.colJobDate.Visible = true;
+			this.colJobDate.VisibleIndex = 2;
+			this.colJobDate.Width = 94;
+			// 
+			// repDateFormat
+			// 
+			this.repDateFormat.AutoHeight = false;
+			this.repDateFormat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repDateFormat.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repDateFormat.CalendarTimeProperties.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.repDateFormat.CalendarTimeProperties.UseMaskAsDisplayFormat = true;
+			this.repDateFormat.MaskSettings.Set("mask", "dd/MM/yyyy");
+			this.repDateFormat.Name = "repDateFormat";
+			this.repDateFormat.UseMaskAsDisplayFormat = true;
+			// 
+			// colMbol
+			// 
+			this.colMbol.Caption = "MBL";
+			this.colMbol.FieldName = "Mbl";
+			this.colMbol.MinWidth = 25;
+			this.colMbol.Name = "colMbol";
+			this.colMbol.Visible = true;
+			this.colMbol.VisibleIndex = 8;
+			this.colMbol.Width = 152;
+			// 
+			// colContainerNo
+			// 
+			this.colContainerNo.Caption = "Container#";
+			this.colContainerNo.FieldName = "ContainerNo";
+			this.colContainerNo.MinWidth = 25;
+			this.colContainerNo.Name = "colContainerNo";
+			this.colContainerNo.Visible = true;
+			this.colContainerNo.VisibleIndex = 9;
+			this.colContainerNo.Width = 159;
+			// 
+			// colBookingNo
+			// 
+			this.colBookingNo.Caption = "Booking#";
+			this.colBookingNo.FieldName = "BookingNo";
+			this.colBookingNo.MinWidth = 25;
+			this.colBookingNo.Name = "colBookingNo";
+			this.colBookingNo.Visible = true;
+			this.colBookingNo.VisibleIndex = 10;
+			this.colBookingNo.Width = 136;
+			// 
+			// colCustomerId
+			// 
+			this.colCustomerId.Caption = "Customer";
+			this.colCustomerId.ColumnEdit = this.repCustomers;
+			this.colCustomerId.FieldName = "CustomerId";
+			this.colCustomerId.MinWidth = 25;
+			this.colCustomerId.Name = "colCustomerId";
+			this.colCustomerId.Visible = true;
+			this.colCustomerId.VisibleIndex = 3;
+			this.colCustomerId.Width = 272;
+			// 
+			// repCustomers
+			// 
+			this.repCustomers.AutoHeight = false;
+			this.repCustomers.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repCustomers.DisplayMember = "CustomerName";
+			this.repCustomers.Name = "repCustomers";
+			this.repCustomers.NullText = "";
+			this.repCustomers.PopupView = this.gridView1;
+			this.repCustomers.ValueMember = "Id";
+			// 
+			// gridView1
+			// 
+			this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMemberId1,
+            this.colMemberName1});
+			this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView1.Name = "gridView1";
+			this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView1.OptionsView.ShowGroupPanel = false;
+			// 
+			// colMemberId1
+			// 
+			this.colMemberId1.Caption = "Id";
+			this.colMemberId1.FieldName = "Id";
+			this.colMemberId1.Name = "colMemberId1";
+			this.colMemberId1.Visible = true;
+			this.colMemberId1.VisibleIndex = 0;
+			this.colMemberId1.Width = 175;
+			// 
+			// colMemberName1
+			// 
+			this.colMemberName1.Caption = "Customer Name";
+			this.colMemberName1.FieldName = "CustomerName";
+			this.colMemberName1.Name = "colMemberName1";
+			this.colMemberName1.Visible = true;
+			this.colMemberName1.VisibleIndex = 1;
+			this.colMemberName1.Width = 892;
+			// 
+			// colConsigneeId
+			// 
+			this.colConsigneeId.Caption = "Consignee";
+			this.colConsigneeId.ColumnEdit = this.repCustomers;
+			this.colConsigneeId.FieldName = "ConsigneeId";
+			this.colConsigneeId.MinWidth = 25;
+			this.colConsigneeId.Name = "colConsigneeId";
+			this.colConsigneeId.Visible = true;
+			this.colConsigneeId.VisibleIndex = 4;
+			this.colConsigneeId.Width = 215;
+			// 
+			// colAgentId
+			// 
+			this.colAgentId.Caption = "Agent";
+			this.colAgentId.ColumnEdit = this.repAgents;
+			this.colAgentId.FieldName = "AgentId";
+			this.colAgentId.MinWidth = 25;
+			this.colAgentId.Name = "colAgentId";
+			this.colAgentId.Visible = true;
+			this.colAgentId.VisibleIndex = 5;
+			this.colAgentId.Width = 222;
+			// 
+			// repAgents
+			// 
+			this.repAgents.AutoHeight = false;
+			this.repAgents.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repAgents.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AgentName", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repAgents.DisplayMember = "AgentName";
+			this.repAgents.Name = "repAgents";
+			this.repAgents.NullText = "";
+			this.repAgents.ValueMember = "Id";
+			// 
+			// colSeaportDeparture
+			// 
+			this.colSeaportDeparture.Caption = "POL";
+			this.colSeaportDeparture.ColumnEdit = this.repPOLPortCodeList;
+			this.colSeaportDeparture.FieldName = "SeaportDeparture";
+			this.colSeaportDeparture.MinWidth = 25;
+			this.colSeaportDeparture.Name = "colSeaportDeparture";
+			this.colSeaportDeparture.Visible = true;
+			this.colSeaportDeparture.VisibleIndex = 6;
+			this.colSeaportDeparture.Width = 138;
+			// 
+			// repPOLPortCodeList
+			// 
+			this.repPOLPortCodeList.AutoHeight = false;
+			this.repPOLPortCodeList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repPOLPortCodeList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repPOLPortCodeList.DisplayMember = "Name";
+			this.repPOLPortCodeList.Name = "repPOLPortCodeList";
+			this.repPOLPortCodeList.NullText = "";
+			this.repPOLPortCodeList.ValueMember = "Id";
+			// 
+			// colCountryDeparture
+			// 
+			this.colCountryDeparture.FieldName = "CountryDeparture";
+			this.colCountryDeparture.MinWidth = 25;
+			this.colCountryDeparture.Name = "colCountryDeparture";
+			this.colCountryDeparture.Width = 94;
+			// 
+			// colSeaportDestination
+			// 
+			this.colSeaportDestination.Caption = "POD";
+			this.colSeaportDestination.ColumnEdit = this.repPODPortCodeList;
+			this.colSeaportDestination.FieldName = "SeaportDestination";
+			this.colSeaportDestination.MinWidth = 25;
+			this.colSeaportDestination.Name = "colSeaportDestination";
+			this.colSeaportDestination.Visible = true;
+			this.colSeaportDestination.VisibleIndex = 7;
+			this.colSeaportDestination.Width = 147;
+			// 
+			// repPODPortCodeList
+			// 
+			this.repPODPortCodeList.AutoHeight = false;
+			this.repPODPortCodeList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repPODPortCodeList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repPODPortCodeList.DisplayMember = "Name";
+			this.repPODPortCodeList.Name = "repPODPortCodeList";
+			this.repPODPortCodeList.NullText = "";
+			this.repPODPortCodeList.ValueMember = "Id";
+			// 
+			// colCountryDestination
+			// 
+			this.colCountryDestination.FieldName = "CountryDestination";
+			this.colCountryDestination.MinWidth = 25;
+			this.colCountryDestination.Name = "colCountryDestination";
+			this.colCountryDestination.Width = 94;
+			// 
+			// colJobType
+			// 
+			this.colJobType.Caption = "Job Type";
+			this.colJobType.ColumnEdit = this.repJobsType;
+			this.colJobType.FieldName = "JobType";
+			this.colJobType.MinWidth = 25;
+			this.colJobType.Name = "colJobType";
+			this.colJobType.Visible = true;
+			this.colJobType.VisibleIndex = 11;
+			this.colJobType.Width = 94;
+			// 
+			// repJobsType
+			// 
+			this.repJobsType.AutoHeight = false;
+			this.repJobsType.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repJobsType.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Description", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repJobsType.DisplayMember = "Description";
+			this.repJobsType.Name = "repJobsType";
+			this.repJobsType.NullText = "";
+			this.repJobsType.ValueMember = "Id";
+			// 
+			// colSideId
+			// 
+			this.colSideId.Caption = "Side";
+			this.colSideId.ColumnEdit = this.repSideId;
+			this.colSideId.FieldName = "SideId";
+			this.colSideId.MinWidth = 25;
+			this.colSideId.Name = "colSideId";
+			this.colSideId.Visible = true;
+			this.colSideId.VisibleIndex = 12;
+			this.colSideId.Width = 267;
+			// 
+			// repSideId
+			// 
+			this.repSideId.AutoHeight = false;
+			this.repSideId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repSideId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AgentName", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repSideId.DisplayMember = "AgentName";
+			this.repSideId.Name = "repSideId";
+			this.repSideId.NullText = "";
+			this.repSideId.ValueMember = "Id";
+			// 
+			// colCommodity
+			// 
+			this.colCommodity.FieldName = "NatureOfGoods";
+			this.colCommodity.MinWidth = 25;
+			this.colCommodity.Name = "colCommodity";
+			this.colCommodity.Visible = true;
+			this.colCommodity.VisibleIndex = 13;
+			this.colCommodity.Width = 261;
+			// 
+			// colQuantities
+			// 
+			this.colQuantities.FieldName = "Quantities";
+			this.colQuantities.MinWidth = 25;
+			this.colQuantities.Name = "colQuantities";
+			this.colQuantities.Visible = true;
+			this.colQuantities.VisibleIndex = 14;
+			this.colQuantities.Width = 94;
+			// 
+			// colPieces
+			// 
+			this.colPieces.FieldName = "Pieces";
+			this.colPieces.MinWidth = 25;
+			this.colPieces.Name = "colPieces";
+			this.colPieces.Visible = true;
+			this.colPieces.VisibleIndex = 15;
+			this.colPieces.Width = 94;
+			// 
+			// colWeight
+			// 
+			this.colWeight.FieldName = "Weight";
+			this.colWeight.MinWidth = 25;
+			this.colWeight.Name = "colWeight";
+			this.colWeight.Visible = true;
+			this.colWeight.VisibleIndex = 16;
+			this.colWeight.Width = 94;
+			// 
+			// colValueOfGoods
+			// 
+			this.colValueOfGoods.FieldName = "ValueOfGoods";
+			this.colValueOfGoods.MinWidth = 25;
+			this.colValueOfGoods.Name = "colValueOfGoods";
+			this.colValueOfGoods.Visible = true;
+			this.colValueOfGoods.VisibleIndex = 17;
+			this.colValueOfGoods.Width = 133;
+			// 
+			// colShippedWithId
+			// 
+			this.colShippedWithId.Caption = "Shipped With";
+			this.colShippedWithId.ColumnEdit = this.repAgentCategories;
+			this.colShippedWithId.FieldName = "ShippedWithId";
+			this.colShippedWithId.MinWidth = 25;
+			this.colShippedWithId.Name = "colShippedWithId";
+			this.colShippedWithId.Visible = true;
+			this.colShippedWithId.VisibleIndex = 18;
+			this.colShippedWithId.Width = 134;
+			// 
+			// repAgentCategories
+			// 
+			this.repAgentCategories.AutoHeight = false;
+			this.repAgentCategories.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repAgentCategories.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repAgentCategories.DisplayMember = "Name";
+			this.repAgentCategories.Name = "repAgentCategories";
+			this.repAgentCategories.NullText = "";
+			this.repAgentCategories.ValueMember = "Id";
+			// 
+			// colVesselId
+			// 
+			this.colVesselId.Caption = "Vessel";
+			this.colVesselId.FieldName = "VesselId";
+			this.colVesselId.MinWidth = 25;
+			this.colVesselId.Name = "colVesselId";
+			this.colVesselId.Visible = true;
+			this.colVesselId.VisibleIndex = 19;
+			this.colVesselId.Width = 139;
+			// 
+			// colFeederVesselId
+			// 
+			this.colFeederVesselId.Caption = "Feeder Vessel";
+			this.colFeederVesselId.FieldName = "FeederVesselId";
+			this.colFeederVesselId.MinWidth = 25;
+			this.colFeederVesselId.Name = "colFeederVesselId";
+			this.colFeederVesselId.Visible = true;
+			this.colFeederVesselId.VisibleIndex = 20;
+			this.colFeederVesselId.Width = 140;
+			// 
+			// colDelivered
+			// 
+			this.colDelivered.FieldName = "Delivered";
+			this.colDelivered.MinWidth = 25;
+			this.colDelivered.Name = "colDelivered";
+			this.colDelivered.Visible = true;
+			this.colDelivered.VisibleIndex = 21;
+			this.colDelivered.Width = 94;
+			// 
+			// colDeliveredTo
+			// 
+			this.colDeliveredTo.FieldName = "DeliveredTo";
+			this.colDeliveredTo.MinWidth = 25;
+			this.colDeliveredTo.Name = "colDeliveredTo";
+			this.colDeliveredTo.Visible = true;
+			this.colDeliveredTo.VisibleIndex = 22;
+			this.colDeliveredTo.Width = 117;
+			// 
+			// colDeliveredDate
+			// 
+			this.colDeliveredDate.ColumnEdit = this.repDateFormat;
+			this.colDeliveredDate.FieldName = "DeliveredDate";
+			this.colDeliveredDate.MinWidth = 25;
+			this.colDeliveredDate.Name = "colDeliveredDate";
+			this.colDeliveredDate.Visible = true;
+			this.colDeliveredDate.VisibleIndex = 23;
+			this.colDeliveredDate.Width = 121;
+			// 
+			// colCurrencyId
+			// 
+			this.colCurrencyId.Caption = "Currency";
+			this.colCurrencyId.FieldName = "CurrencyId";
+			this.colCurrencyId.MinWidth = 25;
+			this.colCurrencyId.Name = "colCurrencyId";
+			this.colCurrencyId.Visible = true;
+			this.colCurrencyId.VisibleIndex = 24;
+			this.colCurrencyId.Width = 117;
+			// 
+			// colTotalInvoicesLl
+			// 
+			this.colTotalInvoicesLl.DisplayFormat.FormatString = "{0:n2}";
+			this.colTotalInvoicesLl.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalInvoicesLl.FieldName = "TotalInvoicesLl";
+			this.colTotalInvoicesLl.MinWidth = 25;
+			this.colTotalInvoicesLl.Name = "colTotalInvoicesLl";
+			this.colTotalInvoicesLl.Visible = true;
+			this.colTotalInvoicesLl.VisibleIndex = 25;
+			this.colTotalInvoicesLl.Width = 94;
+			// 
+			// colTotalInvoicesUsd
+			// 
+			this.colTotalInvoicesUsd.DisplayFormat.FormatString = "{0:n2}";
+			this.colTotalInvoicesUsd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalInvoicesUsd.FieldName = "TotalInvoicesUsd";
+			this.colTotalInvoicesUsd.MinWidth = 25;
+			this.colTotalInvoicesUsd.Name = "colTotalInvoicesUsd";
+			this.colTotalInvoicesUsd.Visible = true;
+			this.colTotalInvoicesUsd.VisibleIndex = 26;
+			this.colTotalInvoicesUsd.Width = 94;
+			// 
+			// colTotalCostsLl
+			// 
+			this.colTotalCostsLl.DisplayFormat.FormatString = "{0:n2}";
+			this.colTotalCostsLl.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalCostsLl.FieldName = "TotalCostsLl";
+			this.colTotalCostsLl.MinWidth = 25;
+			this.colTotalCostsLl.Name = "colTotalCostsLl";
+			this.colTotalCostsLl.Visible = true;
+			this.colTotalCostsLl.VisibleIndex = 27;
+			this.colTotalCostsLl.Width = 94;
+			// 
+			// colTotalCostsUsd
+			// 
+			this.colTotalCostsUsd.DisplayFormat.FormatString = "{0:n2}";
+			this.colTotalCostsUsd.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+			this.colTotalCostsUsd.FieldName = "TotalCostsUsd";
+			this.colTotalCostsUsd.MinWidth = 25;
+			this.colTotalCostsUsd.Name = "colTotalCostsUsd";
+			this.colTotalCostsUsd.Visible = true;
+			this.colTotalCostsUsd.VisibleIndex = 28;
+			this.colTotalCostsUsd.Width = 94;
+			// 
+			// colOperatingUserId
+			// 
+			this.colOperatingUserId.Caption = "Operating User";
+			this.colOperatingUserId.FieldName = "OperatingUserId";
+			this.colOperatingUserId.MinWidth = 25;
+			this.colOperatingUserId.Name = "colOperatingUserId";
+			this.colOperatingUserId.Visible = true;
+			this.colOperatingUserId.VisibleIndex = 29;
+			this.colOperatingUserId.Width = 94;
+			// 
+			// colSales
+			// 
+			this.colSales.Caption = "Sales";
+			this.colSales.FieldName = "SalesId";
+			this.colSales.MinWidth = 25;
+			this.colSales.Name = "colSales";
+			this.colSales.Visible = true;
+			this.colSales.VisibleIndex = 30;
+			this.colSales.Width = 94;
+			// 
+			// colUserId
+			// 
+			this.colUserId.FieldName = "UserId";
+			this.colUserId.MinWidth = 25;
+			this.colUserId.Name = "colUserId";
+			this.colUserId.Visible = true;
+			this.colUserId.VisibleIndex = 31;
+			this.colUserId.Width = 94;
+			// 
+			// colProject
+			// 
+			this.colProject.FieldName = "Project";
+			this.colProject.MinWidth = 25;
+			this.colProject.Name = "colProject";
+			this.colProject.Visible = true;
+			this.colProject.VisibleIndex = 32;
+			this.colProject.Width = 94;
+			// 
+			// colTransit
+			// 
+			this.colTransit.FieldName = "Transit";
+			this.colTransit.MinWidth = 25;
+			this.colTransit.Name = "colTransit";
+			this.colTransit.Visible = true;
+			this.colTransit.VisibleIndex = 33;
+			this.colTransit.Width = 94;
+			// 
+			// colFullPaid
+			// 
+			this.colFullPaid.FieldName = "FullPaid";
+			this.colFullPaid.MinWidth = 25;
+			this.colFullPaid.Name = "colFullPaid";
+			this.colFullPaid.Visible = true;
+			this.colFullPaid.VisibleIndex = 34;
+			this.colFullPaid.Width = 94;
+			// 
+			// colFullPaidDate
+			// 
+			this.colFullPaidDate.ColumnEdit = this.repDateFormat;
+			this.colFullPaidDate.FieldName = "FullPaidDate";
+			this.colFullPaidDate.MinWidth = 25;
+			this.colFullPaidDate.Name = "colFullPaidDate";
+			this.colFullPaidDate.Visible = true;
+			this.colFullPaidDate.VisibleIndex = 72;
+			this.colFullPaidDate.Width = 94;
+			// 
+			// colClearingAgentId
+			// 
+			this.colClearingAgentId.Caption = "Clearing Agent";
+			this.colClearingAgentId.FieldName = "ClearingAgentId";
+			this.colClearingAgentId.MinWidth = 25;
+			this.colClearingAgentId.Name = "colClearingAgentId";
+			this.colClearingAgentId.Visible = true;
+			this.colClearingAgentId.VisibleIndex = 35;
+			this.colClearingAgentId.Width = 94;
+			// 
+			// colATD
+			// 
+			this.colATD.ColumnEdit = this.repDateFormat;
+			this.colATD.FieldName = "Atd";
+			this.colATD.MinWidth = 25;
+			this.colATD.Name = "colATD";
+			this.colATD.Visible = true;
+			this.colATD.VisibleIndex = 36;
+			this.colATD.Width = 94;
+			// 
+			// colATA
+			// 
+			this.colATA.ColumnEdit = this.repDateFormat;
+			this.colATA.FieldName = "Ata";
+			this.colATA.MinWidth = 25;
+			this.colATA.Name = "colATA";
+			this.colATA.Visible = true;
+			this.colATA.VisibleIndex = 37;
+			this.colATA.Width = 94;
+			// 
+			// colETD
+			// 
+			this.colETD.ColumnEdit = this.repDateFormat;
+			this.colETD.FieldName = "Etd";
+			this.colETD.MinWidth = 25;
+			this.colETD.Name = "colETD";
+			this.colETD.Visible = true;
+			this.colETD.VisibleIndex = 38;
+			this.colETD.Width = 94;
+			// 
+			// colETA
+			// 
+			this.colETA.ColumnEdit = this.repDateFormat;
+			this.colETA.FieldName = "Eta";
+			this.colETA.MinWidth = 25;
+			this.colETA.Name = "colETA";
+			this.colETA.Visible = true;
+			this.colETA.VisibleIndex = 39;
+			this.colETA.Width = 94;
+			// 
+			// colCutOffDate
+			// 
+			this.colCutOffDate.ColumnEdit = this.repDateFormat;
+			this.colCutOffDate.FieldName = "CutOffDate";
+			this.colCutOffDate.MinWidth = 25;
+			this.colCutOffDate.Name = "colCutOffDate";
+			this.colCutOffDate.Visible = true;
+			this.colCutOffDate.VisibleIndex = 40;
+			this.colCutOffDate.Width = 94;
+			// 
+			// colDOL
+			// 
+			this.colDOL.FieldName = "DateOfLoading";
+			this.colDOL.MinWidth = 25;
+			this.colDOL.Name = "colDOL";
+			this.colDOL.Visible = true;
+			this.colDOL.VisibleIndex = 41;
+			this.colDOL.Width = 94;
+			// 
+			// colPPCC
+			// 
+			this.colPPCC.FieldName = "Ppcc";
+			this.colPPCC.MinWidth = 25;
+			this.colPPCC.Name = "colPPCC";
+			this.colPPCC.Visible = true;
+			this.colPPCC.VisibleIndex = 42;
+			this.colPPCC.Width = 94;
+			// 
+			// colStatus
+			// 
+			this.colStatus.FieldName = "Status";
+			this.colStatus.MinWidth = 25;
+			this.colStatus.Name = "colStatus";
+			this.colStatus.Visible = true;
+			this.colStatus.VisibleIndex = 43;
+			this.colStatus.Width = 94;
+			// 
+			// colBlstatus
+			// 
+			this.colBlstatus.FieldName = "Blstatus";
+			this.colBlstatus.MinWidth = 25;
+			this.colBlstatus.Name = "colBlstatus";
+			this.colBlstatus.Visible = true;
+			this.colBlstatus.VisibleIndex = 44;
+			this.colBlstatus.Width = 94;
+			// 
+			// colRTejrim
+			// 
+			this.colRTejrim.FieldName = "RTejrim";
+			this.colRTejrim.MinWidth = 25;
+			this.colRTejrim.Name = "colRTejrim";
+			this.colRTejrim.Visible = true;
+			this.colRTejrim.VisibleIndex = 45;
+			this.colRTejrim.Width = 94;
+			// 
+			// colRTejrimDate
+			// 
+			this.colRTejrimDate.ColumnEdit = this.repDateFormat;
+			this.colRTejrimDate.FieldName = "RTejrimDate";
+			this.colRTejrimDate.MinWidth = 25;
+			this.colRTejrimDate.Name = "colRTejrimDate";
+			this.colRTejrimDate.Visible = true;
+			this.colRTejrimDate.VisibleIndex = 46;
+			this.colRTejrimDate.Width = 94;
+			// 
+			// colTejrim
+			// 
+			this.colTejrim.FieldName = "Tejrim";
+			this.colTejrim.MinWidth = 25;
+			this.colTejrim.Name = "colTejrim";
+			this.colTejrim.Visible = true;
+			this.colTejrim.VisibleIndex = 47;
+			this.colTejrim.Width = 94;
+			// 
+			// colTejrimDate
+			// 
+			this.colTejrimDate.ColumnEdit = this.repDateFormat;
+			this.colTejrimDate.FieldName = "TejrimDate";
+			this.colTejrimDate.MinWidth = 25;
+			this.colTejrimDate.Name = "colTejrimDate";
+			this.colTejrimDate.Visible = true;
+			this.colTejrimDate.VisibleIndex = 48;
+			this.colTejrimDate.Width = 94;
+			// 
+			// colRClearance
+			// 
+			this.colRClearance.FieldName = "RClearance";
+			this.colRClearance.MinWidth = 25;
+			this.colRClearance.Name = "colRClearance";
+			this.colRClearance.Visible = true;
+			this.colRClearance.VisibleIndex = 49;
+			this.colRClearance.Width = 94;
+			// 
+			// colRClearanceDate
+			// 
+			this.colRClearanceDate.ColumnEdit = this.repDateFormat;
+			this.colRClearanceDate.FieldName = "RClearanceDate";
+			this.colRClearanceDate.MinWidth = 25;
+			this.colRClearanceDate.Name = "colRClearanceDate";
+			this.colRClearanceDate.Visible = true;
+			this.colRClearanceDate.VisibleIndex = 50;
+			this.colRClearanceDate.Width = 94;
+			// 
+			// colIncoTerms
+			// 
+			this.colIncoTerms.FieldName = "IncoTerms";
+			this.colIncoTerms.MinWidth = 25;
+			this.colIncoTerms.Name = "colIncoTerms";
+			this.colIncoTerms.Visible = true;
+			this.colIncoTerms.VisibleIndex = 51;
+			this.colIncoTerms.Width = 94;
+			// 
+			// colIncoTermsFrom
+			// 
+			this.colIncoTermsFrom.FieldName = "IncoTermsFrom";
+			this.colIncoTermsFrom.MinWidth = 25;
+			this.colIncoTermsFrom.Name = "colIncoTermsFrom";
+			this.colIncoTermsFrom.Visible = true;
+			this.colIncoTermsFrom.VisibleIndex = 52;
+			this.colIncoTermsFrom.Width = 94;
+			// 
+			// colIncoTermsTo
+			// 
+			this.colIncoTermsTo.FieldName = "IncoTermsTo";
+			this.colIncoTermsTo.MinWidth = 25;
+			this.colIncoTermsTo.Name = "colIncoTermsTo";
+			this.colIncoTermsTo.Visible = true;
+			this.colIncoTermsTo.VisibleIndex = 53;
+			this.colIncoTermsTo.Width = 94;
+			// 
+			// colAllInOrderToBeLoaded
+			// 
+			this.colAllInOrderToBeLoaded.FieldName = "AllInOrderToBeLoaded";
+			this.colAllInOrderToBeLoaded.MinWidth = 25;
+			this.colAllInOrderToBeLoaded.Name = "colAllInOrderToBeLoaded";
+			this.colAllInOrderToBeLoaded.Visible = true;
+			this.colAllInOrderToBeLoaded.VisibleIndex = 54;
+			this.colAllInOrderToBeLoaded.Width = 94;
+			// 
+			// colAllInOrderOnWater
+			// 
+			this.colAllInOrderOnWater.FieldName = "AllInOrderOnWater";
+			this.colAllInOrderOnWater.MinWidth = 25;
+			this.colAllInOrderOnWater.Name = "colAllInOrderOnWater";
+			this.colAllInOrderOnWater.Visible = true;
+			this.colAllInOrderOnWater.VisibleIndex = 55;
+			this.colAllInOrderOnWater.Width = 94;
+			// 
+			// colContainerToCnee
+			// 
+			this.colContainerToCnee.FieldName = "ContainerToCnee";
+			this.colContainerToCnee.MinWidth = 25;
+			this.colContainerToCnee.Name = "colContainerToCnee";
+			this.colContainerToCnee.Visible = true;
+			this.colContainerToCnee.VisibleIndex = 56;
+			this.colContainerToCnee.Width = 94;
+			// 
+			// colDtCntrToCnee
+			// 
+			this.colDtCntrToCnee.FieldName = "DtCntrToCnee";
+			this.colDtCntrToCnee.MinWidth = 25;
+			this.colDtCntrToCnee.Name = "colDtCntrToCnee";
+			this.colDtCntrToCnee.Visible = true;
+			this.colDtCntrToCnee.VisibleIndex = 57;
+			this.colDtCntrToCnee.Width = 94;
+			// 
+			// colEmptyContainer
+			// 
+			this.colEmptyContainer.FieldName = "EmptyContainer";
+			this.colEmptyContainer.MinWidth = 25;
+			this.colEmptyContainer.Name = "colEmptyContainer";
+			this.colEmptyContainer.Visible = true;
+			this.colEmptyContainer.VisibleIndex = 58;
+			this.colEmptyContainer.Width = 94;
+			// 
+			// colDtEmptyCntr
+			// 
+			this.colDtEmptyCntr.FieldName = "DtEmptyCntr";
+			this.colDtEmptyCntr.MinWidth = 25;
+			this.colDtEmptyCntr.Name = "colDtEmptyCntr";
+			this.colDtEmptyCntr.Visible = true;
+			this.colDtEmptyCntr.VisibleIndex = 59;
+			this.colDtEmptyCntr.Width = 94;
+			// 
+			// colJobSCId
+			// 
+			this.colJobSCId.FieldName = "JobScId";
+			this.colJobSCId.MinWidth = 25;
+			this.colJobSCId.Name = "colJobSCId";
+			this.colJobSCId.Visible = true;
+			this.colJobSCId.VisibleIndex = 60;
+			this.colJobSCId.Width = 94;
+			// 
+			// colLocked
+			// 
+			this.colLocked.FieldName = "Locked";
+			this.colLocked.MinWidth = 25;
+			this.colLocked.Name = "colLocked";
+			this.colLocked.Visible = true;
+			this.colLocked.VisibleIndex = 61;
+			this.colLocked.Width = 94;
+			// 
+			// colClosed
+			// 
+			this.colClosed.FieldName = "Closed";
+			this.colClosed.MinWidth = 25;
+			this.colClosed.Name = "colClosed";
+			this.colClosed.Visible = true;
+			this.colClosed.VisibleIndex = 62;
+			this.colClosed.Width = 120;
+			// 
+			// colClosedDate
+			// 
+			this.colClosedDate.ColumnEdit = this.repDateFormat;
+			this.colClosedDate.FieldName = "ClosedDate";
+			this.colClosedDate.MinWidth = 25;
+			this.colClosedDate.Name = "colClosedDate";
+			this.colClosedDate.Visible = true;
+			this.colClosedDate.VisibleIndex = 63;
+			this.colClosedDate.Width = 126;
+			// 
+			// colCanceledJob
+			// 
+			this.colCanceledJob.FieldName = "CancelledJob";
+			this.colCanceledJob.MinWidth = 25;
+			this.colCanceledJob.Name = "colCanceledJob";
+			this.colCanceledJob.Visible = true;
+			this.colCanceledJob.VisibleIndex = 64;
+			this.colCanceledJob.Width = 116;
+			// 
+			// colCanceledDate
+			// 
+			this.colCanceledDate.ColumnEdit = this.repDateFormat;
+			this.colCanceledDate.FieldName = "CancelledJobDate";
+			this.colCanceledDate.MinWidth = 25;
+			this.colCanceledDate.Name = "colCanceledDate";
+			this.colCanceledDate.Visible = true;
+			this.colCanceledDate.VisibleIndex = 65;
+			this.colCanceledDate.Width = 117;
+			// 
+			// colCanceledUser
+			// 
+			this.colCanceledUser.FieldName = "CancelledJobByUserId";
+			this.colCanceledUser.MinWidth = 25;
+			this.colCanceledUser.Name = "colCanceledUser";
+			this.colCanceledUser.Visible = true;
+			this.colCanceledUser.VisibleIndex = 66;
+			this.colCanceledUser.Width = 121;
+			// 
+			// colLastJobReopenedBy
+			// 
+			this.colLastJobReopenedBy.FieldName = "LastJobReopenedBy";
+			this.colLastJobReopenedBy.MinWidth = 25;
+			this.colLastJobReopenedBy.Name = "colLastJobReopenedBy";
+			this.colLastJobReopenedBy.Visible = true;
+			this.colLastJobReopenedBy.VisibleIndex = 67;
+			this.colLastJobReopenedBy.Width = 155;
+			// 
+			// colLastJobReopened
+			// 
+			this.colLastJobReopened.FieldName = "LastJobReopenedDate";
+			this.colLastJobReopened.MinWidth = 25;
+			this.colLastJobReopened.Name = "colLastJobReopened";
+			this.colLastJobReopened.Visible = true;
+			this.colLastJobReopened.VisibleIndex = 68;
+			this.colLastJobReopened.Width = 159;
+			// 
+			// colCostReady
+			// 
+			this.colCostReady.FieldName = "CostReady";
+			this.colCostReady.MinWidth = 25;
+			this.colCostReady.Name = "colCostReady";
+			this.colCostReady.Visible = true;
+			this.colCostReady.VisibleIndex = 69;
+			this.colCostReady.Width = 94;
+			// 
+			// colCostReadyDate
+			// 
+			this.colCostReadyDate.ColumnEdit = this.repDateFormat;
+			this.colCostReadyDate.FieldName = "CostReadyDate";
+			this.colCostReadyDate.MinWidth = 25;
+			this.colCostReadyDate.Name = "colCostReadyDate";
+			this.colCostReadyDate.Visible = true;
+			this.colCostReadyDate.VisibleIndex = 70;
+			this.colCostReadyDate.Width = 123;
+			// 
+			// colNotes
+			// 
+			this.colNotes.FieldName = "Notes";
+			this.colNotes.MinWidth = 25;
+			this.colNotes.Name = "colNotes";
+			this.colNotes.Visible = true;
+			this.colNotes.VisibleIndex = 71;
+			this.colNotes.Width = 404;
+			// 
+			// repUsersList
+			// 
+			this.repUsersList.AutoHeight = false;
+			this.repUsersList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repUsersList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repUsersList.DisplayMember = "UserName";
+			this.repUsersList.Name = "repUsersList";
+			this.repUsersList.NullText = "";
+			this.repUsersList.ValueMember = "Id";
+			// 
+			// repSalesList
+			// 
+			this.repSalesList.AutoHeight = false;
+			this.repSalesList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repSalesList.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", "Name", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+			this.repSalesList.DisplayMember = "UserName";
+			this.repSalesList.Name = "repSalesList";
+			this.repSalesList.NullText = "";
+			this.repSalesList.ValueMember = "Id";
+			// 
+			// repCheckList
+			// 
+			this.repCheckList.AutoHeight = false;
+			this.repCheckList.Name = "repCheckList";
+			// 
+			// repNumberFormat
+			// 
+			this.repNumberFormat.AutoHeight = false;
+			this.repNumberFormat.Name = "repNumberFormat";
+			this.repNumberFormat.UseMaskAsDisplayFormat = true;
 			// 
 			// Root
 			// 
@@ -1858,11 +1876,10 @@
 			// 
 			// layoutControlItem1
 			// 
-			this.layoutControlItem1.Control = this.gcSeaExports;
+			this.layoutControlItem1.Control = this.gcSeaExport;
 			this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
 			this.layoutControlItem1.Name = "layoutControlItem1";
-			this.layoutControlItem1.Size = new System.Drawing.Size(1425, 545);
-			this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+			this.layoutControlItem1.Size = new System.Drawing.Size(1421, 541);
 			this.layoutControlItem1.TextVisible = false;
 			// 
 			// JobSeaExportListForm
@@ -1871,17 +1888,20 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1445, 788);
 			this.Controls.Add(this.mainLayout);
-			this.Controls.Add(this.ribbonStatusBar1);
 			this.Controls.Add(this.rcJobSeaExport);
+			this.Controls.Add(this.ribbonStatusBar1);
 			this.Name = "JobSeaExportListForm";
 			this.Ribbon = this.rcJobSeaExport;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.StatusBar = this.ribbonStatusBar1;
 			this.Text = "Sea Export List";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JobSeaExportListForm_FormClosing);
+			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaExport)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).EndInit();
+			this.mainLayout.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.gcSeaExport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gvSeaExportDetails)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gcSeaExports)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gvSeaExports)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gvSeaExport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat.CalendarTimeProperties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repDateFormat)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repCustomers)).EndInit();
@@ -1889,15 +1909,16 @@
 			((System.ComponentModel.ISupportInitialize)(this.repAgents)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repPOLPortCodeList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repPODPortCodeList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repCheckList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.repJobTypes)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repJobsType)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repSideId)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repAgentCategories)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repUsersList)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.repSalesList)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaExport)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).EndInit();
-			this.mainLayout.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.repCheckList)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repNumberFormat)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.bsSeaExportJobs)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1948,115 +1969,113 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPermissions;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraDataLayout.DataLayoutControl mainLayout;
-        private DevExpress.XtraGrid.GridControl gcSeaExports;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvSeaExportDetails;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetailId;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetailJobNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetailBOL;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetailOrigin;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetailSupplier;
-        private DevExpress.XtraGrid.Columns.GridColumn colDetailContNo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvSeaExports;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colRefNo;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn colJobNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colJobDate;
-        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repDateFormat;
-        private DevExpress.XtraGrid.Columns.GridColumn colMbol;
-        private DevExpress.XtraGrid.Columns.GridColumn colContainerNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colBookingNo;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustomerId;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repCustomers;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMemberId1;
-        private DevExpress.XtraGrid.Columns.GridColumn colMemberName1;
-        private DevExpress.XtraGrid.Columns.GridColumn colConsigneeId;
-        private DevExpress.XtraGrid.Columns.GridColumn colAgentId;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repAgents;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeaportDeparture;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repPOLPortCodeList;
-        private DevExpress.XtraGrid.Columns.GridColumn colCountryDeparture;
-        private DevExpress.XtraGrid.Columns.GridColumn colSeaportDestination;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repPODPortCodeList;
-        private DevExpress.XtraGrid.Columns.GridColumn colCountryDestination;
-        private DevExpress.XtraGrid.Columns.GridColumn colBayan;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repCheckList;
-        private DevExpress.XtraGrid.Columns.GridColumn colJobType;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repJobTypes;
-        private DevExpress.XtraGrid.Columns.GridColumn colType;
-        private DevExpress.XtraGrid.Columns.GridColumn colSideId;
-        private DevExpress.XtraGrid.Columns.GridColumn colCommodity;
-        private DevExpress.XtraGrid.Columns.GridColumn colQuantities;
-        private DevExpress.XtraGrid.Columns.GridColumn colPieces;
-        private DevExpress.XtraGrid.Columns.GridColumn colWeight;
-        private DevExpress.XtraGrid.Columns.GridColumn colValueOfGoods;
-        private DevExpress.XtraGrid.Columns.GridColumn colShippedWithId;
-        private DevExpress.XtraGrid.Columns.GridColumn colVesselId;
-        private DevExpress.XtraGrid.Columns.GridColumn colFeederVesselId;
-        private DevExpress.XtraGrid.Columns.GridColumn colDelivered;
-        private DevExpress.XtraGrid.Columns.GridColumn colDeliveredTo;
-        private DevExpress.XtraGrid.Columns.GridColumn colDeliveredDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colCurrencyId;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotalInvoicesLl;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotalInvoicesUsd;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotalCostsLl;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotalCostsUsd;
-        private DevExpress.XtraGrid.Columns.GridColumn colOperatingUserId;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn colUserId;
-        private DevExpress.XtraGrid.Columns.GridColumn colProject;
-        private DevExpress.XtraGrid.Columns.GridColumn colTransit;
-        private DevExpress.XtraGrid.Columns.GridColumn colFullPaid;
-        private DevExpress.XtraGrid.Columns.GridColumn colFullPaidDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colClearingAgentId;
-        private DevExpress.XtraGrid.Columns.GridColumn colATD;
-        private DevExpress.XtraGrid.Columns.GridColumn colATA;
-        private DevExpress.XtraGrid.Columns.GridColumn colETD;
-        private DevExpress.XtraGrid.Columns.GridColumn colETA;
-        private DevExpress.XtraGrid.Columns.GridColumn colCutOffDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colDOL;
-        private DevExpress.XtraGrid.Columns.GridColumn colPPCC;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colBlstatus;
-        private DevExpress.XtraGrid.Columns.GridColumn colRTejrim;
-        private DevExpress.XtraGrid.Columns.GridColumn colRTejrimDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colTejrim;
-        private DevExpress.XtraGrid.Columns.GridColumn colTejrimDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colRClearance;
-        private DevExpress.XtraGrid.Columns.GridColumn colRClearanceDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colIncoTerms;
-        private DevExpress.XtraGrid.Columns.GridColumn colIncoTermsFrom;
-        private DevExpress.XtraGrid.Columns.GridColumn colIncoTermsTo;
-        private DevExpress.XtraGrid.Columns.GridColumn colAllInOrderToBeLoaded;
-        private DevExpress.XtraGrid.Columns.GridColumn colAllInOrderOnWater;
-        private DevExpress.XtraGrid.Columns.GridColumn colContainerToCnee;
-        private DevExpress.XtraGrid.Columns.GridColumn colDtCntrToCnee;
-        private DevExpress.XtraGrid.Columns.GridColumn colEmptyContainer;
-        private DevExpress.XtraGrid.Columns.GridColumn colDtEmptyCntr;
-        private DevExpress.XtraGrid.Columns.GridColumn colJobSCId;
-        private DevExpress.XtraGrid.Columns.GridColumn colLocked;
-        private DevExpress.XtraGrid.Columns.GridColumn colClosed;
-        private DevExpress.XtraGrid.Columns.GridColumn colClosedDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colCanceledJob;
-        private DevExpress.XtraGrid.Columns.GridColumn colCanceledDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colCanceledUser;
-        private DevExpress.XtraGrid.Columns.GridColumn colLastJobReopenedBy;
-        private DevExpress.XtraGrid.Columns.GridColumn colLastJobReopened;
-        private DevExpress.XtraGrid.Columns.GridColumn colCostReady;
-        private DevExpress.XtraGrid.Columns.GridColumn colCostReadyDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colNotes;
-        private DevExpress.XtraGrid.Columns.GridColumn colCreatedBy;
-        private DevExpress.XtraGrid.Columns.GridColumn colCreatedDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colLastModifiedBy;
-        private DevExpress.XtraGrid.Columns.GridColumn colLastModifiedDate;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repUsersList;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repSalesList;
-        private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
 		private DevExpress.XtraBars.BarButtonItem btnResetGridStyle;
 		private DevExpress.XtraBars.Ribbon.RibbonPage rpViewSettings;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+		private DevExpress.XtraDataLayout.DataLayoutControl mainLayout;
+		private DevExpress.XtraGrid.GridControl gcSeaExport;
+		private DevExpress.XtraGrid.Views.Grid.GridView gvSeaExportDetails;
+		private DevExpress.XtraGrid.Columns.GridColumn colDetailId;
+		private DevExpress.XtraGrid.Columns.GridColumn colDetailJobNo;
+		private DevExpress.XtraGrid.Columns.GridColumn colDetailBOL;
+		private DevExpress.XtraGrid.Columns.GridColumn colDetailOrigin;
+		private DevExpress.XtraGrid.Columns.GridColumn colDetailSupplier;
+		private DevExpress.XtraGrid.Columns.GridColumn colDetailContNo;
+		private DevExpress.XtraGrid.Views.Grid.GridView gvSeaExport;
+		private DevExpress.XtraGrid.Columns.GridColumn colId;
+		private DevExpress.XtraGrid.Columns.GridColumn colRefNo;
+		private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+		private DevExpress.XtraGrid.Columns.GridColumn colJobNo;
+		private DevExpress.XtraGrid.Columns.GridColumn colJobDate;
+		private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repDateFormat;
+		private DevExpress.XtraGrid.Columns.GridColumn colMbol;
+		private DevExpress.XtraGrid.Columns.GridColumn colContainerNo;
+		private DevExpress.XtraGrid.Columns.GridColumn colBookingNo;
+		private DevExpress.XtraGrid.Columns.GridColumn colCustomerId;
+		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repCustomers;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+		private DevExpress.XtraGrid.Columns.GridColumn colMemberId1;
+		private DevExpress.XtraGrid.Columns.GridColumn colMemberName1;
+		private DevExpress.XtraGrid.Columns.GridColumn colConsigneeId;
+		private DevExpress.XtraGrid.Columns.GridColumn colAgentId;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repAgents;
+		private DevExpress.XtraGrid.Columns.GridColumn colSeaportDeparture;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repPOLPortCodeList;
+		private DevExpress.XtraGrid.Columns.GridColumn colCountryDeparture;
+		private DevExpress.XtraGrid.Columns.GridColumn colSeaportDestination;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repPODPortCodeList;
+		private DevExpress.XtraGrid.Columns.GridColumn colCountryDestination;
+		private DevExpress.XtraGrid.Columns.GridColumn colJobType;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repJobsType;
+		private DevExpress.XtraGrid.Columns.GridColumn colSideId;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repSideId;
+		private DevExpress.XtraGrid.Columns.GridColumn colCommodity;
+		private DevExpress.XtraGrid.Columns.GridColumn colQuantities;
+		private DevExpress.XtraGrid.Columns.GridColumn colPieces;
+		private DevExpress.XtraGrid.Columns.GridColumn colWeight;
+		private DevExpress.XtraGrid.Columns.GridColumn colValueOfGoods;
+		private DevExpress.XtraGrid.Columns.GridColumn colShippedWithId;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repAgentCategories;
+		private DevExpress.XtraGrid.Columns.GridColumn colVesselId;
+		private DevExpress.XtraGrid.Columns.GridColumn colFeederVesselId;
+		private DevExpress.XtraGrid.Columns.GridColumn colDelivered;
+		private DevExpress.XtraGrid.Columns.GridColumn colDeliveredTo;
+		private DevExpress.XtraGrid.Columns.GridColumn colDeliveredDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colCurrencyId;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalInvoicesLl;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalInvoicesUsd;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalCostsLl;
+		private DevExpress.XtraGrid.Columns.GridColumn colTotalCostsUsd;
+		private DevExpress.XtraGrid.Columns.GridColumn colOperatingUserId;
+		private DevExpress.XtraGrid.Columns.GridColumn colSales;
+		private DevExpress.XtraGrid.Columns.GridColumn colUserId;
+		private DevExpress.XtraGrid.Columns.GridColumn colProject;
+		private DevExpress.XtraGrid.Columns.GridColumn colTransit;
+		private DevExpress.XtraGrid.Columns.GridColumn colFullPaid;
+		private DevExpress.XtraGrid.Columns.GridColumn colFullPaidDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colClearingAgentId;
+		private DevExpress.XtraGrid.Columns.GridColumn colATD;
+		private DevExpress.XtraGrid.Columns.GridColumn colATA;
+		private DevExpress.XtraGrid.Columns.GridColumn colETD;
+		private DevExpress.XtraGrid.Columns.GridColumn colETA;
+		private DevExpress.XtraGrid.Columns.GridColumn colCutOffDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colDOL;
+		private DevExpress.XtraGrid.Columns.GridColumn colPPCC;
+		private DevExpress.XtraGrid.Columns.GridColumn colStatus;
+		private DevExpress.XtraGrid.Columns.GridColumn colBlstatus;
+		private DevExpress.XtraGrid.Columns.GridColumn colRTejrim;
+		private DevExpress.XtraGrid.Columns.GridColumn colRTejrimDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colTejrim;
+		private DevExpress.XtraGrid.Columns.GridColumn colTejrimDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colRClearance;
+		private DevExpress.XtraGrid.Columns.GridColumn colRClearanceDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colIncoTerms;
+		private DevExpress.XtraGrid.Columns.GridColumn colIncoTermsFrom;
+		private DevExpress.XtraGrid.Columns.GridColumn colIncoTermsTo;
+		private DevExpress.XtraGrid.Columns.GridColumn colAllInOrderToBeLoaded;
+		private DevExpress.XtraGrid.Columns.GridColumn colAllInOrderOnWater;
+		private DevExpress.XtraGrid.Columns.GridColumn colContainerToCnee;
+		private DevExpress.XtraGrid.Columns.GridColumn colDtCntrToCnee;
+		private DevExpress.XtraGrid.Columns.GridColumn colEmptyContainer;
+		private DevExpress.XtraGrid.Columns.GridColumn colDtEmptyCntr;
+		private DevExpress.XtraGrid.Columns.GridColumn colJobSCId;
+		private DevExpress.XtraGrid.Columns.GridColumn colLocked;
+		private DevExpress.XtraGrid.Columns.GridColumn colClosed;
+		private DevExpress.XtraGrid.Columns.GridColumn colClosedDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colCanceledJob;
+		private DevExpress.XtraGrid.Columns.GridColumn colCanceledDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colCanceledUser;
+		private DevExpress.XtraGrid.Columns.GridColumn colLastJobReopenedBy;
+		private DevExpress.XtraGrid.Columns.GridColumn colLastJobReopened;
+		private DevExpress.XtraGrid.Columns.GridColumn colCostReady;
+		private DevExpress.XtraGrid.Columns.GridColumn colCostReadyDate;
+		private DevExpress.XtraGrid.Columns.GridColumn colNotes;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repUsersList;
+		private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repSalesList;
+		private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repCheckList;
+		private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repNumberFormat;
+		private DevExpress.XtraLayout.LayoutControlGroup Root;
+		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+		private System.Windows.Forms.BindingSource bsSeaExportJobs;
 	}
 }
