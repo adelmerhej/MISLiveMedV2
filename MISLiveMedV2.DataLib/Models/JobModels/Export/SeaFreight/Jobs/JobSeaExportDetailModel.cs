@@ -2,7 +2,7 @@
 
 namespace MISLiveMed.Models.Models.JobModels.Export.SeaFreight.Jobs
 {
-    public class JobSeaExportDetailsModel : EntityObject, ICloneable
+    public class JobSeaExportDetailModel : EntityObject, ICloneable
     {
 		public int JobId { get; set; } = 0;
 		public string Hbl { get; set; }
@@ -30,7 +30,7 @@ namespace MISLiveMed.Models.Models.JobModels.Export.SeaFreight.Jobs
 
 		public object Clone()
         {
-            var quotationModel = (JobSeaExportDetailsModel)MemberwiseClone();
+            var quotationModel = (JobSeaExportDetailModel)MemberwiseClone();
             return quotationModel;
         }
 

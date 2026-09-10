@@ -105,7 +105,7 @@ namespace MISLiveMed.Models.Models.JobModels.Export.SeaFreight.Jobs
 		public bool MissingDocuments { get; set; }
 		public DateTime? MissingDocumentsDate { get; set; }
 
-		public virtual JobSeaExportDetailsModel JobSeaExportDetails { get; set; } = new JobSeaExportDetailsModel();
+		public virtual JobSeaExportDetailModel JobSeaExportDetails { get; set; } = new JobSeaExportDetailModel();
 
         #region Implementation of ICloneable
 

@@ -12,7 +12,7 @@ namespace MISLiveMed.DataLayers.JobData.SeaExport
 {
     public class JobSeaExportRepository : IDisposable
     {
-        public IList<JobSeaExportModel> JobsSeaExport(bool showProtected = false)
+        public IList<JobSeaExportModel> JobsSeaExportList(bool showProtected = false)
         {
             try
             {

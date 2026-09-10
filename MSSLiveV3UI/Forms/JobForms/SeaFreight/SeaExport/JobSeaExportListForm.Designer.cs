@@ -48,6 +48,8 @@
 			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges5 = new DevExpress.Skins.SkinPaddingEdges();
 			DevExpress.Skins.SkinPaddingEdges skinPaddingEdges6 = new DevExpress.Skins.SkinPaddingEdges();
 			DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+			this.bsSeaExportJobs = new System.Windows.Forms.BindingSource(this.components);
+			this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
 			this.rcJobSeaExport = new DevExpress.XtraBars.Ribbon.RibbonControl();
 			this.btnNew = new DevExpress.XtraBars.BarButtonItem();
 			this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
@@ -74,10 +76,10 @@
 			this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
 			this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
 			this.btnClose = new DevExpress.XtraBars.BarButtonItem();
-			this.cboDepartments = new DevExpress.XtraBars.BarEditItem();
+			this.cboOperatingUsers = new DevExpress.XtraBars.BarEditItem();
 			this.cboSales = new DevExpress.XtraBars.BarEditItem();
 			this.cboStatus = new DevExpress.XtraBars.BarEditItem();
-			this.chkShowProfit = new DevExpress.XtraBars.BarCheckItem();
+			this.chkShowProtected = new DevExpress.XtraBars.BarCheckItem();
 			this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
 			this.barCheckItem9 = new DevExpress.XtraBars.BarCheckItem();
 			this.rgSortByReports = new DevExpress.XtraBars.RibbonGalleryBarItem();
@@ -199,7 +201,14 @@
 			this.repNumberFormat = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
 			this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
 			this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-			this.bsSeaExportJobs = new System.Windows.Forms.BindingSource(this.components);
+			this.repSales = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+			this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.repStatusList = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.repOperatingUsers = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+			this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			((System.ComponentModel.ISupportInitialize)(this.bsSeaExportJobs)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaExport)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).BeginInit();
 			this.mainLayout.SuspendLayout();
@@ -222,7 +231,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.repNumberFormat)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.bsSeaExportJobs)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repSales)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repStatusList)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.repOperatingUsers)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// rcJobSeaExport
@@ -256,10 +270,10 @@
             this.barHeaderItem2,
             this.btnRefresh,
             this.btnClose,
-            this.cboDepartments,
+            this.cboOperatingUsers,
             this.cboSales,
             this.cboStatus,
-            this.chkShowProfit,
+            this.chkShowProtected,
             this.barCheckItem2,
             this.barCheckItem9,
             this.rgSortByReports,
@@ -274,6 +288,10 @@
 			this.rcJobSeaExport.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpJobSeaExport,
             this.rpViewSettings});
+			this.rcJobSeaExport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repSales,
+            this.repStatusList,
+            this.repOperatingUsers});
 			this.rcJobSeaExport.Size = new System.Drawing.Size(1445, 193);
 			this.rcJobSeaExport.StatusBar = this.ribbonStatusBar1;
 			// 
@@ -526,20 +544,20 @@
 			this.btnClose.Name = "btnClose";
 			this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClose_ItemClick);
 			// 
-			// cboDepartments
+			// cboOperatingUsers
 			// 
-			this.cboDepartments.Caption = "By Departments";
-			this.cboDepartments.CaptionToEditorIndent = 6;
-			this.cboDepartments.Edit = null;
-			this.cboDepartments.EditWidth = 150;
-			this.cboDepartments.Id = 39;
-			this.cboDepartments.Name = "cboDepartments";
+			this.cboOperatingUsers.Caption = "Operating User";
+			this.cboOperatingUsers.CaptionToEditorIndent = 6;
+			this.cboOperatingUsers.Edit = this.repOperatingUsers;
+			this.cboOperatingUsers.EditWidth = 150;
+			this.cboOperatingUsers.Id = 39;
+			this.cboOperatingUsers.Name = "cboOperatingUsers";
 			// 
 			// cboSales
 			// 
 			this.cboSales.Caption = "By Sales";
 			this.cboSales.CaptionToEditorIndent = 40;
-			this.cboSales.Edit = null;
+			this.cboSales.Edit = this.repSales;
 			this.cboSales.EditWidth = 150;
 			this.cboSales.Id = 40;
 			this.cboSales.Name = "cboSales";
@@ -548,20 +566,19 @@
 			// 
 			this.cboStatus.Caption = "By Status";
 			this.cboStatus.CaptionToEditorIndent = 37;
-			this.cboStatus.Edit = null;
+			this.cboStatus.Edit = this.repStatusList;
 			this.cboStatus.EditWidth = 150;
 			this.cboStatus.Id = 44;
 			this.cboStatus.Name = "cboStatus";
 			// 
-			// chkShowProfit
+			// chkShowProtected
 			// 
-			this.chkShowProfit.Caption = "Show Profit";
-			this.chkShowProfit.Enabled = false;
-			this.chkShowProfit.Id = 45;
-			this.chkShowProfit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("chkShowProfit.ImageOptions.SvgImage")));
-			this.chkShowProfit.Name = "chkShowProfit";
-			this.chkShowProfit.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-			this.chkShowProfit.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.chkShowProfit_CheckedChanged);
+			this.chkShowProtected.Caption = "Show Protected";
+			this.chkShowProtected.Enabled = false;
+			this.chkShowProtected.Id = 45;
+			this.chkShowProtected.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("chkShowProtected.ImageOptions.SvgImage")));
+			this.chkShowProtected.Name = "chkShowProtected";
+			this.chkShowProtected.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
 			// 
 			// barCheckItem2
 			// 
@@ -709,7 +726,7 @@
 			// 
 			this.rpgDepartments.AllowTextClipping = false;
 			this.rpgDepartments.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-			this.rpgDepartments.ItemLinks.Add(this.cboDepartments);
+			this.rpgDepartments.ItemLinks.Add(this.cboOperatingUsers);
 			this.rpgDepartments.ItemLinks.Add(this.cboSales);
 			this.rpgDepartments.ItemLinks.Add(this.cboStatus);
 			this.rpgDepartments.Name = "rpgDepartments";
@@ -717,7 +734,7 @@
 			// 
 			// rpgPermissions
 			// 
-			this.rpgPermissions.ItemLinks.Add(this.chkShowProfit);
+			this.rpgPermissions.ItemLinks.Add(this.chkShowProtected);
 			this.rpgPermissions.Name = "rpgPermissions";
 			this.rpgPermissions.Text = "Permissions";
 			this.rpgPermissions.Visible = false;
@@ -757,11 +774,12 @@
 			this.mainLayout.Name = "mainLayout";
 			this.mainLayout.Root = this.Root;
 			this.mainLayout.Size = new System.Drawing.Size(1445, 565);
-			this.mainLayout.TabIndex = 18;
+			this.mainLayout.TabIndex = 24;
 			this.mainLayout.Text = "dataLayoutControl1";
 			// 
 			// gcSeaExport
 			// 
+			this.gcSeaExport.DataSource = this.bsSeaExportJobs;
 			this.gcSeaExport.EmbeddedNavigator.Buttons.Append.Visible = false;
 			this.gcSeaExport.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
 			this.gcSeaExport.EmbeddedNavigator.Buttons.Edit.Visible = false;
@@ -955,6 +973,7 @@
 			this.gvSeaExport.Name = "gvSeaExport";
 			this.gvSeaExport.OptionsBehavior.Editable = false;
 			this.gvSeaExport.OptionsBehavior.ReadOnly = true;
+			this.gvSeaExport.OptionsFind.AllowFindInExpandedDetails = DevExpress.Utils.DefaultBoolean.True;
 			this.gvSeaExport.OptionsFind.AlwaysVisible = true;
 			this.gvSeaExport.OptionsPrint.AutoWidth = false;
 			this.gvSeaExport.OptionsPrint.PrintHorzLines = false;
@@ -962,6 +981,12 @@
 			this.gvSeaExport.OptionsView.ColumnAutoWidth = false;
 			this.gvSeaExport.OptionsView.ShowGroupedColumns = true;
 			this.gvSeaExport.OptionsView.ShowGroupPanel = false;
+			this.gvSeaExport.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gvSeaExportList_RowCellStyle);
+			this.gvSeaExport.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.gvSeaExport_MasterRowEmpty);
+			this.gvSeaExport.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.gvSeaExport_MasterRowGetChildList);
+			this.gvSeaExport.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.gvSeaExport_MasterRowGetRelationName);
+			this.gvSeaExport.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.gvSeaExport_MasterRowGetRelationCount);
+			this.gvSeaExport.DoubleClick += new System.EventHandler(this.gvSeaExports_DoubleClick);
 			// 
 			// colId
 			// 
@@ -1882,6 +1907,54 @@
 			this.layoutControlItem1.Size = new System.Drawing.Size(1421, 541);
 			this.layoutControlItem1.TextVisible = false;
 			// 
+			// repSales
+			// 
+			this.repSales.AutoHeight = false;
+			this.repSales.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repSales.Name = "repSales";
+			this.repSales.NullText = "";
+			this.repSales.PopupView = this.repositoryItemSearchLookUpEdit1View;
+			// 
+			// repositoryItemSearchLookUpEdit1View
+			// 
+			this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+			this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+			// 
+			// repStatusList
+			// 
+			this.repStatusList.AutoHeight = false;
+			this.repStatusList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repStatusList.Name = "repStatusList";
+			this.repStatusList.NullText = "";
+			this.repStatusList.PopupView = this.gridView2;
+			// 
+			// gridView2
+			// 
+			this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView2.Name = "gridView2";
+			this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView2.OptionsView.ShowGroupPanel = false;
+			// 
+			// repOperatingUsers
+			// 
+			this.repOperatingUsers.AutoHeight = false;
+			this.repOperatingUsers.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.repOperatingUsers.Name = "repOperatingUsers";
+			this.repOperatingUsers.NullText = "";
+			this.repOperatingUsers.PopupView = this.gridView3;
+			// 
+			// gridView3
+			// 
+			this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+			this.gridView3.Name = "gridView3";
+			this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+			this.gridView3.OptionsView.ShowGroupPanel = false;
+			// 
 			// JobSeaExportListForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1896,6 +1969,8 @@
 			this.StatusBar = this.ribbonStatusBar1;
 			this.Text = "Sea Export List";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JobSeaExportListForm_FormClosing);
+			((System.ComponentModel.ISupportInitialize)(this.bsSeaExportJobs)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.rcJobSeaExport)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.mainLayout)).EndInit();
 			this.mainLayout.ResumeLayout(false);
@@ -1918,60 +1993,67 @@
 			((System.ComponentModel.ISupportInitialize)(this.repNumberFormat)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.bsSeaExportJobs)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repSales)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repStatusList)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.repOperatingUsers)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
         }
 
         #endregion
-        public DevExpress.XtraBars.Ribbon.RibbonControl rcJobSeaExport;
-        private DevExpress.XtraBars.BarButtonItem btnNew;
-        private DevExpress.XtraBars.BarButtonItem btnDelete;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem btnEdit;
-        private DevExpress.XtraBars.BarButtonItem btnPrint;
-        private DevExpress.XtraBars.RibbonGalleryBarItem rgFilterReports;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem3;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
-        private DevExpress.XtraBars.BarSubItem barSubItem4;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem5;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem2;
-        private DevExpress.XtraBars.BarButtonItem btnRefresh;
-        private DevExpress.XtraBars.BarButtonItem btnClose;
-        private DevExpress.XtraBars.BarEditItem cboDepartments;
-        private DevExpress.XtraBars.BarEditItem cboSales;
-        private DevExpress.XtraBars.BarEditItem cboStatus;
-        private DevExpress.XtraBars.BarCheckItem chkShowProfit;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem2;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem9;
-        private DevExpress.XtraBars.RibbonGalleryBarItem rgSortByReports;
-        private DevExpress.XtraBars.RibbonGalleryBarItem rgOrderByReports;
-        private DevExpress.XtraBars.Ribbon.RibbonPage rpJobSeaExport;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDepartments;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPermissions;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+		private System.Windows.Forms.BindingSource bsSeaExportJobs;
+		private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+		public DevExpress.XtraBars.Ribbon.RibbonControl rcJobSeaExport;
+		private DevExpress.XtraBars.BarButtonItem btnNew;
+		private DevExpress.XtraBars.BarButtonItem btnDelete;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+		private DevExpress.XtraBars.BarButtonItem btnEdit;
+		private DevExpress.XtraBars.BarButtonItem btnPrint;
+		private DevExpress.XtraBars.RibbonGalleryBarItem rgFilterReports;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+		private DevExpress.XtraBars.BarSubItem barSubItem1;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem3;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem4;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem17;
+		private DevExpress.XtraBars.BarSubItem barSubItem4;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem5;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem6;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem1;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+		private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+		private DevExpress.XtraBars.BarHeaderItem barHeaderItem2;
+		private DevExpress.XtraBars.BarButtonItem btnRefresh;
+		private DevExpress.XtraBars.BarButtonItem btnClose;
+		private DevExpress.XtraBars.BarEditItem cboOperatingUsers;
+		private DevExpress.XtraBars.BarEditItem cboSales;
+		private DevExpress.XtraBars.BarEditItem cboStatus;
+		private DevExpress.XtraBars.BarCheckItem chkShowProtected;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem2;
+		private DevExpress.XtraBars.BarCheckItem barCheckItem9;
+		private DevExpress.XtraBars.RibbonGalleryBarItem rgSortByReports;
+		private DevExpress.XtraBars.RibbonGalleryBarItem rgOrderByReports;
 		private DevExpress.XtraBars.BarButtonItem btnResetGridStyle;
+		private DevExpress.XtraBars.Ribbon.RibbonPage rpJobSeaExport;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDepartments;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgPermissions;
+		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
 		private DevExpress.XtraBars.Ribbon.RibbonPage rpViewSettings;
 		private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+		private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
 		private DevExpress.XtraDataLayout.DataLayoutControl mainLayout;
 		private DevExpress.XtraGrid.GridControl gcSeaExport;
 		private DevExpress.XtraGrid.Views.Grid.GridView gvSeaExportDetails;
@@ -2076,6 +2158,11 @@
 		private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repNumberFormat;
 		private DevExpress.XtraLayout.LayoutControlGroup Root;
 		private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-		private System.Windows.Forms.BindingSource bsSeaExportJobs;
+		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repOperatingUsers;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repSales;
+		private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
+		private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repStatusList;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
 	}
 }
