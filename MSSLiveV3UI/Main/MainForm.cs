@@ -85,8 +85,7 @@ namespace MISLiveMed.UI.Main
 
 		private bool _resetMenu;
 		private readonly bool _logOut;
-
-
+		private static bool debugMode = true;
 
 		public MainForm()
 		{
@@ -179,6 +178,7 @@ namespace MISLiveMed.UI.Main
 		{
 			// Determine admin rights from MainForm permissions once
 			_isAdmin = _userPermission?.FirstOrDefault(x => x.ControlName == "IsAdmin")?.Value ?? false;
+			if (debugMode) _isAdmin = true;
 
 			if (_forms == null || _forms.Count == 0) return;
 
@@ -215,6 +215,12 @@ namespace MISLiveMed.UI.Main
 					// ignore per-form errors
 				}
 
+				if (debugMode)
+				{
+					isVisible = true;
+					isActive = true;
+				}
+
 				// Try to parse form name to enum
 				if (Enum.TryParse<FormNames>(form.Name, true, out var formEnum))
 				{
@@ -241,7 +247,7 @@ namespace MISLiveMed.UI.Main
 
 		private Dictionary<FormNames, Action<bool, bool>> BuildPermissionMap(Action<DevExpress.XtraBars.Navigation.AccordionControlElement, bool> collapseIfNeeded)
 		{
-			return new Dictionary<FormNames, Action<bool, bool>>
+			var map = new Dictionary<FormNames, Action<bool, bool>>
 			{
 				// MAIN MENU LIST
 				[FormNames.NavigationMenu] = (v, a) => { mnuNavigationMenu.Visible = v; mnuNavigationMenu.Enabled = a; },
@@ -397,6 +403,13 @@ namespace MISLiveMed.UI.Main
 				[FormNames.ChartofAccount] = (v, a) => { try { mnuChartofAccount.Visible = v; mnuChartofAccount.Enabled = a; } catch { } },
 				[FormNames.ChartOfAccounts] = (v, a) => { try { mnuChartOfAccounts.Visible = v; collapseIfNeeded(mnuChartOfAccounts, a); mnuChartOfAccounts.Enabled = a; } catch { } },
 			};
+
+			if (debugMode)
+			{
+				return map.ToDictionary(entry => entry.Key, entry => new Action<bool, bool>((v, a) => entry.Value(true, true)));
+			}
+
+			return map;
 		}
 
 		// Known alternate DB names mapping to enum values (case-insensitive)

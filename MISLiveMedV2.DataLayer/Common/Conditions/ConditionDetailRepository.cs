@@ -44,12 +44,25 @@ namespace MISLiveMed.DataLayers.Common.Conditions
 					var p = new DynamicParameters();
 					p.Add("@ConditionId", conditionId);
 					p.Add("@CompanyId", companyId);
-					p.Add("@Active", active);  // Currently not used in query
+					p.Add("@Active", active);
 
-					var conditionDetailsRecords =
-						connection.Query<ConditionDetailModel>("SELECT * FROM ConditionDetails " +
-						"WHERE CompanyId = @CompanyId " +
-						"AND RequiredEffectiveDate <= GETDATE() AND (RequiredEndDate IS NULL OR RequiredEndDate >= GETDATE());", p);
+					var hasRequiredEndDate = connection.ExecuteScalar<int>(
+				"SELECT COUNT(1) FROM sys.columns WHERE object_id = OBJECT_ID('ConditionDetails') AND name = 'RequiredEndDate';") > 0;
+
+					var sql = "SELECT * FROM ConditionDetails " +
+					  "WHERE ConditionId = @ConditionId " +
+					  "AND CompanyId = @CompanyId " +
+					  "AND Active = @Active " +
+					  "AND RequiredEffectiveDate <= GETDATE()";
+
+					if (hasRequiredEndDate)
+					{
+						sql += " AND (RequiredEndDate IS NULL OR RequiredEndDate >= GETDATE())";
+					}
+
+					sql += ";";
+
+					var conditionDetailsRecords = connection.Query<ConditionDetailModel>(sql, p);
 					return conditionDetailsRecords.ToList();
 				}
 			}

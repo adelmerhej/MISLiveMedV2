@@ -11,6 +11,16 @@ namespace MISLiveMed.DataLayers.JobData.Common
 {
 	public class RequiredDocumentRepository : IDisposable
 	{
+		private static string ResolveRequiredDocumentsTableName(IDbConnection connection)
+		{
+			return connection.ExecuteScalar<string>(
+				"SELECT TOP 1 QUOTENAME(s.name) + '.' + QUOTENAME(t.name) " +
+				"FROM sys.tables t " +
+				"INNER JOIN sys.schemas s ON s.schema_id = t.schema_id " +
+				"WHERE t.name = 'RequiredDocuments' " +
+				"ORDER BY CASE WHEN s.name = 'dbo' THEN 0 ELSE 1 END, s.name;");
+		}
+
 		public IList<RequiredDocumentModel> JobRequiredDocumentsList(int conditionId, int companyId)
 		{
 			try
@@ -18,24 +28,30 @@ namespace MISLiveMed.DataLayers.JobData.Common
 				using (IDbConnection connection = new SqlConnection(ConnectionHelper.BuildConnectionString()))
 				{
 					var p = new DynamicParameters();
-					p.Add("@ConditionId", companyId);
-					p.Add("@CompanyId", conditionId);
+					p.Add("@ConditionId", conditionId);
+					p.Add("@CompanyId", companyId);
+
+					var requiredDocumentsTable = ResolveRequiredDocumentsTableName(connection);
+					if (string.IsNullOrWhiteSpace(requiredDocumentsTable))
+					{
+						throw new InvalidOperationException("Database object 'RequiredDocuments' was not found in the current database.");
+					}
 
 					var requiredDocumentsRecords =
 						connection.Query<RequiredDocumentModel>(
-							"SELECT rd.Id, SortingLineNo, ReferenceNo, JobNo, DepartmemtId, rd.ConditionId, ConditionDetailId, cd.Description, " +
+							"SELECT rd.Id, SortingLineNo, ReferenceNo, JobNo, rd.DepartmentId, rd.ConditionId, ConditionDetailId, cd.Description, " +
 							"rd.IsRequired, IsFulFilled, rd.Notes, rd.CompanyId, " +
 							"rd.BranchId, rd.CreatedBy, rd.CreatedDate, rd.LastModifiedBy, rd.LastModifiedDate, rd.WorkingYear, " +
 							"rd.IsProtected, rd.IsDefault, rd.Active, rd.Locked " +
-							"FROM RequiredDocuments rd " +
+							$"FROM {requiredDocumentsTable} rd " +
 							"INNER JOIN ConditionDetails cd on cd.Id = rd.ConditionDetailId " +
 							" WHERE rd.ConditionId = @ConditionId AND rd.CompanyId = @CompanyId;", p);
 					return requiredDocumentsRecords.ToList();
 				}
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
-				throw new Exception(e.Message);
+				throw;
 			}
 		}
 
@@ -51,21 +67,27 @@ namespace MISLiveMed.DataLayers.JobData.Common
 					p.Add("@ConditionId", conditionId);
 					p.Add("@CompanyId", companyId);
 
+					var requiredDocumentsTable = ResolveRequiredDocumentsTableName(connection);
+					if (string.IsNullOrWhiteSpace(requiredDocumentsTable))
+					{
+						throw new InvalidOperationException("Database object 'RequiredDocuments' was not found in the current database.");
+					}
+
 					var requiredDocumentsRecords =
 						connection.Query<RequiredDocumentModel>(
 							"SELECT rd.Id, SortingLineNo, ReferenceNo, JobNo, rd.DepartmentId, rd.ConditionId, ConditionDetailId, cd.Description, " +
 							"rd.IsRequired, IsFulFilled, rd.Notes, rd.CompanyId, " +
 							"rd.BranchId, rd.CreatedBy, rd.CreatedDate, rd.LastModifiedBy, rd.LastModifiedDate, rd.WorkingYear, " +
 							"rd.IsProtected, rd.IsDefault, rd.Active, rd.Locked " +
-							"FROM RequiredDocuments rd " +
+							$"FROM {requiredDocumentsTable} rd " +
 							"INNER JOIN ConditionDetails cd on cd.Id = rd.ConditionDetailId " +
 							" WHERE rd.JobNo = @jobNo AND rd.DepartmentId = @DepartmentId AND rd.ConditionId = @ConditionId AND rd.CompanyId = @CompanyId;", p);
 					return requiredDocumentsRecords.ToList();
 				}
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
-				throw new Exception(e.Message);
+				throw;
 			}
 		}
 
@@ -80,24 +102,30 @@ namespace MISLiveMed.DataLayers.JobData.Common
 					p.Add("@ReferenceNo", referenceNo);
 					p.Add("@JobNo", jobNo);
 					p.Add("@DepartmentId", departmentId);
-					p.Add("@ConditionId", companyId);
-					p.Add("@CompanyId", conditionId);
+					p.Add("@ConditionId", conditionId);
+					p.Add("@CompanyId", companyId);
+
+					var requiredDocumentsTable = ResolveRequiredDocumentsTableName(connection);
+					if (string.IsNullOrWhiteSpace(requiredDocumentsTable))
+					{
+						throw new InvalidOperationException("Database object 'RequiredDocuments' was not found in the current database.");
+					}
 
 					var requiredDocumentsRecords =
 						connection.Query<RequiredDocumentModel>(
-							"SELECT rd.Id, SortingLineNo, ReferenceNo, JobNo, DepartmemtId, rd.ConditionId, ConditionDetailId, cd.Description, " +
+							"SELECT rd.Id, SortingLineNo, ReferenceNo, JobNo, rd.DepartmentId, rd.ConditionId, ConditionDetailId, cd.Description, " +
 							"rd.IsRequired, IsFulFilled, rd.Notes, rd.CompanyId, " +
 							"rd.BranchId, rd.CreatedBy, rd.CreatedDate, rd.LastModifiedBy, rd.LastModifiedDate, rd.WorkingYear, " +
 							"rd.IsProtected, rd.IsDefault, rd.Active, rd.Locked " +
-							"FROM RequiredDocuments rd " +
+							$"FROM {requiredDocumentsTable} rd " +
 							"INNER JOIN ConditionDetails cd on cd.Id = rd.ConditionDetailId " +
 							" WHERE ReferenceNo = @ReferenceNo AND rd.JobNo = @jobNo AND rd.DepartmentId = @DepartmentId AND rd.ConditionId = @ConditionId AND rd.CompanyId = @CompanyId;", p);
 					return requiredDocumentsRecords.ToList();
 				}
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
-				throw new Exception(e.Message);
+				throw;
 			}
 		}
 
@@ -110,14 +138,20 @@ namespace MISLiveMed.DataLayers.JobData.Common
 					var p = new DynamicParameters();
 					p.Add("@Id", conditionId);
 
+					var requiredDocumentsTable = ResolveRequiredDocumentsTableName(connection);
+					if (string.IsNullOrWhiteSpace(requiredDocumentsTable))
+					{
+						throw new InvalidOperationException("Database object 'RequiredDocuments' was not found in the current database.");
+					}
+
 					var requiredDocumentRecord =
-						connection.QuerySingleOrDefault<RequiredDocumentModel>("SELECT * FROM RequiredDocuments WHERE Id = @Id;", p);
+						connection.QuerySingleOrDefault<RequiredDocumentModel>($"SELECT * FROM {requiredDocumentsTable} WHERE Id = @Id;", p);
 					return requiredDocumentRecord;
 				}
 			}
-			catch (Exception e)
+			catch (Exception)
 			{
-				throw new Exception(e.Message);
+				throw;
 			}
 		}
 
